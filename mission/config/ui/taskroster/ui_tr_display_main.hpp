@@ -297,7 +297,7 @@ class vn_tr_disp_taskRoster_Main
 
 		class TabProfile: vn_mf_RscActivePicture
 		{
-			idc = -1;
+			idc = VN_TR_TABPROFILE_IDC;
 			text = "img\TaskRoster\Profile_Tab.paa";
 			x = VN_TR_SHEET_L_X - UIW(0.9);
 			y = VN_TR_SHEET_L_Y + UIH(0.5);
@@ -305,13 +305,14 @@ class vn_tr_disp_taskRoster_Main
 			h = UIH(3);
 			color[] = {0.9,0.9,0.9,1};
 			colorActive[] = {1,1,1,1};
+			onButtonClick = "[] call vn_mf_fnc_tr_overview_init;";
 		};
 		class TabSupport: TabProfile
 		{
-			idc = -1;
+			idc = VN_TR_TABSUPPORT_IDC;
 			text = "img\TaskRoster\Requests_Tab.paa";
 			y = VN_TR_SHEET_L_Y + UIH(3.5);
-			colorText[] = {0.9,0.9,0.9,1};
+			onButtonClick = "";
 		};
 		
 		//ALWAYS AT THE BOTTOM/LAST OF THE CONTROLS!

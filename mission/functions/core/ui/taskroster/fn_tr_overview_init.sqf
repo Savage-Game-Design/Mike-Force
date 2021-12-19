@@ -99,3 +99,6 @@ if(!isNull _task)then
 
 //If nothing is set (gamestart) -> Autoselect the first Zone.
 if(isNil "vn_mf_tr_zone_filter") then {[VN_TR_ZONE_A_CTRL] call vn_mf_fnc_tr_zone_change;};
+
+// Set this tab as active on the left side:
+[VN_TR_TABPROFILE_CTRL] call vn_mf_fnc_tr_tabs_toggle;
