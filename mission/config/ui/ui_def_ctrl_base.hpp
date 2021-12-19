@@ -37,6 +37,11 @@ class vn_mf_RscPictureKeepAspect: vn_mf_RscPicture
 	style = "0x10+ 0x20+ 0x800";
 };
 
+import RscActivePicture;
+class vn_mf_RscActivePicture: RscActivePicture
+{
+};
+
 class vn_mf_RscText
 {
 	idc = -1;

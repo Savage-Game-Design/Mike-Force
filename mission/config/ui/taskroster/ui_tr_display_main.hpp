@@ -211,7 +211,7 @@ class vn_tr_disp_taskRoster_Main
 			colorText[] = {0,0,0,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
-			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_supportTask_show;";
+			// onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_supportTask_show;";
 			
 			MouseButtonDown = "";	//No _this param given
 			text = "Request a support task";
@@ -293,6 +293,25 @@ class vn_tr_disp_taskRoster_Main
 			
 			onLBSelChanged = "_this call vn_mf_fnc_tr_missions_show";
 			onLBDblClick = "";
+		};
+
+		class TabProfile: vn_mf_RscActivePicture
+		{
+			idc = -1;
+			text = "img\TaskRoster\Profile_Tab.paa";
+			x = VN_TR_SHEET_L_X - UIW(0.9);
+			y = VN_TR_SHEET_L_Y + UIH(0.5);
+			w = UIW(1.5);
+			h = UIH(3);
+			color[] = {0.9,0.9,0.9,1};
+			colorActive[] = {1,1,1,1};
+		};
+		class TabSupport: TabProfile
+		{
+			idc = -1;
+			text = "img\TaskRoster\Requests_Tab.paa";
+			y = VN_TR_SHEET_L_Y + UIH(3.5);
+			colorText[] = {0.9,0.9,0.9,1};
 		};
 		
 		//ALWAYS AT THE BOTTOM/LAST OF THE CONTROLS!
