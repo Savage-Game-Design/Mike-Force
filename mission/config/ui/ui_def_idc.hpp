@@ -12,7 +12,8 @@
 //using getVariable == no "waitUntil{!isNull (findDisplay NUM)}" needed
 #define VN_DISP_TR_TASKROSTER				(uinamespace getvariable ["vn_tr_disp_taskRoster_Main", DisplayNull])
 
-
+#define VN_TR_OVERVIEW_IDC					411999
+#define VN_TR_OVERVIEW_CTRL					(VN_DISP_TR_TASKROSTER displayCtrl VN_TR_OVERVIEW_IDC)
 #define VN_TR_USERNAME_IDC					412000
 #define VN_TR_USERNAME_CTRL					(VN_DISP_TR_TASKROSTER displayCtrl VN_TR_USERNAME_IDC)
 #define VN_TR_TEAMNAME_IDC					412001
