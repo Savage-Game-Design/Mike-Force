@@ -94,6 +94,7 @@ class CfgFunctions
 			class tr_overview_init {};
 			class tr_overview_team_update {};
 			class tr_tabs_toggle {};
+			class tr_requests_init {};
 
 			/* Main Info: */
 			class tr_mainInfo_show {};
