@@ -21,7 +21,7 @@ disableSerialization;
 
 //cleanup everything
 call vn_mf_fnc_tr_cleanRightSheet;
-VN_TR_REQUESTS_CTRL ctrlShow false;
+[VN_TR_TABPROFILE_CTRL] call vn_mf_fnc_tr_tabs_toggle;
 //show Main Info Screen on the right Side
 call vn_mf_fnc_tr_mainInfo_show;
 call vn_mf_fnc_tr_missions_fill;
