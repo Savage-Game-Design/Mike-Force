@@ -317,7 +317,7 @@ class vn_tr_disp_taskRoster_Main
 			{
 				class BackgroundImage: vn_sheet_overview_base
 				{
-					text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_sheet_clean.paa";
+					text = "img\TaskRoster\Page_NoTabs.paa";
 					x = 0;
 					y = 0;
 				};
@@ -331,7 +331,7 @@ class vn_tr_disp_taskRoster_Main
 			x = VN_TR_SHEET_L_X - UIW(1.1);
 			y = VN_TR_SHEET_L_Y + UIH(0.7);
 			w = UIW(1.5);
-			h = UIH(3);
+			h = UIH(4);
 			color[] = {0.9,0.9,0.9,1};
 			colorActive[] = {1,1,1,1};
 			onButtonClick = "[] call vn_mf_fnc_tr_overview_init;";
@@ -340,7 +340,7 @@ class vn_tr_disp_taskRoster_Main
 		{
 			idc = VN_TR_TABSUPPORT_IDC;
 			text = "img\TaskRoster\Requests_Tab.paa";
-			y = VN_TR_SHEET_L_Y + UIH(3.5);
+			y = VN_TR_SHEET_L_Y + UIH(4.6);
 			onButtonClick = "[] call vn_mf_fnc_tr_requests_init;";
 		};
 		
