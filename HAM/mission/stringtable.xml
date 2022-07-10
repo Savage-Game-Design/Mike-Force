@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="VN_MF_GAMEMODE">
+  <Package name="MF">
+    <Container name="default">
+      <Key ID="STR_vn_mf_levelup">
+        <Original>LEVEL UP!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rankpoint_short">
+        <Original>RP</Original>
+      </Key>
+      <Key ID="STR_vn_mf_needdutyofficer">
+        <Original>Cannot change teams without a duty officer present.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_dropincomming">
+        <Original>%1 drop incomming.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_requestdrop">
+        <Original>Request %1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_goto">
+        <Original>Goto %1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_training">
+        <Original>%1 Training</Original>
+      </Key>
+      <Key ID="STR_vn_mf_needtobeengineer">
+        <Original>You must be an %1 to build, please see a Duty Officer.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_medic">
+        <Original>Medic</Original>
+      </Key>
+      <Key ID="STR_vn_mf_radioOperator">
+        <Original>Radio Operator</Original>
+      </Key>
+      <Key ID="STR_vn_mf_radioOperatorTasks">
+        <Original>Operating radios, communication</Original>
+      </Key>
+      <Key ID="STR_vn_mf_engineer">
+        <Original>Engineer</Original>
+      </Key>
+      <Key ID="STR_vn_mf_explosive_specialist">
+        <Original>Explosive Specialist</Original>
+      </Key>
+      <Key ID="STR_vn_mf_resupply">
+        <Original>Resupply With Crate</Original>
+      </Key>
+      <Key ID="STR_vn_mf_scout_action">
+        <Original>Scout for Nearest Enemy Site</Original>
+      </Key>
+      <Key ID="STR_vn_mf_arsenal">
+        <Original>Arsenal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_nosupplydropnearby">
+        <Original>No supplies nearby!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_invite">
+        <Original>Invite %1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_friendsmade">
+        <Original>Acquaintance made</Original>
+      </Key>
+      <Key ID="STR_vn_mf_trainingcomplete">
+        <Original>Training Complete</Original>
+      </Key>
+      <Key ID="STR_vn_mf_invitereceived">
+        <Original>Invite Received</Original>
+      </Key>
+      <Key ID="STR_vn_mf_onetraitperplayer">
+        <Original>You can only have one speciality at a time.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_onetraitperteam">
+        <Original>Your team already has a player with that speciality.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_supplydroponstandby">
+        <Original>Supply drops on standby, make sure no other supplies are near drop zone.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_situation_room">
+        <Original>Situation Room</Original>
+      </Key>
+      <Key ID="STR_vn_mf_checkpoint">
+        <Original>Checkpoint</Original>
+      </Key>
+      <Key ID="STR_vn_mf_aid_post">
+        <Original>Aid Post</Original>
+      </Key>
+      <Key ID="STR_vn_mf_guardtower">
+        <Original>Guard Tower</Original>
+      </Key>
+      <Key ID="STR_vn_mf_ammoresupply">
+        <Original>Ammo Resupply Station</Original>
+      </Key>
+      <Key ID="STR_vn_mf_repairresupply">
+        <Original>Repair Station</Original>
+      </Key>
+      <Key ID="STR_vn_mf_fuelresupply">
+        <Original>Fuel Station</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vehicle_workshop">
+        <Original>Vehicle Workshop</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgebailey01">
+        <Original>Bailey Bridge 1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgebailey02">
+        <Original>Bailey Bridge 2</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgebailey03">
+        <Original>Bailey Bridge 3</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgebailey04">
+        <Original>Bailey Bridge 4</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgeramp01">
+        <Original>Bridge Ramp</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgesmall01">
+        <Original>Small Bridge 1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgesmall02">
+        <Original>Small Bridge 2</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgesmall03">
+        <Original>Small Bridge 3</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bridgesmall04">
+        <Original>Small Bridge 4</Original>
+      </Key>
+      <Key ID="STR_vn_mf_school">
+        <Original>School</Original>
+      </Key>
+      <Key ID="STR_vn_mf_drink_water">
+        <Original>Drink Water</Original>
+      </Key>
+      <Key ID="STR_vn_mf_eat_food">
+        <Original>Eat Food</Original>
+      </Key>
+      <Key ID="STR_vn_mf_repack">
+        <Original>Repack</Original>
+      </Key>
+      <Key ID="STR_vn_mf_drink">
+        <Original>Drink</Original>
+      </Key>
+      <Key ID="STR_vn_mf_take_medicine">
+        <Original>Take Medicine</Original>
+      </Key>
+      <Key ID="STR_vn_mf_refill">
+        <Original>Refill</Original>
+      </Key>
+      <Key ID="STR_vn_mf_eat">
+        <Original>Eat</Original>
+      </Key>
+      <Key ID="STR_vn_mf_check_pulse">
+        <Original>Check Pulse</Original>
+      </Key>
+      <Key ID="STR_vn_mf_build">
+        <Original>Build</Original>
+      </Key>
+      <Key ID="STR_vn_mf_idle">
+        <Original>Idle</Original>
+      </Key>
+      <Key ID="STR_vn_mf_wreck">
+        <Original>Wreck</Original>
+      </Key>
+      <Key ID="STR_vn_mf_disabled">
+        <Original>Disabled</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vehicle_locked_to_team">
+        <Original>This vehicle can't be used by your team</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_mike_force">
+        <Original>PLEI MEI SF CAMP - MIKE FORCE</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_green_hornets">
+        <Original>PLEIKU - GREEN HORNETS</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_spike_team">
+        <Original>FOB2 KONTUM - SPIKE TEAM</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_acav">
+        <Original>FOB 5 BAN ME THUOT - ACAV</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_mike_force_khe_sanh">
+        <Original>KHE SANH SF CAMP - MIKE FORCE</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_green_hornets_khe_sanh">
+        <Original>KHE SANH SF CAMP - GREEN HORNETS</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_spike_team_khe_sanh">
+        <Original>KHE SANH SF CAMP - SPIKE TEAM</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_acav_khe_sanh">
+        <Original>KHE SANH SF CAMP - ACAV</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_spike_team_altis">
+        <Original>MOLOS VILLAGE - SPIKE TEAM</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_mike_force_altis">
+        <Original>MOLOS VILLAGE - MIKE FORCE</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_green_hornets_altis">
+        <Original>MOLOS AIRFIELD - GREEN HORNETS</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_acav_altis">
+        <Original>FOB 1 - ACAV</Original>
+      </Key>
+      <Key ID="STR_vn_mf_supply_officer">
+        <Original>Supply Officer</Original>
+      </Key>
+      <Key ID="STR_vn_mf_duty_officer">
+        <Original>Duty Officer</Original>
+      </Key>
+      <Key ID="STR_vn_mf_light_helicopters">
+        <Original>Light Helicopters</Original>
+      </Key>
+      <Key ID="STR_vn_mf_helicopters">
+        <Original>Helicopters</Original>
+      </Key>
+      <Key ID="STR_vn_mf_wreck_recovery">
+        <Original>Wreck Recovery</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rearm">
+        <Original>Rearm</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading1">
+        <Original>writing diary entry...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading2">
+        <Original>checking pockets...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading3">
+        <Original>cleaning glasses...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading4">
+        <Original>putting boots on...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading5">
+        <Original>washing canteen...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading6">
+        <Original>polishing spork...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading7">
+        <Original>putting on shades...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading8">
+        <Original>dusting off shoulders...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading9">
+        <Original>shining boots...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading10">
+        <Original>ready for action...</Original>
+      </Key>
+      <Key ID="STR_vn_mf_howtobuild">
+        <Original>How to Build</Original>
+      </Key>
+      <Key ID="STR_vn_mf_howtobuild_long">
+        <Original>Note: Engineer training required!&lt;br&gt;&lt;/br&gt;Press 'N' to enable/disable building.&lt;br&gt;&lt;/br&gt;Use mouse scroll wheel for adjustments, press Alt to cycle between height adjustment or rotation.&lt;br&gt;&lt;/br&gt;Press and hold 'Space' to finalize Build.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_other_keys">
+        <Original>Other Key Binds</Original>
+      </Key>
+      <Key ID="STR_vn_mf_other_keys_long">
+        <Original>Press 'Y' to use gesture menu ('Z' on QWERTZ keyboards).&lt;br&gt;&lt;/br&gt;Press 'H' to open task roster.&lt;br&gt;&lt;/br&gt;Press '6' to activate wheel menu.&lt;br&gt;&lt;/br&gt;</Original>
+      </Key>
+      <Key ID="STR_vn_mf_restrictedzone">
+        <Original>Cannot build in Restricted Zone!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_purple_heart">
+        <Original>Purple Heart</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_wound_medal">
+        <Original>RVN Wound Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_distinguished_service_cross">
+        <Original>Distinguished Service Cross</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vietnam_gallantry_cross">
+        <Original>Vietnam Gallantry Cross</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_defense_medal">
+        <Original>RVN Defense Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_combat_infantryman_badge">
+        <Original>Combat Infantryman Badge</Original>
+      </Key>
+      <Key ID="STR_vn_mf_bronze_star">
+        <Original>Bronze Star</Original>
+      </Key>
+      <Key ID="STR_vn_mf_silver_star">
+        <Original>Silver Star</Original>
+      </Key>
+      <Key ID="STR_vn_mf_air_medal">
+        <Original>Air Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_distinguished_service_order">
+        <Original>Distinguished Service Order</Original>
+      </Key>
+      <Key ID="STR_vn_mf_congressional_medalofhonor">
+        <Original>Congressional Medal of Honor</Original>
+      </Key>
+      <Key ID="STR_vn_mf_air_cross_of_gallantry">
+        <Original>RVN Air Cross of Gallantry</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vietnam_tet_campaign_commemorative_medal">
+        <Original>Vietnam Tet Campaign Commemorative Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_special_service_medal">
+        <Original>RVN Special Service Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_national_defense_service_medal">
+        <Original>National Defense Service Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_distinguished_flying_cross">
+        <Original>Distinguished Flying Cross</Original>
+      </Key>
+      <Key ID="STR_vn_mf_army_commendation_medal">
+        <Original>Army Commendation Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_air_force_good_conduct_medal">
+        <Original>Air Force Good Conduct Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_air_force_cross">
+        <Original>Air Force Cross</Original>
+      </Key>
+      <Key ID="STR_vn_mf_special_operations_medal">
+        <Original>Special Operations Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_army_presidential_unit_citation">
+        <Original>Army Presidential Unit Citation</Original>
+      </Key>
+      <Key ID="STR_vn_mf_usaf_outstanding_unit_award">
+        <Original>USAF Outstanding Unit Award</Original>
+      </Key>
+      <Key ID="STR_vn_mf_meritorious_unit_citation">
+        <Original>Meritorious Unit Citation</Original>
+      </Key>
+      <Key ID="STR_vn_mf_meritorious_service_medal">
+        <Original>Meritorious Service Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_joint_service_commendation_medal">
+        <Original>Joint Service Commendation Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_legion_of_merit">
+        <Original>Legion of Merit</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vietnam_service_medal">
+        <Original>Vietnam Service Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_republic_of_vietnam_campaign_medal">
+        <Original>Republic of Vietnam Campaign Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_gulf_of_tonkin_vietnam_commemorative_medal">
+        <Original>Gulf of Tonkin Vietnam Commemorative Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_navy_cross">
+        <Original>Navy Cross</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_training_service_medal">
+        <Original>RVN Training Service Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_technical_service_medal">
+        <Original>RVN Technical Service Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_military_merit_first_republic_medal">
+        <Original>RVN Military Merit First Republic Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_hud_interact">
+        <Original>Interact</Original>
+      </Key>
+      <Key ID="STR_vn_mf_hud_toggledOff">
+        <Original>You toggled off the interaction overlay.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_hud_toggledOn">
+        <Original>You toggled on the interaction overlay.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_interactionOverlay_toggle">
+        <Original>Toggle Interaction Overlay</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_MikeForceDescription">
+        <Original>As special forces infantry, your team's role is to:&lt;br/&gt;- Sweep and clear areas of enemy&lt;br/&gt;- Secure and hold zones&lt;br/&gt;- Protect populations, logistics and supplies&lt;br/&gt;- Reinforce other teams&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example transport is provided for you by ACAV or Green Hornets.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_SpikeTeamDescription">
+        <Original>As special forces recon, your team's role is to:&lt;br/&gt;- Carry out reconnaissance to locate enemy infrastructure&lt;br/&gt;- Ambush and assault the enemy&lt;br/&gt;- Direct air and armour support onto enemy concentrations&lt;br/&gt;- Support other teams with reconnaissance and search and rescue&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams. &lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example transport is provided for you by ACAV or Green Hornets.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_GreenHornetsTeamDescription">
+        <Original>As a Green Hornet, your team's role is to fly helicopters and jets to:&lt;br/&gt;- Insert and extract troops to their desired location&lt;br/&gt;- Carry out aerial reconnaissance to find enemy infrastructure&lt;br/&gt;- Support other teams with close air support&lt;br/&gt;- Deliver supplies to build new infrastructure&lt;br/&gt;- Engage enemy aircraft&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example search and rescue is provided for you by Spike Team.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_ArmouredCavalryDescription">
+        <Original>As Armoured Cavalry, your team's role is to operate trucks and tanks to:&lt;br/&gt;- Insert and extract troops to their desired location&lt;br/&gt;- Support other teams with heavy weapons vehicles&lt;br/&gt;- Deliver supplies and build new infrastructure&lt;br/&gt;- Engage enemy vehicles and armour&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams. &lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example vehicle recovery or convoy protection is provided for you by Green Hornets.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_rolesHeaderName">
+        <Original>Role</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_rolesHeaderTasks">
+        <Original>Tasks</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_rolesHeaderPlayers">
+        <Original>Players</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_medicTasks">
+        <Original>Healing, Humanitarian</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_engineerTasks">
+        <Original>Building</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_explosive_specialistTasks">
+        <Original>Demolition, mining, de-mining</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_assaultpilotTasks">
+        <Original>Flying gunship/ jet</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_requestButton">
+        <Original>REQUEST</Original>
+      </Key>
+      <Key ID="STR_vn_mf_taskRoster_Main_teamWelcome">
+        <Original>Welcome to:&lt;br/&gt;%1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_title">
+        <Original>Resupply: Ammo</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_desc">
+        <Original>Transport the supplies to the position provided by %1.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_deliver_crate_title">
+        <Original>Deliver Resupply Crate</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_deliver_crate_desc">
+        <Original>Deliver the resupply crate to the units that need it.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_requesterDesc">
+        <Original>Request ammo supplies be dropped at a specific location.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_medical_title">
+        <Original>Resupply: Medical</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_medical_requesterDesc">
+        <Original>Request medical supplies be dropped at a specific location.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_food_title">
+        <Original>Resupply: Food</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_food_requesterDesc">
+        <Original>Request food supplies be dropped at a specific location.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_building_materials_title">
+        <Original>Resupply: Building Materials</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_building_materials_requesterDesc">
+        <Original>Request building materials be dropped at a specific location.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_workshop_title">
+        <Original>Resupply: Workshop</Original>
+      </Key>
+      <Key ID="STR_vn_mf_task_support_resupply_workshop_requesterDesc">
+        <Original>Request workshop supplies be dropped at a specific location.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_player_markers_vehicle_marker">
+        <Original>%1 (%2%3)</Original>
+      </Key>
+      <Key ID="STR_vn_mf_add_sandbag">
+        <Original>Add Sandbag</Original>
+        <English>Add Sandbag</English>
+      </Key>
+    </Container>
+    <Container name="interaction_overlay">
+      <Key ID="STR_vn_mf_overlay_duty_officer_name">
+        <Original>Duty Officer</Original>
+      </Key>
+      <Key ID="STR_vn_mf_overlay_duty_officer_description">
+        <Original>Change teams or train in a role, such as engineer.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_overlay_fast_travel_name">
+        <Original>Fast Travel</Original>
+      </Key>
+      <Key ID="STR_vn_mf_overlay_fast_travel_description">
+        <Original>Teleport to the bases of each team</Original>
+      </Key>
+      <Key ID="STR_vn_mf_overlay_supply_officer_name">
+        <Original>Supply Officer</Original>
+      </Key>
+      <Key ID="STR_vn_mf_overlay_supply_officer_description">
+        <Original>Request supplies, such as building supplies, food or ammunition.</Original>
+      </Key>
+      <Key ID="STR_para_overlay_wreck_recovery_status">
+        <Original>Wreck Recovery Status: %1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_wreck_recovery_time_left">
+        <Original>Repairing: %1 (%2s remaining)</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_base">
+        <Original>Base: %1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_standalone">
+        <Original>Standalone</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_status">
+        <Original>Status: %1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_build_progress">
+        <Original>Build Progress: %2%1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_percentage_filled">
+        <Original>Percentage Filled: %2%1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_current_supplies">
+        <Original>Current Supplies: %1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_supplies_until_full">
+        <Original>Supplies Until Full: %1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_supply_capacity">
+        <Original>Supply Capacity: %1</Original>
+      </Key>
+      <Key ID="STR_para_overlay_buildable_lifetime">
+        <Original>Time Until Decay: %1 hours %2 minutes</Original>
+      </Key>
+      <Key ID="STR_para_overlay_good">
+        <Original>Good</Original>
+        <English>Good</English>
+      </Key>
+      <Key ID="STR_para_overlay_decaying">
+        <Original>Decaying</Original>
+        <English>Decaying</English>
+      </Key>
+      <Key ID="STR_para_overlay_ready">
+        <Original>Ready</Original>
+        <English>Ready</English>
+      </Key>
+      <Key ID="STR_para_overlay_in_progress">
+        <Original>In Progress</Original>
+        <English>In Progress</English>
+      </Key>
+    </Container>
+    <Container name="notifications">
+      <Key ID="STR_vn_mf_notification_title_training">
+        <Original>Training</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_vehicle_locked">
+        <Original>Vehicle Locked</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_new_support_request">
+        <Original>New Support Request</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_zone_completed">
+        <Original>Zone Completed</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_support_transport">
+        <Original>Squad Transport</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_support_transport_all_onboard">
+        <Original>All Players Onboard</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_support_transport_players_dead">
+        <Original>All Players Dead</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_support_transport_too_close">
+        <Original>Drop-off Too Close</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_support_transport_wrong_location">
+        <Original>Wrong Location</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_support_transport_complete">
+        <Original>Transport Complete</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_support_task_created">
+        <Original>Support Task Created</Original>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_counter_attack">
+        <Original>Counter-attack</Original>
+        <English>Counter-attack</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_counter_attack_preparing">
+        <Original>The enemy will counter-attack in %2 minutes</Original>
+        <English>The enemy will counter-attack in %2 minutes</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_counter_attack_imminent">
+        <Original>Enemy counter-attack is imminent!</Original>
+        <English>Enemy counter-attack is imminent!</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_base_attack">
+        <Original>FOB Attack</Original>
+        <English>FOB Attack</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_base_attack_preparing">
+        <Original>The enemy will attack an FOB in %2 minutes</Original>
+        <English>The enemy will attack an FOB in %2 minutes</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_base_attack_imminent">
+        <Original>Enemy attack on FOB is imminent!</Original>
+        <English>Enemy attack on FOB is imminent!</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_counter_attack_shortened">
+        <Original>All critical tasks completed. Enemy counter attack in %2 minutes.</Original>
+        <English>All critical tasks completed. Enemy counter attack in %2 minutes.</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_no_sandbag">
+        <Original>No sandbags in inventory</Original>
+        <English>No sandbags in inventory</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_sandbags_not_allowed">
+        <Original>Sandbags cannot be used on this building</Original>
+        <English>Sandbags cannot be used on this building</English>
+      </Key>
+      <Key ID="STR_para_build_cantresupplyunbuiltbuilding">
+        <Original>You can't resupply an unbuilt building</Original>
+        <English>You can't resupply an unbuilt building</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_empty_food_item">
+        <Original>Empty Food Item</Original>
+        <English>Empty Food Item</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_empty_food_item">
+        <Original>The container is empty</Original>
+        <English>The container is empty</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_title_team_full">
+        <Original>This team is full</Original>
+        <English>This team is full</English>
+      </Key>
+      <Key ID="STR_vn_mf_notification_desc_team_full">
+        <Original>Try choosing another team</Original>
+        <English>Try choosing another team</English>
+      </Key>
+    </Container>
+    <Container name="building">
+      <Key ID="STR_para_building_position">
+        <Original>Position</Original>
+        <English>Position</English>
+      </Key>
+      <Key ID="STR_para_building_rotation">
+        <Original>Rotation</Original>
+        <English>Rotation</English>
+      </Key>
+      <Key ID="STR_para_building_height">
+        <Original>Height</Original>
+        <English>Height</English>
+      </Key>
+      <Key ID="STR_para_building_hint_header">
+        <Original>Building Placement</Original>
+        <English>Building Placement</English>
+      </Key>
+      <Key ID="STR_para_building_hint_body">
+        <Original>&lt;t color='#23aa50'&gt;[LMB]/[RMB]&lt;/t&gt; to cycle placement mode.&lt;br/&gt;&lt;br/&gt;Building can be placed with the 'build' action when the building is green. Buildings must not be colliding, and must be placed on a surface.</Original>
+        <English>&lt;t color='#23aa50'&gt;[LMB]/[RMB]&lt;/t&gt; to cycle placement mode.&lt;br/&gt;&lt;br/&gt;Building can be placed with the 'build' action when the building is green. Buildings must not be colliding, and must be placed on a surface.</English>
+      </Key>
+      <Key ID="STR_para_building_placing_in_progress">
+        <Original>Placing Building</Original>
+        <English>Placing Building</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_condition_hasRank">
+        <Original>Has Rank</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_condition_isEngineer">
+        <Original>Is an Engineer</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_condition_rnFoot">
+        <Original>On Foot</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_condition_inRestrictedZone">
+        <Original>Restricted Zone</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_ui_costs">
+        <Original>Costs</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_per_hour">
+        <Original>per hour</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_total_capacity">
+        <Original>total capacity</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_ui_pageAbrev">
+        <Original>p.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_ui_build">
+        <Original>Build</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_ui_nextPage">
+        <Original>Next page</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_ui_previousPage">
+        <Original>Previous page</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_ui_title">
+        <Original>Building Menu</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_conditions">
+        <Original>Conditions</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_selector">
+        <Original>Wheel Menu</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_debug_monitor">
+        <Original>Toggle Debug Monitor</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_task_roster">
+        <Original>Task Roster</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_build_mode">
+        <Original>Building Mode</Original>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category">
+        <Original>Category:</Original>
+        <English>Category:</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_search">
+        <Original>Search:</Original>
+        <English>Search:</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_showLocked">
+        <Original>Show Locked:</Original>
+        <English>Show Locked:</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_search">
+        <Original>Search</Original>
+        <English>Search</English>
+      </Key>
+
+      <Key ID="STR_vn_mf_buildingMenu_condition_inACav">
+        <Original>In ACav</Original>
+        <English>In ACav</English>
+      </Key>
+    </Container>
+    <Container name="params">
+      <Key ID="STR_vn_mf_param_wipe_save">
+        <Original>==== Delete Save ====</Original>
+        <English>==== Delete Save ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_wipe_save_desc">
+        <Original>[WARNING] Deletes your saved game. This will delete all progress (ranks and map)!</Original>
+        <English>[WARNING] Deletes your saved game. This will delete all progress (ranks and map)!</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_enable_ranks">
+        <Original>==== Enable Rank System [Under Development] ====</Original>
+        <English>==== Enable Rank System [Under Development] ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_hard_ai_limit">
+        <Original>==== Hard AI Limit ====</Original>
+        <English>==== Hard AI Limit ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_hard_ai_limit_desc">
+        <Original>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</Original>
+        <English>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_enable_ranks_desc">
+        <Original>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</Original>
+        <English>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_allow_map_markers">
+        <Original>==== Enable Map Markers ====</Original>
+        <English>==== Enable Map Markers ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_allow_map_markers_desc">
+        <Original>Toggle player map markers</Original>
+        <English>Toggle player map markers</English>
+      </Key>
+      <Key ID="STR_vn_mf_dawn_length">
+        <Original>==== Dawn Length ====</Original>
+        <English>==== Dawn Length ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_day_length">
+        <Original>==== Day Length ====</Original>
+        <English>==== Day Length ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_dusk_length">
+        <Original>==== Dusk Length ====</Original>
+        <English>==== Dusk Length ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_night_length">
+        <Original>==== Night Length ==== </Original>
+        <English>==== Night Length ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildables_require_vehicles">
+        <Original>==== Resupply buildings require vehicles ====</Original>
+        <English>==== Resupply buildings require vehicles ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildables_require_vehicles_desc">
+        <Original>Should vehicles be required to build resupply buildings [Not Advised].</Original>
+        <English>Should vehicles be required to build resupply buildings [Not Advised].</English>
+      </Key>
+      <Key ID="STR_vn_mf_ai_quantity">
+        <Original>==== AI Quantity ====</Original>
+        <English>==== AI Quantity ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_always_allow_withstand">
+        <Original>==== Allow Withstanding ====</Original>
+        <English>==== Allow Withstanding ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_always_allow_withstand_desc">
+        <Original>Enable withstand with friendlies nearby</Original>
+        <English>Enable withstand with friendlies nearby</English>
+      </Key>
+      <Key ID="STR_vn_mf_building_sandbag_value">
+        <Original>==== Sandbag Supplies Quantity ====</Original>
+        <English>==== Sandbag Supplies Quantity ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_building_sandbag_value_desc">
+        <Original>The building supplies value of sandbags carried in the inventory.</Original>
+        <English>The building supplies value of sandbags carried in the inventory.</English>
+      </Key>
+      <Key ID="STR_vn_mf_advanced_revive">
+        <Original>==== Advanced Revive ====</Original>
+        <English>==== Advanced Revive ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_advanced_revive_desc">
+        <Original>Enable Advanced Revive (Recommended)</Original>
+        <English>Enable Advanced Revive (Recommended)</English>
+      </Key>
+
+      <Key ID="STR_vn_mf_param_snake_header">
+        <Original>======== Snake Settings ========</Original>
+        <English>======== Snake Settings ========</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_chance">
+        <Original>==== Bite Chance ====</Original>
+        <English>==== Bite Chance ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_chance_desc">
+        <Original>Percentage chance of being bitten</Original>
+        <English>Percentage chance of being bitten</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_distance">
+        <Original>==== Bite Distance ====</Original>
+        <English>==== Bite Distance ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_distance_desc">
+        <Original>How close a snake must be to bite a player</Original>
+        <English>How close a snake must be to bite a player</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_frequency">
+        <Original>==== Bite Frequency ====</Original>
+        <English>==== Bite Frequency ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_frequency_desc">
+        <Original>Minimum Amount of time between bites</Original>
+        <English>Minimum Amount of time between bites</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_extra_time">
+        <Original>==== Ramp up Time ====</Original>
+        <English>==== Ramp up Time ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_snake_bite_extra_time_desc">
+        <Original>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</Original>
+        <English>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_teams_header">
+        <Original>======== Team Settings ========</Original>
+        <English>======== Team Settings ========</English>
+      </Key>
+      <Key ID="STR_vn_mf_max_players_acav">
+        <Original>==== Max players on ACAV ====</Original>
+        <English>==== Max players on ACAV ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_max_players_greenhornets">
+        <Original>==== Max players on Green Hornets ====</Original>
+        <English>==== Max players on Green Hornets ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_max_players_mikeforce">
+        <Original>==== Max players on Mike Force ====</Original>
+        <English>==== Max players on Mike Force ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_max_players_spiketeam">
+        <Original>==== Max players on Spike Team ====</Original>
+        <English>==== Max players on Spike Team ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_hunger_loss_rate">
+        <Original>==== Hunger Gain Rate ====</Original>
+        <English>==== Hunger Gain Rate ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_hunger_loss_rate_desc">
+        <Original>The percentage of the hunger bar lost every 10 seconds</Original>
+        <English>The percentage of the hunger bar lost every 10 seconds</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_thirst_loss_rate">
+        <Original>==== Thirst Gain Rate ====</Original>
+        <English>==== Thirst Gain Rate ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_thirst_loss_rate_desc">
+        <Original>The percentage of the thirst bar lost every 10 seconds</Original>
+        <English>The percentage of the thirst bar lost every 10 seconds</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_medical_header">
+        <Original>======== Medical Settings ========</Original>
+        <English>======== Medical Settings ========</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_headshot_kill">
+        <Original>==== Headshots Kill ====</Original>
+        <English>==== Headshots Kill ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_headshot_kill_desc">
+        <Original>Toggle if headshots can cause instadeath</Original>
+        <English>Toggle if headshots can cause instadeath</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_bleedout_time">
+        <Original>==== Bleedout Time ====</Original>
+        <English>==== Bleedout Time ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_bleedout_time_desc">
+        <Original>The time it takes in seconds for a wounded player to die</Original>
+        <English>The time it takes in seconds for a wounded player to die</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_withstand_percentage">
+        <Original>==== Withstand Percentage ====</Original>
+        <English>==== Withstand Percentage ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_withstand_percentage_desc">
+        <Original>Percentage of bleedout time that must pass before withstanding is allowed</Original>
+        <English>Percentage of bleedout time that must pass before withstanding is allowed</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_remove_bandage_item">
+        <Original>==== Remove Bandage Item ====</Original>
+        <English>==== Remove Bandage Item ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_remove_bandage_item_desc">
+        <Original>Remove the item used to stabilize a patient</Original>
+        <English>Remove the item used to stabilize a patient</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_remove_revive_item">
+        <Original>==== Remove Revive Item ====</Original>
+        <English>==== Remove Revive Item ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_remove_revive_item_desc">
+        <Original>Remove the item used to revive a patient</Original>
+        <English>Remove the item used to revive a patient</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_revive_requirement">
+        <Original>==== Require Medic to Revive ====</Original>
+        <English>==== Require Medic to Revive ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_respawn_delay">
+        <Original>==== Respawn Delay ====</Original>
+        <English>==== Respawn Delay ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_enable_air_support">
+        <Original>==== Enable RTO Air Support ====</Original>
+        <English>==== Enable RTO Air Support  ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_enable_air_support_desc">
+        <Original>Unique supports only will disable support from fast air and rotary wing units</Original>
+        <English>Unique supports only will disable support from fast air and rotary wing units</English>
+      </Key>
+      <Key ID="STR_vn_mf_enable_arty_support">
+        <Original>==== Enable RTO Artillery Support ====</Original>
+        <English>==== Enable RTO Artillery Support ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_enable_stamina">
+        <Original>==== Enable Stamina ====</Original>
+        <English>==== Enable Stamina ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_set_stamina">
+        <Original>==== Stamina Setting ====</Original>
+        <English>==== Stamina Setting ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_header">
+        <Original>======== Cleanup Settings ========</Original>
+        <English>======== Cleanup Settings ========</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_min_player_distance">
+        <Original>==== Cleanup Distance ====</Original>
+        <English>==== Cleanup Distance ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_min_player_distance_desc">
+        <Original>Prevents deletion for certain objects, if a player is within X metres</Original>
+        <English>Prevents deletion for certain objects, if a player is within X metres</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_max_bodies">
+        <Original>==== Max Bodies ====</Original>
+        <English>==== Max Bodies ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_placed_gear">
+        <Original>==== Cleanup Placed Equipment ====</Original>
+        <English>==== Cleanup Placed Equipment ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_placed_gear_desc">
+        <Original>Enables deleting equipment placed on the ground by players.</Original>
+        <English>Enables deleting equipment placed on the ground by players.</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_placed_gear_lifetime">
+        <Original>==== Placed equipment minimum lifetime ====</Original>
+        <English>==== Placed equipment minimum lifetime ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_dropped_gear">
+        <Original>==== Cleanup Dropped Equipment ====</Original>
+        <English>==== Cleanup Dropped Equipment ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_dropped_gear_desc">
+        <Original>Minimum amount of time before placed equipment is deleted.</Original>
+        <English>Minimum amount of time before placed equipment is deleted.</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_cleanup_dropped_gear_lifetime">
+        <Original>==== Dropped equipment minimum lifetime ====</Original>
+        <English>==== Dropped equipment minimum lifetime ====</English>
+      </Key>
+    </Container>
+    <Container name="voteMenu">
+      <Key ID="STR_vn_mf_voteMenu_submitVote">
+        <Original>Submit Vote</Original>
+        <English>Submit Vote</English>
+      </Key>
+      <Key ID="STR_vn_mf_voteMenu_selectOption">
+        <Original>Please select an option:</Original>
+        <English>Please select an option:</English>
+      </Key>
+      <Key ID="STR_vn_mf_voteMenu_voteInitBody">
+        <Original>A vote has been initalized. For more details please open the menu.</Original>
+        <English>A vote has been initalized. For more details please open the menu.</English>
+      </Key>
+      <Key ID="STR_vn_mf_voteMenu_open">
+        <Original>Open</Original>
+        <English>Open</English>
+      </Key>
+      <Key ID="STR_vn_mf_voteMenu_casted">
+        <Original>Vote Casted</Original>
+        <English>Vote Casted</English>
+      </Key>
+      <Key ID="STR_vn_mf_voteMenu_votedFor">
+        <Original>You voted:</Original>
+        <English>You voted:</English>
+      </Key>
+      <Key ID="STR_vn_mf_voteMenu_selectOptionPrompt">
+        <Original>You must select an option!</Original>
+        <English>You must select an option!</English>
+      </Key>
+    </Container>
+    <Container name="buildingCategories">
+      <Key ID="STR_vn_mf_buildingMenu_category_uncategorized">
+        <Original>Uncategorized</Original>
+        <English>Uncategorized</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_all">
+        <Original>+All</Original>
+        <English>+All</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_recent">
+        <Original>+Recents</Original>
+        <English>+Recents</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_favorites">
+        <Original>+Favorites</Original>
+        <English>+Favorites</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_base_starter">
+        <Original>+Feature: HQ</Original>
+        <English>+Feature: HQ</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_radio">
+        <Original>+Feature: Music</Original>
+        <English>+Feature: Music</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_respawn">
+        <Original>+Feature: Respawn</Original>
+        <English>+Feature: Respawn</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_wreck_recovery">
+        <Original>+Feature: Wreck Recovery</Original>
+        <English>+Feature: Wreck Recovery</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_maintenance">
+        <Original>+Feature: Maintenance</Original>
+        <English>+Feature: Maintenance</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_vehicle_spawning">
+        <Original>+Feature: Vehicle Creation</Original>
+        <English>+Feature: Vehicle Creation</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_supply_depot">
+        <Original>+Feature: Building Supply Depot</Original>
+        <English>+Feature: Building Supply Depot</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_functional">
+        <Original>Special Buildings</Original>
+        <English>Special Buildings</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_us">
+        <Original>U.S</Original>
+        <English>U.S</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_buildings">
+        <Original>Buildings</Original>
+        <English>Buildings</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_medical">
+        <Original>Medical</Original>
+        <English>Medical</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_tents">
+        <Original>Tents</Original>
+        <English>Tents</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_towers">
+        <Original>Towers</Original>
+        <English>Towers</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_sanitation">
+        <Original>Sanitation</Original>
+        <English>Sanitation</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_resupply">
+        <Original>Resupply</Original>
+        <English>Resupply</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_bridges">
+        <Original>Bridges</Original>
+        <English>Bridges</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_trees">
+        <Original>Trees</Original>
+        <English>Trees</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_bunkers">
+        <Original>Bunkers</Original>
+        <English>Bunkers</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_fortifications">
+        <Original>Fortifications</Original>
+        <English>Fortifications</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_trenches">
+        <Original>Trenches</Original>
+        <English>Trenches</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_helipads">
+        <Original>Helipads</Original>
+        <English>Helipads</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_shelters">
+        <Original>Camp (PAVN)</Original>
+        <English>Camp (PAVN)</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_nv">
+        <Original>North Vietnamese</Original>
+        <English>North Vietnamese</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_anyone">
+        <Original>Anyone Can Build</Original>
+        <English>Anyone Can Build</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_nonACAV">
+        <Original>Non-ACAV</Original>
+        <English>Non-ACAV</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_caves">
+        <Original>Caves and Rocks</Original>
+        <English>Caves and Rocks</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_decorative">
+        <Original>Misc</Original>
+        <English>Misc</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_lighting">
+        <Original>Lighting</Original>
+        <English>Lighting</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_platforms">
+        <Original>Platforms</Original>
+        <English>Platforms</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_fences">
+        <Original>Fences and walls</Original>
+        <English>Fences and walls</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_antennae">
+        <Original>Antennae</Original>
+        <English>Antennae</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_hootches">
+        <Original>Shacks</Original>
+        <English>Shacks</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_hangars">
+        <Original>Hangars</Original>
+        <English>Hangars</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_arvn">
+        <Original>ARVN</Original>
+        <English>ARVN</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_barracks">
+        <Original>Barracks</Original>
+        <English>Barracks</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_walls">
+        <Original>Walls</Original>
+        <English>Walls</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_water">
+        <Original>Water</Original>
+        <English>Water</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_piers">
+        <Original>Piers</Original>
+        <English>Piers</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_spiderholes">
+        <Original>Spiderholes</Original>
+        <English>Spiderholes</English>
+      </Key>
+      <Key ID="STR_vn_mf_buildingMenu_category_storage">
+        <Original>Storage</Original>
+        <English>Storage</English>
+      </Key>
+    </Container>
+    <Container name="supplies">
+      <Key ID="STR_vn_mf_light_ammo_supplies">
+        <Original>Light Ammo Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_support_ammo_supplies">
+        <Original>Support Ammo Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_explosives_supplies">
+        <Original>Explosives Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_building_supplies_crate">
+        <Original>Building Supplies (Small)</Original>
+      </Key>
+      <Key ID="STR_vn_mf_building_supplies_container">
+        <Original>Building Supplies (Large)</Original>
+      </Key>
+      <Key ID="STR_vn_mf_sandbag_supplies">
+        <Original>Sandbags and Tools</Original>
+        <English>Sandbags and Tools</English>
+      </Key>
+      <Key ID="STR_vn_mf_supplies">
+        <Original>Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_workshop_supplies">
+        <Original>Workshop Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_food_supplies">
+        <Original>Food Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_medical_supplies">
+        <Original>Medical Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_support_supplies">
+        <Original>Support Supplies</Original>
+        <English>Support Supplies</English>
+      </Key>
+	    <Key ID="STR_vn_mf_vehicle_supplies">
+        <Original>Vehicle Supplies</Original>
+        <English>Vehicle Supplies</English>
+      </Key>
+	    <Key ID="STR_vn_mf_building_supplies">
+        <Original>Construction Supplies</Original>
+        <English>Construction Supplies</English>
+      </Key>
+      <Key ID="STR_vn_mf_ammo_supplies">
+        <Original>Ammunition</Original>
+        <English>Ammunition</English>
+      </Key>
+    </Container>
+  </Package>
+  <Package name="PARADIGM">
+    <Container name="default">
+    </Container>
+    <Container name="notifications">
+      <Key ID="STR_para_notification_building_non_functional_title">
+        <Original>Building Non-Functional</Original>
+      </Key>
+      <Key ID="STR_para_notification_building_non_functional_desc">
+        <Original>This building isn't functioning right now.</Original>
+      </Key>
+      <Key ID="STR_para_notification_insufficient_resources_title">
+        <Original>Insufficient Resources</Original>
+      </Key>
+      <Key ID="STR_para_notification_insufficient_resources_desc">
+        <Original>The building doesn't have enough resources to do that.</Original>
+      </Key>
+      <Key ID="STR_para_notification_spawn_position_blocked_title">
+        <Original>Area Blocked</Original>
+      </Key>
+      <Key ID="STR_para_notification_spawn_position_blocked_desc">
+        <Original>Clear the area where the vehicle will be created.</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_repaired_title">
+        <Original>Vehicle Repaired</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_repaired_desc">
+        <Original>%1 supplies consumed.</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_refueled_title">
+        <Original>Vehicle Refueled</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_refueled_desc">
+        <Original>%1 supplies consumed.</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_rearmed_title">
+        <Original>Vehicle Rearmed</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_rearmed_desc">
+        <Original>%1 supplies consumed.</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_spawn_cooldown_title">
+        <Original>Vehicle Created Recently</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_spawn_cooldown_desc">
+        <Original>The next vehicle will be available in %1 minutes.</Original>
+      </Key>
+      <Key ID="STR_para_notification_vehicle_spawn_incorrect">
+        <Original>This vehicle can not be spawned here!</Original>
+      </Key>
+      <Key ID="STR_para_notification_building_placement_incorrect">
+        <Original>The building is incorrectly placed for this vehicle to spawn.</Original>
+      </Key>
+    </Container>
+    <Container name="basebuilding">
+      <Key ID="STR_para_bf_maintenance_repair_action">
+        <Original>Repair Vehicle Using Supplies</Original>
+      </Key>
+      <Key ID="STR_para_bf_maintenance_refuel_action">
+        <Original>Refuel Vehicle Using Supplies</Original>
+      </Key>
+      <Key ID="STR_para_bf_maintenance_rearm_action">
+        <Original>Rearm Vehicle Using Supplies</Original>
+      </Key>
+			<Key ID="STR_vn_mf_vic_car">
+        <Original>Cars</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vic_truck">
+        <Original>Trucks</Original>
+      </Key>
+			<Key ID="STR_vn_mf_vic_armour">
+        <Original>Armoured Vehicles</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vic_static">
+        <Original>Statics</Original>
+      </Key>
+			<Key ID="STR_vn_mf_vic_supply">
+        <Original>Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_vic_boat_light">
+        <Original>Light Boats</Original>
+      </Key>
+			<Key ID="STR_vn_mf_vic_boat_heavy">
+        <Original>Heavy Boats</Original>
+      </Key>
+    </Container>
+    <Container name="supplies">
+      <Key ID="STR_para_supply_buildingsupplies">
+        <Original>Building Supplies</Original>
+      </Key>
+      <Key ID="STR_para_supply_workshopsupplies">
+        <Original>Workshop Supplies</Original>
+      </Key>
+    </Container>
+    <Container name="KeybindingsMenu">
+      <Key ID="STR_vn_mf_keybindings_title">
+        <Original>Mikeforce Keybindings</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_header_action">
+        <Original>Action</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_header_keybind">
+        <Original>Keybind</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_reset">
+        <Original>Reset to default</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_confirm">
+        <Original>Confirm</Original>
+      </Key>
+      <Key ID="STR_vn_mf_keybindings_cancel">
+        <Original>Cancel</Original>
+      </Key>
+    </Container>
+    <Container name="Zone_Name_Altis">
+      <Key ID="STR_vn_mf_zone_sofia">
+        <Original>Sofia</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_paros">
+        <Original>Paros</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kalochori">
+        <Original>Kalochori</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_rodopoli">
+        <Original>Rodopoli</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_charkia">
+        <Original>Charkia</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_anthrakia">
+        <Original>Anthrakia</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_telos">
+        <Original>Telos</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_gravia">
+        <Original>Gravia</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_athira">
+        <Original>Athira</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_frini">
+        <Original>Frini</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_dorida">
+        <Original>Dorida</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pyrgos">
+        <Original>Pyrgos</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_chalkeia">
+        <Original>Chalkeia</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_panagia">
+        <Original>Panagia</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_feres">
+        <Original>Feres</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_selakano">
+        <Original>Selakano</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_abdera">
+        <Original>Abdera</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_oreokastro">
+        <Original>Oreokastro</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_syrta">
+        <Original>Syrta</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lakka">
+        <Original>Lakka</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_stavros">
+        <Original>Stavros</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_neochori">
+        <Original>Neochori</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_alikampos">
+        <Original>Alikampos</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_poliakko">
+        <Original>Poliakko</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_therisa">
+        <Original>Therisa</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_agios_dionysios">
+        <Original>Agios Dionysios</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kore">
+        <Original>Kore</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_negades">
+        <Original>Negades</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_agia_stemma">
+        <Original>Agia Stemma</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_zaros">
+        <Original>Zaros</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_panochori">
+        <Original>Panochori</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_neri">
+        <Original>Neri</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kavala">
+        <Original>Kavala</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_aggelochori">
+        <Original>Aggelochori</Original>
+      </Key>
+    </Container>
+    <Container name="Zone_Name_Cam_Lao">
+      <Key ID="STR_vn_mf_zone_ban_hoang">
+        <Original>Ban Hoang</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ba_ria">
+        <Original>Ba Ria</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_saigon">
+        <Original>Saigon</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_soc_trang">
+        <Original>Soc Trang</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_cu_chi">
+        <Original>Cu Chi</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_can_tho">
+        <Original>Can Tho</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_phu_quoc">
+        <Original>Phu Quoc</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lumphat">
+        <Original>Lumphat</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_fsb_quan_loi">
+        <Original>FSB Quan Loi</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_a_shau_valley">
+        <Original>A Shau Valley</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_khe_gio_valley">
+        <Original>Khe Gio Valley</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hai_phong">
+        <Original>Hanoi Docks</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hue">
+        <Original>Hue</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_da_krong">
+        <Original>Da Krong</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_attapeu">
+        <Original>Attapeu</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_mu_gia_pass">
+        <Original>Mu Gia Pass</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_va_cang">
+        <Original>Va Cang</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_thud_ridge">
+        <Original>Thud Ridge</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ha_long_navy_base">
+        <Original>Ha Long Navy Base</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_dharma">
+        <Original>Dharma</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_sihanoukville">
+        <Original>Sihanoukville</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_san_bay_ban">
+        <Original>San Bay Ban</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_da_nang">
+        <Original>Da Nang</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ling_ho">
+        <Original>Ling Ho</Original>
+      </Key>
+    </Container>
+    <Container name="ZoneName_khe_sanh">
+      <Key ID="STR_vn_mf_zone_khe_sanh">
+        <Original>Khe Sanh</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kok">
+        <Original>Kok</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_french_fort">
+        <Original>French Fort</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_french_fort_base">
+        <Original>French Fort Base</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_khe_sanh_base">
+        <Original>Khe Sanh Base</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_koanphan">
+        <Original>Koanphan</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_that">
+        <Original>That</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nabo">
+        <Original>Nabo</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_river_edge">
+        <Original>River Edge</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hill_203">
+        <Original>Hill203</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hill_538">
+        <Original>Hill538</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kate">
+        <Original>Kate</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hill_399">
+        <Original>Hill399</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_xom_bau">
+        <Original>Xom Bau</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hickory_hill">
+        <Original>Hickory Hill</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pomkhoun">
+        <Original>Pomkhoun</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hill_861">
+        <Original>Hill861</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_xom_ta_can">
+        <Original>Xom Ta Can</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lang_temp">
+        <Original>Lang Temp</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lang_ou_hi">
+        <Original>Near Lang Ou Hi</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lang_vei">
+        <Original>Lang Vei</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kok">
+        <Original>Kok</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_a_bung">
+        <Original>A Bung</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hill_881">
+        <Original>Hill881s</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_sei_na">
+        <Original>Sei Na</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ro_ro">
+        <Original>Near Ro Ro</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_northwest_jungle">
+        <Original>Jungle 1</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_mu_ta">
+        <Original>Mu Ta</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pagnouy">
+        <Original>Pagnouy</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nam_hung">
+        <Original>Nam Hung</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_co_put">
+        <Original>Co Put</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lang_hoan_tap">
+        <Original>Lang Hoan Tap</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_mouang_nong">
+        <Original>Mouang Nong</Original>
+      </Key>
+    </Container>
+  </Package>
+</Project>
