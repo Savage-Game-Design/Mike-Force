@@ -14,10 +14,6 @@ class packageforslingloading
 {
 	fnc = "vn_mf_fnc_packageforslingloading";
 };
-class setlocaleh
-{
-	fnc = "vn_mf_fnc_setlocaleh";
-};
 class settrait
 {
 	fnc = "vn_mf_fnc_settrait";

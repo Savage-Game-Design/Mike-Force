@@ -1,12 +1,12 @@
 //
 class init
 {
-	file = "functions\masterloop\init.sqf";
+	file = "functions\core\masterloop\init.sqf";
 };
 class events
 {
 	condition = "alive player";
-	file = "functions\masterloop";
+	file = "functions\core\masterloop";
 	class debug_monitor
 	{
 		delay = 1;
