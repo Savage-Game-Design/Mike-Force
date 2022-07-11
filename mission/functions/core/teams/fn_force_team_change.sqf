@@ -21,7 +21,6 @@ params ["_player", "_team"];
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 private _playerGroupArray = missionNamespace getVariable [_playerGroup,[]];
 
-if (_team == grpNull) exitWith {["Cannot join player %1 to null group", _player] call BIS_fnc_logFormat;};
 ["changedTeams", [_player, _team]] call para_g_fnc_event_dispatch;
 _player setVariable ["vn_mf_db_player_group", _team, true];
 
