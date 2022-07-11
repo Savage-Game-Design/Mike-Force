@@ -19,13 +19,13 @@ respawnButton = 1;
 respawnOnStart = -1;
 respawnTemplates[] = { "MenuPosition" };
 onPauseScript = "";
-onLoadMission = QUOT(Mike Force (Beta VN_MF_VERSION));
+onLoadMission = QUOT(Mike Force (VN_MF_VERSION));
 OnLoadIntro = "Welcome to Mike Force";
 loadScreen = "\vn\missions_f_vietnam\data\img\mikeforce\mission.jpg";
 OnLoadIntroTime = 0;
 OnLoadMissionTime = 0;
-briefingName = QUOT(Mike Force (Beta VN_MF_VERSION));
-onLoadName = QUOT(Mike Force (Beta VN_MF_VERSION));
+briefingName = QUOT(Mike Force (VN_MF_VERSION));
+onLoadName = QUOT(Mike Force (VN_MF_VERSION));
 overviewPicture = "\vn\missions_f_vietnam\data\img\mikeforce\mission.jpg";
 
 disabledAI = 1;
