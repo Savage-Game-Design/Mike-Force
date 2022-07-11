@@ -3,6 +3,14 @@ class CfgHints
 	class Overview {
 		displayName = "Overview";
 
+		class Tutorial {
+			displayName = "Tutorial";
+			displayNameShort = "Tutorial";
+			description = "Welcome to the Mike Force tutorial. As you play, these survival cards will show up to provide you with helpful hints about the various aspects of the gamemode. Cards be re-read in the Field Manual, accessible from the escape menu. The tutorial can be disabled in the gamemode settings menu.";
+			// image = ""; 
+			// Note: No Image
+		};
+
 		class Gamemode {
 			displayName = "Your goal";
 			displayNameShort = "Your goal";
@@ -47,9 +55,16 @@ class CfgHints
 		class Placing {
 			displayName = "Placing Buildings";
 			displayNameShort = "Placing Buildings";
-			description = "You're now placing a building! While placing, you can adjust position, height and rotation by using the left and right mouse buttons to cycle through different modes. Then the ghost building is green, you can place it by using the 'Build' hold action. <br /><br />Once the building is placed, hit it with a shovel to finish construction!";
+			description = "You're now placing a building! While placing, you can adjust position, height and rotation by using the left and right mouse buttons to cycle through different modes. Then the ghost building is green, you can place it by using the 'Build' hold action.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\ghost_building.paa";
 		};
+
+		class Finishing {
+			displayName = "Finishing a Structure";
+			displayNameShort = "Finishing";
+			description = "When it a building is placed, it is only partially built. To finish construction, you need to equip a shovel from the arsenal and use it on the building. After several hits, the building will be finished.";
+			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\ghost_building.paa";
+		}
 
 		class Resupplying {
 			displayName = "Resupplying Buildings";
@@ -87,25 +102,24 @@ class CfgHints
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\checkpoint.paa";
 		};
 
+		class Construction {
+			displayName = "Construction";
+			displayNameShort = "Construction";
+			description = "Engineers can place building and structures to help their team. Engineers on ACAV have access to more structures than engineers on other teams. To start building, open the building menu using the N key (default).";
+			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\build_menu.paa";
+		};
+
 	};
 		
 	class Deployment {
 		displayName = "Deployment";
 
-		class Role {
-			displayName = "Role Selection";
-			displayNameShort = "Team Select!";
-			description = "Select your team by pressing the H key (default) to open the Task Roster. By clicking on the team insignia, you can then select another team. This will only work when near a duty officer in one of the main bases.";
-			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\duty_officer_radial.paa";
-		};
-
-		class Training {
-			displayName = "Training Selection";
-			displayNameShort = "Training!";
-			description = "You can train as a specialist at the Duty officer by pressing the 6 key (default). Most teams can only have a limited number of each specialist. Possible specialisms include engineers, medics and radio operators.";
+		class Duty_Officer {
+			displayName = "Team and Training Selection";
+			displayNameShort = "Duty Officer!";
+			description = "Duty officers allow you to change your team and train a speciality. To change teams, open your task roster with the H key (default), and select your team insignia. To train a speciality, press 6 (default) while looking at the duty officer to open the wheel menu.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\duty_officer.paa";
 		};
-
 	};
 
 	class Environment {

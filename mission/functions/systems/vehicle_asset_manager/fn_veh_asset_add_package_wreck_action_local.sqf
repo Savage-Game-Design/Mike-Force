@@ -18,6 +18,8 @@
 
 params ["_id", "_target"];
 
+["AddPackageWreck", [player, []]] call para_g_fnc_event_dispatch;
+
 _target addAction [
 	"Package wreck for transport",
 	{

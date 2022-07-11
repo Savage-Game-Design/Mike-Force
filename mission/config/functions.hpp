@@ -273,6 +273,12 @@ class CfgFunctions
 			class training {};
 		};
 
+		class system_tutorial 
+		{
+			file = "functions\systems\tutorial";
+			class tutorial_subsystem_client_init {};
+		};
+
 		class system_vehicle_asset_manager
 		{
 			file = "functions\systems\vehicle_asset_manager";

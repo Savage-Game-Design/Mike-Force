@@ -92,6 +92,16 @@ class vn_mf_task_roster_action
 	displayName = $STR_vn_mf_keybindings_task_roster;
 	access = 1;
 };
+class vn_mf_ack_hint_card {
+	defaultKey = DIK_8;
+	shift = "false";
+	ctrl = "false";
+	alt = "false";
+	function = "para_c_fnc_ui_hints_pop_hint";
+	down = 0;
+	displayName = "Acknowledge Hint";
+	access = 1;
+}
 class vn_mf_build_mode_action_up
 {
 	defaultKey = DIK_N;

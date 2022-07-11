@@ -29,7 +29,8 @@ private _states = getArray(_config >> "gui_state_indicators");
 		{
 			_pbgControl ctrlSetBackgroundColor [1, 0, 0, 0.25];
 			_pbgControl ctrlCommit 0;
-
+			// Hungry or Thirsty, hit that tutorial card
+			["gotHungryThirsty", [player, []]] call para_g_fnc_event_dispatch;
 			[_ctrl,_color] spawn {
 				params ["_ctrl","_color"];
 				_ctrl ctrlSetTextColor [1,0,0,0.5];

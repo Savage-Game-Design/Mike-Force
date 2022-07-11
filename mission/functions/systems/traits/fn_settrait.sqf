@@ -88,6 +88,9 @@ if !(vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEq
 			_selected_traits pushBackUnique _player;
             _current_traits_map set [_trait,_selected_traits];
 
+			// Do checks for tutorial for trait
+			["tookTraining", [_player, _trait]] call para_g_fnc_event_dispatch;
+
 			// mark player as already having set a trait
 			_player setVariable ["vn_mf_dyn_trait_set", _trait];
 

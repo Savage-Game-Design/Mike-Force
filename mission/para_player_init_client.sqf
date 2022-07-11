@@ -37,6 +37,8 @@ player createDiaryRecord ["Diary", [localize "STR_vn_mf_other_keys", localize "S
 // Instantiate the main scheduler
 [] call para_g_fnc_scheduler_subsystem_init;
 
+call para_g_fnc_event_subsystem_init;
+
 // display initial loading text
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading1"]] call vn_mf_fnc_update_loading_screen;
 
@@ -201,7 +203,11 @@ call vn_mf_fnc_display_location_time;
 	};
 };
 
+// Marker Discovery
 [] call vn_mf_fnc_sites_subsystem_client_init;
+// Tutorial System
+[] call vn_mf_fnc_tutorial_subsystem_client_init;
+
 //DEV (ToDo): Until client Scheduler is added:
 []spawn
 {

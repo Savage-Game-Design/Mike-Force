@@ -16,5 +16,4 @@
 		Erm, just like below? C'mon... it's a 1-liner ¯\_(ツ)_/¯
 */
 
-//vn_tr_groupID (set in "vn_mf_fnc_tr_selectTeam")	=	"ACAV" / "GreenHornets" / "MikeForce" / "SpikeTeam"
 ["changeteam", [vn_tr_groupID]] call para_c_fnc_call_on_server;
