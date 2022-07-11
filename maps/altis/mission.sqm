@@ -237,7 +237,8 @@ class ScenarioData
 class Mission
 {
 	class Intel
-	{
+	{  
+ 		briefingName="Mike Force (v1.00.00rc1)";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
