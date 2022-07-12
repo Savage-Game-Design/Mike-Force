@@ -97,7 +97,7 @@ class vn_mf_ack_hint_card {
 	shift = "false";
 	ctrl = "false";
 	alt = "false";
-	function = "para_c_fnc_ui_hints_pop_hint";
+	function = "para_c_fnc_ui_hints_acknowledgeHintKeypress";
 	down = 0;
 	displayName = "Acknowledge Hint";
 	access = 1;
