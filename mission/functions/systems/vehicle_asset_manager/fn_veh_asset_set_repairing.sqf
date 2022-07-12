@@ -26,3 +26,6 @@ if (isNil "_repairTime") then {
 _vehicleInfo set [struct_veh_asset_info_m_state_data, ["REPAIRING", serverTime + _repairTime]];
 
 [_id] call vn_mf_fnc_veh_asset_marker_delete;
+
+private _vehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
+_vehicle hideObjectGlobal true;
