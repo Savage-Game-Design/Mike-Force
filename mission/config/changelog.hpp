@@ -1,4 +1,24 @@
 class Changelog {
+	class 1_00_00 {
+		version = "1.00.00";
+		date = "12th July 2022";
+		changes[] = {
+			"[New] Spike team implementation. The new special purpose team meant for scouting sites.",
+			"[New] Tutorial to teach the basics of the game.",
+			"[New] Wreck recovery buildable. Allows the ability to recover wrecks at FOBs.",
+			"[New] Added support for the new 'The Bra' map.",
+			"[New] Added the dynamic group system (default keybind is U).",
+			"[New] Improved wheel menu implementation for vehicles and supplies.",
+			"[New] Ported MF to Altis map. Grab the compatibility patch from the SGD workshop!",
+			"[Change] 1.2 content added to the arsenal, workshop, and docks.",
+			"[Change] Icon-based scouting.",
+			"[Change] Refactored teams(MF,ACAV,...) to not use the group system.",
+			"[Change] Update welcome menu to only show after update by default",
+			"[Change] Add M101 Howitzers to configurable logistics.",
+			"[Fix] Players not being able to get in team-locked vehicles.",
+			"[Fix] Runtime error when building if no blocked areas."
+		};
+	};
 	class 0_67_00 {
 		version = "0.67.00";
 		date = "27th May 2022";
