@@ -101,7 +101,7 @@ private _fnc_processVehicle = {
 
 			if (_vehicleDistance <= 20) then
 			{
-				private _vehicleName = [configFile >> "CfgVehicles" >> typeOf _vehicle] call BIS_fnc_displayName;
+				private _vehicleName = [configFile >> "CfgVehicles" >> _type] call BIS_fnc_displayName;
 				private _canRecover = [_x, _respawnTime, _vehicleName] call para_s_fnc_bf_wreck_recovery_availablity_check; //check if recovery building can recover.
 
 				if(_canRecover) then 
