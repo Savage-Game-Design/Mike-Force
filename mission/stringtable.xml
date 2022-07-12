@@ -1642,5 +1642,58 @@
         <Original>Mouang Nong</Original>
       </Key>
     </Container>
+    <Container name="ZoneName_the_bra">
+      <Key ID="STR_vn_mf_zone_ban_dac_maruk">
+        <Original>Ban Dac Maruk</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_phouvong">
+        <Original>Phouvong</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ban_pakha">
+        <Original>Ban Pakha</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nam_phat">
+        <Original>Nam Phat</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_xayden">
+        <Original>Xayden</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ban_onglouang">
+        <Original>Ban Onglouang</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_antoum">
+        <Original>Antoum</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pak_ha">
+        <Original>Pak Ha</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_the_bra">
+        <Original>The Bra</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_western_temple">
+        <Original>Western Temple</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nva_base_316">
+        <Original>NVA Base 316</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_southwestern_supply_depot">
+        <Original>Southwestern Supply Depot</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_western_pow_camp">
+        <Original>Western POW Camp</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_southwestern_nva_outpost">
+        <Original>Southwestern NVA Outpost</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pia_hom">
+        <Original>Pia Hom</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_southeastern_nva_outpost">
+        <Original>Southeastern NVA Outpost</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_southeastern_supply_depot">
+        <Original>Southeastern Supply Depot</Original>
+      </Key>
+    </Container>
   </Package>
 </Project>
