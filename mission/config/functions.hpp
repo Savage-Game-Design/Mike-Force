@@ -66,6 +66,8 @@ class CfgFunctions
 			file = "functions\debug";
 			class debug_monitor {};
 			class enable_debug_monitor {};
+			class init_performance_logging {};
+			class log_performance_data {};
 		};
 
 		class ui

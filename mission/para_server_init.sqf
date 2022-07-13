@@ -314,5 +314,8 @@ diag_log "VN MikeForce: Initialising Respawn Scheduler";
 // Initialise respawn job
 ["veh_asset_respawner_job", {call vn_mf_fnc_veh_asset_respawn_job}, [], 1] call para_g_fnc_scheduler_add_job;
 
+diag_log "VN MikeForce: Initialising Performance Logging";
+[] call vn_mf_fnc_init_performance_logging;
+
 diag_log "VN MikeForce: Initialising Dynamic Groups";
 ["Initialize"] call para_c_fnc_dynamicGroups;
