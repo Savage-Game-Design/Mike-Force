@@ -510,6 +510,7 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_prop_med_dysentery",{0,0,0,0}},
 			{"vn_prop_med_painkillers",{0,0,0,0}},
 			{"vn_prop_med_wormpowder",{0,0,0,0}},
+			// 1.1 Content
 			{"vn_m63a_150_mag",{-1,6,-1,-1}},
 			{"vn_m63a_150_t_mag",{-1,6,-1,-1}},
 			{"vn_m63a_100_mag",{-1,4,-1,-1}},
@@ -524,30 +525,7 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_m1a1_30_t_mag",{-1,3,-1,-1}},
 			{"vn_mpu_mag",{-1,2,-1,-1}},
 			{"vn_mpu_t_mag",{-1,2,-1,-1}},
-			{"vn_mk1_udg_mag",{-1,2,-1,-1}}
-		};
-
-		items[] =
-		{
-      //Basics
-			{"vn_o_item_firstaidkit",{0,-1,-1,0}},
-			{"vn_o_item_map",{0,-1,-1,0}},
-			{"vn_o_item_radio_m252",{0,-1,-1,0}},
-			{"vn_b_item_compass",{0,0,0,0}},
-			{"vn_b_item_compass_sog",{0,3,0,0}},
-			{"vn_b_item_firstaidkit",{-1,0,0,-1}},
-			{"vn_b_item_map",{-1,0,0,-1}},
-			{"vn_b_item_medikit_01",{0,0,0,0}},
-			{"vn_b_item_radio_urc10",{-1,0,0,-1}},
-			{"vn_b_item_toolkit",{0,0,0,0}},
-			{"vn_b_item_watch",{0,0,0,0}},
-			{"vn_b_item_wiretap",{0,0,0,0}},
-      //ACRE Radios
-			{"ACRE_PRC343",{0,0,0,0}},
-			{"ACRE_PRC77",{0,0,0,0}},
-			{"ItemRadioAcreFlagged", {0,0,0,0}},
-			//1.1 Content
-			{"vn_b_prop_camera_01",{-1,5,-1,-1}},
+			{"vn_mk1_udg_mag",{-1,2,-1,-1}},
 			//1.2 Content
 			{"vn_mine_bangalore_mag",{0,-1,-1,0}},
 			{"vn_mine_bike_mag",{0,-1,-1,0}},
@@ -587,6 +565,30 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_m1_garand_t_mag",{-1,1,-1,-1}},
 			{"vn_m1918_mag",{-1,0,-1,-1}},
 			{"vn_m1918_t_mag",{-1,1,-1,-1}},
+		};
+
+		items[] =
+		{
+      //Basics
+			{"vn_o_item_firstaidkit",{0,-1,-1,0}},
+			{"vn_o_item_map",{0,-1,-1,0}},
+			{"vn_o_item_radio_m252",{0,-1,-1,0}},
+			{"vn_b_item_compass",{0,0,0,0}},
+			{"vn_b_item_compass_sog",{0,3,0,0}},
+			{"vn_b_item_firstaidkit",{-1,0,0,-1}},
+			{"vn_b_item_map",{-1,0,0,-1}},
+			{"vn_b_item_medikit_01",{0,0,0,0}},
+			{"vn_b_item_radio_urc10",{-1,0,0,-1}},
+			{"vn_b_item_toolkit",{0,0,0,0}},
+			{"vn_b_item_watch",{0,0,0,0}},
+			{"vn_b_item_wiretap",{0,0,0,0}},
+      //ACRE Radios
+			{"ACRE_PRC343",{0,0,0,0}},
+			{"ACRE_PRC77",{0,0,0,0}},
+			{"ItemRadioAcreFlagged", {0,0,0,0}},
+			//1.1 Content
+			{"vn_b_prop_camera_01",{-1,5,-1,-1}},
+
 			//---
 			//Facewear
 			{"G_Aviator",{0,0,0,0}},

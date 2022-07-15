@@ -65,6 +65,7 @@ class CfgFunctions
 		class debug {
 			file = "functions\debug";
 			class debug_monitor {};
+			class detect_missing_arsenal_magazines {};
 			class enable_debug_monitor {};
 			class init_performance_logging {};
 			class log_performance_data {};
