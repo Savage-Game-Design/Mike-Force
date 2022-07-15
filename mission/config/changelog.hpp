@@ -1,4 +1,20 @@
 class Changelog {
+	class 1_00_01 {
+		version = "1.00.01";
+		date = "16th July 2022";
+		changes[] = {
+			"[Fix] Wrecks will no longer reappear at the bottom left of the map",
+			"[Fix] Sites won't spawn near to the main base",
+			"[Fix] 1.2 magazines not showing in arsenal or in supply crates",
+			"[Fix] Duty officers now face in the right direction",
+			"[Fix] Logistic menu popup no longer appears",
+			"[Fix] Trash can on Altis now clears equipment",
+			"[Fix] Fog turned down on The Bra",
+			"[Fix] Call-in time increased for RTO on The Bra",
+			"[Fix] Added trash can to Green Hornets on The Bra",
+			"[Fix] Howitzers not respawning on The Bra"
+		};
+	};
 	class 1_00_00 {
 		version = "1.00.00";
 		date = "12th July 2022";
