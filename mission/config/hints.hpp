@@ -36,7 +36,7 @@ class CfgHints
 		class Fast_Travel {
 			displayName = "Fast Travel";
 			displayNameShort = "Fast Travel";
-			description = "Fast travel is a quick way to travel around the main US bases for each team: Mike force at Plei Mei, Spike team at Kontum, Green Hornets at Pleiku, and to ACAV at Ban Me Thuot. You can fast travel by standing next to the map display in game and pressing the 6 key (default). Travelling in this way is free and instant!";
+			description = "Fast travel is a quick way to travel around the main US bases for each team. You can fast travel by standing next to the map stand in game and pressing the 6 key (default). Travelling in this way is free and instant!";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\map.paa";
 		};
 
@@ -62,14 +62,14 @@ class CfgHints
 		class Finishing {
 			displayName = "Finishing a Structure";
 			displayNameShort = "Finishing";
-			description = "When it a building is placed, it is only partially built. To finish construction, you need to equip a shovel from the arsenal and use it on the building. After several hits, the building will be finished.";
+			description = "When a building is placed, it is only partially built. To finish construction, you need to equip a shovel from the arsenal and use it on the building. After several hits, the building will be finished.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\ghost_building.paa";
 		}
 
 		class Resupplying {
 			displayName = "Resupplying Buildings";
 			displayNameShort = "Resupplying Buildings";
-			description = "Supply that building! Buildings and constructed objects require building supplies to prevent them from decaying. Add supplies to the building or object by placing a supply crate nearby then using the 6 (default) key and selecting resupply. <br /><br />Alternatively, you can add a small number of supplies using sandbags from your inventory. <br /><br />Buildings that are part of an FOB will use the FOB's supply pool. Standalone buildings have their own internal supply pool, and need resupplying individually!";
+			description = "Buildings and constructed objects require building supplies to prevent them from decaying. To resupply a building, you'll need a resupply crate nearby or sandbags in your inventory. Then open the building's wheel menu with 6 (default) and press resupply. Buildings that are of an FOB share the same supplies, while standalone buildings have their own supply pool.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\decay.paa";
 		};
 
@@ -98,7 +98,7 @@ class CfgHints
 		class Checkpoint {
 			displayName = "Checkpoint";
 			displayNameShort = "Checkpoint";
-			description = "Checkpoints are essential for gaining a foothold in a hostile area. They enable your team to respawn at their location, at the cost of a small amount of the building or FOB's supplies. This should be one of the first things you build when setting up a new base! ";
+			description = "The building next to you is a checkpoint. You can respawn at these buildings, although that depletes the building's supplies. Running out of supplies will disable redeployment to that checkpoint, so remember to keep resupplying to ensure you can always get back in the fight.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\checkpoint.paa";
 		};
 
@@ -117,7 +117,7 @@ class CfgHints
 		class Duty_Officer {
 			displayName = "Team and Training Selection";
 			displayNameShort = "Duty Officer!";
-			description = "Duty officers allow you to change your team and train a speciality. To change teams, open your task roster with the H key (default), and select your team insignia. To train a speciality, press 6 (default) while looking at the duty officer to open the wheel menu.";
+			description = "Duty officers allow you to change your team and train a speciality. To change teams, open your task roster with the H key (default), and select your team insignia. To train a speciality, press 6 (default) while looking at the duty officer to open the wheel menu. ";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\duty_officer.paa";
 		};
 	};
@@ -154,7 +154,7 @@ class CfgHints
 		class Needs {
 			displayName = "Food and Water";
 			displayNameShort = "Food and Water";
-			description = "Food and water allow you to keep your strength up in the field. Without food or water, your ability to move and fight will be severely hindered, leaving you an open target for the VC or NVA. Make sure you don't leave base without at least a canteen and some rations!";
+			description = "Food and water allow you to keep your strength up in the field. Without food or water, your ability to move and fight will be severely hindered, leaving you an open target for the VC or NVA. Make sure you don't leave base without at least a canteen and some rations, or you'll need to borrow some from a friend.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\drink_food.paa";
 		};
 
@@ -176,8 +176,8 @@ class CfgHints
 		class Logistics {
 			displayName = "Logistics Inventory";
 			displayNameShort = "Logistics Inventory";
-			description = "The logistics inventory allows vehicles to carry a variety of supplies and static weapons. You can access this through the 'Logistics Inventory' action, which is separate from the vehicle's normal inventory. Vehicles have differing maximum load values and so it is worthwhile to familiarise yourself with the maximum load on each vehicle. You can place logistics items into vehicles by picking up the items and then using the scroll wheel option 'load item into vehicle', while looking at the vehicle.then add that game item into the logistics inventory of the vehicle. Be advised - loading items into a vehicle increases its weight, so don't be surprised if it doesn't perform as you'd expect!";
-			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\logistics_menu.paa";
+			description = "The logistics inventory allows vehicles to carry a variety of supplies and static weapons. You can access this by looking at a vehicle and selecting 'Logistics Inventory'. Vehicles have differing maximum capacities, so it is worth familiarising yourself with each vehicle. You can place objects into vehicles by picking up the items, looking at the vehicle andusing the scroll wheel option 'load item into vehicle'. Be advised - loading items into a vehicle increases its weight, so don't be surprised if it doesn't perform as you'd expect!";
+			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\logistic_menu.paa";
 		};
 
 	};
@@ -203,7 +203,7 @@ class CfgHints
 		class Wrecks {
 			displayName = "Wreck Recovery";
 			displayNameShort = "Wreck Recovery";
-			description = "When certain vehicles are damaged beyond repair in combat, a wreck is left behind. This wreck can be packaged up into a crate, and slingloaded by Green Hornets or loaded into a truck. Make sure to make a support task so that teams know where to find the wreck! Once collected, take to the wreck recovery zone at the Pleiku. The vehicle will then respawn at its previous base. ";
+			description = "When certain vehicles are damaged beyond repair in combat, a wreck is left behind. This wreck can be packaged up into a crate, and slingloaded by Green Hornets or loaded into a truck. Make sure to make a support task so that teams know where to find the wreck! Once collected, take to the wreck recovery zone at the Pleiku. The vehicle will then respawn at its previous base.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\wreck_packing.paa";
 		};
 
@@ -223,7 +223,7 @@ class CfgHints
 		class Downed {
 			displayName = "Downed";
 			displayNameShort = "Withstand and keep on fighting!";
-			description = "Withstand and keep on fighting! Withstand will allow you patch yourself back up and get back in the fight, if you're downed during combat. After being downed, wait a minute and a withstand option will appear. Be advised withstanding will consume four medical kits, so it's better to get your teammates to help where possible!";
+			description = "Withstand and keep on fighting! Withstand will allow you patch yourself back up and get back in the fight, if you're downed during combat. After being downed, wait a minute and a withstand option will appear. Be advised withstanding will consume multiple medical kits, so it's better to get your teammates to help where possible!";
 			//image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\<cardname>.paa";
 			//Note: No image.
 		};
@@ -257,7 +257,7 @@ class CfgHints
 		class Mike_Force {
 			displayName = "Mike Force";
 			displayNameShort = "Mike Force, attack and clear those objectives.";
-			description = "Mike Force, attack and clear those objectives! Mike Force's primary mission is to attack targets within the zone, clear objectives amd take out AA and artillery. This allows ACAV and Green Hornets to do their jobs, supporting you on the ground and in the air!";
+			description = "Mike Force, attack and clear those objectives! Mike Force's primary mission is to clear hostiles from the zone and eliminate enemy sites such as AA and artillery. You'll be in the thick of it, supported by ACAV on the ground and Green Hornets in the air.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\mike_force.paa";
 		};
 
@@ -271,7 +271,7 @@ class CfgHints
 		class ACAV {
 			displayName = "ACAV";
 			displayNameShort = "ACAV, Build, Supply, Win!";
-			description = "You'll never get anywhere without a base, and supplies to fuel it. That's where ACAV comes in. As the only faction with unlimited numbers of engineers, ACAV are perfectly positioned to build all of the necessary structures to allow all your team to capture, hold and deploy from the current zone. ACAV also fill the role of heavy fire support on the ground, wading into battle with tanks and gun trucks.";
+			description = "You'll never get anywhere without a base. With unlimited numbers of engineers, ACAV are perfectly positioned to build all of the necessary structures to allow all your team to capture, hold and deploy from the current zone. ACAV also fill the role of heavy fire support on the ground, wading into battle with tanks and gun trucks.";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\acav.paa";
 		};
 
@@ -291,7 +291,7 @@ class CfgHints
 		class RTO {
 			displayName = "RTO";
 			displayNameShort = "Bring the Iron Rain!";
-			description = "Bring the Iron Rain! The Radio Telephone Operator is critical to providing heavy fire support to the team. As an RTO you have the power to control the battlefield through a variety of air and artillery strikes. Illuminations, particularly a fireship, are key to being able to operate during the night.";
+			description = "Bring the Iron Rain! The Radio Telephone Operator is critical to providing heavy fire support to the team. As an RTO you have the power to control the battlefield through a variety of air and artillery strikes. Illuminations are key to being able to operate during the night. You'll need a radio backpack though in order to call for support!";
 			image = "\vn\ui_f_vietnam\ui\mikeforce\survivalcards\arty_support.paa";
 		};
 
