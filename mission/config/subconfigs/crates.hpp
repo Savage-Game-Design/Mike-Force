@@ -52,7 +52,14 @@ class AmmoCrateLight
 		{"vn_m3a1_mag",30},
 		{"vn_m45_mag",30},
 		{"vn_m1897_buck_mag",20},
-		{"vn_m1897_fl_mag",20}};
+		{"vn_m1897_fl_mag",20},
+		{"vn_l1a1_20_mag", 30},
+		{"vn_f1_smg_mag", 30},
+		{"vn_m1918_mag", 30},
+		{"vn_m1_garand_mag", 30},
+		{"vn_mpu_mag", 30},
+		{"vn_m1928_mag", 30}
+	};
 	items[] = {};
 	backpacks[] = {};
 };
@@ -67,6 +74,8 @@ class AmmoCrateSupport
 	magazines[] = {
 		{"vn_m60_100_mag",20},
 		{"vn_rpd_100_mag",20},
+		{"vn_m63a_100_mag", 20},
+		{"vn_vz61_mag", 20},
 		{"vn_m40a1_mag",30},
 		{"vn_m127_mag",50},
 		{"vn_m128_mag",20},
