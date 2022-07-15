@@ -52,6 +52,7 @@ _box setVelocity [0,0,0];
 [_box, false] call para_s_fnc_allow_damage_persistent;
 
 _vehicleInfo set [struct_veh_asset_info_m_vehicle, _box];
+_box setVariable ['vehAssetId', _id];
 
 if (_actionsArray isEqualType []) then {
 	{
