@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=276;
+		nextID=298;
 	};
 	class Camera
 	{
@@ -280,10 +280,8 @@ class Mission
 		day=21;
 		hour=8;
 		minute=0;
-		startFogBase=150;
-		forecastFogBase=150;
-		startFogDecay=0.017999999;
-		forecastFogDecay=0.017999999;
+		startFogDecay=0.0099999998;
+		forecastFogDecay=0.0099999998;
 	};
 	class Entities
 	{
@@ -1538,8 +1536,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3420.0759,38.517082,4234.4326};
-				angles[]={0.035984326,0,6.2392149};
+				position[]={3509.6873,58.285778,8229.2412};
+				angles[]={0.040409312,0,0.057322167};
 			};
 			id=121;
 			type="vn_module_artillery";
@@ -10960,11 +10958,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=38;
+			nextID=41;
 		};
 		class Links
 		{
-			items=38;
+			items=41;
 			class Item0
 			{
 				linkID=0;
@@ -11339,6 +11337,36 @@ class Mission
 			{
 				linkID=37;
 				item0=536;
+				item1=116;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item38
+			{
+				linkID=38;
+				item0=508;
+				item1=116;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item39
+			{
+				linkID=39;
+				item0=507;
+				item1=116;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item40
+			{
+				linkID=40;
+				item0=509;
 				item1=116;
 				class CustomData
 				{
