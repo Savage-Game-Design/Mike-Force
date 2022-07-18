@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=558;
+		nextID=559;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=298;
+		nextID=309;
 	};
 	class Camera
 	{
@@ -285,7 +285,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=86;
+		items=87;
 		class Item0
 		{
 			dataType="Layer";
@@ -10951,6 +10951,23 @@ class Mission
 				name="arsenal_cleanup_0";
 			};
 			id=557;
+			type="Land_vn_object_trashcan_01";
+		};
+		class Item86
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3226.9341,39.64196,4249.2656};
+				angles[]={6.2631865,0,6.2791886};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="arsenal_cleanup_1";
+			};
+			id=558;
 			type="Land_vn_object_trashcan_01";
 		};
 	};
