@@ -20,7 +20,7 @@ private _enemyUnitCount = {side _x == east} count _allUnits;
 private _vehicleCount = count vehicles;
 private _groups = allGroups;
 private _groupsWestCount = {side _x == west} count _groups;
-private _groupsEast = {side _x == east} select _groups;
+private _groupsEast = _groups select {side _x == east};
 private _combatGroupCount = {combatBehaviour _x == "COMBAT"} count _groupsEast;
 
 
