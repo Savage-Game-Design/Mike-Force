@@ -25,16 +25,8 @@ if (_zonesToGenerateIn isEqualType 0) then {
 };
 
 private _fnc_noSitesZoneCheck = {
-	params["_position"];
-	private _result = false;
-
-	{
-		if(_position inArea _x) then {
-			_result = true;
-		};
-	} forEach vn_mf_markers_blocked_areas;
-
-	_result
+	params ["_position"];
+	vn_mf_markers_blocked_areas findIf {_position inArea _x} != -1
 };
 
 private _fnc_findPos = {
