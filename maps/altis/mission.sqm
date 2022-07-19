@@ -323,6 +323,7 @@ class CustomAttributes
 class Mission
 {
 	appId=1227700;
+	assetType="Free";
 	class Intel
 	{
 		briefingName="Mike Force (v1.00.00)";
