@@ -275,7 +275,7 @@ class Mission
 	assetType="Free";
 	class Intel
 	{
-		briefingName="Mike Force (v1.00.00)";
+		briefingName="Mike Force (v1.00.01)";
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startWind=0.1;

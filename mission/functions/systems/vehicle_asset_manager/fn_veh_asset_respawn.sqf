@@ -37,7 +37,7 @@ isNil {
 	if !(_positionOverride isEqualTo [0,0,0]) then {
 		_positionOverride = _positionOverride findEmptyPosition [0, 50, _className];
 		_vehicle setPos _positionOverride;
-		_vehicleInfo set [struct_veh_asset_info_m_respawn_info, [_respawnType, _respawnTime, locationNull]];
+		_vehicleInfo set [struct_veh_asset_info_m_respawn_info, [_respawnType, _respawnTime, [0,0,0]]];
 	} else {
 		_vehicle setPosWorld _position;
 	}

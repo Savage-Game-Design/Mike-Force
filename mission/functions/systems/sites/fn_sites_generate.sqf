@@ -24,13 +24,18 @@ if (_zonesToGenerateIn isEqualType 0) then {
   _zonesToGenerateIn = mf_s_zones select {!(_x select struct_zone_m_captured)};
 };
 
+private _fnc_noSitesZoneCheck = {
+	params ["_position"];
+	vn_mf_markers_blocked_areas findIf {_position inArea _x} != -1
+};
+
 private _fnc_findPos = {
     params ["_startPos", "_minDist", "_maxDist"];
     private _result = _startPos;
     for "_i" from 1 to _attempts do
     {
         _attempt = _startPos getPos [_minDist + random (_maxDist - _minDist), random 360];
-        if (!surfaceIsWater _attempt) exitWith {
+        if (!surfaceIsWater _attempt || !([_attempt] call _fnc_noSitesZoneCheck)) exitWith {
             _result = _attempt;
             break;
         };
