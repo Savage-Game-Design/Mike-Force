@@ -564,7 +564,7 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_m1_garand_mag",{-1,0,-1,-1}},
 			{"vn_m1_garand_t_mag",{-1,1,-1,-1}},
 			{"vn_m1918_mag",{-1,0,-1,-1}},
-			{"vn_m1918_t_mag",{-1,1,-1,-1}},
+			{"vn_m1918_t_mag",{-1,1,-1,-1}}
 		};
 
 		items[] =
