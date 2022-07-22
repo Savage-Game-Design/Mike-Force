@@ -40,7 +40,7 @@
 private _tutorialEnabled = ["para_enableTutorial"] call para_c_fnc_optionsMenu_getValue;
 
 // Early exit if the tutorial is disabled
-if (_tutorialEnabled != 1) exitWith {
+if (!_tutorialEnabled) exitWith {
 	//systemChat "Tutorial Disabled";
 	false;
 };
