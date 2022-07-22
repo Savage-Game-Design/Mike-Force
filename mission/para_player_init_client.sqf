@@ -190,7 +190,7 @@ call vn_mf_fnc_display_location_time;
 	private _version = getText(missionConfigFile >> "version");
 	private _lastVersion = (["GET", "last_version", ""] call para_s_fnc_profile_db) select 1;
 	//Open welcome screen for new players
-	private _welcomeScreenEnabled = (["para_enableWelcomeScreen"] call para_c_fnc_optionsMenu_getValue) == 1;
+	private _welcomeScreenEnabled = ["para_enableWelcomeScreen"] call para_c_fnc_optionsMenu_getValue;
 	private _versionHasChanged = _lastVersion == "" || _lastVersion != _version;
 
 	if (_versionHasChanged) exitWith {
