@@ -70,8 +70,6 @@ wreckLimit = 2;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
 
-disableRandomization[] = {"All"};
-
 showHUD[] =
 {
 	true,	// Scripted HUD (same as showHUD command)
