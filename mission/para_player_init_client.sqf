@@ -228,7 +228,16 @@ if hasInterface then
         true,
         true,
         "",
-        "local (vehicle _this) && {!(vehicle _this isKindOf 'Air' || vehicle _this isKindOf 'Man') && {speed (vehicle _this) <= 5 && {(driver vehicle _this) isEqualTo _this && {vn_fnc_masterarm_action_objects findif {(vehicle _this distance _x) < 25} > -1}}}}",
+        toString {
+            private _vehicle = vehicle _this;
+            local _vehicle && {
+                !(_vehicle isKindOf 'Air' || _vehicle isKindOf 'Man') && {
+                    speed _vehicle <= 5 && {
+                        driver _vehicle == _this && {vn_fnc_masterarm_action_objects findif {(_vehicle distance _x) < 25} > -1}
+                    }
+                }
+            }
+        },
         25
     ];
 
