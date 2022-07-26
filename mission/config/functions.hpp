@@ -329,6 +329,19 @@ class CfgFunctions
 			class player_can_enter_vehicle {};
 		};
 
+		class system_vehicle_saving
+		{
+			file = "functions\systems\vehicle_saving";
+			class add_save_load_actions {};
+			class area_check {};
+			class crate_load {};
+			class full_load {};
+			class full_save {};
+			class start_save_loop {};
+			class veh_get_data {};
+			class veh_load {};
+		};
+
 		class system_zones
 		{
 			file = "functions\systems\zones";

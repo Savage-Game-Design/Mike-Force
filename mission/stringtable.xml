@@ -991,6 +991,19 @@
         <Original>==== Dropped equipment minimum lifetime ====</Original>
         <English>==== Dropped equipment minimum lifetime ====</English>
       </Key>
+      <Key ID="STR_vn_mf_param_cleanup_dropped_gear_lifetime">
+        <Original>==== Dropped equipment minimum lifetime ====</Original>
+        <English>==== Dropped equipment minimum lifetime ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_saving_header">
+        <Original>======== Vehicle And Crate Saving Settings ========</Original>
+        <English>======== Vehicle And Crate Saving Settings ========</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_saving_autosave_timer">
+        <Original>==== Time in between each autosave ====</Original>
+        <English>==== Time in between each autosave ====</English>
+      </Key>
+
     </Container>
     <Container name="voteMenu">
       <Key ID="STR_vn_mf_voteMenu_submitVote">
