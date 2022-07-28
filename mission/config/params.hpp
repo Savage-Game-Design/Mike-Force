@@ -595,5 +595,5 @@ class saving_autosave_timer
     title = $STR_vn_mf_param_saving_autosave_timer;
     values[] = {0, 5, 10, 15, 20, 30, 45, 60};
     texts[] = {"No autosave", "5 minutes", "10 minutes", "15 minutes", "20 minutes", "30 minutes", "45 minutes", "1 hour"};
-    default = 20;
+    default = 0;
 };

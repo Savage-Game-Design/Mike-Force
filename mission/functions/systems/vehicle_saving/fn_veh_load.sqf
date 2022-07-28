@@ -59,26 +59,9 @@ if (count _vehicles >= 1) then {
 
 
 	// Empty vehicle inventory and put the saved inventory back in
-	_mags = (_data select 3) select 0;
-	_weapons = (_data select 3) select 1;
-	_items = (_data select 3) select 2;
-	_backpacks = (_data select 3) select 3;
-	clearMagazineCargo _veh;
-	clearWeaponCargo _veh;
-	clearItemCargo _veh;
-	clearBackpackCargo _veh;
-	{
-		_veh addMagazineAmmoCargo [_x select 0, 1, _x select 1];	
-	} forEach _mags;
-	{
-		_veh addWeaponCargo [_x, 1];
-	} forEach _weapons;
-	{
-		_veh addItemCargo [_x, 1];
-	} forEach _items;
-	{
-		_veh addbackpackCargo [_x, 1];
-	} forEach _backpacks;
+	_inv = (_data select 3);
+
+	[_veh, _inv] call vn_mf_fnc_inv_set_data;
 
 
 	// Load saved fuel and ammo cargo

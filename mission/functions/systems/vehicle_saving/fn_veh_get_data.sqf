@@ -23,10 +23,6 @@
 				[1] - Fuel
 				[2] - Turret magazines
 				[3] - Array containing cargo inventory of vehicle
-					[0] - Array containing array of magazines and their ammo count
-					[1] - Array containing weapons (Not yet with attached accessories saved)
-					[2] - Array containing items
-					[3] - Array containing backpacks (Not yet with inventory saved)
 			[4] - Array containing cargo fuel and ammo of vehicle
 				[0] - Cargo fuel
 				[1] - Cargo ammo
@@ -45,7 +41,7 @@ params ["_veh"];
 
 _weaponsData = [(magazinesAmmo [_veh, true])];
 
-_vehInventory = [magazinesAmmoCargo _veh, weaponCargo _veh, itemCargo _veh, backpackCargo _veh];
+_vehInventory = [_veh] call vn_mf_fnc_inv_get_data;
 
 
 _id = _veh getVariable "vehAssetId";
@@ -57,4 +53,4 @@ _packaged = ((_class splitString "-") select 0 == "vn_us_komex_medium_01");
 
 
 _vehData = [_id, _class, _loc, _data, _dataCargo, _packaged];
-_vehData
+return _vehData;

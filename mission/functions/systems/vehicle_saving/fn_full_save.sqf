@@ -16,14 +16,11 @@
 */
 
 
-// Fuck me I need to be better about comments
-// Plus the crates save should probably also be structured a bit more like the vehicles for consistency
-
 
 if (isServer) then {
 	["SET", "veh_save_data", []] call para_s_fnc_profile_db;
 
-	// Vehicles
+	// Find all relevant vehicles
 	_vehicleIDList = missionNamespace getVariable ["veh_asset_vehicle_ids", []];
 	_allVehicles = [];
 	{
@@ -34,7 +31,7 @@ if (isServer) then {
 	_vehicles = _allVehicles select {!(_x call vn_mf_fnc_area_check)};
 
 
-	// Supply crates
+	// Find all relevant supply crates
 	private _supplyDropsConfig = (missionConfigFile >> "gamemode" >> "supplydrops");
 	private _crateTypeArray = "true" configClasses _supplyDropsConfig apply {
   		getText (_x >> "className");
@@ -45,33 +42,31 @@ if (isServer) then {
 	_crates = _crates select {!(_x call vn_mf_fnc_area_check)};
 	_crates = _crates select {!((_x getVariable ["supply_drop_config", ""]) isEqualTo "")};
 
-
+	// Prepare empty save data variable
 	_saveData = [];
 
+	// Go through all vehicles and save them
 	_vehsToSave = [];
 	{
-		_vehsToSave append [_x call vn_mf_fnc_veh_get_data];
+		_vehData = _x call vn_mf_fnc_veh_get_data;
+
+		_vehsToSave pushBack _vehData;
 	} forEach _vehicles;
 
 	_saveData pushBack _vehsToSave;
 
+	// Go through all crates and save them
 	_cratesToSave = [];
-	{ // [Classname, [Pos, Dir], Magazines, Weapons, Items, Config entry] (Currently doesn't support weapon attachments being saved SHHH don't tell the infantry)
-		_crateClassName = typeOf _x;
-		_crateLoc = [getPos _x, getDir _x];
-		_crateMagazines = magazinesAmmoCargo _x;
-		_crateWeapons = weaponCargo _x;
-		_crateItems = itemCargo _x;
-		_crateBackpacks = backpackCargo _x;
-		_crateDropConfig = _x getVariable "supply_drop_config";
+	{ 
+		_crateData [_x] call vn_mf_crate_save;
 
-		_cratesToSave pushBack [_crateClassName, _crateLoc, _crateMagazines, _crateWeapons, _crateItems, _crateBackpacks, _crateDropConfig];
+		_cratesToSave pushBack _crateData;
 	} forEach _crates;
 
 	_saveData pushBack _cratesToSave;
 
 	
-
+	// Save the save data
 	["SET", "veh_save_data", _saveData] call para_s_fnc_profile_db;
 	["SAVE"] call para_s_fnc_profile_db;
 

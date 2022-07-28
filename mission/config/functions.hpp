@@ -335,11 +335,14 @@ class CfgFunctions
 			class add_save_load_actions {};
 			class area_check {};
 			class crate_load {};
+			class crate_save {};
 			class full_load {};
 			class full_save {};
 			class start_save_loop {};
 			class veh_get_data {};
 			class veh_load {};
+			class inv_get_data {};
+			class inv_set_data {};
 		};
 
 		class system_zones

@@ -17,11 +17,15 @@
 	    [TheBiggestTank] call vn_mf_fnc_area_check;
 */
 
-// TODO: Fix this function
-
 params["_obj"];
 _inArea = false;
+
+/*  OLD CODE DOESN'T WORK
 {
 	if (_obj inArea _x) exitWith {_inArea = true};
 } forEach (allMapMarkers select {((_x splitString "_") select 0) == "rid"});
+*/
+
+_inarea = vn_mf_markers_blocked_areas findIf {_obj inArea _x} > -1;
+
 _inArea;
