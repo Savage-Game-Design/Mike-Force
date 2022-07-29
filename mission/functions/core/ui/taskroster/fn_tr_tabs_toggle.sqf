@@ -16,8 +16,8 @@
 	Example(s):
 		[VN_TR_TABPROFILE_CTRL] call vn_mf_fnc_tr_tabs_toggle;
 */
-#include "..\..\..\config\ui\ui_def_base.inc"
-#include "..\..\..\config\ui\ui_def_idc.hpp"
+#include "..\..\..\..\config\ui\ui_def_base.inc"
+#include "..\..\..\..\config\ui\ui_def_idc.hpp"
 params ["_ctrlActive"];
 private _tabsAndControls = createHashMapFromArray [
 	[ctrlClassName VN_TR_TABPROFILE_CTRL, VN_TR_OVERVIEW_CTRL],

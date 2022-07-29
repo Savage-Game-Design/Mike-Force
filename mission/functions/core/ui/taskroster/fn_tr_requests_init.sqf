@@ -15,7 +15,7 @@
 	Example(s):
 		[] call vn_mf_fnc_tr_requests_init;
 */
-#include "..\..\..\config\ui\ui_def_base.inc"
+#include "..\..\..\..\config\ui\ui_def_base.inc"
 diag_log "fn_tr_requests_init.sqf";
 //cleanup everything
 call vn_mf_fnc_tr_cleanRightSheet;
