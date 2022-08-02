@@ -25,7 +25,8 @@ private _playerGroupArray = missionNamespace getVariable [_playerGroup,[]];
 _player setVariable ["vn_mf_db_player_group", _team, true];
 
 // Remove the player from their original team's group array
-missionNamespace setVariable [_playerGroup, _playerGroupArray - [_player]];
+_playerGroupArray deleteAt (_playerGroupArray find _player);
+missionNamespace setVariable [_playerGroup, _playerGroupArray];
 publicVariable _playerGroup;
 
 // add them to the new group
