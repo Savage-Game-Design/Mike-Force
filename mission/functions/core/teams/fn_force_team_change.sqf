@@ -29,10 +29,10 @@ _playerGroupArray deleteAt (_playerGroupArray find _player);
 missionNamespace setVariable [_playerGroup, _playerGroupArray];
 publicVariable _playerGroup;
 
-// add them to the new group
-private _nextPlayerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"]; //did vn_mf_db_player_group fail to set?
-private _nextPlayerGroupArray = missionNamespace getVariable [_nextPlayerGroup, []];
-_nextPlayerGroupArray pushBackUnique _player;
+// add them to the new team
+private _nextPlayerTeam = _player getVariable ["vn_mf_db_player_group", "FAILED"];
+private _nextPlayerTeamArray = missionNamespace getVariable [_nextPlayerTeam, []];
+_nextPlayerTeamArray pushBackUnique _player;
 
 missionNamespace setVariable [_nextPlayerGroup, _nextPlayerGroupArray];
 publicVariable _nextPlayerGroup;
