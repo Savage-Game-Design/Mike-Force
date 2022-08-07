@@ -53,4 +53,4 @@ _packaged = ((_class splitString "-") select 0 == "vn_us_komex_medium_01");
 
 
 _vehData = [_id, _class, _loc, _data, _dataCargo, _packaged];
-return _vehData;
+_vehData

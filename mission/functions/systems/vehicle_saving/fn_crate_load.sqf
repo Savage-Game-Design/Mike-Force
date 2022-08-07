@@ -22,11 +22,18 @@ params ["_crateData"];
 // _crateData looks like this = [Classname, [Pos, Dir], Inventory data, Config entry]
 
 
-_crateData params ["_className", "_loc", "_inv", "_backpacks", "_config"];
+_crateData params ["_className", "_loc", "_inv", "_config"];
+
 _crate = createVehicle [_className, [0,0,0], [], 1, "NONE"];
+
+
 _crate setPos (_loc select 0);
 _crate setDir (_loc select 1);
+
+
 [_crate, _inv] call vn_mf_fnc_inv_set_data;
+
+[_crate, false] call para_s_fnc_allow_damage_persistent;
 
 
 _crate setVariable ["supply_drop_config", _config, true];

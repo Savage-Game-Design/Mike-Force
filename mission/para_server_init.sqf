@@ -320,10 +320,11 @@ diag_log "VN MikeForce: Initialising Performance Logging";
 diag_log "VN MikeForce: Initialising Dynamic Groups";
 ["Initialize"] call para_c_fnc_dynamicGroups;
 
-// If vehicle and crate autosave is set to anything above zero start the autosave loop
-private _vehicleSaveTimer = "vehicle_saving" call BIS_fnc_getParamValue;
+// If vehicle and crate autosave is set to anything above zero start the autosave loop and load last save
+private _vehicleSaveTimer = "saving_autosave_timer" call BIS_fnc_getParamValue;
 if (_vehicleSaveTimer > 0) then {
     diag_log "VN MikeForce: Starting Vehicle And Crate Save/Load Loop";
     [_vehicleSaveTimer] call vn_mf_fnc_start_save_loop;
+    [] call vn_mf_fnc_full_load;
 };
 

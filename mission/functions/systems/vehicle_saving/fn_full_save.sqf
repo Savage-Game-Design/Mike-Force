@@ -30,20 +30,24 @@ if (isServer) then {
 
 	_vehicles = _allVehicles select {!(_x call vn_mf_fnc_area_check)};
 
-
-	// Find all relevant supply crates
-	private _supplyDropsConfig = (missionConfigFile >> "gamemode" >> "supplydrops");
-	private _crateTypeArray = "true" configClasses _supplyDropsConfig apply {
-  		getText (_x >> "className");
-	};
 	//_crateTypeArray = ["vn_b_ammobox_supply_05", "vn_us_komex_small_02", "vn_b_ammobox_supply_10", "vn_b_ammobox_supply_06", "vn_b_ammobox_supply_02", "vn_b_ammobox_supply_03", "vn_b_ammobox_supply_01"];
+	// Find all relevant supply crates
+	private _supplyDropsConfig = "true" configClasses (missionConfigFile >> "gamemode" >> "supplydrops");
+	private _crateTypeArray = [];
+	{
+		 _crateTypeArray append ("true" configClasses _x apply {
+			getText (_x >> "className");
+		});
+		_crateTypeArray = _crateTypeArray arrayIntersect _crateTypeArray;
+		
+	} forEach _supplyDropsConfig;
 	
 	_crates = entities [_crateTypeArray, [], false, true];
 	_crates = _crates select {!(_x call vn_mf_fnc_area_check)};
 	_crates = _crates select {!((_x getVariable ["supply_drop_config", ""]) isEqualTo "")};
 
 	// Prepare empty save data variable
-	_saveData = [];
+	_saveData = [[], []];
 
 	// Go through all vehicles and save them
 	_vehsToSave = [];
@@ -53,19 +57,19 @@ if (isServer) then {
 		_vehsToSave pushBack _vehData;
 	} forEach _vehicles;
 
-	_saveData pushBack _vehsToSave;
+	_saveData set [0, _vehsToSave];
 
 	// Go through all crates and save them
 	_cratesToSave = [];
 	{ 
-		_crateData [_x] call vn_mf_crate_save;
+		_crateData = [_x] call vn_mf_fnc_crate_save;
 
 		_cratesToSave pushBack _crateData;
 	} forEach _crates;
 
-	_saveData pushBack _cratesToSave;
+	_saveData set [1, _cratesToSave];
 
-	
+
 	// Save the save data
 	["SET", "veh_save_data", _saveData] call para_s_fnc_profile_db;
 	["SAVE"] call para_s_fnc_profile_db;

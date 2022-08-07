@@ -578,7 +578,7 @@ class cleanup_dropped_gear_lifetime
     default = 300;
 };
 
-class Spacer21: Spacer1 {};
+class Spacer22: Spacer1 {};
 
 class saving_header
 {
@@ -588,7 +588,7 @@ class saving_header
     default = "";
 };
 
-class Spacer22: Spacer1 {};
+class Spacer23: Spacer1 {};
 
 class saving_autosave_timer
 {

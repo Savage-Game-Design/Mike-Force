@@ -16,16 +16,16 @@
 */
 
 params[
-	["_minBtwnSaves", 20, [0]];
+	["_minBtwnSaves", 20]
 ];
 
 if (isServer) then {
 
 	// Execute save every 20 minutes
 	
-	[] spawn {
+	[_minBtwnSaves] spawn {
 		while {true} do {
-			sleep (_minBtwnSaves * 60);
+			sleep ((_this select 0) * 60);
 			[] call vn_mf_fnc_full_save;
 		};
 	};

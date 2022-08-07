@@ -15,17 +15,22 @@
 	    [] call vn_mf_fnc_full_load;
 */
 
-_savedData = [];
+_savedData = [[], []];
 // To be extra sure we don't load before ID's have been assigned
 waitUntil { (((vehicles select {typeOf _x == "vn_b_air_oh6a_01"}) select 0) getVariable ["vehAssetId", ""]) != ""};
 
 // Load saved data
-["GET", "veh_save_data", []] call para_s_fnc_profile_db params ["", "_savedData"];
-	
-{
-	[_x] call vn_mf_fnc_veh_load;
-} forEach (_savedData select 0);
-	
-{
-	[_x] call vn_mf_fnc_crate_load;
-} forEach (_savedData select 1);
+["GET", "veh_save_data", _savedData] call para_s_fnc_profile_db params ["", "_savedData"];
+
+// Load vehicles
+
+  {
+    [_x] call vn_mf_fnc_veh_load;
+  } forEach (_savedData select 0);
+
+
+// Load crates
+
+  {
+    [_x] call vn_mf_fnc_crate_load;
+  } forEach (_savedData select 1);

@@ -28,4 +28,4 @@ _inArea = false;
 
 _inarea = vn_mf_markers_blocked_areas findIf {_obj inArea _x} > -1;
 
-_inArea;
+_inArea

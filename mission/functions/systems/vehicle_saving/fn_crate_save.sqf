@@ -21,14 +21,14 @@ params ["_crate"];
 // _crateData looks like this = [Classname, [Pos, Dir], Inventory data, Config entry]
 
 
-_crateClassName = typeOf _x;
-_crateLoc = [getPos _x, getDir _x];
+_crateClassName = typeOf _crate;
+_crateLoc = [getPos _crate, getDir _crate];
 
 _crateInv = [_crate] call vn_mf_fnc_inv_get_data;
 
-_crateDropConfig = _x getVariable "supply_drop_config";
+_crateDropConfig = _crate getVariable "supply_drop_config";
 _crate setMass ((getMass _crate) min 2500);
 
 _crateData = [_crateClassName, _crateLoc, _crateInv, _crateDropConfig];
 
-return _crateData;
+_crateData
