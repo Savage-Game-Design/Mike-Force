@@ -63,7 +63,6 @@ if (count _emptyContainers > 0) then {
 		_cargoWeapons = _containerData select 2;
 		_cargoBackpacks = _containerData select 3;
 
-		systemChat str _emptyContainersEntry;
 
 		{
 			_container addItemCargoGlobal [_x, 1];
