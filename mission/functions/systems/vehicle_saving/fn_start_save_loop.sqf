@@ -23,9 +23,9 @@ if (isServer) then {
 
 	// Execute save every 20 minutes
 	
-	[_minBtwnSaves] spawn {
+	_minBtwnSaves spawn {
 		while {true} do {
-			sleep ((_this select 0) * 60);
+			sleep (_this * 60);
 			[] call vn_mf_fnc_full_save;
 		};
 	};
