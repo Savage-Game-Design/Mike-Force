@@ -21,14 +21,14 @@ if (isServer) then {
 	["SET", "veh_save_data", []] call para_s_fnc_profile_db;
 
 	// Find all relevant vehicles
-	_vehicleIDList = missionNamespace getVariable ["veh_asset_vehicle_ids", []];
-	_allVehicles = [];
+	private _vehicleIDList = missionNamespace getVariable ["veh_asset_vehicle_ids", []];
+	private _allVehicles = [];
 	{
 		_veh = [_x] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
 		_allVehicles pushBack _veh;
 	} forEach _vehicleIDList;
 
-	_vehicles = _allVehicles select {!(_x call vn_mf_fnc_area_check)};
+	private _vehicles = _allVehicles select {!(_x call vn_mf_fnc_area_check)};
 
 	//_crateTypeArray = ["vn_b_ammobox_supply_05", "vn_us_komex_small_02", "vn_b_ammobox_supply_10", "vn_b_ammobox_supply_06", "vn_b_ammobox_supply_02", "vn_b_ammobox_supply_03", "vn_b_ammobox_supply_01"];
 	// Find all relevant supply crates
@@ -42,7 +42,7 @@ if (isServer) then {
 		
 	} forEach _supplyDropsConfig;
 	
-	_crates = entities [_crateTypeArray, [], false, true];
+	private _crates = entities [_crateTypeArray, [], false, true];
 	_crates = _crates select {!(_x call vn_mf_fnc_area_check)};
 	_crates = _crates select {!((_x getVariable ["supply_drop_config", ""]) isEqualTo "")};
 
