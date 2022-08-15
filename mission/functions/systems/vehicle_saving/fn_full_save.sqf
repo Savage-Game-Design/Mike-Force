@@ -42,7 +42,7 @@ if (isServer) then {
 		
 	} forEach _supplyDropsConfig;
 	
-	_crates = entities [_crateTypeArray, [], false, true];
+	private _crates = entities [_crateTypeArray, [], false, true];
 	_crates = _crates select {!(_x call vn_mf_fnc_area_check)};
 	_crates = _crates select {!((_x getVariable ["supply_drop_config", ""]) isEqualTo "")};
 
