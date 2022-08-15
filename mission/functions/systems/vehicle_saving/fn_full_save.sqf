@@ -22,7 +22,7 @@ if (isServer) then {
 
 	// Find all relevant vehicles
 	private _vehicleIDList = missionNamespace getVariable ["veh_asset_vehicle_ids", []];
-	_allVehicles = [];
+	private _allVehicles = [];
 	{
 		_veh = [_x] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
 		_allVehicles pushBack _veh;
