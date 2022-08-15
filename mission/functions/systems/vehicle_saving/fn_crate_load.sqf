@@ -24,7 +24,7 @@ params ["_crateData"];
 
 _crateData params ["_className", "_loc", "_inv", "_config"];
 
-_crate = createVehicle [_className, [0,0,0], [], 1, "NONE"];
+private _crate = createVehicle [_className, [0,0,0], [], 1, "NONE"];
 
 
 _crate setPos (_loc select 0);
