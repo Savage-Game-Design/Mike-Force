@@ -21,7 +21,7 @@ if (isServer) then {
 	["SET", "veh_save_data", []] call para_s_fnc_profile_db;
 
 	// Find all relevant vehicles
-	_vehicleIDList = missionNamespace getVariable ["veh_asset_vehicle_ids", []];
+	private _vehicleIDList = missionNamespace getVariable ["veh_asset_vehicle_ids", []];
 	_allVehicles = [];
 	{
 		_veh = [_x] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
