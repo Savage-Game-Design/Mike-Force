@@ -28,7 +28,7 @@ if (isServer) then {
 		_allVehicles pushBack _veh;
 	} forEach _vehicleIDList;
 
-	_vehicles = _allVehicles select {!(_x call vn_mf_fnc_area_check)};
+	private _vehicles = _allVehicles select {!(_x call vn_mf_fnc_area_check)};
 
 	//_crateTypeArray = ["vn_b_ammobox_supply_05", "vn_us_komex_small_02", "vn_b_ammobox_supply_10", "vn_b_ammobox_supply_06", "vn_b_ammobox_supply_02", "vn_b_ammobox_supply_03", "vn_b_ammobox_supply_01"];
 	// Find all relevant supply crates
