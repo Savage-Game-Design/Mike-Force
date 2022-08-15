@@ -46,7 +46,7 @@ _vehInventory = [_veh] call vn_mf_fnc_inv_get_data;
 
 _id = _veh getVariable "vehAssetId";
 _class = typeOf _veh;
-_loc = [getPos _veh, getDir _veh];
+_loc = [getPosWorld _veh, [VectorDir _veh, vectorUp _veh]];
 _data = [damage _veh, fuel _veh, _weaponsData, _vehInventory];
 _dataCargo = [getFuelCargo _veh, getAmmoCargo _veh];
 _packaged = ((_class splitString "-") select 0 == "vn_us_komex_medium_01");

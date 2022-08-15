@@ -33,8 +33,8 @@ if (count _vehicles >= 1) then {
 
 
 	// Load vehicle position and direction
-	_veh setPos (_loc select 0);
-	_veh setDir (_loc select 1);
+	_veh setPosWorld (_loc select 0);
+	_veh setVectorDirAndUp (_loc select 1);
 
 
 	// Load saved damage and fuel
