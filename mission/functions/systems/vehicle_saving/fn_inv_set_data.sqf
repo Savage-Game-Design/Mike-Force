@@ -52,16 +52,11 @@ _emptyContainers = everyContainer _obj;
 if (count _emptyContainers > 0) then {
 	{
 		
-		_containerClassName = _x select 0;
-		_containerData = _x select 1;
+		_x params ["_containerClassName", "_containerData"];
+		_containerData params ["_cargoItems", "_cargoMags", "_cargoWeapons", "_cargoBackpacks"];
 
-		_emptyContainersEntry = (_emptyContainers select {(_x select 0) == _containerClassName}) select 0;
-		_container = _emptyContainersEntry select 1;
-
-		_cargoItems = _containerData select 0;
-		_cargoMags = _containerData select 1;
-		_cargoWeapons = _containerData select 2;
-		_cargoBackpacks = _containerData select 3;
+		private _emptyContainersEntry = (_emptyContainers select {(_x select 0) == _containerClassName}) select 0;
+		private _container = _emptyContainersEntry select 1;
 
 
 		{
