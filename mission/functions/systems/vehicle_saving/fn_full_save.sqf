@@ -60,7 +60,7 @@ if (isServer) then {
 	_saveData set [0, _vehsToSave];
 
 	// Go through all crates and save them
-	_cratesToSave = [];
+	private _cratesToSave = [];
 	{ 
 		_crateData = [_x] call vn_mf_fnc_crate_save;
 
