@@ -15,7 +15,7 @@
 	    [] call vn_mf_fnc_full_load;
 */
 
-_savedData = [[], []];
+private _savedData = [[], []];
 // To be extra sure we don't load before ID's have been assigned
 waitUntil { (((vehicles select {typeOf _x == "vn_b_air_oh6a_01"}) select 0) getVariable ["vehAssetId", ""]) != ""};
 
