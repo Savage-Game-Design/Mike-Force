@@ -18,13 +18,14 @@
 
 params ["_obj"];
 
-_startLoad = _obj addAction ["Start load", {
-	if (isServer) then {
-		[] call vn_mf_fnc_full_load;
-		[player, _this select 2] remoteExec ["removeAction", 0, true];
-	};
-}];
+{
+	if (!hasInterface) exitWith {};
+	_startLoad = _obj addAction ["Start load", {
+			[] remoteExec ["vn_mf_fnc_full_load", 2];
+			player removeAction _this select 2;
+	}];
 
-_obj addAction ["Save vehicles and crates", {
-	[] call vn_mf_fnc_full_save;
-}];
+	_obj addAction ["Save vehicles and crates", {
+		[] remoteExec ["vn_mf_fnc_full_save", 2];
+	}];
+} remoteExec ["call", 0, true];
