@@ -47,7 +47,7 @@ if (isServer) then {
 	_crates = _crates select {!((_x getVariable ["supply_drop_config", ""]) isEqualTo "")};
 
 	// Prepare empty save data variable
-	_saveData = [[], []];
+	private _saveData = [[], []];
 
 	// Go through all vehicles and save them
 	_vehsToSave = [];
