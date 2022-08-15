@@ -18,7 +18,7 @@
 */
 
 params["_obj"];
-_inArea = false;
+private _inArea = false;
 
 /*  OLD CODE DOESN'T WORK
 {
