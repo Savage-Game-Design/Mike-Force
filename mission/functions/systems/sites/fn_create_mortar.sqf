@@ -18,7 +18,7 @@
 
 params ["_position"];
 
-private _mortar = [[selectRandom vehicles_vc_mortars, _position] call para_g_fnc_create_vehicle, [], grpNull];
+private _mortar = [[selectRandom vehicles_vc_mortars, _position] call para_g_fnc_create_vehicle_safely, [], grpNull];
 
 private _vehicles = [_mortar select 0];
 private _units = _mortar select 1;
