@@ -50,15 +50,6 @@ player addEventHandler ["Respawn", _fnc_disableChatter];
 //This way they can still exit if they want.
 player enableSimulation false;
 
-//Assign player to Mike Force if they aren't in a group or failed to join one.
-private _playerGroup = player getVariable ["vn_mf_db_player_group", "FAILED"];
-if(_playerGroup == "FAILED") then // Should be the only time this check is needed.
-{
-	[player, "MikeForce"] call vn_mf_fnc_force_team_change;
-} else {
-	[player, _playerGroup] call vn_mf_fnc_force_team_change;
-};	
-
 // Start loading screen, so we wait while server init completes.
 startLoadingScreen ["Welcome to Mike Force!", "MikeForce_loadingScreen"];
 [selectRandom (getArray(missionConfigFile >> "gamemode" >> "loadingScreens" >> "images")),5002] call vn_mf_fnc_update_loading_screen;
