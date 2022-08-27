@@ -18,10 +18,12 @@
 */
 #include "..\..\..\..\config\ui\ui_def_base.inc"
 #include "..\..\..\..\config\ui\ui_def_idc.hpp"
+
 params ["_ctrlActive"];
 private _tabsAndControls = createHashMapFromArray [
 	[ctrlClassName VN_TR_TABPROFILE_CTRL, VN_TR_OVERVIEW_CTRL],
-	[ctrlClassName VN_TR_TABSUPPORT_CTRL, VN_TR_REQUESTS_CTRL]
+	[ctrlClassName VN_TR_TABSUPPORT_CTRL, VN_TR_REQUESTS_CTRL],
+	[ctrlClassName VN_TR_TABTASKS_CTRL, VN_TR_TASKS_CTRL]
 ];
 {
 	_y ctrlShow false;

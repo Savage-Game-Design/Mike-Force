@@ -1695,5 +1695,21 @@
         <Original>Southeastern Supply Depot</Original>
       </Key>
     </Container>
+    <Container name="Taskroster">
+      <Key ID="STR_vn_mf_tr_tasks_label_main_tasks_text">
+        <Original>Main Tasks</Original>
+      </Key>
+      <Key ID="STR_vn_mf_tr_tasks_btn_choose_new_zone_text">
+        <Original>Choose new zone</Original>
+      </Key>
+      <Key ID="STR_vn_mf_tr_tasks_label_accepted_support_tasks_text">
+        <Original>Support tasks</Original>
+      </Key>
+      <Key ID="STR_vn_mf_tr_tasks_pending_requests_text">
+        <Original>Pending requests</Original>
+      </Key>
+      <Key ID="STR_vn_mf_tr_tasks_please_select_zone">
+        <Original>Please select a zone</Original>
+      </Key>
   </Package>
 </Project>

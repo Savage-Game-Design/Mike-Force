@@ -191,6 +191,12 @@
 #define VN_TR_SHEET_R_W			UIW(19.5)
 #define VN_TR_SHEET_R_H			UIH(25)
 
+//Whole folder
+#define VN_TR_SHEETS_X			VN_TR_SHEET_L_X
+#define VN_TR_SHEETS_Y			VN_TR_SHEET_L_Y
+#define VN_TR_SHEETS_W			(VN_TR_SHEET_L_W + VN_TR_SHEET_R_W)
+#define VN_TR_SHEETS_H			VN_TR_SHEET_L_H
+
 //Cordles in the center
 #define VN_TR_CORDLES_X			UIX_CL(1.6)
 #define VN_TR_CORDLES_Y			UIY_CU(3.9)

@@ -128,6 +128,7 @@ class CfgFunctions
 			class tr_characterInfo_ribbon_setIcon {};
 
 			/* TaskRoster: */
+			class tr_tasks_init {file = "functions\ui\taskroster\fn_tr_tasks_init.sqf";};
 		};
 
 		class ui_timerOverlay

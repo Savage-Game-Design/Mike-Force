@@ -1289,3 +1289,10 @@ class MikeForce_loadingScreen
 	};
 
 };
+
+import RscTree;
+class vn_mf_RscTree: RscTree
+{
+	font = USEDFONT;
+	sizeEx = TXT_M;
+};

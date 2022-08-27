@@ -985,3 +985,51 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 		};
 	};
 };
+
+class vn_tr_RscTaskItem: vn_mf_RscControlsGroupNoScrollbarHV
+{
+	x = 0;
+	y = 0;
+	w = VN_TR_SHEET_L_W - UIW(4);
+	h = UIH(6);
+	class Controls
+	{
+		class Background: vn_mf_RscText
+		{
+			idc = -1;
+			x = 0;
+			y = 0;
+			w = VN_TR_SHEET_L_W - UIW(4.5);
+			h = UIH(6);
+			colorBackground[] = {0,0,0,0.2};
+		};
+		class Icon: vn_mf_RscPicture
+		{
+			idc = -1;
+			x = 0;
+			y = 0;
+			w = UIW(1);
+			h = UIH(1);
+			colorText[] = {0,0,0,1};
+		};
+		class Title: vn_mf_RscStructuredText
+		{
+			idc = -1;
+			text = "Task Title";
+			x = UIW(1);
+			y = 0;
+			w = VN_TR_SHEET_L_W - UIW(5);
+			h = UIH(1);
+			size = TXT_XL;
+		};
+		class ZoneTasks: vn_mf_RscListBox
+		{
+			idc = -1;
+			x = 0;
+			y = UIH(1);
+			w = VN_TR_SHEET_L_W - UIW(4.5);
+			h = UIH(5);
+			colorBackground[] = {0,0,0,0};
+		};
+	};
+};

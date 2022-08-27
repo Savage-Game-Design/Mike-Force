@@ -33,10 +33,10 @@ class vn_tr_disp_taskRoster_Main
 			tooltip = "";
 		};
 		
-		class vn_sheet_overview: vn_sheet_overview_accepted_base
-		{
-			idc = -1;
-		};
+		/* class vn_sheet_overview: vn_sheet_overview_accepted_base */
+		/* { */
+		/* 	idc = -1; */
+		/* }; */
 		
 		//Background Image
 		class vn_sheet_clean_R: vn_sheet_clean_R_base
@@ -73,6 +73,7 @@ class vn_tr_disp_taskRoster_Main
 	{
 		class Overview: vn_mf_RscControlsGroupNoScrollbarHV
 		{
+			show = 0;
 			idc = VN_TR_OVERVIEW_IDC;
 			x = VN_TR_SHEET_L_X;
 			y = VN_TR_SHEET_L_Y;
@@ -80,6 +81,14 @@ class vn_tr_disp_taskRoster_Main
 			h = VN_TR_SHEET_L_H;
 			class Controls
 			{
+				class Background: vn_mf_RscPicture
+				{
+					text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_overview_accepted.paa";
+					x = 0;
+					y = 0;
+					w = VN_TR_SHEET_L_W;
+					h = VN_TR_SHEET_L_H;
+				};
 				class team_logo: vn_mf_RscPicture
 				{
 					idc = VN_TR_TEAMLOGO_IDC;
@@ -323,6 +332,172 @@ class vn_tr_disp_taskRoster_Main
 				};
 			};
 		};
+		class Tasks: Requests
+		{
+#define COLOR_BACKGROUND_FOLDER {0.91, 0.82, 0.67, 1}
+#define COLOR_PAPER {0.9, 0.9, 0.9, 1}
+			idc = VN_TR_TASKS_IDC;
+			show = 1;
+			x = VN_TR_SHEETS_X;
+			y = VN_TR_SHEETS_Y;
+			w = VN_TR_SHEETS_W;
+			h = VN_TR_SHEETS_H;
+			class Controls: Controls
+			{
+				class BackgroundImage: BackgroundImage
+				{
+					text = "img\TaskRoster\Tasks.paa";
+				};
+				class LabelMainTasks: vn_mf_RscStructuredText
+				{
+					idc = -1;
+					text = "$STR_vn_mf_tr_tasks_label_main_tasks_text";
+					x = UIW(2.3);
+					y = UIH(2.2);
+					w = UIW(5);
+					h = UIH(1);
+					class Attributes
+					{
+						font = USEDFONT;
+						color = "#000000";
+						colorLink = "#D09B43";
+						align = "left";
+						shadow = 1;
+					};
+				};
+				class BtnChooseNewZone: vn_mf_RscButton
+				{
+					idc = -1;
+					text = "$STR_vn_mf_tr_tasks_btn_choose_new_zone_text";
+					sizeEx = TXT_S;
+					x = VN_TR_SHEET_L_W - UIW(7.5);
+					y = UIH(2.25);
+					w = UIW(5.5);
+					h = UIH(0.9);
+					colorText[] = {0,0,0,1};
+				};
+#define _H 7
+				class TreeMainTaskList: vn_mf_RscTree
+				{
+					idc = VN_TR_TASKS_TREEMAINTASKLIST_IDC;
+					x = UIW(2.2);
+					y = UIH(4);
+					w = VN_TR_SHEET_L_W - UIW(4.4);
+					h = UIH(_H);
+					// colorBackground[] = COLOR_PAPER;
+					colorText[] = {0,0,0,1};
+					borderSize = 1;
+					/* colorBorder[] = {0,0,0,1}; */
+					colorLines[] = {0,0,0,1};
+					colorSelect[] = {0.9,0.9,0.2,0.5};
+					colorArrow[] = {0,0,0,1};
+					colorPicture[] = {0,0,0,1};
+					hiddenTexture = "";
+					expandedTexture = "";
+				};
+				class LabelAcceptedSupportTasks: LabelMainTasks
+				{
+					idc = -1;
+					text = "$STR_vn_mf_tr_tasks_label_accepted_support_tasks_text";
+					y = UIH((4 + _H));
+					w = UIW(6);
+				};
+				class PendingRequests: BtnChooseNewZone
+				{
+					idc = -1;
+					text = "$STR_vn_mf_tr_tasks_pending_requests_text";
+					x = VN_TR_SHEET_L_W - UIW(7.5);
+					y = UIH((4.1 + _H));
+					w = UIW(5.5);
+				};
+				// class BackgroundSupportTasks: BackgroundMainTasks
+				// {
+				// 	y = UIH((3.8 + _H));
+				// };
+				class SupportTasks: vn_mf_RscListbox
+				{
+					idc = VN_TR_TASKS_SUPPORTTASKS_IDC;
+					x = UIW(2.2);
+					y = UIH((5.6 + _H));
+					w = VN_TR_SHEET_L_W - UIW(4.5);
+					h = UIH((_H + 1.2));
+					colorBackground[] = {0,0,0,0};
+					colorText[] = {0,0,0,1};
+					colorSelect[] = {0,0,0,1};
+					colorSelect2[] = {0,0,0,1};
+					colorSelectBackground[] = {0.9,0.9,0.2,0.5};
+					colorSelectBackground2[] = {0.9,0.9,0.2,0.5};
+					colorPicture[] = {1,1,1,1};
+					colorPictureSelected[] = {1,1,1,1};
+					period = 0;
+				};
+#undef _H
+				// Right page
+				class BackgroundImageRight: BackgroundImage
+				{
+					text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_1.paa";
+					x = VN_TR_SHEET_L_W;
+					y = 0;
+					w = VN_TR_SHEET_R_W;
+					h = VN_TR_SHEET_R_H;
+				};
+				class Polaroid: vn_mf_RscPicture
+				{
+					idc = VN_TR_TASKS_POLAROID_IDC;
+					x = VN_TR_SHEET_L_W + UIW(1);
+					y = UIH(17.1);
+					w = UIW(9.9);
+					h = UIH(6.9);
+					text = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa";
+				};
+				class ZoneMap: vn_mf_RscMapControl
+				{
+					idc = VN_TR_TASKS_ZONEMAP_IDC;
+					x = VN_TR_SHEET_L_W + UIW(9.2);
+					y = UIH(17.5);
+					w = UIW(7.4);
+					h = UIH(6.95);
+					type = 101;
+					style = "0x10+ 0x20";
+				};
+				class TaskTitle: vn_mf_RscStructuredText
+				{
+					idc = VN_TR_TASKS_TASKTITLE_IDC;
+					text = "Task Title";
+					x = VN_TR_SHEET_L_W + UIW(2);
+					y = UIH(3.5);
+					w = VN_TR_SHEET_R_W - UIW(4);
+					h = UIH(1);
+					size = TXT_L;
+					class Attributes
+					{
+						font = USEDFONT;
+						color = "#000000";
+						colorLink = "#D09B43";
+						align = "left";
+						shadow = 0;
+					};
+				};
+				class TaskDescription: TaskTitle
+				{
+					idc = VN_TR_TASKS_TASKDESCRIPTION_IDC;
+					text = "A lot of text";
+					y = UIH(4.6);
+					h = UIH(5);
+					size = TXT_S;
+				};
+				class Distance: vn_mf_RscStructuredText
+				{
+					idc = VN_TR_TASKS_TASKDISTANCE_IDC;
+					text = "3.0 km";
+					x = VN_TR_SHEET_L_W + UIW(2);
+					y = UIH(15.5);
+					w = UIW(5);
+					h = UIH(1);
+					size = TXT_L;
+				};
+			};
+		};
 
 		class TabProfile: vn_mf_RscActivePicture
 		{
@@ -342,6 +517,13 @@ class vn_tr_disp_taskRoster_Main
 			text = "img\TaskRoster\Requests_Tab.paa";
 			y = VN_TR_SHEET_L_Y + UIH(4.6);
 			onButtonClick = "[] call vn_mf_fnc_tr_requests_init;";
+		};
+		class TabTasks: TabProfile
+		{
+			idc = VN_TR_TABTASKS_IDC;
+			text = "img\TaskRoster\Tasks_Tab.paa";
+			y = VN_TR_SHEET_L_Y + UIH(8.5);
+			onButtonClick = "[] call vn_mf_fnc_tr_tasks_init;";
 		};
 		
 		//ALWAYS AT THE BOTTOM/LAST OF THE CONTROLS!
