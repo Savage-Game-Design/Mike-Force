@@ -95,6 +95,7 @@ class CfgFunctions
 			class tr_overview_team_update {};
 			class tr_tabs_toggle {};
 			class tr_requests_init {};
+			class tr_tasks_init {};
 
 			/* Main Info: */
 			class tr_mainInfo_show {};
@@ -126,9 +127,19 @@ class CfgFunctions
 			class tr_characterInfo_ribbon_enter {};
 			class tr_characterInfo_ribbon_exit {};
 			class tr_characterInfo_ribbon_setIcon {};
+		};
 
-			/* TaskRoster: */
-			class tr_tasks_init {file = "functions\ui\taskroster\fn_tr_tasks_init.sqf";};
+		class ui_taskroster_requests {
+			file = "functions\core\ui\taskroster\requests";
+
+			class tr_requests_init {};
+			class tr_requests_pulse {};
+			class tr_requests_load {};
+			class tr_requests_onLBSelChanged {};
+			class tr_requests_onMouseMoving {};
+			class tr_requests_onDismiss {};
+			class tr_requests_debug_mock {};
+			class tr_requests_debug_recompile {};
 		};
 
 		class ui_timerOverlay
@@ -333,6 +344,7 @@ class CfgFunctions
 			class lock_vehicle_to_teams {};
 			class player_can_enter_vehicle {};
 		};
+
 
 		class system_zones
 		{

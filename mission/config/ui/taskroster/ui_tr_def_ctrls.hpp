@@ -1,4 +1,5 @@
 //included by "ui_tr_base.hpp"
+import RscCheckBox;
 
 //Cordels in the center of the folder. Must be loaded as last item!
 class vn_tr_cordels: vn_mf_RscPicture
@@ -48,6 +49,14 @@ class vn_sheet_overview_accepted_base: vn_sheet_overview_base
 {
 	idc = -1;
 	text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_overview_accepted.paa";
+};
+
+class vn_tr_requestTitle: vn_mf_RscText {
+	colorText[] = { 0, 0, 0, 1 };
+};
+
+class vn_tr_checkbox: RscCheckBox {
+  color[] = {0,0,0,1};
 };
 
 class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV

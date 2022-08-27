@@ -1,5 +1,3 @@
-//included by "ui_tr_base.hpp"
-
 class vn_tr_disp_taskRoster_Main
 {
 	name = "vn_tr_disp_taskRoster_Main";
@@ -66,7 +64,14 @@ class vn_tr_disp_taskRoster_Main
 		{
 			idc = VN_TR_MAININFO_IDC;
 		};
-		
+
+		class BackgroundImage: vn_sheet_overview_base {
+			idc = VN_TR_REQUESTS_TAB_BG_IDC;
+      text = "img\TaskRoster\Page_NoTabs.paa";
+      x = VN_TR_SHEET_L_X;
+      y = VN_TR_SHEET_L_Y;
+			show = 0;
+    };
 	};
 	
 	class Controls
@@ -314,7 +319,7 @@ class vn_tr_disp_taskRoster_Main
 			};
 		};
 
-		class Requests: vn_mf_RscControlsGroupNoScrollbarHV
+		/*class Requests: vn_mf_RscControlsGroupNoScrollbarHV
 		{
 			idc = VN_TR_REQUESTS_IDC;
 			show = 0;
@@ -331,7 +336,10 @@ class vn_tr_disp_taskRoster_Main
 					y = 0;
 				};
 			};
-		};
+		};*/
+
+		#include "requests\display.hpp"
+
 		class Tasks: Requests
 		{
 #define COLOR_BACKGROUND_FOLDER {0.91, 0.82, 0.67, 1}
@@ -513,10 +521,10 @@ class vn_tr_disp_taskRoster_Main
 		};
 		class TabRequests: TabProfile
 		{
-			idc = VN_TR_TABSUPPORT_IDC;
+			idc = VN_TR_TABREQUESTS_IDC;
 			text = "img\TaskRoster\Requests_Tab.paa";
 			y = VN_TR_SHEET_L_Y + UIH(4.6);
-			onButtonClick = "[] call vn_mf_fnc_tr_requests_init;";
+			onButtonClick = "diag_log 'hello'; call vn_mf_fnc_tr_requests_init;";
 		};
 		class TabTasks: TabProfile
 		{

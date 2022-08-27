@@ -21,18 +21,27 @@
 
 params ["_ctrlActive"];
 private _tabsAndControls = createHashMapFromArray [
-	[ctrlClassName VN_TR_TABPROFILE_CTRL, VN_TR_OVERVIEW_CTRL],
-	[ctrlClassName VN_TR_TABSUPPORT_CTRL, VN_TR_REQUESTS_CTRL],
-	[ctrlClassName VN_TR_TABTASKS_CTRL, VN_TR_TASKS_CTRL]
+	[ctrlClassName VN_TR_TABPROFILE_CTRL, [VN_TR_OVERVIEW_CTRL]],
+	[ctrlClassName VN_TR_TABSUPPORT_CTRL, [VN_TR_REQUESTS_CTRL]],
+	[ctrlClassName VN_TR_TABTASKS_CTRL, [VN_TR_TASKS_CTRL]],
+	[ctrlClassName VN_TR_TABREQUESTS_CTRL, [VN_TR_REQUESTS_TAB_BG_CTRL, VN_TR_REQUESTS_TAB_CTRL]]
 ];
+
 {
-	_y ctrlShow false;
-	_y ctrlEnable false;
+	{
+		_x ctrlShow false;
+		_x ctrlEnable false;
+	} forEach _y;
 } forEach _tabsAndControls;
-private _ctrlGroup = _tabsAndControls get ctrlClassName _ctrlActive;
-_ctrlGroup ctrlShow true;
-_ctrlGroup ctrlEnable true;
-ctrlSetFocus _ctrlGroup;
+
+private _ctrls = _tabsAndControls get ctrlClassName _ctrlActive;
+
+{
+	_x ctrlShow true;
+	_x ctrlEnable true;
+	ctrlSetFocus _x;
+} forEach _ctrls;
+
 VN_TR_TABS_CTRLS apply {
 	_x ctrlSetTextColor [0.9,0.9,0.9,1];
 };
