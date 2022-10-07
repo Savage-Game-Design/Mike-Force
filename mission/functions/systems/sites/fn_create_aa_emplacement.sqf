@@ -20,7 +20,7 @@ params ["_position", ["_style", "heavy"]];
 
 private _aaGun	= ["vn_o_nva_static_dshkm_high_02", "vn_o_nva_static_zpu4"] select (_style == "heavy");
 
-private _crewedAAGun = [[_aaGun, _position] call para_g_fnc_create_vehicle_safely, [], grpNull];
+private _crewedAAGun = [[_aaGun, _position, 15, 3, true] call para_g_fnc_create_vehicle_safely, [], grpNull];
 
 private _vehicles = [_crewedAAGun select 0];
 private _units = _crewedAAGun select 1;
