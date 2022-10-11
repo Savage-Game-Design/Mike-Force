@@ -1,4 +1,18 @@
 class Changelog {
+	class 1_00_02 {
+		version = "1.00.02";
+		date = "9th October 2022";
+		changes[] = {
+			"[New] Adds masterarm functionality to vehicle spawn building",
+			"[Change] Makes HQ defense complete faster",
+			"[Change] Updates dynamic view distance to have more configuration options",
+			"[Change] AI will no longer despawn when last player is downed in the AO",
+			"[Fix] Sites will no longer fall through the map and be un-completable",
+			"[Fix] Players will no longer get 'Mission Failed' if the server loads take a long time",
+			"[Fix] Player numbers will update correctly after players disconnect",
+			"[Fix] Zeus'd in vehicles will now have the correct skin, instead of US default"
+		};
+	};
 	class 1_00_01 {
 		version = "1.00.01";
 		date = "16th July 2022";
