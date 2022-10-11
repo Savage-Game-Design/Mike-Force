@@ -190,7 +190,7 @@ call vn_mf_fnc_display_location_time;
 	private _version = getText(missionConfigFile >> "version");
 	private _lastVersion = (["GET", "last_version", ""] call para_s_fnc_profile_db) select 1;
 	//Open welcome screen for new players
-	private _welcomeScreenEnabled = (["para_enableWelcomeScreen"] call para_c_fnc_optionsMenu_getValue) == 1;
+	private _welcomeScreenEnabled = ["para_enableWelcomeScreen"] call para_c_fnc_optionsMenu_getValue;
 	private _versionHasChanged = _lastVersion == "" || _lastVersion != _version;
 
 	if (_versionHasChanged) exitWith {
@@ -207,6 +207,67 @@ call vn_mf_fnc_display_location_time;
 [] call vn_mf_fnc_sites_subsystem_client_init;
 // Tutorial System
 [] call vn_mf_fnc_tutorial_subsystem_client_init;
+
+
+//Add Master Arm addAction for Boats and Land Vehicles
+if hasInterface then
+{
+    // Remove action to re-add it later
+    private _old_action_id = player getVariable ["vn_mf_masterarm_action_id", -1];
+    if (_old_action_id > -1) then { player removeAction _old_action_id; player setVariable ["vn_mf_masterarm_action_id", -1]; };
+
+    private _action =
+    [
+        localize "STR_VN_MASTER_ARM_OPEN_ACTION",
+        {
+            params ["_target", "_caller", "_actionId", "_arguments"];
+            ["init"] call VN_fnc_masterarm;
+        },
+        [],
+        -100,
+        true,
+        true,
+        "",
+        toString {
+            private _vehicle = vehicle _this;
+            local _vehicle && {
+                !(_vehicle isKindOf 'Air' || _vehicle isKindOf 'Man') && {
+                    speed _vehicle <= 5 && {
+                        driver _vehicle == _this && {vn_fnc_masterarm_action_objects findif {(_vehicle distance _x) < 25} > -1}
+                    }
+                }
+            }
+        },
+        25
+    ];
+
+    if (player getVariable ["vn_mf_masterarm_action_id", -1] <= -1) then
+    {
+        private _action_id = player addAction _action;
+        player setVariable ["vn_mf_masterarm_action_id",_action_id];
+    };
+
+    private _vn_action = player getVariable ["vn_mf_masterarm_event_respawn",-1];
+    if (_vn_action <= -1) then
+    {
+        private _retun = player addEventHandler ["Respawn",
+            {
+            _this spawn
+            {
+                params ["_unit", "_corpse"];
+
+                waitUntil {player == _unit};
+
+                _corpse removeAction (_corpse getVariable ["vn_mf_masterarm_action_id", -1]);
+                _corpse setVariable ["vn_mf_masterarm_action_id", -1];
+
+                // Add new actions to player
+                [] spawn vn_fnc_masterarm_actions;
+            };
+            }];
+        player setVariable ["vn_mf_masterarm_event_respawn",_retun];
+    };
+};
 
 //DEV (ToDo): Until client Scheduler is added:
 []spawn

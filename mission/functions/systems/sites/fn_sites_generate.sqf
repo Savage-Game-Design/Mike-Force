@@ -35,7 +35,7 @@ private _fnc_findPos = {
     for "_i" from 1 to _attempts do
     {
         _attempt = _startPos getPos [_minDist + random (_maxDist - _minDist), random 360];
-        if (!surfaceIsWater _attempt || !([_attempt] call _fnc_noSitesZoneCheck)) exitWith {
+        if (!surfaceIsWater _attempt && !([_attempt] call _fnc_noSitesZoneCheck)) exitWith {
             _result = _attempt;
             break;
         };

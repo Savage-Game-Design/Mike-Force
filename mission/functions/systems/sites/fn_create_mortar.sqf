@@ -18,7 +18,8 @@
 
 params ["_position"];
 
-private _mortar = [[selectRandom vehicles_vc_mortars, _position] call para_g_fnc_create_vehicle, [], grpNull];
+private _mortar = [[selectRandom vehicles_vc_mortars, _position, 15, 3, true] call para_g_fnc_create_vehicle_safely, [], grpNull];
+[_mortar # 0, sizeOf typeOf (_mortar # 0)] call para_s_fnc_hide_foliage;
 
 private _vehicles = [_mortar select 0];
 private _units = _mortar select 1;

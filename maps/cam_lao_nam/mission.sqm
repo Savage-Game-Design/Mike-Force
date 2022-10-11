@@ -404,7 +404,7 @@ class Mission
 	appId=1227700;
 	class Intel
 	{
-		briefingName="Mike Force (v1.00.01)";
+		briefingName="Mike Force (v1.00.02)";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;

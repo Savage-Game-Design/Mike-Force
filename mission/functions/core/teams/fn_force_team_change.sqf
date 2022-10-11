@@ -25,13 +25,14 @@ private _playerGroupArray = missionNamespace getVariable [_playerGroup,[]];
 _player setVariable ["vn_mf_db_player_group", _team, true];
 
 // Remove the player from their original team's group array
-missionNamespace setVariable [_playerGroup, _playerGroupArray - [_player]];
+_playerGroupArray deleteAt (_playerGroupArray find _player);
+missionNamespace setVariable [_playerGroup, _playerGroupArray];
 publicVariable _playerGroup;
 
-// add them to the new group
-private _nextPlayerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"]; //did vn_mf_db_player_group fail to set?
-private _nextPlayerGroupArray = missionNamespace getVariable [_nextPlayerGroup, []];
-_nextPlayerGroupArray pushBackUnique _player;
+// add them to the new team
+private _nextPlayerTeam = _player getVariable ["vn_mf_db_player_group", "FAILED"];
+private _nextPlayerTeamArray = missionNamespace getVariable [_nextPlayerTeam, []];
+_nextPlayerTeamArray pushBackUnique _player;
 
 missionNamespace setVariable [_nextPlayerGroup, _nextPlayerGroupArray];
 publicVariable _nextPlayerGroup;

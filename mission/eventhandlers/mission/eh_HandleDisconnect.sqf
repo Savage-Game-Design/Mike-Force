@@ -47,6 +47,14 @@ if !(isNull _unit) then
 	// save players loadout
 	["SET", (_uid + "_loadout"), getUnitLoadout _unit] call para_s_fnc_profile_db;
 
+	private _playerTeam = _unit getVariable ["vn_mf_db_player_group", "FAILED"];
+	private _playerTeamArray = missionNamespace getVariable [_playerTeam, []];
+
+	// Remove the player from their team array
+	_playerTeamArray deleteAt (_playerTeamArray find _unit);
+	missionNamespace setVariable [_playerTeam, _playerTeamArray];
+	publicVariable _playerTeam;
+
 	// delete unit
 	deleteVehicle _unit;
 };

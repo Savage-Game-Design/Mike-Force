@@ -37,7 +37,7 @@ _taskDataStore setVariable ["INIT", {
 	private _hqs = (missionNamespace getVariable ["sites_hq", []]) inAreaArray _zone;
 	private _hqPosition = if (count _hqs > 0) then {getPos (_hqs # 0)} else {_zonePosition};
 
-	private _defendObj = [_hqPosition, 3, 5] call para_s_fnc_ai_obj_request_defend;
+	private _defendObj = [_hqPosition, 3, 2] call para_s_fnc_ai_obj_request_defend;
 
 	_taskDataStore setVariable ["hqDefendObjective", _defendObj];
 	_taskDataStore setVariable ["aiObjectives", [_defendObj]];
