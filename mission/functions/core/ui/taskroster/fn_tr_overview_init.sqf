@@ -71,8 +71,10 @@ if(!isNull _task)then
 };
 
 //set Zone names and setup the Ctrl with the proper Filter
+private _activeZoneNames = missionNamespace getVariable ["mf_g_dir_activeZoneNames", []];
+
 {
-	if(_forEachIndex > (count vn_mf_activeZones) -1)then
+	if(_forEachIndex > (count _activeZoneNames) -1)then
 	{
 		_x ctrlSetText "";
 		_x setVariable ["activeZone",""];
@@ -80,7 +82,7 @@ if(!isNull _task)then
 		_x ctrlSetEventhandler ["buttonClick",""];
 		_x ctrlSetTextColor [0,0,0,0];
 	}else{
-		private _curZoneData = vn_mf_activeZones#_forEachIndex;
+		private _curZoneData = _activeZoneNames # _forEachIndex;
 		private _markerText = markerText _curZoneData;
 		private _zoneName = if(isLocalized _markerText)then{localize _markerText}else{_markerText};
 		_x ctrlSetText _zoneName;

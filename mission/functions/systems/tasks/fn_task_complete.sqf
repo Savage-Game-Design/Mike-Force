@@ -24,7 +24,7 @@ params ["_taskDataStore", "_completionType", ["_rankPointsReward", objNull]];
 private _taskClass = _taskDataStore getVariable "taskClass";
 private _taskArrayPos = vn_mf_tasks findIf {_x select 1 isEqualTo _taskDataStore};
 
-//Invalid task! Abort! Abort!
+// Prevents an already completed task from being completed twice, or trying to complete an invalid task
 if (_taskArrayPos < 0) exitWith {
 	false
 };
