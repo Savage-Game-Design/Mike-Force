@@ -594,6 +594,10 @@
         <Original>All critical tasks completed. Enemy counter attack in %2 minutes.</Original>
         <English>All critical tasks completed. Enemy counter attack in %2 minutes.</English>
       </Key>
+      <Key ID="STR_vn_mf_notification_desc_counter_attack_lost">
+        <Original>The enemy counter-attack was successful. Zone %1 has been lost.</Original>
+        <English>The enemy counter-attack was successful. Zone %1 has been lost.</English>
+      </Key>
       <Key ID="STR_vn_mf_notification_desc_no_sandbag">
         <Original>No sandbags in inventory</Original>
         <English>No sandbags in inventory</English>

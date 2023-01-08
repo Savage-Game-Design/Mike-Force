@@ -133,6 +133,7 @@ _taskDataStore setVariable ["defend_zone", {
 		_enemyHoldZone &&
 		{_enemyZoneHeldTime > (_taskDataStore getVariable ["failureTime", 5 * 60])}
 	) then {
+		["CounterAttackLost", ["", [_zone] call vn_mf_fnc_zone_marker_to_name]] remoteExec ["para_c_fnc_show_notification", 0];
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;
 	};
