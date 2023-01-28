@@ -1,4 +1,16 @@
 class Changelog {
+	class 1_00_03 {
+		version = "1.00.03";
+		date = "28th January 2023";
+		changes[] = {
+			"[New] Adds a mission parameter to scale the number of AI (and therefore difficulty)",
+			"[Change] Added a notification when counterattacks are failed",
+			"[Fix] Zone progression rewritten to be more robust (fewer bugs)",
+			"[Fix] Headless clients should be much more effective at hosting AI",
+			"[Fix] Team swapping no longer causes an error"
+		};
+	};
+	
 	class 1_00_02 {
 		version = "1.00.02";
 		date = "9th October 2022";
