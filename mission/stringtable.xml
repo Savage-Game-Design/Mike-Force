@@ -746,6 +746,14 @@
         <Original>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</Original>
         <English>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</English>
       </Key>
+      <Key ID="STR_vn_mf_param_ai_scaling">
+        <Original>==== AI Quantity Scaling ====</Original>
+        <English>==== AI Quantity Scaling ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_ai_scaling_desc">
+        <Original>[High performance impact] Global AI scaling. Higher is more AI for everything, lower is less.</Original>
+        <English>[High performance impact] Global AI scaling. Higher is more AI for everything, lower is less.</English>
+      </Key>
       <Key ID="STR_vn_mf_param_enable_ranks_desc">
         <Original>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</Original>
         <English>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</English>
