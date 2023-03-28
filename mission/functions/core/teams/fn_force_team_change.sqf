@@ -22,19 +22,16 @@ private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 private _playerGroupArray = missionNamespace getVariable [_playerGroup,[]];
 
 ["changedTeams", [_player, _team]] call para_g_fnc_event_dispatch;
-_player setVariable ["vn_mf_db_player_group", _team, true];
 
 // Remove the player from their original team's group array
-missionNamespace setVariable [_playerGroup, _playerGroupArray - [_player]];
+_playerGroupArray deleteAt (_playerGroupArray find _player);
 publicVariable _playerGroup;
 
-// add them to the new group
-private _nextPlayerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"]; //did vn_mf_db_player_group fail to set?
-private _nextPlayerGroupArray = missionNamespace getVariable [_nextPlayerGroup, []];
-_nextPlayerGroupArray pushBackUnique _player;
-
-missionNamespace setVariable [_nextPlayerGroup, _nextPlayerGroupArray];
-publicVariable _nextPlayerGroup;
+// Add the player to the new team's player list.
+_player setVariable ["vn_mf_db_player_group", _team, true];
+private _nextPlayerTeamArray = missionNamespace getVariable [_team, []];
+_nextPlayerTeamArray pushBackUnique _player;
+publicVariable _nextPlayerTeam;
 
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;

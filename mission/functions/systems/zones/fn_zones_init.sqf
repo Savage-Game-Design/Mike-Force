@@ -67,10 +67,6 @@ mf_s_zone_markers = [];
 
 ["Loading zone data"] call BIS_fnc_log;
 
-//TODO - Remove
-vn_mf_activeZones = []; //This gets publicVariable'd in the make_active call
-publicVariable "vn_mf_activeZones";
-
 vn_mf_completedZones = ["GET", "completed_zones", []] call para_s_fnc_profile_db select 1; publicVariable "vn_mf_completedZones";
 
 ["zone_manager", vn_mf_fnc_zones_manager_job, [], 30] call para_g_fnc_scheduler_add_job;

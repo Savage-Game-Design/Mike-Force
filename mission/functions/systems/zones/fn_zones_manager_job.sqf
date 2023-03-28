@@ -65,9 +65,9 @@
 
 //private _store = _schedulerCurrentJob;
 
-//For now, this uses vn_mf_activeZones
+//For now, this uses mf_s_dir_activeZones
 //Later, this should be all zones < 100 % presence, but only when spawning optimisations are in.
-//private _activeZones = vn_mf_activeZones;
+//private _activeZones = keys mf_s_dir_activeZones;
 
 //private _mfPlayers = (allPlayers select {groupId group _x == "MikeForce"});
 //private _ghPlayers = (allPlayers select {groupId group _x == "GreenHornets"});

@@ -15,18 +15,18 @@
     Example(s):
         [parameter] call vn_fnc_myFunction
 */
-private _connectedZones = [];
+private _startingZones = getArray (missionConfigFile >> "map_config" >> "starting_zones");
+private _potentialZonesToOpen = _startingZones;
 private _capturedZones = (mf_s_zones select {_x select struct_zone_m_captured}) apply {_x select struct_zone_m_marker};
-private _activeZones = mf_s_activeZones apply {_x # 0};
-private _siegedZones = mf_s_siegedZones apply {_x # 0};
+private _activeZones = keys mf_s_dir_activeZones;
 
 {
-	_connectedZones append (getArray (missionConfigFile >> "map_config" >> "zones" >> _x) apply {_x # 0});
+	_potentialZonesToOpen append (getArray (missionConfigFile >> "map_config" >> "zones" >> _x) apply {_x # 0});
 } forEach _capturedZones;
 
-_connectedZones = _connectedZones arrayIntersect _connectedZones;
+_potentialZonesToOpen = _potentialZonesToOpen arrayIntersect _potentialZonesToOpen;
 
-private _zonesToOpen = _connectedZones - _capturedZones - _activeZones - _siegedZones;
+private _zonesToOpen = _potentialZonesToOpen - _capturedZones - _activeZones;
 
 {
     [_x] call vn_mf_fnc_director_open_zone;

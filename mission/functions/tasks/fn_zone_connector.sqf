@@ -43,7 +43,7 @@ _taskDataStore setVariable ["build_checkpoint", {
 	//If another connector has told us to abort, we abort.
 	if (
 		_taskDataStore getVariable ["abortConnector", false] 
-	    || (_taskDataStore getVariable "newZone") in vn_mf_activeZones
+	    || (_taskDataStore getVariable "newZone") in keys mf_s_dir_activeZones
 		|| (_taskDatastore getVariable "newZone") in vn_mf_completedZones
 	)
 	exitWith {
@@ -69,7 +69,7 @@ _taskDataStore setVariable ["FINISH", {
 	//Cancel other connectors if we have enough zones active.
 	//Not entirely happy with how we're cancelling the task.
 	//Maybe cancelling should be built into the state machine framework?
-	if (count vn_mf_activeZones + 1 >= vn_mf_targetNumberOfActiveZones) then {
+	if (count keys mf_s_dir_activeZones + 1 >= vn_mf_targetNumberOfActiveZones) then {
 		private _otherRelatedConnectors = 
 			vn_mf_tasks 
 			select {_x select 1 getVariable "taskClass" == "zone_connector"};
@@ -82,7 +82,7 @@ _taskDataStore setVariable ["FINISH", {
 	
 	//Protection from a race condition, where two or more connectors might be in the 'FINISH' state at the same time
 	//Without this check, it would make multiple zones active, which might go over our limit.
-	if (count vn_mf_activeZones < vn_mf_targetNumberOfActiveZones) then {
+	if (count keys mf_s_dir_activeZones < vn_mf_targetNumberOfActiveZones) then {
 		(_taskDataStore getVariable "newZone") call vn_mf_fnc_zones_make_zone_active;
 	};
 

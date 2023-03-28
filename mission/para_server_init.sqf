@@ -93,8 +93,8 @@ para_s_bf_respawn_supply_cost = 50;
 
 // Set desired number of simultaneously active zones.
 vn_mf_targetNumberOfActiveZones = 1;
-// Set number of enemies per player.
-para_g_enemiesPerPlayer = 2;
+// Set number of enemies per player. Scale the default value by the percentage set in the config options.
+para_g_enemiesPerPlayer = ((["ai_scaling", 100] call BIS_fnc_getParamValue) / 100) * 2;
 //Global variable, so it needs syncing across the network.
 publicVariable "para_g_enemiesPerPlayer";
 

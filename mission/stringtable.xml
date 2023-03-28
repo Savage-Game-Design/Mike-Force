@@ -594,6 +594,10 @@
         <Original>All critical tasks completed. Enemy counter attack in %2 minutes.</Original>
         <English>All critical tasks completed. Enemy counter attack in %2 minutes.</English>
       </Key>
+      <Key ID="STR_vn_mf_notification_desc_counter_attack_lost">
+        <Original>The enemy counter-attack was successful. Zone %1 has been lost.</Original>
+        <English>The enemy counter-attack was successful. Zone %1 has been lost.</English>
+      </Key>
       <Key ID="STR_vn_mf_notification_desc_no_sandbag">
         <Original>No sandbags in inventory</Original>
         <English>No sandbags in inventory</English>
@@ -741,6 +745,14 @@
       <Key ID="STR_vn_mf_param_hard_ai_limit_desc">
         <Original>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</Original>
         <English>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_ai_scaling">
+        <Original>==== AI Quantity Scaling ====</Original>
+        <English>==== AI Quantity Scaling ====</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_ai_scaling_desc">
+        <Original>[High performance impact] Global AI scaling. Higher is more AI for everything, lower is less.</Original>
+        <English>[High performance impact] Global AI scaling. Higher is more AI for everything, lower is less.</English>
       </Key>
       <Key ID="STR_vn_mf_param_enable_ranks_desc">
         <Original>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</Original>

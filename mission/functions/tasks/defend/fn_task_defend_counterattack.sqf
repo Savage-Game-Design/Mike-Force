@@ -27,6 +27,7 @@ _taskDataStore setVariable ["INIT", {
 
 	//Required parameters
 	private _marker = _taskDataStore getVariable "taskMarker";
+	private _markerPos = getMarkerPos _marker;
 	private _hqs = (localNamespace getVariable ["sites_hq", []]) inAreaArray _marker;
 	private _prepTime = _taskDataStore getVariable ["prepTime", 0];
 
@@ -43,7 +44,7 @@ _taskDataStore setVariable ["INIT", {
 	};
 
 	[[
-		["prepare_zone", _zonePosition]
+		["prepare_zone", _markerPos]
 	]] call _fnc_initialSubtasks;
 }];
 
@@ -132,15 +133,7 @@ _taskDataStore setVariable ["defend_zone", {
 		_enemyHoldZone &&
 		{_enemyZoneHeldTime > (_taskDataStore getVariable ["failureTime", 5 * 60])}
 	) then {
-		private _zone = _taskDataStore getVariable "taskMarker";
-		private _selectZone = mf_s_siegedZones findIf {_zone in _x};
-		mf_s_siegedZones deleteAt _selectZone;
-
-		private _zoneData = mf_s_zones select (mf_s_zones findIf {_zone isEqualTo (_x select struct_zone_m_marker)});
-
-		[[_zoneData]] call vn_mf_fnc_sites_generate;
-		[_zone] call vn_mf_fnc_director_open_zone;
-
+		["CounterAttackLost", ["", [_zone] call vn_mf_fnc_zone_marker_to_name]] remoteExec ["para_c_fnc_show_notification", 0];
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;
 	};
@@ -151,8 +144,6 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 	if (_taskDataStore getVariable ["zoneDefended", false]
 	) then {
-		private _zone = _taskDataStore getVariable "taskMarker";
-		[_zone] call vn_mf_fnc_zones_capture_zone;
 		["SUCCEEDED"] call _fnc_finishTask;
 	};
 }];

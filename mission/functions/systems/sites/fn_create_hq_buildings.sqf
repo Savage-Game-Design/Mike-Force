@@ -16,6 +16,8 @@
 
 params ["_position"];
 
+[_position, 20] call para_s_fnc_hide_foliage;
+
 vn_mf_hq_composition = [
 	["Land_vn_o_shelter_01",[-0.541992,2.78516,0],0,1,0,[0,0],"","",true,false], 
 	["Land_vn_pavn_weapons_stack3",[0.99707,2.85059,0],65.7312,1,0,[0,0],"","",true,false], 

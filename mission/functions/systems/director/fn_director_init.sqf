@@ -18,9 +18,11 @@
 */
 
 //Array in format - [Task Object]
-mf_s_activeZones = [];
-mf_s_siegedZones = [];
+mf_s_dir_activeZones = createHashMap;
 mf_s_baseZoneUnlockDistance = 4000;
+
+mf_g_dir_activeZoneNames = [];
+publicVariable "mf_g_dir_activeZoneNames";
 
 //Delay between actions.
 mf_s_dir_action_delay = 1200;
@@ -31,12 +33,18 @@ mf_s_dir_action_fired = true; //Mark it as dispatched, so we reset back to a new
 
 //Create tasks for any zones that aren't captured, but are connected a captured zone.
 [] call vn_mf_fnc_director_open_connected_zones;
-//If none can be opened, we're at game start - need to open one manually.
-if (mf_s_activeZones isEqualTo []) then 
-{
-	{
-		[_x] call vn_mf_fnc_director_open_zone;
-	} forEach (getArray (missionConfigFile >> "map_config" >> "starting_zones"));
-};
+
+// Trigger a zone process whenever a task completes there, to make the zones feel more responsive.
+[
+	"taskCompleted",
+	[{
+		params ["_handlerParams", "_eventParams"];
+		_eventParams params ["_taskDataStore"];
+		private _zoneName = _taskDataStore getVariable ["taskMarker", ""];
+		if (_zoneName in mf_s_dir_activeZones) then {
+			[_zoneName] call vn_mf_fnc_director_process_active_zone;
+		};
+	}, []]
+] call para_g_fnc_event_add_handler;
 
 ["gameplay_director", vn_mf_fnc_director_job, [], 15] call para_g_fnc_scheduler_add_job;

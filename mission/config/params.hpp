@@ -76,6 +76,24 @@ class hard_ai_limit_desc
 
 class Spacer1_0 : Spacer0 {};
 
+class ai_scaling
+{
+    title = $STR_vn_mf_param_ai_scaling;
+    values[] = {25, 50, 75, 100, 150, 200, 250, 300};
+    texts[] = {"25%", "50%", "75%", "100%", "150%", "200%", "250%", "300%"};
+    default = 100;
+};
+
+class ai_scaling_desc
+{
+    title = $STR_vn_mf_param_ai_scaling_desc;
+    values[] = {""};
+    texts[] = {""};
+    default = "";
+};
+
+class Spacer1_1 : Spacer0 {};
+
 // gamemode specific start
 class buildables_require_vehicles
 {
