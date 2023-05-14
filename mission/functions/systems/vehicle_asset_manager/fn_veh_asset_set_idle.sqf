@@ -4,19 +4,21 @@
 	Public: No
 
 	Description:
-		Sets a vehicle asset to idle.
+		Sets a spawn point's vehicle status to idle.
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		_spawnPoint - Spawn point whose status should be set to idle [Object]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
+params ["_spawnPoint"];
 
-private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id;
-_vehicle set [struct_veh_asset_info_m_state_data, ["IDLE", serverTime]];
+_spawnPoint set ["status", createHashMapFromArray [
+	["state", "IDLE"], 
+	["lastChanged", serverTime]
+]];
 
-[_id] call vn_mf_fnc_veh_asset_marker_delete;
+[_spawnPoint] call vn_mf_fnc_veh_asset_marker_delete;

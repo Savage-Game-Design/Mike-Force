@@ -7,32 +7,36 @@
 		Marks a vehicle asset as wrecked. Wrecks it if it isn't already.
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		__spawnPoint - Spawn point whose vehicle should be set as wrecked [HashMap]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
+params ["_spawnPoint"];
 
-private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
-private _vehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
+private _vehicle = _spawnPoint getOrDefault ["currentVehicle", objNull];
 
 //if it's deleted, not a lot we can do about it, as we have no position! Might as well just set it to repair.
 if (isNull _vehicle) exitWith {
-	["VN MikeForce: Vehicle %1 was deleted and respawn type is Wreck. Sending to repair", _id] call BIS_fnc_logFormat;
-	[_id] call vn_mf_fnc_veh_asset_set_repairing;
+	["VN MikeForce: Vehicle for spawn point %1 was deleted and respawn type is Wreck. Sending to repair", _spawnPoint get "id"] call BIS_fnc_logFormat;
+	[_spawnPoint] call vn_mf_fnc_veh_asset_set_repairing;
 };
 
-_vehicleInfo set [struct_veh_asset_info_m_state_data, ["WRECKED", getPosASL _vehicle, getDir _vehicle]];
+_spawnPoint set ["status", createHashMapFromArray [
+	["state", "WRECKED"], 
+	["lastChanged", serverTime],
+	["posASL", getPosASL _vehicle],
+	["dir", getDir _vehicle]
+]];
 
 //Kaboom. We don't want TWO vehicles by accident.
 if (alive _vehicle) then {
 	_vehicle setDamage 1;
 };
 
-[_id] call vn_mf_fnc_veh_asset_setup_package_wreck_action;
+[_vehicle] call vn_mf_fnc_veh_asset_setup_package_wreck_action;
 
-[_id, "WRECK"] call vn_mf_fnc_veh_asset_marker_create;
+[_spawnPoint, "WRECK"] call vn_mf_fnc_veh_asset_marker_create;
 

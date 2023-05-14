@@ -4,17 +4,21 @@
 	Public: No
 
 	Description:
-		Sets a vehicle asset to disabled.
+		Sets a spawn point's vehicle asset to disabled.
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		_spawnPoint - Spawn point whose vehicle should be set as disabled [HashMap]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
+params ["_spawnPoint"];
 
-[_id] call vn_mf_fnc_veh_asset_get_by_id set [struct_veh_asset_info_m_state_data, ["DISABLED", serverTime]];
-[_id, "DISABLED"] call vn_mf_fnc_veh_asset_marker_create;
+_spawnPoint set ["status", createHashMapFromArray [
+	["state", "DISABLED"], 
+	["lastChanged", serverTime]
+]];
+
+[_spawnPoint, "DISABLED"] call vn_mf_fnc_veh_asset_marker_create;

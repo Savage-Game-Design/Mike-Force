@@ -4,21 +4,19 @@
     Public: No
 
     Description:
-    Locks a vehicle asset
+        Locks a vehicle asset
 
     Parameter(s):
-		_id - Id of the vehicle asset [Number]
+        _vehicle - Vehicle to lock [Object]
 
     Returns:
-		None
+        None
 
     Example(s):
-		[22] call vn_mf_fnc_veh_asset_lock_vehicle
+        [cursorObject] call vn_mf_fnc_veh_asset_lock_vehicle
 */
 
-params ["_id"];
-
-private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
+params ["_vehicle"];
 
 //Prevent locking if a player is within 10 (?) metres
 if (allPlayers inAreaArray [getPos _vehicle, 10, 10] isNotEqualTo [] || _vehicle getVariable ["vn_mf_g_veh_asset_locked", false]) exitWith {};

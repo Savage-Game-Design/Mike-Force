@@ -7,14 +7,14 @@
         Remote execution handler for packaging a vehicle asset.
     
     Parameter(s):
-		_id - Id of the vehicle asset to package [String]
+        _vehicle - Vehicle asset to package [Object]
     
     Returns: nothing
     
     Example(s):
-		["myVehicle"] call vn_mf_fnc_package_for_slingloading
+        ["myVehicle"] call vn_mf_fnc_package_for_slingloading
 */
 
-params ["_id", "_trigger"];
+params ["_vehicle"];
 
-[_id, _trigger] call vn_mf_fnc_veh_asset_package_wreck;
+[_vehicle] call vn_mf_fnc_veh_asset_package_wreck;

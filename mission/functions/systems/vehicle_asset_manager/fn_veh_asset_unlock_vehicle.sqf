@@ -7,18 +7,16 @@
         Unlocks a locked vehicle asset
     
     Parameter(s):
-		_id - Id of the vehicle asset [Number]
+        _vehicle - Vehicle to unlock [Object]
     
     Returns:
-		None
+        None
     
     Example(s):
-		[22] call vn_mf_fnc_veh_asset_unlock_vehicle
+        [22] call vn_mf_fnc_veh_asset_unlock_vehicle
 */
 
-params ["_id"];
-
-private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
+params ["_vehicle"];
 
 if !(_vehicle getVariable ["vn_mf_g_veh_asset_locked", false]) exitWith {};
 

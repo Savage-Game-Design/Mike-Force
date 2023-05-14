@@ -4,25 +4,30 @@
 	Public: No
 
 	Description:
-		Respawns a vehicle asset.
+		Respawns the last spawned vehicle at the given spawnpoint.
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		_spawnPoint - Spawn point to respawn [HashMap]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
+params ["_spawnPoint"];
 
-private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
-_vehicleInfo select struct_veh_asset_info_m_respawn_info params ["_respawnType", "_respawnTime", "_positionOverride"];
-private _spawnInfo = _vehicleInfo select struct_veh_asset_info_m_spawn_info;
-_spawnInfo params ["_className", "_vectorDirUp", "_position", "_initialVariables"];
+private _respawnType = _spawnPoint get "settings" get "respawnType";
+private _respawnTime = _spawnPoint get "settings" get "time";
+private _classToSpawn = _spawnPoint getOrDefault ["lastClassSpawned", _spawnpoint get "settings" get "vehicles" select 0];
+private _spawnLocation = _spawnPoint getOrDefault ["nextSpawnLocationOverride", _spawnPoint get "spawnLocation"];
+
+if (isNil "_classToSpawn") exitWith {};
+if (!isClass (configFile >> "CfgVehicles" >> _classToSpawn)) exitWith {
+	diag_log format ["VN MikeForce: [ERROR] Unable to respawn vehicle, class %1 is invalid", _classToSpawn];
+};
+
 private _vehicle = objNull;
-
-private _oldVehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
+private _oldVehicle = _spawnPoint getOrDefault ["currentVehicle", objNull];
 
 _oldVehicle enableSimulationGlobal false;
 deleteVehicle _oldVehicle;
@@ -30,32 +35,29 @@ deleteVehicle _oldVehicle;
 sleep 1;
 
 isNil { 
-    _vehicle = [_className, [0,0,0], [], 0, "CAN_COLLIDE"] call para_g_fnc_create_vehicle;
+    _vehicle = [_classToSpawn, [0,0,0], [], 0, "CAN_COLLIDE"] call para_g_fnc_create_vehicle;
 	_vehicle enableSimulationGlobal false;
-	_vehicle setVectorDirAndUp _vectorDirUp;
 
-	if !(_positionOverride isEqualTo [0,0,0]) then {
-		_positionOverride = _positionOverride findEmptyPosition [0, 50, _className];
-		_vehicle setPos _positionOverride;
-		_vehicleInfo set [struct_veh_asset_info_m_respawn_info, [_respawnType, _respawnTime, [0,0,0]]];
-	} else {
-		_vehicle setPosWorld _position;
-	}
+	private _position = _spawnLocation get "pos";
+	if (_spawnLocation getOrDefault ["searchForEmptySpace", false]) then {
+		private _newPosition = _position findEmptyPosition [0, 50, _classToSpawn];
+		if (_newPosition isNotEqualTo []) then {
+			_position = AGLtoASL _newPosition;
+		};
+	};
+
+	_vehicle setDir (_spawnLocation get "dir");
+	_vehicle setPosASL _position;
+	
+	// Location override is only valid for 1 respawn.
+	_spawnPoint deleteAt "nextSpawnLocationOverride";
 };
 
 //This restores UAV drivers. Shouldn't need it in VN, but better safe than sorry.
-if (getNumber (configfile >> "CfgVehicles" >> _className >> "isUAV") > 0 && count crew _vehicle > 0) then {
+if (getNumber (configfile >> "CfgVehicles" >> _classToSpawn >> "isUAV") > 0 && count crew _vehicle > 0) then {
 	createVehicleCrew _vehicle;
 };
 
-//Restore initial variables
-//TODO: Un-network this, once teamLock is fixed to be less buggy with respawn.
-{
-	_vehicle setVariable [_x select 0, _x select 1, true];
-} forEach _initialVariables;
-
-_vehicleInfo set [struct_veh_asset_info_m_vehicle, _vehicle];
-
-[_id, _vehicle] call vn_mf_fnc_veh_asset_init_vehicle;
+[_spawnPoint, _vehicle] call vn_mf_fnc_veh_asset_assign_vehicle_to_spawn_point;
 
 _vehicle enableSimulationGlobal true;

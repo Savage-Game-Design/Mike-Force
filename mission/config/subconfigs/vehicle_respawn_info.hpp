@@ -34,19 +34,31 @@ class wreck_long
 	time = 60;
 };
 
-//Jeeps + Small Cars
-class vn_b_wheeled_m151_01 : respawn_short {};
-class vn_b_wheeled_m151_02 : respawn_short {};
-class vn_b_wheeled_m151_mg_01 : respawn_medium {};
-class vn_b_wheeled_m151_mg_02 : respawn_medium {};
-class vn_b_wheeled_m151_mg_03 : respawn_medium {};
-class vn_b_wheeled_m151_mg_04 : respawn_medium {};
-class vn_b_wheeled_m151_mg_05 : respawn_medium {};
-class vn_b_wheeled_m151_mg_06 : respawn_medium {};
-class vn_c_car_01_01 : respawn_short {};
-class vn_c_car_02_01 : respawn_short {};
-class vn_c_car_03_01 : respawn_short {};
-class vn_c_car_04_01 : respawn_short {};
+class unarmed_m151 : respawn_short {
+	class vehicles {
+		class vn_b_wheeled_m151_01 {};
+		class vn_b_wheeled_m151_02 {};
+	};
+};
+
+class armed_m151 : respawn_medium {
+	class vehicles {
+		class vn_b_wheeled_m151_mg_02 {};
+		class vn_b_wheeled_m151_mg_03 {};
+		class vn_b_wheeled_m151_mg_04 {};
+		class vn_b_wheeled_m151_mg_05 {};
+		class vn_b_wheeled_m151_mg_06 {};
+	};
+};
+
+class civilian_cars : respawn_short {
+	class vehicles {
+		class vn_c_car_01_01 {};
+		class vn_c_car_02_01 {};
+		class vn_c_car_03_01 {};
+		class vn_c_car_04_01 {};
+	};
+};
 
 //Transport trucks
 class vn_b_wheeled_m54_01 : respawn_medium {};

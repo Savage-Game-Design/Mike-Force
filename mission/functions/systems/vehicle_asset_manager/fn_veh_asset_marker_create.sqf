@@ -7,7 +7,7 @@
 		Creates a marker of the specific type for every player, localized. Replaces any previous markers.
 
 	Parameter(s):
-		_id - Id of the vehicle asset [Number]
+		_spawnPoint - Spawn point to create the marker for [HashMap]
 		_type - Type of marker [String]
 
 	Returns: nothing
@@ -16,10 +16,9 @@
 */
 
 
-params ["_id", "_type"];
+params ["_spawnPoint", "_type"];
 
-private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
-private _vehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
+private _vehicle = _spawnPoint get ["currentVehicle", objNull];
 
 private _textGenerator = [
 	[_type, _vehicle],
@@ -46,7 +45,7 @@ private _textGenerator = [
 	}
 ];
 
-private _markerName = format ["marker_%1", _id];
+private _markerName = format ["marker_%1", _spawnPoint get "id"];
 [_markerName, getPos _vehicle, _textGenerator] call para_g_fnc_create_localized_marker;
 
 _markerName setMarkerType "mil_marker";
@@ -57,4 +56,4 @@ if (_type in ["WRECK", "DISABLED"]) then {
 	_markerName setMarkerColor "ColorBlue";
 };
 
-_vehicleInfo set [struct_veh_asset_info_m_marker, _markerName];
+_spawnPoint set ["marker", _markerName];

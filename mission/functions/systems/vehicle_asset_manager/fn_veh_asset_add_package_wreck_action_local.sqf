@@ -8,15 +8,14 @@
 
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
-		_target - Object addAction is to be added to [Object]
+		_target - Vehicle addAction is to be added to [Object]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id", "_target"];
+params ["_target"];
 
 ["AddPackageWreck", [player, []]] call para_g_fnc_event_dispatch;
 
@@ -24,9 +23,9 @@ _target addAction [
 	"Package wreck for transport",
 	{
 		params ["_target", "_caller", "_actionId", "_args"];
-		["packageforslingloading", _args] call para_c_fnc_call_on_server;
+		["packageforslingloading", [_target]] call para_c_fnc_call_on_server;
 	},
-	[_id, _trigger],
+	[],
 	1.5,
 	false,
 	true,

@@ -7,19 +7,17 @@
 		Prepares a wreck to be loaded into a crate.
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		_vehicle - Vehicle to add action to [Object]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
-
-private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
+params ["_vehicle"];
 
 [
-	[_id, _vehicle],
+	[_vehicle],
 	"vn_mf_fnc_veh_asset_setup_package_wreck_action_local",
 	0,
 	_vehicle

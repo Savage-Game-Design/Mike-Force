@@ -7,16 +7,16 @@
 		Removes the package underwater wreck action from the player
 
 	Parameter(s):
-		_id - Vehicle asset ID
+		_vehicle - Vehicle to remove package action from [Object]
 
 	Returns: nothing
 
 	Example(s): Not to be directly called
 */
 
-params ["_id"];
+params ["_vehicle"];
 
-private _actionVariable = format ["veh_asset_package_underwater_wreck_action_%1", _id];
+private _actionVariable = format ["veh_asset_package_underwater_wreck_action_%1", netId _vehicle];
 private _actionId = player getVariable _actionVariable;
 
 if (isNil "_actionId") exitWith {};

@@ -7,21 +7,19 @@
 		Updates the position of an existing marker.
 
 	Parameter(s):
-		_id - Id of the vehicle asset [Number]
+		_spawnPoint - Spawn point whose marker should be updated [HashMap]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
+params ["_spawnPoint"];
 
-params ["_id", "_type"];
-
-private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
-private _marker = _vehicleInfo select struct_veh_asset_info_m_marker;
+private _marker = _spawnPoint getOrDefault ["marker", ""];
 if (_marker == "") exitWith {};
 
-private _vehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
+private _vehicle = _spawnPoint get ["currentVehicle", objNull];
 
 [
 	[_marker, _vehicle],

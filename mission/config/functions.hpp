@@ -288,33 +288,35 @@ class CfgFunctions
 		{
 			file = "functions\systems\vehicle_asset_manager";
 			class packageforslingloading {};
-			class veh_asset_add_package_wreck_action_local {};
+			class veh_asset_3DEN_spawn_point {};
 			class veh_asset_add_package_underwater_wreck_action_local {};
+			class veh_asset_add_package_wreck_action_local {};
+			class veh_asset_add_spawn_point {};
 			class veh_asset_add_unlock_action {};
-			class veh_asset_add_vehicle {};
-			class veh_asset_get_by_id {};
-			class veh_asset_init_vehicle {};
-			class veh_asset_key {};
+			class veh_asset_assign_vehicle_to_spawn_point {};
+			class veh_asset_create_spawn_point_id {};
+			class veh_asset_get_spawn_point_info_from_config {};
 			class veh_asset_job {};
 			class veh_asset_lock_vehicle {};
 			class veh_asset_marker_create {};
 			class veh_asset_marker_delete {};
 			class veh_asset_marker_update_position {};
 			class veh_asset_package_wreck {};
+			class veh_asset_process_spawn_point {};
 			class veh_asset_remove_package_underwater_wreck_action_local {};
-			class veh_asset_remove_vehicle {};
+			class veh_asset_remove_spawn_point {};
 			class veh_asset_respawn {};
+			class veh_asset_respawn_job {};
 			class veh_asset_set_active {};
 			class veh_asset_set_disabled {};
 			class veh_asset_set_idle {};
-			class veh_asset_setup_package_wreck_action {};
-			class veh_asset_setup_package_wreck_action_local {};
 			class veh_asset_set_repairing {};
 			class veh_asset_set_respawning {};
 			class veh_asset_set_wrecked {};
+			class veh_asset_setup_package_wreck_action {};
+			class veh_asset_setup_package_wreck_action_local {};
 			class veh_asset_subsystem_init {};
 			class veh_asset_unlock_vehicle {};
-			class veh_asset_respawn_job {};
 		};
 
 		class system_vehicle_creation_detection

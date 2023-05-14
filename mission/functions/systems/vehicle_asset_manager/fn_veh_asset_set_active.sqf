@@ -4,17 +4,21 @@
 	Public: No
 
 	Description:
-		Marks a vehicle asset as being in active use.
+		Marks a spawn point's vehicle as being in active use.
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		_spawnPoint - Spawn point whose vehicle should be set as active [HashMap]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
+params ["_spawnPoint"];
 
-[_id] call vn_mf_fnc_veh_asset_get_by_id set [struct_veh_asset_info_m_state_data, ["ACTIVE"]];
-[_id] call vn_mf_fnc_veh_asset_marker_delete;
+_spawnPoint set ["status", createHashMapFromArray [
+	["state", "ACTIVE"], 
+	["lastChanged", serverTime]
+]];
+
+[_spawnPoint] call vn_mf_fnc_veh_asset_marker_delete;

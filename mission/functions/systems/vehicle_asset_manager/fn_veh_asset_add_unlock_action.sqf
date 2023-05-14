@@ -7,25 +7,23 @@
 		Adds an action that unlocks a vehicle that's in simulation disabled mode.
 	
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
+		_vehicle - Vehicle to add unlock action to [Object]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
-
-private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
+params ["_vehicle"];
 
 [
 	_vehicle,
 	"Unlock vehicle",
 	{
 		params ["_target", "_caller", "_id", "_args"];
-		[_args select 0] call vn_mf_fnc_veh_asset_unlock_vehicle;
+		[_target] call vn_mf_fnc_veh_asset_unlock_vehicle;
 	},
-	[_id],
+	[],
 	1.5,
 	false,
 	true,

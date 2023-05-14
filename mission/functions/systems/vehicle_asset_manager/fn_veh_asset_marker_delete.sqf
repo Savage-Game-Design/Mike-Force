@@ -4,22 +4,21 @@
 	Public: No
 
 	Description:
-		Deletes the current marker for a vehicle.
+		Deletes the current marker for a spawn point.
 
 	Parameter(s):
-		_id - Id of the vehicle asset [Number]
+		_spawnPoint - Spawn point to delete the vehicle marker from [HashMap]
 
 	Returns: nothing
 
 	Example(s): none
 */
 
-params ["_id"];
+params ["_spawnPoint"];
 
-private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
-private _marker = _vehicleInfo select struct_veh_asset_info_m_marker;
+private _marker = _spawnPoint getOrDefault ["marker", ""];
 
 if (_marker != "") then {
 	[_marker] call para_g_fnc_delete_localized_marker;
-	_vehicleInfo set [struct_veh_asset_info_m_marker, ""];
+	_spawnPoint set [_marker, ""];
 }; 
