@@ -193,6 +193,7 @@ class CfgFunctions
 		class system_garage {
 			file = "functions\systems\garage";
 			class garage_arsenal {};
+			class garage_create_ui_callback {};
 			class garage_open {};
 			class garage_register_display {};
 		};

@@ -27,10 +27,10 @@
 #include "\A3\ui_f\hpp\defineDIKCodes.inc"
 #include "\A3\Ui_f\hpp\defineResinclDesign.inc"
 
-#define SELF_NAME vn_mf_fnc_garage_open
-#define SELF (missionNamespace getVariable "vn_mf_fnc_garage_open")
-#define ARSENAL_NAME vn_mf_fnc_garage_arsenal
-#define ARSENAL_FUNC (missionNamespace getVariable "vn_mf_fnc_garage_arsenal")
+#define SELF_NAME "vn_mf_fnc_garage_open"
+#define SELF_FUNC (missionNamespace getVariable SELF_NAME)
+#define ARSENAL_NAME "vn_mf_fnc_garage_arsenal"
+#define ARSENAL_FUNC (missionNamespace getVariable ARSENAL_NAME)
 #define REGISTER_DISPLAY_FUNC (missionNamespace getVariable "vn_mf_fnc_garage_register_display")
 
 #define FADE_DELAY	0.15
@@ -120,7 +120,7 @@ switch _mode do {
 		// We need to do this because the RscDisplayGarage script does it.
 		// No idea why - maybe we could remove it in the future?
 		if (isNil "bis_fnc_arsenal_data" && !canSuspend) exitWith {
-			["Init", _this] spawn SELF;
+			["Init", _this] spawn SELF_FUNC;
 		};
 
 		["register", _this, "RscDisplayGarageMikeForce", "GUI"] call REGISTER_DISPLAY_FUNC;
@@ -162,10 +162,10 @@ switch _mode do {
 		};
 
 		INITTYPES
-		["InitGUI",[_display, SELF]] call ARSENAL_FUNC;
-		["Preload"] call SELF;
-		["ListAdd",[_display]] call SELF;
-		if (BIS_fnc_garage_centerType == "") then {["buttonRandom",[_display]] call SELF;};
+		["InitGUI",[_display, SELF_NAME]] call ARSENAL_FUNC;
+		["Preload"] call SELF_FUNC;
+		["ListAdd",[_display]] call SELF_FUNC;
+		if (BIS_fnc_garage_centerType == "") then {["buttonRandom",[_display]] call SELF_FUNC;};
 		["MouseZChanged",[controlnull,0]] call ARSENAL_FUNC; //--- Reset zoom
 		{
 			_ctrl = _display displayctrl _x;
@@ -187,7 +187,7 @@ switch _mode do {
 		// Since that was replaced by register_display
 		if (currentNamespace isNotEqualTo uiNamespace) exitWith {
 			with uiNamespace do {
-				["Exit", _this] call SELF;
+				["Exit", _this] call SELF_FUNC;
 			};
 		};
 
@@ -361,7 +361,7 @@ switch _mode do {
 				_ctrlLineTabLeft ctrlcommit 0;
 				ctrlsetfocus _ctrlList;
 				if (_idc != IDC_RSCDISPLAYGARAGE_TAB_SUBANIMATION) then { //--- Don't select animation, it would inverse the state
-					['SelectItem',[_display,_display displayctrl (IDC_RSCDISPLAYARSENAL_LIST + _idc),_idc]] call SELF;
+					['SelectItem',[_display,_display displayctrl (IDC_RSCDISPLAYARSENAL_LIST + _idc),_idc]] call SELF_FUNC;
 				};
 			} else {
 				if ((_center getvariable "bis_fnc_arsenal_idc") != _idc) then {_ctrlList lbsetcursel -1;};
@@ -411,7 +411,7 @@ switch _mode do {
 			];
 		};
 
-		['TabSelectRight',[_display,IDC_RSCDISPLAYGARAGE_TAB_SUBCREW]] call SELF;
+		['TabSelectRight',[_display,IDC_RSCDISPLAYGARAGE_TAB_SUBCREW]] call SELF_FUNC;
 	};
 
 	///////////////////////////////////////////////////////////////////////////////////////////
@@ -840,12 +840,12 @@ switch _mode do {
 			[_center,_textures,_animations,true] call bis_fnc_initVehicle;
 		};
 		
-		["SetCrewStatus",[_display]] call SELF;
-		["SetAnimationStatus",[_display]] call SELF;
-		["SetTextureStatus",[_display]] call SELF;
+		["SetCrewStatus",[_display]] call SELF_FUNC;
+		["SetAnimationStatus",[_display]] call SELF_FUNC;
+		["SetTextureStatus",[_display]] call SELF_FUNC;
 		if (isclass _cfg) then {
 			["ShowItemInfo",[_cfg]] call ARSENAL_FUNC;
-			["ShowItemStats",[_cfgStats]] call SELF;
+			["ShowItemStats",[_cfgStats]] call SELF_FUNC;
 		};
 	};
 
@@ -1150,9 +1150,9 @@ switch _mode do {
 				{_center deletevehiclecrew _x;} foreach (crew _center);
 				[_center,_crew] call bis_fnc_initVehicleCrew;
 				{_x setbehaviour "careless";} foreach (crew _center);
-				["SetCrewStatus",[_display]] call SELF;
-				["SetAnimationStatus",[_display]] call SELF;
-				["SetTextureStatus",[_display]] call SELF;
+				["SetCrewStatus",[_display]] call SELF_FUNC;
+				["SetAnimationStatus",[_display]] call SELF_FUNC;
+				["SetTextureStatus",[_display]] call SELF_FUNC;
 			};
 		};
 		endloadingscreen;
@@ -1314,11 +1314,11 @@ switch _mode do {
 
 						[_center,[profilenamespace,_name]] call bis_fnc_loadvehicle;
 						if (is3DEN) then {
-							['SelectItem',[_display,_display displayctrl (IDC_RSCDISPLAYARSENAL_LIST + _categoryIndex),_categoryIndex]] call SELF;
+							['SelectItem',[_display,_display displayctrl (IDC_RSCDISPLAYARSENAL_LIST + _categoryIndex),_categoryIndex]] call SELF_FUNC;
 						} else {
-							["SetCrewStatus",[_display]] call SELF;
-							["SetAnimationStatus",[_display]] call SELF;
-							["SetTextureStatus",[_display]] call SELF;
+							["SetCrewStatus",[_display]] call SELF_FUNC;
+							["SetAnimationStatus",[_display]] call SELF_FUNC;
+							["SetTextureStatus",[_display]] call SELF_FUNC;
 						};
 					};
 				};
