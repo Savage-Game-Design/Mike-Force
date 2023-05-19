@@ -190,6 +190,13 @@ class CfgFunctions
 			class earplugs {};
 		};
 
+		class system_garage {
+			file = "functions\systems\garage";
+			class garage_arsenal {};
+			class garage_open {};
+			class garage_register_display {};
+		};
+
 		class system_player_markers
 		{
 			file = "functions\systems\player_markers";
