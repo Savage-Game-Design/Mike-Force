@@ -67,6 +67,7 @@ if (isNil "_spawnLocation") exitWith {
 private _spawnPoint = createHashMap;
 
 _spawnPoint set ["id", [] call vn_mf_fnc_veh_asset_create_spawn_point_id];
+_spawnPoint set ["object", _obj];
 _spawnPoint set ["settings", _spawnPointSettings];
 _spawnPoint set ["currentVehicle", objNull];
 _spawnPoint set ["status", createHashMapFromArray [

@@ -8,7 +8,6 @@
 
 
 	Parameter(s):
-		_id - Id of vehicle asset [Number]
 		_target - Object addAction is to be added to [Object]
 
 	Returns: nothing
