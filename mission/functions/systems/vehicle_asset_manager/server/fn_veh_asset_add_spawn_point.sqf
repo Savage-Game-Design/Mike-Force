@@ -91,6 +91,7 @@ _spawnPoint set ["spawnLocation", createHashMapFromArray [
 //lastClassSpawned is a spawn point variable, but shouldn't exist by default.
 //nextSpawnLocationOverride is a spawn point variable, but shouldn't exist by default. It has the same structure as "spawnLocation"
 
+_obj setVariable ["veh_asset_spawnPointId", _id, true];
 vn_mf_veh_asset_spawn_points set [_spawnPoint get "id", _spawnPoint];
 
 // Perform most of the client logic. Uses the data that's been sent to the client above.

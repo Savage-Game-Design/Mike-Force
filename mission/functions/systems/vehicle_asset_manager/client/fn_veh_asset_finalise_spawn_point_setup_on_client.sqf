@@ -62,12 +62,20 @@ if (count _missingVariables > 0) exitWith {};
 //TODO Setup "return vehicle to spawn" action as zeus
 
 //TODO Setup interaction overlay
-/*
-_object setVariable ["#para_InteractionOverlay_Data", [
-    [_spawnPoint get 'settings' get "name"] call para_c_fnc_localize, 
+private _name = _spawnPoint get 'settings' get 'name';
+private _vehicles = _spawnPoint get 'settings' get 'vehicles';
+if (_name isEqualTo '' && _vehicles isNotEqualTo []) then {
+    private _editorSubcategory = (getText (configFile >> 'CfgVehicles' >> (_vehicles # 0) >> 'editorSubcategory'));
+    _name = getText (configFile >> 'CfgEditorSubcategories' >> _editorSubcategory >> 'displayName');
+};
+
+
+_spawnPoint get 'object' setVariable ["#para_InteractionOverlay_Data", [
+    _name call para_c_fnc_localize, 
     "", 
-    "", // TODO - Respawn
-    {[]}, 
-    true,
+    "%1",
+    {[
+        [_this getVariable "veh_asset_spawnPointId"] call vn_mf_fnc_veh_asset_describe_status
+    ]}, 
+    true
 ]];
-*/
