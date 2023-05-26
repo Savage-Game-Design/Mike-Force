@@ -44,7 +44,7 @@ private _fnc_getTimeRemaining = {
 };
 
 if (_state isEqualTo "IDLE") exitWith {
-	format ["%1 is deployed and isn't currently in use.", _vehicleName]
+	format ["%1 is currently deployed and not in use.", _vehicleName]
 };
 
 if (_state isEqualTo "REPAIRING") exitWith {
