@@ -22,6 +22,7 @@ params ["_config"];
 
 private _spawnPointInfo = createHashMap;
 
+_spawnPointInfo set ["name", getText (_config >> "name")];
 _spawnPointInfo set ["respawnType", getText (_config >> "respawnType")];
 _spawnPointInfo set ["time", getNumber (_config >> "time")];
 _spawnPointInfo set ["vehicles", "true" configClasses (_config >> "vehicles") apply {configName _x}];

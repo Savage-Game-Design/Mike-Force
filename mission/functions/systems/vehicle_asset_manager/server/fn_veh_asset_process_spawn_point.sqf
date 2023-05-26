@@ -77,7 +77,8 @@ if ((_spawnPoint get "status" get "state") == "WRECKED") then {
 	if (isNull _vehicle) then {
 		// TODO - make this use the actual wreck if possible
 		_vehicle = ["vn_wheeled_m54_01_wreck", ASLtoAGL (_stateData select 1)] call para_g_fnc_create_vehicle;
-		_spawnPoint set ["currentVehicle", _vehicle];
+		_vehicle setVariable ["veh_asset_spawnPointId", _spawnPoint get "id", true];
+		[_spawnPoint, "currentVehicle", _vehicle] call vn_mf_fnc_veh_asset_set_global_variable;
 
 		[_vehicle] call vn_mf_fnc_veh_asset_setup_package_wreck_action;
 	};
@@ -94,7 +95,7 @@ if ((_spawnPoint get "status" get "state") == "WRECKED") then {
 
 		if (_vehicleDistance <= 20) then
 		{
-			private _vehicleClass =_spawnPoint get ["lastClassSpawned", _spawnpoint get "settings" get "vehicles" select 0];
+			private _vehicleClass =_spawnPoint getOrDefault ["lastClassSpawned", _spawnpoint get "settings" get "vehicles" select 0];
 			private _vehicleName = [configFile >> "CfgVehicles" >> _vehicleClass] call BIS_fnc_displayName;
 			private _canRecover = [_x, _settings get "time", _vehicleName] call para_s_fnc_bf_wreck_recovery_availablity_check; //check if recovery building can recover.
 

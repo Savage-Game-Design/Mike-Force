@@ -21,11 +21,11 @@ if (isNil "_repairTime") then {
 	_repairTime = _spawnPoint get "settings" getOrDefault ["time", 0];
 };
 
-_spawnPoint set ["status", createHashMapFromArray [
+[_spawnPoint, "status", createHashMapFromArray [
 	["state", "REPAIRING"], 
 	["lastChanged", serverTime],
 	["finishesAt", serverTime + _repairTime]
-]];
+]] call vn_mf_fnc_veh_asset_set_global_variable;
 
 [_spawnPoint] call vn_mf_fnc_veh_asset_marker_delete;
 

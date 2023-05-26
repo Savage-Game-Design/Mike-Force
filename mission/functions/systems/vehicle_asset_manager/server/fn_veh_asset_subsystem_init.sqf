@@ -33,6 +33,9 @@ vn_mf_veh_asset_lock_all_idle_vehicles = true;
 vn_mf_veh_asset_lock_idle_vehicle_markers = _lockIdleVehicleMarkers;
 //Time to re-lock a vehicle
 vn_mf_veh_asset_relock_time = 30;
+//The maximum distance from the spawn point at which a vehicle can be changed for another vehicle type.
+vn_mf_veh_asset_vehicle_change_max_distance = 10;
+publicVariable "vn_mf_veh_asset_vehicle_change_max_distance";
 //Vehicles to respawn var init
 vn_mf_spawn_points_to_respawn = [];
 

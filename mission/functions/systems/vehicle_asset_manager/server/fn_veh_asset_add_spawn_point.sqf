@@ -64,26 +64,34 @@ if (isNil "_spawnLocation") exitWith {
 	diag_log format ["VN MikeForce: [ERROR] Unable to create spawn point, no spawn location given: %1 at %2", typeOf _obj, getPos _obj];
 };
 
-private _spawnPoint = createHashMap;
+private _id = [] call vn_mf_fnc_veh_asset_create_spawn_point_id;
 
-_spawnPoint set ["id", [] call vn_mf_fnc_veh_asset_create_spawn_point_id];
-_spawnPoint set ["settings", _spawnPointSettings];
-_spawnPoint set ["currentVehicle", objNull];
-_spawnPoint set ["status", createHashMapFromArray [
-	["state", "IDLE"],
-	["lastChanged", serverTime]
-]];
+// Simultaneously create the spawn point on the client and the server.
+// Allows us to set variables on server + client at the same time.
+private _spawnPoint = createHashMapFromArray [["id", _id]];
+
 _spawnPoint set ["marker", ""];
 _spawnPoint set ["spawnLocation", createHashMapFromArray [
 	["pos", _spawnLocation # 0],
 	["dir", _spawnLocation # 1],
 	["searchForEmptySpace", false]
 ]];
-//lastClassSpawned is available, but should be nil on creation
-//nextSpawnLocationOverride is available, but shouldn't be in the HashMap by default. It has the same structure as "spawnLocation"
 
+[_spawnPoint, [
+	["object", _obj],
+	["settings", _spawnPointSettings],
+	["currentVehicle", objNull],
+	["status", createHashMapFromArray [
+		["state", "IDLE"],
+		["lastChanged", serverTime]
+	]]
+]] call vn_mf_fnc_veh_asset_set_global_variables;
+// Spawn point will be setup on the client here, due to set_global_variables.
+
+//lastClassSpawned is a spawn point variable, but shouldn't exist by default.
+//nextSpawnLocationOverride is a spawn point variable, but shouldn't exist by default. It has the same structure as "spawnLocation"
+
+_obj setVariable ["veh_asset_spawnPointId", _id, true];
 vn_mf_veh_asset_spawn_points set [_spawnPoint get "id", _spawnPoint];
-
-// TODO - Add actions and status
 
 _spawnPoint

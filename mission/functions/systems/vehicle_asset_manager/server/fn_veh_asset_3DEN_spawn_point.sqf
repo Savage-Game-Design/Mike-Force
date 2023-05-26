@@ -23,6 +23,8 @@
 
 params ["_spawnPointSettings", "_textureSelection"];
 
+if (!isServer) exitWith {};
+
 private _synchronizedObjects = synchronizedObjects this;
 private _spawnLocationObject = objNull;
 

@@ -18,8 +18,8 @@
 params ["_spawnPoint", "_vehicle"];
 
 _vehicle setVariable ["veh_asset_spawnPointId", _spawnPoint get "id", true];
-_spawnPoint set ["currentVehicle", _vehicle];
 _spawnPoint set ["lastClassSpawned", typeOf _vehicle];
+[_spawnPoint, "currentVehicle", _vehicle] call vn_mf_fnc_veh_asset_set_global_variable;
 
 [_vehicle] call vn_mf_fnc_veh_asset_add_unlock_action;
 [_spawnPoint] call vn_mf_fnc_veh_asset_set_idle;

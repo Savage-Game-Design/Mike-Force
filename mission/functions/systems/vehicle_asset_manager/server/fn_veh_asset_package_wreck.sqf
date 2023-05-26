@@ -27,8 +27,8 @@ private _pos = getPos _vehicle;
 
 // Swap out the vehicle for a box before deleting the original vehicle.
 private _box = ["vn_us_komex_medium_01", [0,0,0]] call para_g_fnc_create_vehicle;
-_box setVariable ["veh_asset_spawnPointId", _spawnPointId];
-_spawnPoint set ["currentVehicle", _box];
+_box setVariable ["veh_asset_spawnPointId", _spawnPointId, true];
+[_spawnPoint, "currentVehicle", _box] call vn_mf_fnc_veh_asset_set_global_variable;
 deleteVehicle _vehicle;
 
 // Move the box to the vehicle's old position
