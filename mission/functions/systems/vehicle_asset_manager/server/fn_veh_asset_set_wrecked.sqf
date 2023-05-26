@@ -24,12 +24,12 @@ if (isNull _vehicle) exitWith {
 	[_spawnPoint] call vn_mf_fnc_veh_asset_set_repairing;
 };
 
-_spawnPoint set ["status", createHashMapFromArray [
+[_spawnPoint, "status", createHashMapFromArray [
 	["state", "WRECKED"], 
 	["lastChanged", serverTime],
 	["posASL", getPosASL _vehicle],
 	["dir", getDir _vehicle]
-]];
+]] call vn_mf_fnc_veh_asset_set_global_variable;
 
 //Kaboom. We don't want TWO vehicles by accident.
 if (alive _vehicle) then {

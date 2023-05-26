@@ -64,27 +64,36 @@ if (isNil "_spawnLocation") exitWith {
 	diag_log format ["VN MikeForce: [ERROR] Unable to create spawn point, no spawn location given: %1 at %2", typeOf _obj, getPos _obj];
 };
 
-private _spawnPoint = createHashMap;
+private _id = [] call vn_mf_fnc_veh_asset_create_spawn_point_id;
 
-_spawnPoint set ["id", [] call vn_mf_fnc_veh_asset_create_spawn_point_id];
-_spawnPoint set ["object", _obj];
-_spawnPoint set ["settings", _spawnPointSettings];
-_spawnPoint set ["currentVehicle", objNull];
-_spawnPoint set ["status", createHashMapFromArray [
-	["state", "IDLE"],
-	["lastChanged", serverTime]
-]];
+// Simultaneously create the spawn point on the client and the server.
+// Allows us to set variables on server + client at the same time.
+private _spawnPoint = createHashMapFromArray [["id", _id]];
+[_id] remoteExec ["vn_mf_fnc_veh_asset_add_spawn_point_client", 0];
+
 _spawnPoint set ["marker", ""];
 _spawnPoint set ["spawnLocation", createHashMapFromArray [
 	["pos", _spawnLocation # 0],
 	["dir", _spawnLocation # 1],
 	["searchForEmptySpace", false]
 ]];
-//lastClassSpawned is available, but should be nil on creation
-//nextSpawnLocationOverride is available, but shouldn't be in the HashMap by default. It has the same structure as "spawnLocation"
+
+[_spawnPoint, [
+	["object", _obj],
+	["settings", _spawnPointSettings],
+	["currentVehicle", objNull],
+	["status", createHashMapFromArray [
+		["state", "IDLE"],
+		["lastChanged", serverTime]
+	]]
+]] call vn_mf_fnc_veh_asset_set_global_variables;
+
+//lastClassSpawned is a spawn point variable, but shouldn't exist by default.
+//nextSpawnLocationOverride is a spawn point variable, but shouldn't exist by default. It has the same structure as "spawnLocation"
 
 vn_mf_veh_asset_spawn_points set [_spawnPoint get "id", _spawnPoint];
 
-// TODO - Add actions and status
+// Perform most of the client logic. Uses the data that's been sent to the client above.
+[_id] remoteExec ["vn_mf_fnc_veh_asset_finalise_spawn_point_setup_on_client", 0];
 
 _spawnPoint

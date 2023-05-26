@@ -16,9 +16,9 @@
 
 params ["_spawnPoint"];
 
-_spawnPoint set ["status", createHashMapFromArray [
+[_spawnPoint, "status", createHashMapFromArray [
 	["state", "IDLE"], 
 	["lastChanged", serverTime]
-]];
+]] call vn_mf_fnc_veh_asset_set_global_variable;
 
 [_spawnPoint] call vn_mf_fnc_veh_asset_marker_delete;

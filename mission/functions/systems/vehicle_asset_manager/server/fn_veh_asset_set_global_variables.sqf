@@ -25,4 +25,4 @@ private _map = createHashMapFromArray _variableValuePairs;
 
 _spawnPoint merge [_map, true];
 
-[_spawnPoint get "id", _map] remoteExec ["vn_mf_fnc_veh_asset_set_variables_on_client", 0];
+[_spawnPoint get "id", _map] remoteExec ["vn_mf_fnc_veh_asset_set_client_variables", 0];
