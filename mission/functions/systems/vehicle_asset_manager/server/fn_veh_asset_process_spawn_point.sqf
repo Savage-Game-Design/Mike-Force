@@ -95,7 +95,7 @@ if ((_spawnPoint get "status" get "state") == "WRECKED") then {
 
 		if (_vehicleDistance <= 20) then
 		{
-			private _vehicleClass =_spawnPoint get ["lastClassSpawned", _spawnpoint get "settings" get "vehicles" select 0];
+			private _vehicleClass =_spawnPoint getOrDefault ["lastClassSpawned", _spawnpoint get "settings" get "vehicles" select 0];
 			private _vehicleName = [configFile >> "CfgVehicles" >> _vehicleClass] call BIS_fnc_displayName;
 			private _canRecover = [_x, _settings get "time", _vehicleName] call para_s_fnc_bf_wreck_recovery_availablity_check; //check if recovery building can recover.
 

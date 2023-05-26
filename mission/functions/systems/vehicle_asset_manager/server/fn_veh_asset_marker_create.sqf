@@ -18,7 +18,7 @@
 
 params ["_spawnPoint", "_type"];
 
-private _vehicle = _spawnPoint get ["currentVehicle", objNull];
+private _vehicle = _spawnPoint getOrDefault ["currentVehicle", objNull];
 
 private _textGenerator = [
 	[_type, _vehicle],

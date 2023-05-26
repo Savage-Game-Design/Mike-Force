@@ -19,7 +19,7 @@ params ["_spawnPoint"];
 private _marker = _spawnPoint getOrDefault ["marker", ""];
 if (_marker == "") exitWith {};
 
-private _vehicle = _spawnPoint get ["currentVehicle", objNull];
+private _vehicle = _spawnPoint getOrDefault ["currentVehicle", objNull];
 
 [
 	[_marker, _vehicle],
