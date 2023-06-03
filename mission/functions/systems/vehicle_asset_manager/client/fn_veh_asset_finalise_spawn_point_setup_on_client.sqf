@@ -11,7 +11,7 @@
         The spawn point data object should already exist, and have all relevant variables set on it.
     
     Parameter(s):
-        _id - ID of the spawn point [String]
+        _spawnPoint - Spawnpoint to finalise setup for [HashMap]
 
     Returns:
         Nothing
@@ -20,13 +20,7 @@
         ["32"] call vn_mf_fnc_veh_asset_finalise_spawn_point_setup_on_client;
 */
 
-params ["_id"];
-
-if (isNil "vn_mf_veh_asset_spawn_points_client") then {
-    vn_mf_veh_asset_spawn_points_client = createHashMap;
-};
-
-private _spawnPoint = vn_mf_veh_asset_spawn_points_client get _id;
+params ["_spawnPoint"];
 
 //============
 // Validation 

@@ -23,4 +23,5 @@
 params ["_spawnPoint", "_variable", "_value"];
 
 _spawnPoint set [_variable, _value];
-[_spawnPoint get "id", _variable, _value] remoteExec ["vn_mf_fnc_veh_asset_set_client_variable", 0];
+
+[_spawnPoint] remoteExec ["vn_mf_fnc_veh_asset_update_spawn_point_data", 0, format ["vn_mf_spawnpoint_%1", _spawnPoint get "id"]];

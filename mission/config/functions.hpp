@@ -297,13 +297,12 @@ class CfgFunctions
 			file = "functions\systems\vehicle_asset_manager\client";
 			class veh_asset_add_package_underwater_wreck_action_local {};
 			class veh_asset_add_package_wreck_action_local {};
-			class veh_asset_add_spawn_point_client {};
 			class veh_asset_describe_status {};
 			class veh_asset_finalise_spawn_point_setup_on_client {};
 			class veh_asset_remove_package_underwater_wreck_action_local {};
-			class veh_asset_set_client_variable {};
-			class veh_asset_set_client_variables {};
+			class veh_asset_remove_spawn_point_client {};
 			class veh_asset_setup_package_wreck_action_local {};
+			class veh_asset_update_spawn_point_data {};
 		};
 
 		class system_vehicle_asset_manager_global

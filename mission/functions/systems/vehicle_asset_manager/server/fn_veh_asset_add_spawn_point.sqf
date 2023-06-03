@@ -69,7 +69,6 @@ private _id = [] call vn_mf_fnc_veh_asset_create_spawn_point_id;
 // Simultaneously create the spawn point on the client and the server.
 // Allows us to set variables on server + client at the same time.
 private _spawnPoint = createHashMapFromArray [["id", _id]];
-[_id] remoteExec ["vn_mf_fnc_veh_asset_add_spawn_point_client", 0];
 
 _spawnPoint set ["marker", ""];
 _spawnPoint set ["spawnLocation", createHashMapFromArray [
@@ -87,14 +86,12 @@ _spawnPoint set ["spawnLocation", createHashMapFromArray [
 		["lastChanged", serverTime]
 	]]
 ]] call vn_mf_fnc_veh_asset_set_global_variables;
+// Spawn point will be setup on the client here, due to set_global_variables.
 
 //lastClassSpawned is a spawn point variable, but shouldn't exist by default.
 //nextSpawnLocationOverride is a spawn point variable, but shouldn't exist by default. It has the same structure as "spawnLocation"
 
 _obj setVariable ["veh_asset_spawnPointId", _id, true];
 vn_mf_veh_asset_spawn_points set [_spawnPoint get "id", _spawnPoint];
-
-// Perform most of the client logic. Uses the data that's been sent to the client above.
-[_id] remoteExec ["vn_mf_fnc_veh_asset_finalise_spawn_point_setup_on_client", 0];
 
 _spawnPoint
