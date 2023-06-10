@@ -28,7 +28,7 @@ if (_obj getVariable ["veh_asset_isSpawnPoint", false]) exitWith {
 };
 
 if (_spawnPointSettings isEqualType "") then {
-	_spawnPointSettings = [missionConfigFile >> "gamemode" >> "vehicle_respawn_info" >> _spawnPointSettings] call vn_mf_fnc_veh_asset_get_spawn_point_info_from_config;
+	_spawnPointSettings = [missionConfigFile >> "gamemode" >> "vehicle_respawn_info" >> "spawn_point_types" >> _spawnPointSettings] call vn_mf_fnc_veh_asset_get_spawn_point_info_from_config;
 };
 
 if (_spawnLocation isEqualType objNull) then {

@@ -310,6 +310,7 @@ class CfgFunctions
 			file = "functions\systems\vehicle_asset_manager\global";
 			class veh_asset_can_change_vehicle {};
 			class veh_asset_get_spawn_point_info_from_config {};
+			class veh_asset_load_vehicle_configs {};
 		};
 
 		class system_vehicle_asset_manager_server_network

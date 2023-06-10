@@ -1,20 +1,10 @@
+#include "..\ui\icons.inc"
+
 #define CONDITION_HAS_RANK { $STR_vn_mf_buildingMenu_condition_hasRank, "player getVariable ['vn_mf_db_rank',0] >= getNumber(_config >> 'rank')"}
 #define CONDITION_IS_ENGINEER { $STR_vn_mf_buildingMenu_condition_isEngineer, "player getUnitTrait 'engineer'"}
 #define CONDITION_IS_ON_FOOT { $STR_vn_mf_buildingMenu_condition_rnFoot, "isNull objectParent player"}
 #define CONDITION_NOT_IN_RESTRICTED_ZONE { $STR_vn_mf_buildingMenu_condition_inRestrictedZone, "vn_mf_markers_blocked_areas findIf {_pos inArea _x} isEqualTo -1"}
 #define CONDITION_IS_ACAV { $STR_vn_mf_buildingMenu_condition_inACav, "player getVariable ['vn_mf_db_player_group', 'MikeForce'] isEqualTo 'ACAV'"}
-
-//Icon Classes for Vehicle Spawner
-#define VEHICLE_ICON_BOAT "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_mf_boat_ca.paa"
-#define VEHICLE_ICON_PLANE "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_mf_plane_ca.paa"
-#define VEHICLE_ICON_HELO "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_heli_ca.paa"
-#define VEHICLE_ICON_CAR "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_car_ca.paa"
-#define VEHICLE_ICON_STATIC "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_mg_ca.paa"
-#define VEHICLE_ICON_TANK "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tank_ca.paa"
-#define VEHICLE_ICON_TRUCK "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_truck_ca.paa"
-#define VEHICLE_ICON_SUPPLY "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_sup_ammo_ca.paa"
-#define VEHICLE_ICON_ARMOUR "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tank_ca.paa"
-
 
 //Takes "Capacity" in supply units, and "Lifetime" in seconds.
 #define DAYS_TO_SECONDS(days) (days * 86400)
