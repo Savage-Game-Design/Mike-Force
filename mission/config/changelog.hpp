@@ -3,7 +3,9 @@ class Changelog {
 		version = "1.00.03";
 		date = "28th January 2023";
 		changes[] = {
+			"[New] Adds S.O.G. Prairie Fire 1.3 content",
 			"[New] Adds a mission parameter to scale the number of AI (and therefore difficulty)",
+			"[Change] Redesigned vehicle spawning. The base now has a handful of spawn points, each with a selection of vehicles",
 			"[Change] Added a notification when counterattacks are failed",
 			"[Fix] Zone progression rewritten to be more robust (fewer bugs)",
 			"[Fix] Headless clients should be much more effective at hosting AI",
