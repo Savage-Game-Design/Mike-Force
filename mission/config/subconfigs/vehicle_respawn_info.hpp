@@ -451,17 +451,17 @@ class spawn_point_types {
 		RESPAWN_SHORT;
 
 		class categories {
-			class civilian {
-				name = "Civilian";
-				icon = VEHICLE_ICON_CAR;
-				include[] = { "civilian" };
-			};
-
 			class dirtranger {
 				name = "Dirt Ranger";
 				icon = VEHICLE_ICON_CAR;
 				include[] = { { "dirtranger", "transport" } };
 				exclude[] = { "armed" };
+			};
+
+			class civilian {
+				name = "Civilian";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { "civilian" };
 			};
 
 			class m151 {
@@ -495,7 +495,7 @@ class spawn_point_types {
 			class m151 {
 				name = "M151A1";
 				icon = VEHICLE_ICON_CAR;
-				include[] = { { "m151", "armed" } };
+				include[] = { { "m151a1", "armed" } };
 				exclude[] = { "transport" };
 			};
 

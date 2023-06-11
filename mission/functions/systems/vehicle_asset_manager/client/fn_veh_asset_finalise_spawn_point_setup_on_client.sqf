@@ -45,17 +45,40 @@ if (count _missingVariables > 0) exitWith {};
 // Logic
 //========
 
-//TODO Setup change vehicle actions
-/*
+// ----------------------
+// Wheel menu actions
+// ----------------------
+private _vehicleCategories = _spawnPoint get "settings" get "categories";
+
 {
+    private _category = _x;
+    private _submenuActions = _category get "vehicles" apply {
+        private _vehicle = _x;
+        createHashMapFromArray [
+            ["text", getText (configFile >> "CfgVehicles" >> (_vehicle get "classname") >> "displayName")],
+            ["iconPath", _vehicle get "icon"],
+            ["functionArguments", [_spawnPoint get "id", _vehicle get "classname"]],
+            ["function", "vn_mf_fnc_veh_asset_request_vehicle_change_client"]
+        ]
+    };
 
+    private _categoryAction = createHashMapFromArray [
+        ["text", (_category get "name") call para_c_fnc_localize],
+        ["iconPath", _category get "icon"],
+        ["submenuActions", _submenuActions]
+    ];
 
-} forEach (_spawnPoint get "settings" getOrDefault ['vehicles', []]);
-*/
+    [
+        _spawnPoint get "object",
+        _categoryAction
+    ] call para_c_fnc_wheel_menu_add_obj_action;
+} forEach _vehicleCategories;
 
 //TODO Setup "return vehicle to spawn" action as zeus
 
-//TODO Setup interaction overlay
+// ----------------------
+// Interaction overlay
+// ----------------------
 private _name = _spawnPoint get 'settings' get 'name';
 private _vehicles = _spawnPoint get 'settings' get 'vehicles';
 if (_name isEqualTo '' && _vehicles isNotEqualTo []) then {

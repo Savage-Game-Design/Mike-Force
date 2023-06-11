@@ -301,6 +301,7 @@ class CfgFunctions
 			class veh_asset_finalise_spawn_point_setup_on_client {};
 			class veh_asset_remove_package_underwater_wreck_action_local {};
 			class veh_asset_remove_spawn_point_client {};
+			class veh_asset_request_vehicle_change_client {};
 			class veh_asset_setup_package_wreck_action_local {};
 			class veh_asset_update_spawn_point_data {};
 		};
@@ -317,6 +318,7 @@ class CfgFunctions
 		{
 			file = "functions\systems\vehicle_asset_manager\server\network";
 			class packageforslingloading {};
+			class veh_asset_handle_change_vehicle_request {};
 		};
 
 		class system_vehicle_asset_manager_server

@@ -68,7 +68,7 @@ private _categoryConfigs = "true" configClasses (_config >> "categories");
 
     private _categoryVehicleClasses = _categoryVehicles apply {_x get "classname"};
 
-    _category set ["vehicles", _categoryVehicleClasses];
+    _category set ["vehicles", _categoryVehicles];
     _vehicles append (_categoryVehicleClasses);
 } forEach _categoryConfigs;
 
