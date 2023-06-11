@@ -173,11 +173,11 @@ class vehicles {
 	};
 
 	class vn_b_armor_m41_01_01 {
-		tags[] = {"m41a3","armed","firesupport","tank,lighttank","antitank"};
+		tags[] = {"m41a3","armed","firesupport","tank","lighttank","antitank"};
 	};
 
 	class vn_b_armor_m48_01_01 {
-		tags[] = {"m48a3","armed","firesupport","tank,heavytank","antitank"};
+		tags[] = {"m48a3","armed","firesupport","tank","heavytank","antitank"};
 	};
 
 	class vn_b_armor_m577_01 {
@@ -189,7 +189,7 @@ class vehicles {
 	};
 
 	class vn_b_armor_m67_01_01 {
-		tags[] = {"m67a2","armed","firesupport","tank,flamethrower"};
+		tags[] = {"m67a2","armed","firesupport","tank","flamethrower"};
 	};
 
 	class vn_b_army_static_tow {
@@ -508,7 +508,7 @@ class spawn_point_types {
 		};
 	};
 
-	class transport_apc {
+	class transport_heavy {
 		name = "Heavy transport";
 		RESPAWN_LONG;
 
@@ -528,6 +528,29 @@ class spawn_point_types {
 			};
 		};
 	};
+
+	class transport_trucks {
+		name = "Large transport";
+		RESPAWN_LONG;
+
+		class categories {
+			class m113 {
+				name = "M113";
+				icon = VEHICLE_ICON_ARMOUR;
+				include[] = { { "m113", "transport" } };
+				exclude[] = { "firesupport" };
+			};
+
+			class trucks {
+				name = "Trucks";
+				icon = VEHICLE_ICON_TRUCK;
+				include[] = { { "truck", "transport" } };
+				exclude[] = { "firesupport" };
+			};
+		};
+	};
+
+
 
 	class ambulance {
 		name = "Ambulance";
@@ -602,7 +625,21 @@ class spawn_point_types {
 		};
 	};
 
-	class light_air {
+	class air_scout {
+		name = "Scout air";
+		RESPAWN_SHORT;
+
+		class categories {
+			class cayuse {
+				name = "OH-6A";
+				icon = VEHICLE_ICON_HELO;
+				include[] = { "oh6a" };
+				exclude[] = { "firesupport" };
+			};
+		};
+	};
+
+	class air_light {
 		name = "Light air";
 		RESPAWN_SHORT;
 
@@ -642,7 +679,7 @@ class spawn_point_types {
 		};
 	};
 
-	class fire_support {
+	class air_fire_support {
 		name = "Air support";
 		WRECK_MEDIUM;
 
@@ -660,7 +697,7 @@ class spawn_point_types {
 		};
 	};
 
-	class heavy_fire_support_air {
+	class air_heavy_fire_support {
 		name = "Heavy air support";
 		WRECK_LONG;
 
