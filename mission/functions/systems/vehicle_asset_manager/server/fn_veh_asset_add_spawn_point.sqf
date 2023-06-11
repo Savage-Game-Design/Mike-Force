@@ -77,6 +77,9 @@ _spawnPoint set ["spawnLocation", createHashMapFromArray [
 	["searchForEmptySpace", false]
 ]];
 
+// Start the spawn point with a random vehicle.
+_spawnPoint set ["lastClassSpawned", selectRandom (_spawnPointSettings get "vehicles")];
+
 [_spawnPoint, [
 	["object", _obj],
 	["settings", _spawnPointSettings],
