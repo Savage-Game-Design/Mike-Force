@@ -35,7 +35,7 @@ deleteVehicle _oldVehicle;
 sleep 1;
 
 isNil { 
-    _vehicle = [_classToSpawn, [0,0,0], [], 0, "CAN_COLLIDE"] call para_g_fnc_create_vehicle;
+    _vehicle = [_classToSpawn, [0,0,1000], [], 0, "CAN_COLLIDE"] call para_g_fnc_create_vehicle;
 	_vehicle enableSimulationGlobal false;
 
 	private _position = _spawnLocation get "pos";
@@ -46,11 +46,13 @@ isNil {
 		};
 	};
 
+	_vehicle setVelocity [0,0,0];
 	_vehicle setDir (_spawnLocation get "dir");
 	_vehicle setPosASL _position;
 	
 	// Location override is only valid for 1 respawn.
 	_spawnPoint deleteAt "nextSpawnLocationOverride";
+	_vehicle enableSimulationGlobal true;
 };
 
 //This restores UAV drivers. Shouldn't need it in VN, but better safe than sorry.
@@ -60,4 +62,3 @@ if (getNumber (configfile >> "CfgVehicles" >> _classToSpawn >> "isUAV") > 0 && c
 
 [_spawnPoint, _vehicle] call vn_mf_fnc_veh_asset_assign_vehicle_to_spawn_point;
 
-_vehicle enableSimulationGlobal true;
