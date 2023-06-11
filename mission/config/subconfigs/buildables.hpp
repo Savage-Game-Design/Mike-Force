@@ -5297,6 +5297,51 @@ class Land_vn_i_shed_ind_old_f
 						//side = "WEST";
 					};
 				};
+				class mules
+				{
+					icon = VEHICLE_ICON_CAR;
+					name = "STR_vn_mf_vic_mule";
+
+					class vn_b_wheeled_m274_01_01
+					{
+						cost[] = {{"BuildingSupplies", 100}};
+						cooldown = 120;
+						icon = VEHICLE_ICON_CAR;
+						//side = "WEST";
+					};
+
+					class vn_b_wheeled_m274_02_01
+					{
+						cost[] = {{"BuildingSupplies", 100}};
+						cooldown = 120;
+						icon = VEHICLE_ICON_CAR;
+						//side = "WEST";
+					};
+
+					class vn_b_wheeled_m274_mg_02_01
+					{
+						cost[] = {{"BuildingSupplies", 250}};
+						cooldown = 120;
+						icon = VEHICLE_ICON_CAR;
+						//side = "WEST";
+					};
+
+					class vn_b_wheeled_m274_mg_03_01
+					{
+						cost[] = {{"BuildingSupplies", 200}};
+						cooldown = 120;
+						icon = VEHICLE_ICON_CAR;
+						//side = "WEST";
+					};
+
+					class vn_b_wheeled_m274_mg_01_01
+					{
+						cost[] = {{"BuildingSupplies", 200}};
+						cooldown = 120;
+						icon = VEHICLE_ICON_CAR;
+						//side = "WEST";
+					};
+				};
 				class cars
 				{
 					icon = VEHICLE_ICON_CAR;
@@ -5310,7 +5355,7 @@ class Land_vn_i_shed_ind_old_f
 						//side = "WEST";
 					};
 
-					class vn_b_wheeled_m151_02
+					class vn_b_wheeled_lr2a_02_aus_army
 					{
 						cost[] = {{"BuildingSupplies", 250}};
 						cooldown = 120;
@@ -5319,6 +5364,14 @@ class Land_vn_i_shed_ind_old_f
 					};
 
 					class vn_b_wheeled_m151_mg_03
+					{
+						cost[] = {{"BuildingSupplies", 300}};
+						cooldown = 180;
+						icon = VEHICLE_ICON_CAR;
+						//side = "WEST";
+					};
+
+					class vn_b_wheeled_lr2a_mg_02_aus_army
 					{
 						cost[] = {{"BuildingSupplies", 300}};
 						cooldown = 180;
@@ -5342,7 +5395,7 @@ class Land_vn_i_shed_ind_old_f
 						//side = "WEST";
 					};
 
-					class vn_b_wheeled_m151_mg_02
+					class vn_b_wheeled_lr2a_mg_01_aus_army
 					{
 						cost[] = {{"BuildingSupplies", 300}};
 						cooldown = 180;
@@ -5350,7 +5403,7 @@ class Land_vn_i_shed_ind_old_f
 						//side = "WEST";
 					};
 
-					class vn_b_wheeled_m151_mg_06
+					class vn_b_wheeled_lr2a_mg_03_aus_army
 					{
 						cost[] = {{"BuildingSupplies", 500}};
 						cooldown = 300;
@@ -5494,6 +5547,14 @@ class Land_vn_i_shed_ind_old_f
 					};
 
 					class vn_b_armor_m113_acav_06
+					{
+						cost[] = {{"BuildingSupplies", 1500}};
+						cooldown = 900;
+						icon = VEHICLE_ICON_ARMOUR;
+						//side = "WEST";
+					};
+
+					class vn_b_armor_m132_01
 					{
 						cost[] = {{"BuildingSupplies", 2000}};
 						cooldown = 900;

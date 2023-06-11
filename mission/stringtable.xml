@@ -1328,6 +1328,9 @@
 			<Key ID="STR_vn_mf_vic_car">
         <Original>Cars</Original>
       </Key>
+			<Key ID="STR_vn_mf_vic_mule">
+        <Original>Mules</Original>
+      </Key>
       <Key ID="STR_vn_mf_vic_truck">
         <Original>Trucks</Original>
       </Key>
