@@ -5564,7 +5564,7 @@ class Land_vn_i_shed_ind_old_f
 				};
 			};
 
-			spawnPositionModelSpace[] = {6.00293,3.26758,-1.91181};
+			spawnPositionModelSpace[] = {6.00293,3.26758,-1.2};
 			spawnDirectionModelSpace = 270;
 		};
 	};
