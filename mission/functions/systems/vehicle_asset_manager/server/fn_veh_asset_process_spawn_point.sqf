@@ -76,7 +76,7 @@ if ((_spawnPoint get "status" get "state") == "WRECKED") then {
 	//If it's wrecked, but the object no longer exists, create a placeholder for it - so we don't make it unretrievable accidentally
 	if (isNull _vehicle) then {
 		// TODO - make this use the actual wreck if possible
-		_vehicle = ["vn_wheeled_m54_01_wreck", ASLtoAGL (_stateData select 1)] call para_g_fnc_create_vehicle;
+		_vehicle = ["vn_wheeled_m54_01_wreck", ASLtoAGL (_spawnPoint get "status" get "posASL")] call para_g_fnc_create_vehicle;
 		_vehicle setVariable ["veh_asset_spawnPointId", _spawnPoint get "id", true];
 		[_spawnPoint, "currentVehicle", _vehicle] call vn_mf_fnc_veh_asset_set_global_variable;
 
