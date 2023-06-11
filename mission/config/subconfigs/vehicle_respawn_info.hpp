@@ -530,17 +530,10 @@ class spawn_point_types {
 	};
 
 	class transport_trucks {
-		name = "Large transport";
+		name = "Trucks";
 		RESPAWN_LONG;
 
 		class categories {
-			class m113 {
-				name = "M113";
-				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "m113", "transport" } };
-				exclude[] = { "firesupport" };
-			};
-
 			class trucks {
 				name = "Trucks";
 				icon = VEHICLE_ICON_TRUCK;
