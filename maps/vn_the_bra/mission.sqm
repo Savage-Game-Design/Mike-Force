@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=636;
+		nextID=638;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=481;
+		nextID=568;
 	};
 	class Camera
 	{
-		pos[]={3286.269,66.490005,4353.7139};
-		dir[]={0,-0.70710683,0.70710671};
-		up[]={0,0.70710665,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={3439.7888,59.304642,4305.0957};
+		dir[]={-0.94546878,-0.29431665,-0.13954034};
+		up[]={-0.29116467,0.95570773,-0.042972304};
+		aside[]={-0.1460069,-7.0605893e-008,0.98928702};
 	};
 };
 binarizationWanted=0;
@@ -10342,7 +10342,7 @@ class Mission
 					};
 					id=607;
 					type="Sign_Arrow_Direction_Green_F";
-					atlOffset=0.60484695;
+					atlOffset=0.5977211;
 				};
 				class Item2
 				{
@@ -10358,7 +10358,7 @@ class Mission
 				};
 			};
 			id=631;
-			atlOffset=0.21392441;
+			atlOffset=0.005317688;
 		};
 		class Item89
 		{
@@ -10397,7 +10397,7 @@ class Mission
 					};
 					id=610;
 					type="Sign_Arrow_Direction_Green_F";
-					atlOffset=0.60484695;
+					atlOffset=0.5977211;
 				};
 				class Item2
 				{
@@ -10413,7 +10413,7 @@ class Mission
 				};
 			};
 			id=632;
-			atlOffset=0.031162262;
+			atlOffset=0.051296234;
 		};
 		class Item90
 		{
@@ -10452,7 +10452,7 @@ class Mission
 					};
 					id=616;
 					type="Sign_Arrow_Direction_Green_F";
-					atlOffset=0.088878632;
+					atlOffset=0.081752777;
 				};
 				class Item2
 				{
@@ -10507,7 +10507,7 @@ class Mission
 					};
 					id=613;
 					type="Sign_Arrow_Direction_Green_F";
-					atlOffset=0.34686279;
+					atlOffset=0.33973694;
 				};
 				class Item2
 				{
