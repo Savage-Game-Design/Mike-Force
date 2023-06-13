@@ -18,6 +18,7 @@ class Changelog {
 			"[Fix] Wreck recovery point status should update correctly",
 			"[Fix] Team swapping no longer causes an error",
 			"[Fix] Headless client slots added to Altis",
+			"[Fix] Respawn markers should be created when a building is loaded from a save",
 			"[Change] Minor changes to bases on Khe Sanh, Cam Lao Nam and The Bra"
 		};
 	};
