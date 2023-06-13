@@ -5,7 +5,7 @@ class vn_logistics
 	class vn_defaults_extra_large
 	{
 		inventory_max_weight = 1200;
-		inventory_max_size = 7.5;
+		inventory_max_size = 10;
 	};
 	class vn_defaults_large
 	{
@@ -369,7 +369,7 @@ class vn_logistics
 		class Land_Cargo10_brick_red_F
 		{
 			item_weight = 600;
-			item_size = 7.5;
+			item_size = 10;
 			spawn_distance = 9;
 			rotation_offset = 0;
 		};

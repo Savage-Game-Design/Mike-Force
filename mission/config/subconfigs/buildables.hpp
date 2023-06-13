@@ -5447,23 +5447,6 @@ class Land_vn_i_shed_ind_old_f
 						icon = VEHICLE_ICON_STATIC;
 						//side = "WEST";
 					};
-
-					class vn_b_sf_static_m60_high
-					{
-						cost[] = {{"BuildingSupplies", 100}};
-						cooldown = 60;
-						icon = VEHICLE_ICON_STATIC;
-						//side = "WEST";
-					};
-
-					class vn_b_sf_static_m60_low
-					{
-						cost[] = {{"BuildingSupplies", 100}};
-						cooldown = 60;
-						icon = VEHICLE_ICON_STATIC;
-						//side = "WEST";
-					};
-
 					class vn_b_sf_static_mk18
 					{
 						cost[] = {{"BuildingSupplies", 300}};
@@ -5484,6 +5467,14 @@ class Land_vn_i_shed_ind_old_f
 					{
 						cost[] = {{"BuildingSupplies", 300}};
 						cooldown = 120;
+						icon = VEHICLE_ICON_STATIC;
+						//side = "WEST";
+					};
+
+					class vn_o_pl_static_at3
+					{
+						cost[] = {{"BuildingSupplies", 100}};
+						cooldown = 60;
 						icon = VEHICLE_ICON_STATIC;
 						//side = "WEST";
 					};
