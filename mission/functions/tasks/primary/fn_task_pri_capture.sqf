@@ -99,15 +99,5 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
-	private _zone = _taskDataStore getVariable "taskMarker";
-
 	_taskDataStore getVariable "aiObjectives" apply {[_x] call para_s_fnc_ai_obj_finish_objective};
-
-	private _taskStore = ((["defend_counterattack", _zone, [["prepTime", 180]]] call vn_mf_fnc_task_create) # 1);
-
-	//Put the besieged zone off to the side for now to prevent an infinite loop
-	private _selectZone = mf_s_activeZones findIf {_zone isEqualTo (_x select struct_zone_m_marker)};
-	mf_s_siegedZones pushBack [_zone, _taskStore];
-	mf_s_activeZones deleteAt _selectZone;
-
 }];

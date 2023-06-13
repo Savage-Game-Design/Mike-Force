@@ -2,6 +2,11 @@ class vn_logistics
 {
     class vehicle_data
     {
+	class vn_defaults_extra_large
+	{
+		inventory_max_weight = 1200;
+		inventory_max_size = 10;
+	};
 	class vn_defaults_large
 	{
 		inventory_max_weight = 600;
@@ -27,10 +32,14 @@ class vn_logistics
 	class vn_b_wheeled_m151_01_mp : vn_defaults_small {};
 	class vn_b_wheeled_m151_02_mp : vn_defaults_small {};
 	class vn_b_wheeled_m151_02 : vn_defaults_small {};
-	class vn_c_car_01_01 : vn_defaults_tiny {};
-	class vn_c_car_02_01 : vn_defaults_tiny {};
-	class vn_c_car_03_01 : vn_defaults_tiny {};
+	class vn_c_car_01_01 : vn_defaults_small {};
+	class vn_c_car_02_01 : vn_defaults_small {};
+	class vn_c_car_03_01 : vn_defaults_small {};
 	class vn_c_car_04_01 : vn_defaults_small {};
+	class vn_c_car_01_02 : vn_defaults_small {};
+	class vn_c_wheeled_m151_01 : vn_defaults_small {};
+	class vn_c_wheeled_m151_02 : vn_defaults_small {};
+
 
 	//Armed Jeeps
 	class vn_b_wheeled_m151_mg_01 : vn_defaults_tiny {};
@@ -53,9 +62,9 @@ class vn_logistics
 	class vn_b_armor_m113_acav_06 : vn_defaults_small {};
 
 	//Transport trucks
-	class vn_b_wheeled_m54_01 : vn_defaults_large {};
-	class vn_b_wheeled_m54_01_airport : vn_defaults_large {};
-	class vn_b_wheeled_m54_02 : vn_defaults_large {};
+	class vn_b_wheeled_m54_01 : vn_defaults_extra_large {};
+	class vn_b_wheeled_m54_01_airport : vn_defaults_extra_large {};
+	class vn_b_wheeled_m54_02 : vn_defaults_extra_large {};
 	//M109 Command Truck
 	class vn_b_wheeled_m54_03 : vn_defaults_medium {};
 	//Repair Truck
@@ -72,8 +81,11 @@ class vn_logistics
 	class vn_b_wheeled_m54_mg_03 : vn_defaults_small {};
 
 	//Armor
-	class vn_b_armor_m41_01_01 : vn_defaults_small {};
-	class vn_o_armor_type63_01 : vn_defaults_small {};
+	class vn_b_armor_m41_01_01 : vn_defaults_tiny {};
+	class vn_o_armor_type63_01 : vn_defaults_tiny {};
+	class vn_b_armor_m48_01_01 : vn_defaults_tiny {};
+	class vn_b_armor_m67_01_01 : vn_defaults_tiny {};
+	class vn_i_armor_type63_01 : vn_defaults_tiny {};
 
 	//Small VC boats
 	class vn_o_boat_01_00 : vn_defaults_small {};
@@ -203,11 +215,22 @@ class vn_logistics
 	class vn_b_air_uh1c_06_02 : vn_defaults_tiny {};
 
 	//UH1B - Slick
-	class vn_b_air_uh1c_07_01 : vn_defaults_tiny {};
+	class vn_b_air_uh1c_07_01 : vn_defaults_small {};
+
+	//UH1B - Dustoff 
+	class vn_b_air_uh1b_01_01 : vn_defaults_small {};
+
+	//UH1E - Slick
+	class vn_b_air_uh1e_03_04 : vn_defaults_small {};
+
+	//UH1E - Gunship
+	class vn_b_air_uh1e_01_04 : vn_defaults_tiny {};
 
 	//Choctaw - Transport
 	class vn_b_air_ch34_01_01 : vn_defaults_small {};
 	class vn_b_air_ch34_03_01 : vn_defaults_small {};
+	class vn_i_air_ch34_01_02 : vn_defaults_small {};
+	class vn_i_air_ch34_02_02 : vn_defaults_small {};
 	//Choctaw - Armed (Stinger variants)
 	class vn_b_air_ch34_04_01 : vn_defaults_tiny {};
 	class vn_b_air_ch34_04_02 : vn_defaults_tiny {};
@@ -232,6 +255,69 @@ class vn_logistics
 	//UH1F - Slick
 	class vn_b_air_uh1f_01_03 : vn_defaults_small {};
 
+	//Jets
+	// 	Jets don't get any storage.
+
+	// CH-47 Chinook
+	class vn_b_air_ch47_01_01: vn_defaults_large {};
+	class vn_b_air_ch47_02_01: vn_defaults_large {};
+	class vn_b_air_ch47_03_01: vn_defaults_large {};
+	class vn_b_air_ch47_04_01: vn_defaults_large {};
+	class vn_b_air_ch47_01_02: vn_defaults_large {};
+	class vn_b_air_ch47_02_02: vn_defaults_large {};
+	class vn_b_air_ch47_03_02: vn_defaults_large {};
+	class vn_b_air_ch47_04_02: vn_defaults_large {};
+	class vn_b_air_ach47_01_01: vn_defaults_medium {};
+	class vn_b_air_ach47_02_01: vn_defaults_medium {};
+	class vn_b_air_ach47_03_01: vn_defaults_medium {};
+	class vn_b_air_ach47_04_01: vn_defaults_medium {};
+	class vn_b_air_ach47_05_01: vn_defaults_medium {};
+	class vn_i_air_ch47_01_01: vn_defaults_large {};
+	class vn_i_air_ch47_02_01: vn_defaults_large {};
+	class vn_i_air_ch47_03_01: vn_defaults_large {};
+	class vn_i_air_ch47_04_01: vn_defaults_large {};
+
+	// M151
+	class vn_b_wheeled_m151_01_usmc: vn_defaults_small {};
+	class vn_b_wheeled_m151_02_usmc: vn_defaults_small {};
+	class vn_b_wheeled_m151_mg_02_usmc: vn_defaults_tiny {};
+	class vn_b_wheeled_m151_mg_03_usmc: vn_defaults_tiny {};
+	class vn_b_wheeled_m151_mg_04_usmc: vn_defaults_tiny {};
+
+	// LR2a
+	class vn_b_wheeled_lr2a_01_aus_army: vn_defaults_small {};
+	class vn_b_wheeled_lr2a_01_nz_army: vn_defaults_small {};
+	class vn_b_wheeled_lr2a_02_aus_army: vn_defaults_small {};
+	class vn_b_wheeled_lr2a_02_nz_army: vn_defaults_small {};
+	class vn_b_wheeled_lr2a_03_aus_army: vn_defaults_small {};
+	class vn_b_wheeled_lr2a_03_nz_army: vn_defaults_small {};
+	class vn_b_wheeled_lr2a_mg_01_aus_army: vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_01_nz_army: vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_02_aus_army: vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_02_nz_army: vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_03_aus_army: vn_defaults_tiny {};
+	class vn_b_wheeled_lr2a_mg_03_nz_army: vn_defaults_tiny {};
+	class vn_i_wheeled_lr2a_mg_01_fank_71: vn_defaults_tiny {};
+
+	// M274 Mule
+	class vn_b_wheeled_m274_01_01: vn_defaults_small {};
+	class vn_b_wheeled_m274_01_02: vn_defaults_small {};
+	class vn_b_wheeled_m274_01_03: vn_defaults_small {};
+	class vn_b_wheeled_m274_02_01: vn_defaults_small {};
+	class vn_b_wheeled_m274_02_02: vn_defaults_small {};
+	class vn_b_wheeled_m274_02_03: vn_defaults_small {};
+	class vn_b_wheeled_m274_mg_01_01: vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_01_02: vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_02_01: vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_02_02: vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_03_01: vn_defaults_tiny {};
+	class vn_b_wheeled_m274_mg_03_02: vn_defaults_tiny {};
+
+	// M113A1
+	class vn_b_armor_m125_01: vn_defaults_small {};
+	class vn_b_armor_m132_01: vn_defaults_small {};
+	class vn_b_armor_m577_01: vn_defaults_medium {};
+	class vn_b_armor_m577_02: vn_defaults_medium {};
 
 	//////////////////
 	////  UNSUNG  ////
@@ -283,7 +369,7 @@ class vn_logistics
 		class Land_Cargo10_brick_red_F
 		{
 			item_weight = 600;
-			item_size = 7.5;
+			item_size = 10;
 			spawn_distance = 9;
 			rotation_offset = 0;
 		};
@@ -366,6 +452,14 @@ class vn_logistics
 			rotation_offset = 0;
 		};
 
+		class vn_static_medium
+		{
+			item_weight = 200;
+			item_size = 2.5;
+			spawn_distance = 4;
+			rotation_offset = 0;
+		};
+
 		class vn_static_large
 		{
 			item_weight = 600;
@@ -393,6 +487,10 @@ class vn_logistics
 		class vn_b_army_static_m60_high : vn_static_tiny {};
 		class vn_b_sf_static_m60_high : vn_static_tiny {};
 		class vn_b_sf_static_m40a1rr : vn_static_small {};
+		class vn_b_army_static_tow : vn_static_small {};
+		class vn_b_sf_static_tow : vn_static_small {};
+		class vn_b_army_static_m40a1rr : vn_static_medium {};
+		class vn_b_army_static_mk18 : vn_static_small {};
 		//TODO - Bump these to large when slingloading is added to M45s
 		class vn_b_army_static_m45 : vn_static_small {};
 		class vn_b_sf_static_m45 : vn_static_small {};
@@ -404,6 +502,8 @@ class vn_logistics
 		class vn_i_static_m101_02 : vn_static_large {};
 		class vn_i_marines_static_m101_01 : vn_static_large {};
 		class vn_i_marines_static_m101_02 : vn_static_large {};
+		class vn_b_navy_static_l60mk3 : vn_static_large {};
+		class vn_b_navy_static_l70mk2 : vn_static_large {};
 
 		class vn_i_static_mortar_m2: 	vn_b_army_static_mortar_m2 {};
 		class vn_i_static_mortar_m29: 	vn_b_army_static_mortar_m29 {};
@@ -440,5 +540,97 @@ class vn_logistics
 		class vn_o_vc_static_dshkm_low_02:	vn_b_army_static_m2_low {};
 		class vn_o_vc_static_mortar_type53: 	vn_b_army_static_mortar_m29 {};
 		class vn_o_vc_static_mortar_type63: 	vn_b_army_static_mortar_m2 {};
+
+		//--------------
+		// 1.3 content
+		//--------------
+
+		// ZGU-1
+		class vn_o_nva_static_zgu1_01: vn_static_small {};
+		class vn_o_nva_65_static_zgu1_01: vn_static_small {};
+		class vn_o_nva_navy_static_zgu1_01: vn_static_small {};
+		class vn_o_vc_static_zgu1_01: vn_static_small {};
+		class vn_o_pl_static_zgu1_01: vn_static_small {};
+
+		//M1910
+		class vn_o_nva_static_m1910_low_01: vn_static_small {};
+		class vn_o_nva_static_m1910_low_02: vn_static_small {};
+		class vn_o_nva_static_m1910_high_01: vn_static_small {};
+		class vn_o_nva_65_static_m1910_low_01: vn_static_small {};
+		class vn_o_nva_65_static_m1910_low_02: vn_static_small {};
+		class vn_o_nva_65_static_m1910_high_01: vn_static_small {};
+		class vn_o_nva_navy_static_m1910_low_01: vn_static_small {};
+		class vn_o_nva_navy_static_m1910_low_02: vn_static_small {};
+		class vn_o_nva_navy_static_m1910_high_01: vn_static_small {};
+		class vn_o_vc_static_m1910_low_01: vn_static_small {};
+		class vn_o_vc_static_m1910_low_02: vn_static_small {};
+		class vn_o_vc_static_m1910_high_01: vn_static_small {};
+
+		//M2
+		class vn_b_army_static_m2_scoped_high: vn_static_small {};
+		class vn_b_army_static_m2_scoped_low: vn_static_small {};
+		class vn_b_sf_static_m2_scoped_high: vn_static_small {};
+		class vn_b_sf_static_m2_scoped_low: vn_static_small {};
+
+		//USMC
+		class vn_b_usmc_static_m2_low: vn_static_small {};
+		class vn_b_usmc_static_m2_high: vn_static_small {};
+		class vn_b_usmc_static_m2_scoped_high: vn_static_small {};
+		class vn_b_usmc_static_m2_scoped_low: vn_static_small {};
+		class vn_b_usmc_static_m60_low: vn_static_small {};
+		class vn_b_usmc_static_m60_high: vn_static_small {};
+		class vn_b_usmc_static_mortar_m2: vn_static_small {};
+		class vn_b_usmc_static_mortar_m29: vn_static_small {};
+		class vn_b_usmc_static_m101_01: vn_static_small {};
+		class vn_b_usmc_static_m101_02: vn_static_small {};
+		class vn_b_usmc_static_m40a1rr: vn_static_small {};
+
+		//FANK
+		class vn_i_fank_71_static_m1919a6: vn_static_small {};
+		class vn_i_fank_71_static_m1919a4_low: vn_static_small {};
+		class vn_i_fank_71_static_m1919a4_high: vn_static_small {};
+		class vn_i_fank_71_static_m2_low: vn_static_small {};
+		class vn_i_fank_71_static_m2_high: vn_static_small {};
+		class vn_i_fank_71_static_m45: vn_static_small {};
+		class vn_i_fank_71_static_m60_low: vn_static_small {};
+		class vn_i_fank_71_static_m60_high: vn_static_small {};
+		class vn_i_fank_71_static_mortar_m2: vn_static_small {};
+		class vn_i_fank_71_static_mortar_m29: vn_static_small {};
+		class vn_i_fank_71_static_m40a1rr: vn_static_small {};
+		class vn_i_fank_71_static_l70mk2: vn_static_small {};
+
+		class vn_i_fank_70_static_dp28_high: vn_static_small {};
+		class vn_i_fank_70_static_rpd_high: vn_static_small {};
+		class vn_i_fank_70_static_dshkm_high_01: vn_static_small {};
+		class vn_i_fank_70_static_dshkm_high_02: vn_static_small {};
+		class vn_i_fank_70_static_dshkm_low_01: vn_static_small {};
+		class vn_i_fank_70_static_dshkm_low_02: vn_static_small {};
+		class vn_i_fank_70_static_sgm_low_01: vn_static_small {};
+		class vn_i_fank_70_static_sgm_low_02: vn_static_small {};
+		class vn_i_fank_70_static_sgm_high_01: vn_static_small {};
+		class vn_i_fank_70_static_mortar_type53: vn_static_small {};
+		class vn_i_fank_70_static_mortar_type63: vn_static_small {};
+		class vn_i_fank_70_static_type56rr: vn_static_small {};
+		class vn_i_fank_70_static_zgu1_01: vn_static_small {};
+		class vn_i_fank_70_static_l60mk3: vn_static_small {};
+
+		//KR
+		class vn_o_kr_static_rpd_high: vn_static_small {};
+		class vn_o_kr_static_dp28_high: vn_static_small {};
+		class vn_o_kr_static_dshkm_high_01: vn_static_small {};
+		class vn_o_kr_static_dshkm_high_02: vn_static_small {};
+		class vn_o_kr_static_dshkm_low_01: vn_static_small {};
+		class vn_o_kr_static_dshkm_low_02: vn_static_small {};
+		class vn_o_kr_static_mortar_type53: vn_static_small {};
+		class vn_o_kr_static_mortar_type63: vn_static_small {};
+		class vn_o_kr_static_type56rr: vn_static_small {};
+		class vn_o_kr_static_sgm_low_01: vn_static_small {};
+		class vn_o_kr_static_sgm_low_02: vn_static_small {};
+		class vn_o_kr_static_sgm_high_01: vn_static_small {};
+		class vn_o_kr_static_h12: vn_static_small {};
+		class vn_o_kr_static_zgu1_01: vn_static_small {};
+		class vn_o_kr_static_m1910_low_01: vn_static_small {};
+		class vn_o_kr_static_m1910_low_02: vn_static_small {};
+		class vn_o_kr_static_m1910_high_01: vn_static_small {};
     };
 };

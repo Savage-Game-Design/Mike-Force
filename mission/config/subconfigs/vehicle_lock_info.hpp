@@ -46,6 +46,22 @@ class vn_b_armor_m113_acav_04 : acav {};
 class vn_b_armor_m113_acav_05 : acav {};
 class vn_b_armor_m113_acav_06 : acav {};
 
+// M113 mortar and flamethrower
+class vn_b_armor_m125_01 : acav {};
+class vn_b_armor_m132_01 : acav {};
+
+//M41 Walker bulldog
+class vn_b_armor_m41_01_01 : acav {};
+
+//Type 63 tank
+class vn_o_armor_type63_01 : acav {};
+
+// M48 Patton
+class vn_b_armor_m48_01_01 : acav {};
+
+// M67 flame tank
+class vn_b_armor_m67_01_01 : acav {};
+
 //Transport trucks
 class vn_b_wheeled_m54_01 : acav {};
 class vn_b_wheeled_m54_01_airport : acav {};
@@ -65,10 +81,6 @@ class vn_b_wheeled_m54_ammo_airport : green_hornet {};
 class vn_b_wheeled_m54_mg_01 : acav {};
 class vn_b_wheeled_m54_mg_02 : acav {};
 class vn_b_wheeled_m54_mg_03 : acav {};
-
-//Armoured Cars
-class vn_b_armor_m41_01_01 : acav {};
-class vn_o_armor_type63_01 : acav {};
 
 //Wooden boats
 class vn_c_boat_01_01 : unlocked {};
@@ -107,6 +119,15 @@ class vn_b_air_ah1g_08_usmc : green_hornet {};
 class vn_b_air_ah1g_09_usmc : green_hornet {};
 class vn_b_air_ah1g_10_usmc : green_hornet {};
 
+// CH-47 Guns-a-go-go
+class vn_b_air_ach47_01_01 : green_hornet {};
+
+// CH-47 transport variants
+class vn_b_air_ch47_01_01 : green_hornet {};
+class vn_b_air_ch47_02_01 : green_hornet {};
+class vn_b_air_ch47_03_01 : green_hornet {};
+class vn_b_air_ch47_04_01 : green_hornet {};
+
 //Choctaw
 class vn_b_air_ch34_01_01 : green_hornet {};
 class vn_b_air_ch34_03_01 : green_hornet {};
@@ -126,7 +147,18 @@ class vn_b_air_oh6a_05 : green_hornet {};
 class vn_b_air_oh6a_06 : green_hornet {};
 class vn_b_air_oh6a_07 : green_hornet {};
 
-//UH1D - Dustoff
+//UH-1B
+class vn_b_air_uh1b_01_01 : green_hornet {};
+
+
+
+
+// M113 command and ambulance variants
+class vn_b_armor_m577_01 : acav {};
+class vn_b_armor_m577_02 : acav {};
+
+
+//class UH1D : green_hornet {}; - Dustoff
 class vn_b_air_uh1d_01_01 : green_hornet {};
 class vn_b_air_uh1d_01_02 : green_hornet {};
 class vn_b_air_uh1d_01_03 : green_hornet {};
@@ -199,6 +231,10 @@ class vn_b_air_uh1c_06_02 : green_hornet {};
 //UH1B - Slick
 class vn_b_air_uh1c_07_01 : green_hornet {};
 
+//UH-1E
+class vn_b_air_uh1e_03_04 : green_hornet {};
+class vn_b_air_uh1e_01_04 : green_hornet {};
+
 //UH1E - Heavy Gunship
 class vn_b_air_uh1e_02_04 : green_hornet {};
 
@@ -257,6 +293,9 @@ class vn_b_air_f4b_navy_hbmb : green_hornet {};
 class vn_b_air_f4b_navy_gbu : green_hornet {};
 class vn_b_air_f4b_navy_cbu : green_hornet {};
 class vn_b_air_f4b_navy_sead : green_hornet {};
+
+// F100D
+class vn_b_air_f100d_at : green_hornet {};
 
 //Howitzer
 class vn_b_army_static_m101_02 : acav {};

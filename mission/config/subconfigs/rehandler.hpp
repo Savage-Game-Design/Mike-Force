@@ -2,6 +2,10 @@ class arsenalcleanup
 {
 	fnc = "vn_mf_fnc_arsenal_trash_cleanup";
 };
+class change_spawn_point_vehicle
+{
+	fnc = "vn_mf_fnc_veh_asset_handle_change_vehicle_request";
+};
 class changeteam
 {
 	fnc = "vn_mf_fnc_changeteam";
