@@ -31,7 +31,7 @@ publicVariable _playerGroup;
 _player setVariable ["vn_mf_db_player_group", _team, true];
 private _nextPlayerTeamArray = missionNamespace getVariable [_team, []];
 _nextPlayerTeamArray pushBackUnique _player;
-publicVariable _nextPlayerTeam;
+publicVariable _team;
 
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;
