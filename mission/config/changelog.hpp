@@ -17,6 +17,7 @@ class Changelog {
 			"[Fix] Vehicles should explode far less often when recovered at a wreck recovery point",
 			"[Fix] Wreck recovery point status should update correctly",
 			"[Fix] Team swapping no longer causes an error",
+			"[Fix] Headless client slots added to Altis",
 			"[Change] Minor changes to bases on Khe Sanh, Cam Lao Nam and The Bra"
 		};
 	};
