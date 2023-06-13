@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3417.2913,143.5565,4263.9644};
-		dir[]={-0.65638942,-0.59361577,0.46564054};
-		up[]={-0.48416653,0.80474663,0.34346718};
-		aside[]={0.57860953,1.473818e-007,0.81563699};
+		pos[]={3522.6306,85.464821,4409.623};
+		dir[]={0.9603883,-0.27665213,-0.034191575};
+		up[]={0.27649489,0.960967,-0.0098444363};
+		aside[]={-0.0355797,3.3799734e-007,-0.99939507};
 	};
 };
 binarizationWanted=0;
@@ -213,7 +213,7 @@ class Mission
 	assetType="Free";
 	class Intel
 	{
-		briefingName="Mike Force (v1.00.03 Indev - 230611v3)";
+		briefingName="Mike Force (v1.00.03)";
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startWind=0.1;
