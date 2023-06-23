@@ -491,7 +491,7 @@ class spawn_point_types {
 			class m151 {
 				name = "M151A1";
 				icon = VEHICLE_ICON_CAR;
-				include[] = { { "m151", "transport" } };
+				include[] = { { "m151a1", "transport" } };
 				exclude[] = { "armed" };
 			};
 
