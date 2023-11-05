@@ -4,595 +4,787 @@
     <Container name="default">
       <Key ID="STR_vn_mf_levelup">
         <Original>LEVEL UP!</Original>
+        <Chinesesimp>晋升！</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rankpoint_short">
         <Original>RP</Original>
+        <Chinesesimp>军衔点数</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_needdutyofficer">
         <Original>Cannot change teams without a duty officer present.</Original>
+        <Chinesesimp>附近没有值班军官 ，不能更换团队。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_dropincomming">
         <Original>%1 drop incomming.</Original>
+        <Chinesesimp>%1即将空投。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_requestdrop">
         <Original>Request %1</Original>
+        <Chinesesimp>请求%1</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_goto">
         <Original>Goto %1</Original>
+        <Chinesesimp>前往%1</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_training">
         <Original>%1 Training</Original>
+        <Chinesesimp>%1训练</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_needtobeengineer">
         <Original>You must be an %1 to build, please see a Duty Officer.</Original>
+        <Chinesesimp>你必须是%1才能建造，请找值班军官。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_medic">
         <Original>Medic</Original>
+        <Chinesesimp>医疗兵</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_radioOperator">
         <Original>Radio Operator</Original>
+        <Chinesesimp>无线电操作员</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_radioOperatorTasks">
         <Original>Operating radios, communication</Original>
+        <Chinesesimp>操作无线电，通讯</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_engineer">
         <Original>Engineer</Original>
+        <Chinesesimp>工程兵</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_explosive_specialist">
         <Original>Explosive Specialist</Original>
+        <Chinesesimp>爆破专家</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_resupply">
         <Original>Resupply With Crate</Original>
+        <Chinesesimp>使用补给箱补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_scout_action">
         <Original>Scout for Nearest Enemy Site</Original>
+        <Chinesesimp>侦察最近的敌军</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_arsenal">
         <Original>Arsenal</Original>
+        <Chinesesimp>军火库</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_nosupplydropnearby">
         <Original>No supplies nearby!</Original>
+        <Chinesesimp>附近没有补给！</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_invite">
         <Original>Invite %1</Original>
+        <Chinesesimp>邀请%1</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_friendsmade">
         <Original>Acquaintance made</Original>
+        <Chinesesimp>结识了</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_trainingcomplete">
         <Original>Training Complete</Original>
+        <Chinesesimp>训练完成</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_invitereceived">
         <Original>Invite Received</Original>
+        <Chinesesimp>收到邀请</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_onetraitperplayer">
         <Original>You can only have one speciality at a time.</Original>
+        <Chinesesimp>你一次只能选择一个职业。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_onetraitperteam">
         <Original>Your team already has a player with that speciality.</Original>
+        <Chinesesimp>你的团队中已经有了一个该职业的玩家。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_supplydroponstandby">
         <Original>Supply drops on standby, make sure no other supplies are near drop zone.</Original>
+        <Chinesesimp>空投补给待命中，确保投放区附近没有其他补给。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_situation_room">
         <Original>Situation Room</Original>
+        <Chinesesimp>情报室</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_checkpoint">
         <Original>Checkpoint</Original>
+        <Chinesesimp>检查点</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_aid_post">
         <Original>Aid Post</Original>
+        <Chinesesimp>医疗站</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_guardtower">
         <Original>Guard Tower</Original>
+        <Chinesesimp>哨塔</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_ammoresupply">
         <Original>Ammo Resupply Station</Original>
+        <Chinesesimp>弹药补给站</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_repairresupply">
         <Original>Repair Station</Original>
+        <Chinesesimp>维修站</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_fuelresupply">
         <Original>Fuel Station</Original>
+        <Chinesesimp>燃油站</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vehicle_workshop">
         <Original>Vehicle Workshop</Original>
+        <Chinesesimp>载具维修</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgebailey01">
         <Original>Bailey Bridge 1</Original>
+        <Chinesesimp>活动便桥1</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgebailey02">
         <Original>Bailey Bridge 2</Original>
+        <Chinesesimp>活动便桥2</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgebailey03">
         <Original>Bailey Bridge 3</Original>
+        <Chinesesimp>活动便桥3</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgebailey04">
         <Original>Bailey Bridge 4</Original>
+        <Chinesesimp>活动便桥4</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgeramp01">
         <Original>Bridge Ramp</Original>
+        <Chinesesimp>桥式坡道</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgesmall01">
         <Original>Small Bridge 1</Original>
+        <Chinesesimp>小型桥梁1</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgesmall02">
         <Original>Small Bridge 2</Original>
+        <Chinesesimp>小型桥梁2</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgesmall03">
         <Original>Small Bridge 3</Original>
+        <Chinesesimp>小型桥梁3</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bridgesmall04">
         <Original>Small Bridge 4</Original>
+        <Chinesesimp>小型桥梁4</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_school">
         <Original>School</Original>
+        <Chinesesimp>学校</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_drink_water">
         <Original>Drink Water</Original>
+        <Chinesesimp>喝水</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_eat_food">
         <Original>Eat Food</Original>
+        <Chinesesimp>吃饭</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_repack">
         <Original>Repack</Original>
+        <Chinesesimp>整理</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_drink">
         <Original>Drink</Original>
+        <Chinesesimp>喝</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_take_medicine">
         <Original>Take Medicine</Original>
+        <Chinesesimp>吃药</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_refill">
         <Original>Refill</Original>
+        <Chinesesimp>灌满</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_eat">
         <Original>Eat</Original>
+        <Chinesesimp>吃</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_check_pulse">
         <Original>Check Pulse</Original>
+        <Chinesesimp>检查脉搏</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_build">
         <Original>Build</Original>
+        <Chinesesimp>建造</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_idle">
         <Original>Idle</Original>
+        <Chinesesimp>闲置</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_wreck">
         <Original>Wreck</Original>
+        <Chinesesimp>残骸</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_disabled">
         <Original>Disabled</Original>
+        <Chinesesimp>禁用</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vehicle_locked_to_team">
         <Original>This vehicle can't be used by your team</Original>
+        <Chinesesimp>你的团队无法使用该载具</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force">
         <Original>PLEI MEI SF CAMP - MIKE FORCE</Original>
+        <Chinesesimp>波来美特种部队营地——机动打击部队</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_green_hornets">
         <Original>PLEIKU - GREEN HORNETS</Original>
+        <Chinesesimp>波来古——绿色大黄蜂</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_spike_team">
         <Original>FOB2 KONTUM - SPIKE TEAM</Original>
+        <Chinesesimp>FOB 2 昆图——SPIKE TEAM</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_acav">
         <Original>FOB 5 BAN ME THUOT - ACAV</Original>
+        <Chinesesimp>FOB5 班梅托——ACAV</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force_khe_sanh">
         <Original>KHE SANH SF CAMP - MIKE FORCE</Original>
+        <Chinesesimp>溪山特种部队营地——机动打击部队</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_green_hornets_khe_sanh">
         <Original>KHE SANH SF CAMP - GREEN HORNETS</Original>
+        <Chinesesimp>溪山特种部队营地——绿色大黄蜂</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_spike_team_khe_sanh">
         <Original>KHE SANH SF CAMP - SPIKE TEAM</Original>
+        <Chinesesimp>溪山特种部队营地——SPIKE TEAM</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_acav_khe_sanh">
         <Original>KHE SANH SF CAMP - ACAV</Original>
+        <Chinesesimp>溪山特种部队营地——ACAV</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_spike_team_altis">
         <Original>MOLOS VILLAGE - SPIKE TEAM</Original>
+        <Chinesesimp>莫洛斯村——SPIKE TEAM</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force_altis">
         <Original>MOLOS VILLAGE - MIKE FORCE</Original>
+        <Chinesesimp>莫洛斯村——机动打击部队</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_green_hornets_altis">
         <Original>MOLOS AIRFIELD - GREEN HORNETS</Original>
+        <Chinesesimp>莫洛斯机场——绿色大黄蜂</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_respawn_acav_altis">
         <Original>FOB 1 - ACAV</Original>
+        <Chinesesimp>FOB 1 - ACAV</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>
+        <Chinesesimp>军需官</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_duty_officer">
         <Original>Duty Officer</Original>
+        <Chinesesimp>值班军官</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_light_helicopters">
         <Original>Light Helicopters</Original>
+        <Chinesesimp>轻型直升机</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_helicopters">
         <Original>Helicopters</Original>
+        <Chinesesimp>直升机</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_wreck_recovery">
         <Original>Wreck Recovery</Original>
+        <Chinesesimp>残骸回收</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rearm">
         <Original>Rearm</Original>
+        <Chinesesimp>重新武装</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading1">
         <Original>writing diary entry...</Original>
+        <Chinesesimp>写日记...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading2">
         <Original>checking pockets...</Original>
+        <Chinesesimp>翻裤兜...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading3">
         <Original>cleaning glasses...</Original>
+        <Chinesesimp>擦眼镜...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading4">
         <Original>putting boots on...</Original>
+        <Chinesesimp>穿军靴...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading5">
         <Original>washing canteen...</Original>
+        <Chinesesimp>洗水壶...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading6">
         <Original>polishing spork...</Original>
+        <Chinesesimp>擦餐叉...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading7">
         <Original>putting on shades...</Original>
+        <Chinesesimp>戴墨镜...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading8">
         <Original>dusting off shoulders...</Original>
+        <Chinesesimp>掸掉肩膀上的土...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading9">
         <Original>shining boots...</Original>
+        <Chinesesimp>擦亮军靴...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_loading10">
         <Original>ready for action...</Original>
+        <Chinesesimp>准备行动...</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_howtobuild">
         <Original>How to Build</Original>
+        <Chinesesimp>如何建造</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_howtobuild_long">
         <Original>Note: Engineer training required!&lt;br&gt;&lt;/br&gt;Press 'N' to enable/disable building.&lt;br&gt;&lt;/br&gt;Use mouse scroll wheel for adjustments, press Alt to cycle between height adjustment or rotation.&lt;br&gt;&lt;/br&gt;Press and hold 'Space' to finalize Build.</Original>
+        <Chinesesimp>注意：需要进行工程兵培训！&lt;br&gt;&lt;/br&gt;按'N'来打开/关闭建造模式。&lt;br&gt;&lt;/br&gt;使用鼠标滚轮进行调整，按Alt键在高度调整或旋转之间切换。&lt;br&gt;&lt;/br&gt;按住空格以完成建造。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_other_keys">
         <Original>Other Key Binds</Original>
+        <Chinesesimp>其他按键绑定</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_other_keys_long">
         <Original>Press 'Y' to use gesture menu ('Z' on QWERTZ keyboards).&lt;br&gt;&lt;/br&gt;Press 'H' to open task roster.&lt;br&gt;&lt;/br&gt;Press '6' to activate wheel menu.&lt;br&gt;&lt;/br&gt;</Original>
+        <Chinesesimp>按'Y'来使用手势菜单（QWERTZ布局键盘，按'Z'）。&lt;br&gt;&lt;/br&gt;按'H'键打开任务手册。&lt;br&gt;&lt;/br&gt;按'6'键激活滚轮菜单。&lt;br&gt;&lt;/br&gt;</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_restrictedzone">
         <Original>Cannot build in Restricted Zone!</Original>
+        <Chinesesimp>无法在限制区内建造！</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_purple_heart">
         <Original>Purple Heart</Original>
+        <Chinesesimp>紫心勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_wound_medal">
         <Original>RVN Wound Medal</Original>
+        <Chinesesimp>越南共和国战伤奖章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_distinguished_service_cross">
         <Original>Distinguished Service Cross</Original>
+        <Chinesesimp>杰出服役十字勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vietnam_gallantry_cross">
         <Original>Vietnam Gallantry Cross</Original>
+        <Chinesesimp>越战英勇十字勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_defense_medal">
         <Original>RVN Defense Medal</Original>
+        <Chinesesimp>南越共和国防御奖章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_combat_infantryman_badge">
         <Original>Combat Infantryman Badge</Original>
+        <Chinesesimp>作战步兵徽章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_bronze_star">
         <Original>Bronze Star</Original>
+        <Chinesesimp>铜星勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_silver_star">
         <Original>Silver Star</Original>
+        <Chinesesimp>银星勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_air_medal">
         <Original>Air Medal</Original>
+        <Chinesesimp>航空勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_distinguished_service_order">
         <Original>Distinguished Service Order</Original>
+        <Chinesesimp>杰出服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_congressional_medalofhonor">
         <Original>Congressional Medal of Honor</Original>
+        <Chinesesimp>国会荣誉勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_air_cross_of_gallantry">
         <Original>RVN Air Cross of Gallantry</Original>
+        <Chinesesimp>南越空中勇士十字勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vietnam_tet_campaign_commemorative_medal">
         <Original>Vietnam Tet Campaign Commemorative Medal</Original>
+        <Chinesesimp>越南春季攻势战役纪念章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_special_service_medal">
         <Original>RVN Special Service Medal</Original>
+         <Chinesesimp>南越特别服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_national_defense_service_medal">
         <Original>National Defense Service Medal</Original>
+        <Chinesesimp>国防服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_distinguished_flying_cross">
         <Original>Distinguished Flying Cross</Original>
+        <Chinesesimp>杰出飞行十字勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_army_commendation_medal">
         <Original>Army Commendation Medal</Original>
+        <Chinesesimp>陆军嘉奖勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_air_force_good_conduct_medal">
         <Original>Air Force Good Conduct Medal</Original>
+        <Chinesesimp>空军良好作战勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_air_force_cross">
         <Original>Air Force Cross</Original>
+        <Chinesesimp>空军十字勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_special_operations_medal">
         <Original>Special Operations Medal</Original>
+        <Chinesesimp>特种作战勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_army_presidential_unit_citation">
         <Original>Army Presidential Unit Citation</Original>
+        <Chinesesimp>陆军总统集体勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_usaf_outstanding_unit_award">
         <Original>USAF Outstanding Unit Award</Original>
+        <Chinesesimp>美国空军杰出集体勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_meritorious_unit_citation">
         <Original>Meritorious Unit Citation</Original>
+        <Chinesesimp>功勋集体勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_meritorious_service_medal">
         <Original>Meritorious Service Medal</Original>
+        <Chinesesimp>杰出服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_joint_service_commendation_medal">
         <Original>Joint Service Commendation Medal</Original>
+        <Chinesesimp>联合服役嘉奖勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_legion_of_merit">
         <Original>Legion of Merit</Original>
+        <Chinesesimp>军功勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vietnam_service_medal">
         <Original>Vietnam Service Medal</Original>
+        <Chinesesimp>越战服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_republic_of_vietnam_campaign_medal">
         <Original>Republic of Vietnam Campaign Medal</Original>
+        <Chinesesimp>越南共和国战争勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_gulf_of_tonkin_vietnam_commemorative_medal">
         <Original>Gulf of Tonkin Vietnam Commemorative Medal</Original>
+        <Chinesesimp>越南北部湾战斗纪念勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_navy_cross">
         <Original>Navy Cross</Original>
+        <Chinesesimp>海军十字勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_training_service_medal">
         <Original>RVN Training Service Medal</Original>
+        <Chinesesimp>南越训练服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_technical_service_medal">
         <Original>RVN Technical Service Medal</Original>
+        <Chinesesimp>南越技术服役勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_military_merit_first_republic_medal">
         <Original>RVN Military Merit First Republic Medal</Original>
+        <Chinesesimp>南越第一共和国军功勋章</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_hud_interact">
         <Original>Interact</Original>
+        <Chinesesimp>互动</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_hud_toggledOff">
         <Original>You toggled off the interaction overlay.</Original>
+        <Chinesesimp>你停用了互动提示界面。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_hud_toggledOn">
         <Original>You toggled on the interaction overlay.</Original>
+        <Chinesesimp>你启用了互动提示界面。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_interactionOverlay_toggle">
         <Original>Toggle Interaction Overlay</Original>
+        <Chinesesimp>切换互动提示界面</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_MikeForceDescription">
         <Original>As special forces infantry, your team's role is to:&lt;br/&gt;- Sweep and clear areas of enemy&lt;br/&gt;- Secure and hold zones&lt;br/&gt;- Protect populations, logistics and supplies&lt;br/&gt;- Reinforce other teams&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example transport is provided for you by ACAV or Green Hornets.</Original>
+        <Chinesesimp>作为特种部队步兵，你们小队的作用是:&lt;br/&gt;- 扫荡和清理敌方区域&lt;br/&gt;- 夺取并控制区域&lt;br/&gt;- 保护人员、后勤和物资&lt;br/&gt;- 支援其他团队&lt;br/&gt;任务&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; 主要任务由所有小队共同承担。&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; 次要任务是你的小队所独有的。&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; 支援任务由其他需要你帮助的小队呼叫请求。你也可以请求他们的支援，例如请求ACAV或绿色大黄蜂为你提供运输服务。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_SpikeTeamDescription">
         <Original>As special forces recon, your team's role is to:&lt;br/&gt;- Carry out reconnaissance to locate enemy infrastructure&lt;br/&gt;- Ambush and assault the enemy&lt;br/&gt;- Direct air and armour support onto enemy concentrations&lt;br/&gt;- Support other teams with reconnaissance and search and rescue&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams. &lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example transport is provided for you by ACAV or Green Hornets.</Original>
+        <Chinesesimp>作为特种部队侦察兵，你们小队的作用是:&lt;br/&gt;- 侦察以确定敌人基础设施的位置&lt;br/&gt;- 伏击和攻击敌人&lt;br/&gt;- 指引空军和装甲部队打击敌军集结点&lt;br/&gt;- 支援其他团队进行侦察、搜索和救援&lt;br/&gt;任务&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; 主要任务由所有小队共同承担。 &lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; 次要任务是你的小队所独有的。&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; 支援任务由其他需要你帮助的小队呼叫请求。你也可以请求他们的支援，例如请求ACAV或绿色大黄蜂为你提供运输服务。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_GreenHornetsTeamDescription">
         <Original>As a Green Hornet, your team's role is to fly helicopters and jets to:&lt;br/&gt;- Insert and extract troops to their desired location&lt;br/&gt;- Carry out aerial reconnaissance to find enemy infrastructure&lt;br/&gt;- Support other teams with close air support&lt;br/&gt;- Deliver supplies to build new infrastructure&lt;br/&gt;- Engage enemy aircraft&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example search and rescue is provided for you by Spike Team.</Original>
+        <Chinesesimp>作为一名绿色大黄蜂飞行员，你们小队的作用是:&lt;br/&gt;- 运输或撤离部队到指定的位置&lt;br/&gt;- 执行空中侦察，搜索敌人的基础设施&lt;br/&gt;- 近距离空中支援(CAS)其他团队&lt;br/&gt;- 运送补给用以建造新基础设施&lt;br/&gt;- 与敌机交战&lt;br/&gt;任务&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; 主要任务由所有小队共同承担。&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; 次要任务是你的小队所独有的。&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; 支援任务由其他需要你帮助的小队呼叫申请。你也可以请求他们的支援，例如请求Spike Team为你提供搜索和救援任务。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_ArmouredCavalryDescription">
         <Original>As Armoured Cavalry, your team's role is to operate trucks and tanks to:&lt;br/&gt;- Insert and extract troops to their desired location&lt;br/&gt;- Support other teams with heavy weapons vehicles&lt;br/&gt;- Deliver supplies and build new infrastructure&lt;br/&gt;- Engage enemy vehicles and armour&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams. &lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example vehicle recovery or convoy protection is provided for you by Green Hornets.</Original>
+        <Chinesesimp>作为装甲兵，你们小队的作用是驾驶卡车和坦克来:&lt;br/&gt;- 运输或撤离部队到指定的位置&lt;br/&gt;- 用重型武装车辆支援其他团队&lt;br/&gt;- 运送补给，建造新基础设施&lt;br/&gt;- 与敌方车辆和装甲交战&lt;br/&gt;任务&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; 主要任务由所有小队共同承担。 &lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; 次要任务是你的小队所独有的。&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; 支援任务由其他需要你帮助的小队呼叫申请。你也可以请求他们的支援，例如请求绿色大黄蜂为你提供车辆恢复或车队保护。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_rolesHeaderName">
         <Original>Role</Original>
+        <Chinesesimp>角色</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_rolesHeaderTasks">
         <Original>Tasks</Original>
+        <Chinesesimp>任务</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_rolesHeaderPlayers">
         <Original>Players</Original>
+        <Chinesesimp>玩家</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_medicTasks">
         <Original>Healing, Humanitarian</Original>
+        <Chinesesimp>医疗，人道救助</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_engineerTasks">
         <Original>Building</Original>
+        <Chinesesimp>建造</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_explosive_specialistTasks">
         <Original>Demolition, mining, de-mining</Original>
+        <Chinesesimp>爆破、布雷、排雷</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_assaultpilotTasks">
         <Original>Flying gunship/ jet</Original>
+        <Chinesesimp>驾驶武装直升机/固定翼</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_requestButton">
         <Original>REQUEST</Original>
+        <Chinesesimp>请求</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_teamWelcome">
         <Original>Welcome to:&lt;br/&gt;%1</Original>
+        <Chinesesimp>欢迎来到:&lt;br/&gt;%1</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_title">
         <Original>Resupply: Ammo</Original>
+        <Chinesesimp>补给: 弹药</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_desc">
         <Original>Transport the supplies to the position provided by %1.</Original>
+        <Chinesesimp>将补给运送到%1指定的地点。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_deliver_crate_title">
         <Original>Deliver Resupply Crate</Original>
+        <Chinesesimp>运送补给箱</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_deliver_crate_desc">
         <Original>Deliver the resupply crate to the units that need it.</Original>
+        <Chinesesimp>运送补给箱到需要的单位。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_requesterDesc">
         <Original>Request ammo supplies be dropped at a specific location.</Original>
+        <Chinesesimp>请求在指定地点投放弹药补给。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_medical_title">
         <Original>Resupply: Medical</Original>
+        <Chinesesimp>补给: 医疗物资</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_medical_requesterDesc">
         <Original>Request medical supplies be dropped at a specific location.</Original>
+        <Chinesesimp>请求在指定地点投放医疗补给。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_food_title">
         <Original>Resupply: Food</Original>
+        <Chinesesimp>补给: 食物</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_food_requesterDesc">
         <Original>Request food supplies be dropped at a specific location.</Original>
+        <Chinesesimp>请求在指定地点投放食物补给。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_building_materials_title">
         <Original>Resupply: Building Materials</Original>
+        <Chinesesimp>补给: 建筑材料</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_building_materials_requesterDesc">
         <Original>Request building materials be dropped at a specific location.</Original>
+        <Chinesesimp>请求在指定地点投放建筑材料补给。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_workshop_title">
         <Original>Resupply: Workshop</Original>
+        <Chinesesimp>补给: 载具维修</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_task_support_resupply_workshop_requesterDesc">
         <Original>Request workshop supplies be dropped at a specific location.</Original>
+        <Chinesesimp>请求在指定地点投放载具维修补给。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_player_markers_vehicle_marker">
         <Original>%1 (%2%3)</Original>
+        <Chinesesimp>%1 (%2%3)</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_add_sandbag">
         <Original>Add Sandbag</Original>
         <English>Add Sandbag</English>
+        <Chinesesimp>添加沙袋</Chinesesimp>
       </Key>
     </Container>
     <Container name="interaction_overlay">
       <Key ID="STR_vn_mf_overlay_duty_officer_name">
         <Original>Duty Officer</Original>
+        <Chinesesimp>值班军官</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_overlay_duty_officer_description">
         <Original>Change teams or train in a role, such as engineer.</Original>
+        <Chinesesimp>切换团队或培训角色，例如工程兵</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_overlay_fast_travel_name">
         <Original>Fast Travel</Original>
+        <Chinesesimp>传送</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_overlay_fast_travel_description">
         <Original>Teleport to the bases of each team</Original>
+        <Chinesesimp>传送到各团队基地</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_overlay_supply_officer_name">
         <Original>Supply Officer</Original>
+        <Chinesesimp>军需官</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_overlay_supply_officer_description">
         <Original>Request supplies, such as building supplies, food or ammunition.</Original>
+        <Chinesesimp>请求补给，如建筑材料，食物或弹药。</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_wreck_recovery_status">
         <Original>Wreck Recovery Status: %1</Original>
+        <Chinesesimp>残骸回收状况：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_wreck_recovery_time_left">
         <Original>Repairing: %1 (%2s remaining)</Original>
+        <Chinesesimp>正在修理：%1 (剩余 %2s)</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_base">
         <Original>Base: %1</Original>
+        <Chinesesimp>基地：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_standalone">
         <Original>Standalone</Original>
+        <Chinesesimp>独立作战</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_status">
         <Original>Status: %1</Original>
+        <Chinesesimp>状况：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_build_progress">
         <Original>Build Progress: %2%1</Original>
+        <Chinesesimp>建造进度：%2%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_percentage_filled">
         <Original>Percentage Filled: %2%1</Original>
+        <Chinesesimp>已填充：%2%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_current_supplies">
         <Original>Current Supplies: %1</Original>
+        <Chinesesimp>当前补给：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_supplies_until_full">
         <Original>Supplies Until Full: %1</Original>
+        <Chinesesimp>补给到满载：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_supply_capacity">
         <Original>Supply Capacity: %1</Original>
+        <Chinesesimp>补给容量：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_lifetime">
         <Original>Time Until Decay: %1 hours %2 minutes</Original>
+        <Chinesesimp>建筑损耗时间：%1小时%2分钟</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_good">
         <Original>Good</Original>
         <English>Good</English>
+        <Chinesesimp>好</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_decaying">
         <Original>Decaying</Original>
         <English>Decaying</English>
+        <Chinesesimp>正在损耗</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_ready">
         <Original>Ready</Original>
         <English>Ready</English>
+        <Chinesesimp>准备</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_in_progress">
         <Original>In Progress</Original>
         <English>In Progress</English>
+        <Chinesesimp>进行中</Chinesesimp>       
       </Key>
     </Container>
     <Container name="notifications">
       <Key ID="STR_vn_mf_notification_title_training">
         <Original>Training</Original>
+        <Chinesesimp>训练</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_vehicle_locked">
         <Original>Vehicle Locked</Original>
+        <Chinesesimp>载具已锁定</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_new_support_request">
         <Original>New Support Request</Original>
+        <Chinesesimp>新的支援请求</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_zone_completed">
         <Original>Zone Completed</Original>
+        <Chinesesimp>已完成的地区</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_support_transport">
         <Original>Squad Transport</Original>
+        <Chinesesimp>小队运输</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_support_transport_all_onboard">
         <Original>All Players Onboard</Original>
+        <Chinesesimp>所有玩家已就绪</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_support_transport_players_dead">
         <Original>All Players Dead</Original>
+        <Chinesesimp>所有玩家已阵亡</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_support_transport_too_close">
         <Original>Drop-off Too Close</Original>
+        <Chinesesimp>运输距离过近</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_support_transport_wrong_location">
         <Original>Wrong Location</Original>
+        <Chinesesimp>错误地点</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_support_transport_complete">
         <Original>Transport Complete</Original>
+        <Chinesesimp>运输完成</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_support_task_created">
         <Original>Support Task Created</Original>
+        <Chinesesimp>支援任务已创建</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_counter_attack">
         <Original>Counter-attack</Original>
         <English>Counter-attack</English>
+        <Chinesesimp>反攻</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_counter_attack_preparing">
         <Original>The enemy will counter-attack in %2 minutes</Original>
         <English>The enemy will counter-attack in %2 minutes</English>
+        <Chinesesimp>敌人将在%2分钟后反攻。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_counter_attack_imminent">
         <Original>Enemy counter-attack is imminent!</Original>
         <English>Enemy counter-attack is imminent!</English>
+        <Chinesesimp>敌人正在反攻!</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_base_attack">
         <Original>FOB Attack</Original>
         <English>FOB Attack</English>
+        <Chinesesimp>FOB被袭</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_base_attack_preparing">
         <Original>The enemy will attack an FOB in %2 minutes</Original>
         <English>The enemy will attack an FOB in %2 minutes</English>
+        <Chinesesimp>敌人将在%2分钟后袭击FOB</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_base_attack_imminent">
         <Original>Enemy attack on FOB is imminent!</Original>
         <English>Enemy attack on FOB is imminent!</English>
+        <Chinesesimp>敌军正在进攻FOB!</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_counter_attack_shortened">
         <Original>All critical tasks completed. Enemy counter attack in %2 minutes.</Original>
         <English>All critical tasks completed. Enemy counter attack in %2 minutes.</English>
+        <Chinesesimp>所有关键任务已完成。敌人将在%2分钟内发起反攻。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_counter_attack_lost">
         <Original>The enemy counter-attack was successful. Zone %1 has been lost.</Original>
@@ -601,150 +793,192 @@
       <Key ID="STR_vn_mf_notification_desc_no_sandbag">
         <Original>No sandbags in inventory</Original>
         <English>No sandbags in inventory</English>
+        <Chinesesimp>库存中没有沙袋</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_sandbags_not_allowed">
         <Original>Sandbags cannot be used on this building</Original>
         <English>Sandbags cannot be used on this building</English>
+        <Chinesesimp>沙袋不能用于该建筑</Chinesesimp>
       </Key>
       <Key ID="STR_para_build_cantresupplyunbuiltbuilding">
         <Original>You can't resupply an unbuilt building</Original>
         <English>You can't resupply an unbuilt building</English>
+        <Chinesesimp>你不能对未建成的建筑进行补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_empty_food_item">
         <Original>Empty Food Item</Original>
         <English>Empty Food Item</English>
+        <Chinesesimp>空的食物</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_empty_food_item">
         <Original>The container is empty</Original>
         <English>The container is empty</English>
+        <Chinesesimp>容器是空的</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_title_team_full">
         <Original>This team is full</Original>
         <English>This team is full</English>
+        <Chinesesimp>团队已满</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_notification_desc_team_full">
         <Original>Try choosing another team</Original>
         <English>Try choosing another team</English>
+        <Chinesesimp>请选择另一只团队</Chinesesimp>
       </Key>
     </Container>
     <Container name="building">
       <Key ID="STR_para_building_position">
         <Original>Position</Original>
         <English>Position</English>
+        <Chinesesimp>位置</Chinesesimp>
       </Key>
       <Key ID="STR_para_building_rotation">
         <Original>Rotation</Original>
         <English>Rotation</English>
+        <Chinesesimp>旋转</Chinesesimp>
       </Key>
       <Key ID="STR_para_building_height">
         <Original>Height</Original>
         <English>Height</English>
+        <Chinesesimp>高度</Chinesesimp>
       </Key>
       <Key ID="STR_para_building_hint_header">
         <Original>Building Placement</Original>
         <English>Building Placement</English>
+        <Chinesesimp>建筑摆放</Chinesesimp>
       </Key>
       <Key ID="STR_para_building_hint_body">
         <Original>&lt;t color='#23aa50'&gt;[LMB]/[RMB]&lt;/t&gt; to cycle placement mode.&lt;br/&gt;&lt;br/&gt;Building can be placed with the 'build' action when the building is green. Buildings must not be colliding, and must be placed on a surface.</Original>
         <English>&lt;t color='#23aa50'&gt;[LMB]/[RMB]&lt;/t&gt; to cycle placement mode.&lt;br/&gt;&lt;br/&gt;Building can be placed with the 'build' action when the building is green. Buildings must not be colliding, and must be placed on a surface.</English>
+        <Chinesesimp>&lt;t color='#23aa50'&gt;[鼠标左键]/[鼠标右键]&lt;/t&gt; 循环切换放置模式。&lt;br/&gt;&lt;br/&gt;当建筑为绿色时，可以用"建造"动作来放置建筑。建筑物不能有碰撞，且必须放置在一个表面上。</Chinesesimp>
+      </Key>
+      <Key ID="STR_para_building_placing_in_progress">
       </Key>
       <Key ID="STR_para_building_placing_in_progress">
         <Original>Placing Building</Original>
         <English>Placing Building</English>
+        <Chinesesimp>放置建筑中</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_condition_hasRank">
         <Original>Has Rank</Original>
+        <Chinesesimp>军衔</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_condition_isEngineer">
         <Original>Is an Engineer</Original>
+        <Chinesesimp>是一名工程兵</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_condition_rnFoot">
         <Original>On Foot</Original>
+        <Chinesesimp>步行</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_condition_inRestrictedZone">
         <Original>Restricted Zone</Original>
+        <Chinesesimp>限制区域</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_ui_costs">
         <Original>Costs</Original>
+        <Chinesesimp>费用</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_per_hour">
         <Original>per hour</Original>
+        <Chinesesimp>每小时</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_total_capacity">
         <Original>total capacity</Original>
+        <Chinesesimp>总容量</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_ui_pageAbrev">
         <Original>p.</Original>
+        <Chinesesimp>页.</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_ui_build">
         <Original>Build</Original>
+        <Chinesesimp>建造</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_ui_nextPage">
         <Original>Next page</Original>
+        <Chinesesimp>下一页</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_ui_previousPage">
         <Original>Previous page</Original>
+        <Chinesesimp>上一页</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_ui_title">
         <Original>Building Menu</Original>
+        <Chinesesimp>建造菜单</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_conditions">
         <Original>Conditions</Original>
+        <Chinesesimp>状态</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_selector">
         <Original>Wheel Menu</Original>
+        <Chinesesimp>滚轮菜单</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_debug_monitor">
         <Original>Toggle Debug Monitor</Original>
+        <Chinesesimp>切换调试监控器</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_task_roster">
         <Original>Task Roster</Original>
+        <Chinesesimp>任务手册</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_build_mode">
         <Original>Building Mode</Original>
+        <Chinesesimp>建造模式</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category">
         <Original>Category:</Original>
         <English>Category:</English>
+        <Chinesesimp>类别：</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_search">
         <Original>Search:</Original>
         <English>Search:</English>
+        <Chinesesimp>搜索:</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_showLocked">
         <Original>Show Locked:</Original>
         <English>Show Locked:</English>
+        <Chinesesimp>显示已锁定：</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_search">
         <Original>Search</Original>
         <English>Search</English>
+        <Chinesesimp>搜索</Chinesesimp>
       </Key>
 
       <Key ID="STR_vn_mf_buildingMenu_condition_inACav">
         <Original>In ACav</Original>
         <English>In ACav</English>
+        <Chinesesimp>是ACAV</Chinesesimp>
       </Key>
     </Container>
     <Container name="params">
       <Key ID="STR_vn_mf_param_wipe_save">
         <Original>==== Delete Save ====</Original>
         <English>==== Delete Save ====</English>
+        <Chinesesimp>==== 删除存档 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_wipe_save_desc">
         <Original>[WARNING] Deletes your saved game. This will delete all progress (ranks and map)!</Original>
         <English>[WARNING] Deletes your saved game. This will delete all progress (ranks and map)!</English>
+        <Chinesesimp>[警告]删除你所保存的游戏。这将删除所有的进度(军衔和地图)!</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_enable_ranks">
         <Original>==== Enable Rank System [Under Development] ====</Original>
         <English>==== Enable Rank System [Under Development] ====</English>
+        <Chinesesimp>==== 启用军衔系统[正在开发中] ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_hard_ai_limit">
         <Original>==== Hard AI Limit ====</Original>
         <English>==== Hard AI Limit ====</English>
+        <Chinesesimp>==== 硬性AI限制 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_hard_ai_limit_desc">
         <Original>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</Original>
         <English>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</English>
+        <Chinesesimp>[高性能影响]任务将同时拥有的最大AI数量</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_ai_scaling">
         <Original>==== AI Quantity Scaling ====</Original>
@@ -757,508 +991,637 @@
       <Key ID="STR_vn_mf_param_enable_ranks_desc">
         <Original>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</Original>
         <English>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</English>
+        <Chinesesimp>根据军衔限制车辆/武器使用。推荐启用，以减少恶意破坏。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_allow_map_markers">
         <Original>==== Enable Map Markers ====</Original>
         <English>==== Enable Map Markers ====</English>
+        <Chinesesimp>==== 启用地图标记 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_allow_map_markers_desc">
         <Original>Toggle player map markers</Original>
         <English>Toggle player map markers</English>
+        <Chinesesimp>切换玩家地图标记</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_dawn_length">
         <Original>==== Dawn Length ====</Original>
         <English>==== Dawn Length ====</English>
+        <Chinesesimp>==== 黎明时长 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_day_length">
         <Original>==== Day Length ====</Original>
         <English>==== Day Length ====</English>
+        <Chinesesimp>==== 白天时长 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_dusk_length">
         <Original>==== Dusk Length ====</Original>
         <English>==== Dusk Length ====</English>
+        <Chinesesimp>==== 黄昏时长 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_night_length">
         <Original>==== Night Length ==== </Original>
         <English>==== Night Length ====</English>
+        <Chinesesimp>==== 夜晚时长 ====</Chinesesimp>
+        
+       
       </Key>
       <Key ID="STR_vn_mf_buildables_require_vehicles">
         <Original>==== Resupply buildings require vehicles ====</Original>
         <English>==== Resupply buildings require vehicles ====</English>
+        <Chinesesimp>==== 补给建筑需要车辆 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildables_require_vehicles_desc">
         <Original>Should vehicles be required to build resupply buildings [Not Advised].</Original>
         <English>Should vehicles be required to build resupply buildings [Not Advised].</English>
+         <Chinesesimp>是否需要车辆来建造补给建筑物[不建议].</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_ai_quantity">
         <Original>==== AI Quantity ====</Original>
         <English>==== AI Quantity ====</English>
+        <Chinesesimp>==== AI数量 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_always_allow_withstand">
         <Original>==== Allow Withstanding ====</Original>
         <English>==== Allow Withstanding ====</English>
+        <Chinesesimp>==== 允许挣扎 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_always_allow_withstand_desc">
         <Original>Enable withstand with friendlies nearby</Original>
         <English>Enable withstand with friendlies nearby</English>
+        <Chinesesimp>启用与附近友军的挣扎</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_building_sandbag_value">
         <Original>==== Sandbag Supplies Quantity ====</Original>
         <English>==== Sandbag Supplies Quantity ====</English>
+        <Chinesesimp>==== 沙袋供应数量 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_building_sandbag_value_desc">
         <Original>The building supplies value of sandbags carried in the inventory.</Original>
         <English>The building supplies value of sandbags carried in the inventory.</English>
+        <Chinesesimp>建筑物供应库存中所装载沙袋的价值。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_advanced_revive">
         <Original>==== Advanced Revive ====</Original>
         <English>==== Advanced Revive ====</English>
+        <Chinesesimp>==== 高级复苏 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_advanced_revive_desc">
         <Original>Enable Advanced Revive (Recommended)</Original>
         <English>Enable Advanced Revive (Recommended)</English>
+        <Chinesesimp>启用高级复苏功能(推荐)</Chinesesimp
       </Key>
 
       <Key ID="STR_vn_mf_param_snake_header">
         <Original>======== Snake Settings ========</Original>
         <English>======== Snake Settings ========</English>
+        <Chinesesimp>======== 毒蛇设置 ========</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_chance">
         <Original>==== Bite Chance ====</Original>
         <English>==== Bite Chance ====</English>
+        <Chinesesimp>==== 蛇咬概率 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_chance_desc">
         <Original>Percentage chance of being bitten</Original>
         <English>Percentage chance of being bitten</English>
+        <Chinesesimp>被蛇咬的概率</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_distance">
         <Original>==== Bite Distance ====</Original>
         <English>==== Bite Distance ====</English>
+        <Chinesesimp>==== 蛇咬距离 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_distance_desc">
         <Original>How close a snake must be to bite a player</Original>
         <English>How close a snake must be to bite a player</English>
+        <Chinesesimp>蛇要多近才能咬到玩家</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_frequency">
         <Original>==== Bite Frequency ====</Original>
         <English>==== Bite Frequency ====</English>
+        <Chinesesimp>==== 蛇咬频率 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_frequency_desc">
         <Original>Minimum Amount of time between bites</Original>
         <English>Minimum Amount of time between bites</English>
+        <Chinesesimp>最小间隔时间</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_extra_time">
         <Original>==== Ramp up Time ====</Original>
         <English>==== Ramp up Time ====</English>
+        <Chinesesimp>==== 加速时间 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_extra_time_desc">
         <Original>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</Original>
         <English>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</English>
+        <Chinesesimp>减少被咬的几率的时间。开始计数后，咬频时间已经过去。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_teams_header">
         <Original>======== Team Settings ========</Original>
         <English>======== Team Settings ========</English>
+        <Chinesesimp>======== 团队设置 ========</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_max_players_acav">
         <Original>==== Max players on ACAV ====</Original>
         <English>==== Max players on ACAV ====</English>
+        <Chinesesimp>==== ACAV最大玩家数 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_max_players_greenhornets">
         <Original>==== Max players on Green Hornets ====</Original>
         <English>==== Max players on Green Hornets ====</English>
+        <Chinesesimp>==== 绿色大黄蜂最大玩家数 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_max_players_mikeforce">
         <Original>==== Max players on Mike Force ====</Original>
         <English>==== Max players on Mike Force ====</English>
+        <Chinesesimp>==== Mike Force最大玩家数 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_max_players_spiketeam">
         <Original>==== Max players on Spike Team ====</Original>
         <English>==== Max players on Spike Team ====</English>
+        <Chinesesimp>==== Spike Team最大玩家数 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_hunger_loss_rate">
         <Original>==== Hunger Gain Rate ====</Original>
         <English>==== Hunger Gain Rate ====</English>
+        <Chinesesimp>==== 饥饿增幅值 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_hunger_loss_rate_desc">
         <Original>The percentage of the hunger bar lost every 10 seconds</Original>
         <English>The percentage of the hunger bar lost every 10 seconds</English>
+        <Chinesesimp>每10秒消耗的饥饿条百分比  </Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_thirst_loss_rate">
         <Original>==== Thirst Gain Rate ====</Original>
         <English>==== Thirst Gain Rate ====</English>
+        <Chinesesimp>==== 饥渴增幅值 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_thirst_loss_rate_desc">
         <Original>The percentage of the thirst bar lost every 10 seconds</Original>
         <English>The percentage of the thirst bar lost every 10 seconds</English>
+        <Chinesesimp>每10秒消耗的饥渴条百分比  </Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_medical_header">
         <Original>======== Medical Settings ========</Original>
         <English>======== Medical Settings ========</English>
+        <Chinesesimp>==== 医疗设置 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_headshot_kill">
         <Original>==== Headshots Kill ====</Original>
         <English>==== Headshots Kill ====</English>
+        <Chinesesimp>==== 头部中弹死亡 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_headshot_kill_desc">
         <Original>Toggle if headshots can cause instadeath</Original>
         <English>Toggle if headshots can cause instadeath</English>
+        <Chinesesimp>头部中弹导致立即死亡</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_bleedout_time">
         <Original>==== Bleedout Time ====</Original>
         <English>==== Bleedout Time ====</English>
+        <Chinesesimp>==== 失血时间 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_bleedout_time_desc">
         <Original>The time it takes in seconds for a wounded player to die</Original>
         <English>The time it takes in seconds for a wounded player to die</English>
+        <Chinesesimp>受伤的玩家在多少秒钟内阵亡</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_withstand_percentage">
         <Original>==== Withstand Percentage ====</Original>
         <English>==== Withstand Percentage ====</English>
+        <Chinesesimp>==== 挣扎百分比 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_withstand_percentage_desc">
         <Original>Percentage of bleedout time that must pass before withstanding is allowed</Original>
         <English>Percentage of bleedout time that must pass before withstanding is allowed</English>
+        <Chinesesimp>允许挣扎之前必须通过的失血时间百分比 </Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_remove_bandage_item">
         <Original>==== Remove Bandage Item ====</Original>
         <English>==== Remove Bandage Item ====</English>
+        <Chinesesimp>==== 移除绷带物品 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_remove_bandage_item_desc">
         <Original>Remove the item used to stabilize a patient</Original>
         <English>Remove the item used to stabilize a patient</English>
+        <Chinesesimp>移除用来稳定伤员的物品</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_remove_revive_item">
         <Original>==== Remove Revive Item ====</Original>
         <English>==== Remove Revive Item ====</English>
+        <Chinesesimp>==== 移除复苏物品 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_remove_revive_item_desc">
         <Original>Remove the item used to revive a patient</Original>
         <English>Remove the item used to revive a patient</English>
+        <Chinesesimp>移除用来复苏伤员的物品</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_revive_requirement">
         <Original>==== Require Medic to Revive ====</Original>
         <English>==== Require Medic to Revive ====</English>
+        <Chinesesimp>==== 需要医疗兵来复苏 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_respawn_delay">
         <Original>==== Respawn Delay ====</Original>
         <English>==== Respawn Delay ====</English>
+        <Chinesesimp>==== 重生延迟 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_enable_air_support">
         <Original>==== Enable RTO Air Support ====</Original>
         <English>==== Enable RTO Air Support  ====</English>
+        <Chinesesimp>==== 启用无线电空中支援 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_enable_air_support_desc">
         <Original>Unique supports only will disable support from fast air and rotary wing units</Original>
         <English>Unique supports only will disable support from fast air and rotary wing units</English>
+        <Chinesesimp>唯一的支援将使快速空中和旋翼单位的支援失效  </Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_enable_arty_support">
         <Original>==== Enable RTO Artillery Support ====</Original>
         <English>==== Enable RTO Artillery Support ====</English>
+        <Chinesesimp>==== 启用无线电火炮支援 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_enable_stamina">
         <Original>==== Enable Stamina ====</Original>
         <English>==== Enable Stamina ====</English>
+        <Chinesesimp>==== 启用耐力 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_set_stamina">
         <Original>==== Stamina Setting ====</Original>
         <English>==== Stamina Setting ====</English>
+        <Chinesesimp>==== 耐力设置 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_header">
         <Original>======== Cleanup Settings ========</Original>
         <English>======== Cleanup Settings ========</English>
+        <Chinesesimp>==== 清理设置 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_min_player_distance">
         <Original>==== Cleanup Distance ====</Original>
         <English>==== Cleanup Distance ====</English>
+        <Chinesesimp>==== 清理距离 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_min_player_distance_desc">
         <Original>Prevents deletion for certain objects, if a player is within X metres</Original>
         <English>Prevents deletion for certain objects, if a player is within X metres</English>
+        <Chinesesimp>如果玩家在X米范围内，防止删除物品  </Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_max_bodies">
         <Original>==== Max Bodies ====</Original>
         <English>==== Max Bodies ====</English>
+        <Chinesesimp>==== 最大尸体数 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_placed_gear">
         <Original>==== Cleanup Placed Equipment ====</Original>
         <English>==== Cleanup Placed Equipment ====</English>
+        <Chinesesimp>==== 清理放置的装备 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_placed_gear_desc">
         <Original>Enables deleting equipment placed on the ground by players.</Original>
         <English>Enables deleting equipment placed on the ground by players.</English>
+        <Chinesesimp>允许删除玩家放在地上的装备。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_placed_gear_lifetime">
         <Original>==== Placed equipment minimum lifetime ====</Original>
         <English>==== Placed equipment minimum lifetime ====</English>
+        <Chinesesimp>==== 已放置装备的最短存在时间 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_dropped_gear">
         <Original>==== Cleanup Dropped Equipment ====</Original>
         <English>==== Cleanup Dropped Equipment ====</English>
+        <Chinesesimp>==== 清理投放装备 ====</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_dropped_gear_desc">
         <Original>Minimum amount of time before placed equipment is deleted.</Original>
         <English>Minimum amount of time before placed equipment is deleted.</English>
+        <Chinesesimp>删除已放置装备的最小时间  </Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_dropped_gear_lifetime">
         <Original>==== Dropped equipment minimum lifetime ====</Original>
         <English>==== Dropped equipment minimum lifetime ====</English>
+        <Chinesesimp>==== 已投放装备最短存在时间 ====</Chinesesimp>
       </Key>
     </Container>
     <Container name="voteMenu">
       <Key ID="STR_vn_mf_voteMenu_submitVote">
         <Original>Submit Vote</Original>
         <English>Submit Vote</English>
+        <Chinesesimp>提交投票</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_voteMenu_selectOption">
         <Original>Please select an option:</Original>
         <English>Please select an option:</English>
+        <Chinesesimp>请选择一个选项:</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_voteMenu_voteInitBody">
         <Original>A vote has been initalized. For more details please open the menu.</Original>
         <English>A vote has been initalized. For more details please open the menu.</English>
+        <Chinesesimp>已近开始了一个投票。请打开菜单查看详情。</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_voteMenu_open">
         <Original>Open</Original>
         <English>Open</English>
+        <Chinesesimp>打开</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_voteMenu_casted">
         <Original>Vote Casted</Original>
         <English>Vote Casted</English>
+        <Chinesesimp>已投票</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_voteMenu_votedFor">
         <Original>You voted:</Original>
         <English>You voted:</English>
+        <Chinesesimp>你投票了:</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_voteMenu_selectOptionPrompt">
         <Original>You must select an option!</Original>
         <English>You must select an option!</English>
+        <Chinesesimp>你必须选择一个选项！</Chinesesimp>
       </Key>
     </Container>
     <Container name="buildingCategories">
       <Key ID="STR_vn_mf_buildingMenu_category_uncategorized">
         <Original>Uncategorized</Original>
         <English>Uncategorized</English>
+        <Chinesesimp>未分类</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_all">
         <Original>+All</Original>
         <English>+All</English>
+        <Chinesesimp>+全部</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_recent">
         <Original>+Recents</Original>
         <English>+Recents</English>
+        <Chinesesimp>+最近选择</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_favorites">
         <Original>+Favorites</Original>
         <English>+Favorites</English>
+        <Chinesesimp>+最爱</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_base_starter">
         <Original>+Feature: HQ</Original>
         <English>+Feature: HQ</English>
+        <Chinesesimp>+功能：HQ</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_radio">
         <Original>+Feature: Music</Original>
         <English>+Feature: Music</English>
+        <Chinesesimp>+功能：音乐</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_respawn">
         <Original>+Feature: Respawn</Original>
         <English>+Feature: Respawn</English>
+        <Chinesesimp>+功能：重生</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_wreck_recovery">
         <Original>+Feature: Wreck Recovery</Original>
         <English>+Feature: Wreck Recovery</English>
+        <Chinesesimp>+功能：残骸回收</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_maintenance">
         <Original>+Feature: Maintenance</Original>
         <English>+Feature: Maintenance</English>
+        <Chinesesimp>+功能：维护</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_vehicle_spawning">
         <Original>+Feature: Vehicle Creation</Original>
         <English>+Feature: Vehicle Creation</English>
+        <Chinesesimp>+功能：载具制造</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_supply_depot">
         <Original>+Feature: Building Supply Depot</Original>
         <English>+Feature: Building Supply Depot</English>
+        <Chinesesimp>+功能：建筑补给站</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_functional">
         <Original>Special Buildings</Original>
         <English>Special Buildings</English>
+        <Chinesesimp>特殊建筑</Chinesesimp
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_us">
         <Original>U.S</Original>
         <English>U.S</English>
+        <Chinesesimp>美国</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_buildings">
         <Original>Buildings</Original>
         <English>Buildings</English>
+        <Chinesesimp>建筑</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_medical">
         <Original>Medical</Original>
         <English>Medical</English>
+        <Chinesesimp>医疗</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_tents">
         <Original>Tents</Original>
         <English>Tents</English>
+        <Chinesesimp>帐篷</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_towers">
         <Original>Towers</Original>
         <English>Towers</English>
+        <Chinesesimp>塔楼</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_sanitation">
         <Original>Sanitation</Original>
         <English>Sanitation</English>
+        <Chinesesimp>环境</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_resupply">
         <Original>Resupply</Original>
         <English>Resupply</English>
+        <Chinesesimp>补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_bridges">
         <Original>Bridges</Original>
         <English>Bridges</English>
+        <Chinesesimp>桥梁</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_trees">
         <Original>Trees</Original>
         <English>Trees</English>
+        <Chinesesimp>树木</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_bunkers">
         <Original>Bunkers</Original>
         <English>Bunkers</English>
+        <Chinesesimp>碉堡</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_fortifications">
         <Original>Fortifications</Original>
         <English>Fortifications</English>
+        <Chinesesimp>防御工事</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_trenches">
         <Original>Trenches</Original>
         <English>Trenches</English>
+        <Chinesesimp>战壕</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_helipads">
         <Original>Helipads</Original>
         <English>Helipads</English>
+        <Chinesesimp>直升机停机坪</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_shelters">
         <Original>Camp (PAVN)</Original>
         <English>Camp (PAVN)</English>
+        <Chinesesimp>营地(越南人民军)</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_nv">
         <Original>North Vietnamese</Original>
         <English>North Vietnamese</English>
+        <Chinesesimp>北越</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_anyone">
         <Original>Anyone Can Build</Original>
         <English>Anyone Can Build</English>
+        <Chinesesimp>任何人可建造</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_nonACAV">
         <Original>Non-ACAV</Original>
         <English>Non-ACAV</English>
+        <Chinesesimp>非ACAV</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_caves">
         <Original>Caves and Rocks</Original>
         <English>Caves and Rocks</English>
+        <Chinesesimp>洞穴与岩石</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_decorative">
         <Original>Misc</Original>
         <English>Misc</English>
+        <Chinesesimp>杂项</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_lighting">
         <Original>Lighting</Original>
         <English>Lighting</English>
+        <Chinesesimp>照明</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_platforms">
         <Original>Platforms</Original>
         <English>Platforms</English>
+        <Chinesesimp>平台</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_fences">
         <Original>Fences and walls</Original>
         <English>Fences and walls</English>
+        <Chinesesimp>栅栏和墙壁</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_antennae">
         <Original>Antennae</Original>
         <English>Antennae</English>
+        <Chinesesimp>天线</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_hootches">
         <Original>Shacks</Original>
         <English>Shacks</English>
+        <Chinesesimp>茅草房</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_hangars">
         <Original>Hangars</Original>
         <English>Hangars</English>
+        <Chinesesimp>机棚</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_arvn">
         <Original>ARVN</Original>
         <English>ARVN</English>
+        <Chinesesimp>南越陆军</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_barracks">
         <Original>Barracks</Original>
         <English>Barracks</English>
+        <Chinesesimp>军营</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_walls">
         <Original>Walls</Original>
         <English>Walls</English>
+        <Chinesesimp>墙体</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_water">
         <Original>Water</Original>
         <English>Water</English>
+        <Chinesesimp>水</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_piers">
         <Original>Piers</Original>
         <English>Piers</English>
+        <Chinesesimp>码头</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_spiderholes">
         <Original>Spiderholes</Original>
         <English>Spiderholes</English>
+        <Chinesesimp>散兵坑</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_buildingMenu_category_storage">
         <Original>Storage</Original>
         <English>Storage</English>
+        <Chinesesimp>存储</Chinesesimp>
       </Key>
     </Container>
     <Container name="supplies">
       <Key ID="STR_vn_mf_light_ammo_supplies">
         <Original>Light Ammo Supplies</Original>
+        <Chinesesimp>轻型弹药补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_support_ammo_supplies">
         <Original>Support Ammo Supplies</Original>
+        <Chinesesimp>支援弹药补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_explosives_supplies">
         <Original>Explosives Supplies</Original>
+        <Chinesesimp>炸药补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_building_supplies_crate">
         <Original>Building Supplies (Small)</Original>
+        <Chinesesimp>建筑补给（小）</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_building_supplies_container">
         <Original>Building Supplies (Large)</Original>
+        <Chinesesimp>建筑补给（大）</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_sandbag_supplies">
         <Original>Sandbags and Tools</Original>
         <English>Sandbags and Tools</English>
+        <Chinesesimp>沙袋和工具</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_supplies">
         <Original>Supplies</Original>
+        <Chinesesimp>补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_workshop_supplies">
         <Original>Workshop Supplies</Original>
+        <Chinesesimp>维修补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_food_supplies">
         <Original>Food Supplies</Original>
+        <Chinesesimp>食物补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_medical_supplies">
         <Original>Medical Supplies</Original>
+        <Chinesesimp>医疗补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_support_supplies">
         <Original>Support Supplies</Original>
         <English>Support Supplies</English>
+        <Chinesesimp>支援补给</Chinesesimp>
       </Key>
 	    <Key ID="STR_vn_mf_vehicle_supplies">
         <Original>Vehicle Supplies</Original>
         <English>Vehicle Supplies</English>
+        <Chinesesimp>载具补给</Chinesesimp>
       </Key>
 	    <Key ID="STR_vn_mf_building_supplies">
         <Original>Construction Supplies</Original>
         <English>Construction Supplies</English>
+        <Chinesesimp>建筑补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_ammo_supplies">
         <Original>Ammunition</Original>
         <English>Ammunition</English>
+        <Chinesesimp>弹药</Chinesesimp>
       </Key>
     </Container>
   </Package>
@@ -1268,114 +1631,148 @@
     <Container name="notifications">
       <Key ID="STR_para_notification_building_non_functional_title">
         <Original>Building Non-Functional</Original>
+        <Chinesesimp>无法运作的建筑</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_building_non_functional_desc">
         <Original>This building isn't functioning right now.</Original>
+        <Chinesesimp>该建筑现在无法运作</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_insufficient_resources_title">
         <Original>Insufficient Resources</Original>
+        <Chinesesimp>资源不足</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_insufficient_resources_desc">
         <Original>The building doesn't have enough resources to do that.</Original>
+        <Chinesesimp>该建筑没有足够资源。</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_spawn_position_blocked_title">
         <Original>Area Blocked</Original>
+        <Chinesesimp>区域受阻</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_spawn_position_blocked_desc">
         <Original>Clear the area where the vehicle will be created.</Original>
+        <Chinesesimp>清理载具生成区域。</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_repaired_title">
         <Original>Vehicle Repaired</Original>
+        <Chinesesimp>载具已维修</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_repaired_desc">
         <Original>%1 supplies consumed.</Original>
+        <Chinesesimp>消耗%1补给</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_refueled_title">
         <Original>Vehicle Refueled</Original>
+        <Chinesesimp>载具已补充燃料</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_refueled_desc">
         <Original>%1 supplies consumed.</Original>
+        <Chinesesimp>消耗%1补给</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_rearmed_title">
         <Original>Vehicle Rearmed</Original>
+        <Chinesesimp>载具已补充弹药</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_rearmed_desc">
         <Original>%1 supplies consumed.</Original>
+        <Chinesesimp>消耗%1补给</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_spawn_cooldown_title">
         <Original>Vehicle Created Recently</Original>
+        <Chinesesimp>最近生成的载具</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_spawn_cooldown_desc">
         <Original>The next vehicle will be available in %1 minutes.</Original>
+        <Chinesesimp>下一个载具%1分钟后可用</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_vehicle_spawn_incorrect">
         <Original>This vehicle can not be spawned here!</Original>
+        <Chinesesimp>载具不能在此生成！</Chinesesimp>
       </Key>
       <Key ID="STR_para_notification_building_placement_incorrect">
         <Original>The building is incorrectly placed for this vehicle to spawn.</Original>
+        <Chinesesimp>建筑位置不正确，无法生成载具。</Chinesesimp>
       </Key>
     </Container>
     <Container name="basebuilding">
       <Key ID="STR_para_bf_maintenance_repair_action">
         <Original>Repair Vehicle Using Supplies</Original>
+        <Chinesesimp>使用补给维修载具</Chinesesimp>
       </Key>
       <Key ID="STR_para_bf_maintenance_refuel_action">
         <Original>Refuel Vehicle Using Supplies</Original>
+        <Chinesesimp>使用补给补充燃料</Chinesesimp>
       </Key>
       <Key ID="STR_para_bf_maintenance_rearm_action">
         <Original>Rearm Vehicle Using Supplies</Original>
+        <Chinesesimp>使用补给补充弹药</Chinesesimp>
       </Key>
 			<Key ID="STR_vn_mf_vic_car">
         <Original>Cars</Original>
+        <Chinesesimp>车辆</Chinesesimp>
       </Key>
 			<Key ID="STR_vn_mf_vic_mule">
         <Original>Mules</Original>
       </Key>
       <Key ID="STR_vn_mf_vic_truck">
         <Original>Trucks</Original>
+        <Chinesesimp>卡车</Chinesesimp>
       </Key>
 			<Key ID="STR_vn_mf_vic_armour">
         <Original>Armoured Vehicles</Original>
+        <Chinesesimp>武装载具</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vic_static">
         <Original>Statics</Original>
+        <Chinesesimp>静态</Chinesesimp>
       </Key>
 			<Key ID="STR_vn_mf_vic_supply">
         <Original>Supplies</Original>
+        <Chinesesimp>补给</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_vic_boat_light">
         <Original>Light Boats</Original>
+        <Chinesesimp>轻型船只</Chinesesimp>
       </Key>
 			<Key ID="STR_vn_mf_vic_boat_heavy">
         <Original>Heavy Boats</Original>
+        <Chinesesimp>重型船只</Chinesesimp>
       </Key>
     </Container>
     <Container name="supplies">
       <Key ID="STR_para_supply_buildingsupplies">
         <Original>Building Supplies</Original>
+        <Chinesesimp>建筑补给</Chinesesimp>
       </Key>
       <Key ID="STR_para_supply_workshopsupplies">
         <Original>Workshop Supplies</Original>
+        <Chinesesimp>载具补给</Chinesesimp>
       </Key>
     </Container>
     <Container name="KeybindingsMenu">
       <Key ID="STR_vn_mf_keybindings_title">
         <Original>Mikeforce Keybindings</Original>
+        <Chinesesimp>Mike Force按键绑定</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_header_action">
         <Original>Action</Original>
+        <Chinesesimp>动作</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_header_keybind">
         <Original>Keybind</Original>
+        <Chinesesimp>按键</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_reset">
         <Original>Reset to default</Original>
+        <Chinesesimp>重置为默认</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_confirm">
         <Original>Confirm</Original>
+        <Chinesesimp>确认</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_keybindings_cancel">
         <Original>Cancel</Original>
+        <Chinesesimp>取消</Chinesesimp>
       </Key>
     </Container>
     <Container name="Zone_Name_Altis">
