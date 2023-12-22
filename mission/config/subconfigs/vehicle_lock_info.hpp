@@ -96,6 +96,14 @@ class vn_b_boat_12_01 : unlocked {};
 class vn_b_boat_13_01 : unlocked {};
 
 //Air assets
+// C-119 Planes
+class vnx_b_air_ac119_01_01 : green_hornet {};
+class vnx_b_air_ac119_02_01 : green_hornet {};
+class vnx_b_air_ac119_02_02 : green_hornet {};
+class vnx_b_air_ac119_03_01 : green_hornet {};
+class vnx_b_air_ac119_03_02 : green_hornet {};
+class vnx_b_air_ac119_04_01 : green_hornet {};
+
 //Cobra Helicopter
 class vn_b_air_ah1g_01 : green_hornet {};
 class vn_b_air_ah1g_02 : green_hornet {};

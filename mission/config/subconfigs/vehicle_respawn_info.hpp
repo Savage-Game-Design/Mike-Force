@@ -467,6 +467,34 @@ class vehicles {
 	class vn_i_fank_70_static_zgu1_01 {
 		tags[] = {"zgu1","static","antiair","nodisassemble"};
 	};
+	
+	////////////////////////////////////////
+	// S.O.G. Nickel Steel (VNX) Vehicles //
+	////////////////////////////////////////
+	
+	class vnx_b_air_ac119_01_01 {
+		tags[] = {"c119", "armed", "firesupport", "plane"};
+	};
+
+	class vnx_b_air_ac119_02_01 {
+		tags[] = {"c119", "transport", "plane"};
+	};
+
+	class vnx_b_air_ac119_02_02 {
+		tags[] = {"c119", "transport", "plane"};
+	};
+
+	class vnx_b_air_ac119_03_01 {
+		tags[] = {"c119", "transport", "cargo", "plane"};
+	};
+
+	class vnx_b_air_ac119_03_02 {
+		tags[] = {"c119", "transport", "cargo", "plane"};
+	};
+
+	class vnx_b_air_ac119_04_01 {
+		tags[] = {"c119", "firesupport", "plane"};
+	};
 };
 
 class spawn_point_types {
@@ -831,6 +859,44 @@ class spawn_point_types {
 				name = "F4 Phantom";
 				icon = VEHICLE_ICON_PLANE;
 				include[] = { { "jet", "f4" } };
+			};
+		};
+	};
+
+	class c119_unarmed {
+		name = "C-119 (Transport)";
+		RESPAWN_MEDIUM;
+
+		class categories {
+			class transport {
+				name = "Transport";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "c119", "transport" } };
+				exclude[] = { "cargo" };
+			};
+			class cargo {
+				name = "Cargo";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "c119", "transport", "cargo" } };
+			};
+		};
+	};
+
+	class c119_armed {
+		name = "C-119 (Armed)";
+		WRECK_MEDIUM;
+
+		class categories {
+			class gunship {
+				name = "Gunship";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "c119", "armed", "firesupport" } };
+			};
+			class bomber {
+				name = "Bomber";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "c119", "firesupport" } };
+				exclude[] = { "armed" };
 			};
 		};
 	};

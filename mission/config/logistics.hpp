@@ -319,6 +319,18 @@ class vn_logistics
 	class vn_b_armor_m577_01: vn_defaults_medium {};
 	class vn_b_armor_m577_02: vn_defaults_medium {};
 
+
+	/////////////////////////////////////
+	////  S.O.G. Nickel Steel (VNX)  ////
+	/////////////////////////////////////
+
+	class vnx_b_air_ac119_01_01 : vn_defaults_small {};
+	class vnx_b_air_ac119_02_01 : vn_defaults_large {};
+	class vnx_b_air_ac119_02_02 : vn_defaults_large {};
+	class vnx_b_air_ac119_03_01 : vn_defaults_extra_large {};
+	class vnx_b_air_ac119_03_02 : vn_defaults_extra_large {};
+	class vnx_b_air_ac119_04_01 : vn_defaults_small {};
+
 	//////////////////
 	////  UNSUNG  ////
 	//////////////////
