@@ -303,9 +303,9 @@ class vn_logistics
 	class vn_b_wheeled_m274_01_01: vn_defaults_small {};
 	class vn_b_wheeled_m274_01_02: vn_defaults_small {};
 	class vn_b_wheeled_m274_01_03: vn_defaults_small {};
-	class vn_b_wheeled_m274_02_01: vn_defaults_small {};
-	class vn_b_wheeled_m274_02_02: vn_defaults_small {};
-	class vn_b_wheeled_m274_02_03: vn_defaults_small {};
+	class vn_b_wheeled_m274_02_01: vn_defaults_medium {};
+	class vn_b_wheeled_m274_02_02: vn_defaults_medium {};
+	class vn_b_wheeled_m274_02_03: vn_defaults_medium {};
 	class vn_b_wheeled_m274_mg_01_01: vn_defaults_tiny {};
 	class vn_b_wheeled_m274_mg_01_02: vn_defaults_tiny {};
 	class vn_b_wheeled_m274_mg_02_01: vn_defaults_tiny {};
