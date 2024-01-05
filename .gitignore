@@ -6,5 +6,6 @@ mission/paradigm/*
 mission/map_config
 mission/paradigm
 build_output
+__pycache__
 user_paths.py
 *.code-workspace
