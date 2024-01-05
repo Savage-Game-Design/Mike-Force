@@ -955,6 +955,12 @@
         <Original>==== Enable RTO Artillery Support ====</Original>
         <English>==== Enable RTO Artillery Support ====</English>
       </Key>
+      <Key ID="STR_vn_mf_param_danger_close">
+        <Original>==== RTO Firesupport Danger Close Distance ====</Original>
+      </Key>
+      <Key ID="STR_vn_mf_param_danger_close_disc">
+        <Original>The minimum distance to friendlies that RTO firesupport can be called in</Original>
+      </Key>
       <Key ID="STR_vn_mf_param_enable_stamina">
         <Original>==== Enable Stamina ====</Original>
         <English>==== Enable Stamina ====</English>
