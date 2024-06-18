@@ -54,13 +54,18 @@ private _fnc_findPos = {
 	//Create initial AA emplacements
 	for "_i" from 1 to (1 + ceil random (vn_mf_s_max_aa_per_zone - 1)) do
 	{
-		[[_center, _sizeMax / 4, _sizeMax / 2] call _fnc_findPos] call vn_mf_fnc_sites_create_aa_site;
+		private _pos = [_center, _sizeMax / 4, _sizeMax / 2] call _fnc_findPos;
+
+		[_pos] call vn_mf_fnc_sites_create_aa_site;
+		[_pos, 5] call vn_mf_fnc_sites_hide_terrain_objects_bbox_intersections;
 	};
 
 	//Create initial artillery emplacements
 	for "_i" from 1 to (1 + ceil random (vn_mf_s_max_artillery_per_zone - 1)) do
 	{
-		[[_center, _sizeMax / 3, _sizeMax] call _fnc_findPos] call vn_mf_fnc_sites_create_artillery_site;
+		private _pos = [_center, _sizeMax / 3, _sizeMax] call _fnc_findPos;
+		[_pos] call vn_mf_fnc_sites_create_artillery_site;
+		[_pos, 5] call vn_mf_fnc_sites_hide_terrain_objects_bbox_intersections;
 	};
 
 	//Create zone HQ
@@ -73,4 +78,5 @@ private _fnc_findPos = {
 		};
 	};
 	[_hqPosition] call vn_mf_fnc_sites_create_hq;
+	[_pos, 50] call vn_mf_fnc_sites_hide_terrain_objects_bbox_intersections;
 } forEach _zonesToGenerateIn;

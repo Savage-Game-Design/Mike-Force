@@ -223,6 +223,7 @@ class CfgFunctions
 			class sites_init {};
 			class sites_load {};
 			class sites_teardown_site {};
+			class sites_hide_terrain_objects_bbox_intersections {};
 
 			//Specific types of site
 			class sites_create_aa_site {};
