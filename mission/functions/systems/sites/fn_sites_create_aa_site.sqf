@@ -88,8 +88,21 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-		//Teardown when all guns destroyed
-		(_siteStore getVariable "aaGuns" findIf {alive _x} == -1)
+
+                private _pos = getPos _siteStore;
+                private _objects = _siteStore getVariable ["aaGuns", []];
+
+                /*
+                Teardown when all guns are either
+                - destroyed
+                - no longer with 20m radius of site centre point
+                */
+
+                private _objectsAreAliveInRadius = _objects findIf {
+                        (alive _x) && (count ([_x] inAreaArray [_pos, 20, 20, 0, false]) > 0)
+                };
+
+                _objectsAreAliveInRadius == -1
 	},
 	//Teardown code
 	{

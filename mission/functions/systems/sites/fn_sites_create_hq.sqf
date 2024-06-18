@@ -28,10 +28,13 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
+		private _radius = 50;
+		_siteStore setVariable ["siteRadius", _radius];
+
 		//Hide all nearby terrain objects.
 		{
 			_x hideObjectGlobal true;
-		} forEach (nearestTerrainObjects [_spawnPos, ["TREE", "BUSH", "SMALL TREE", "ROCK", "ROCKS"], 50, false, true]);
+		} forEach (nearestTerrainObjects [_spawnPos, ["TREE", "BUSH", "SMALL TREE", "ROCK", "ROCKS"], _radius, false, true]);
 
 		private _hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {_x isKindOf "land_vn_pavn_ammo"};
@@ -81,8 +84,22 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-		//Teardown when all guns destroyed
-		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
+
+		private _pos = getPos _siteStore;
+		private _radius = _siteStore getVariable ["siteRadius", 50];
+		private _objects = _siteStore getVariable ["objectsToDestroy", []];
+
+		/*
+		Teardown when all ammo crates are either
+		- destroyed
+		- no longer within radius of site
+		*/
+
+		private _objectsAreAliveInRadius = _objects findIf {
+			(alive _x) && (count ([_x] inAreaArray [_pos, _, _radius, 0, false]) > 0)
+		};
+
+		_objectsAreAliveInRadius == -1
 	},
 	//Teardown code
 	{
