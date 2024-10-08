@@ -81,21 +81,11 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-
-		private _pos = getPos _siteStore;
-		private _objects = _siteStore getVariable ["mortars", []];
-
-		/*
-		Teardown when all guns are either
-		- destroyed
-		- no longer with 20m radius of site cetnre point
-		*/
-
-		private _objectsAreAliveInRadius = _objects findIf {
-			(alive _x) && (count ([_x] inAreaArray [_pos, 20, 20, 0, false]) > 0)
-		};
-
-		_objectsAreAliveInRadius == -1
+		[
+			_siteStore getVariable ["mortars", []],
+			_siteStore,
+			20
+		] call vn_mf_fnc_sites_check_standard_site_completed;
 	},
 	//Teardown code
 	{

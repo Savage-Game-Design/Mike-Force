@@ -84,22 +84,11 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-
-		private _pos = getPos _siteStore;
-		private _radius = _siteStore getVariable ["siteRadius", 50];
-		private _objects = _siteStore getVariable ["objectsToDestroy", []];
-
-		/*
-		Teardown when all ammo crates are either
-		- destroyed
-		- no longer within radius of site
-		*/
-
-		private _objectsAreAliveInRadius = _objects findIf {
-			(alive _x) && (count ([_x] inAreaArray [_pos, _, _radius, 0, false]) > 0)
-		};
-
-		_objectsAreAliveInRadius == -1
+		[
+			_siteStore getVariable ["objectsToDestroy", []],
+			_siteStore,
+			_siteStore getVariable ["siteRadius", 50]
+		] call vn_mf_fnc_sites_check_standard_site_completed;
 	},
 	//Teardown code
 	{
