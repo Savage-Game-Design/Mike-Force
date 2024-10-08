@@ -28,13 +28,21 @@ params ["_pos"];
 		private _sitePos = getPos _siteStore;
 		private _spawnPos = _sitePos;
 
+		private _radius = 50;
+		_siteStore setVariable ["siteRadius", _radius];
+
 		//Hide all nearby terrain objects.
 		{
 			_x hideObjectGlobal true;
-		} forEach (nearestTerrainObjects [_spawnPos, ["TREE", "BUSH", "SMALL TREE", "ROCK", "ROCKS"], 50, false, true]);
+		} forEach (nearestTerrainObjects [_spawnPos, ["TREE", "BUSH", "SMALL TREE", "ROCK", "ROCKS"], _radius, false, true]);
 
 		private _hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {_x isKindOf "land_vn_pavn_ammo"};
+
+		// site objects being placed in a vehicle's logistics inventory
+		// can result in strange side-effects / edge cases, including
+		// soft-locked sites and objects being deleted in front of players.
+		_objectsToDestroy apply {_x setVariable ["vn_log_enablePickup", false]};
 
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
@@ -81,8 +89,11 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-		//Teardown when all guns destroyed
-		(_siteStore getVariable "objectsToDestroy" findIf {alive _x} == -1)
+		[
+			_siteStore getVariable ["objectsToDestroy", []],
+			_siteStore,
+			_siteStore getVariable ["siteRadius", 50]
+		] call vn_mf_fnc_sites_check_standard_site_completed;
 	},
 	//Teardown code
 	{
