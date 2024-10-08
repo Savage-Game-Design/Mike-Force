@@ -108,4 +108,7 @@ if !(vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEq
 	};
 
 	[_trait,_allowed] call BIS_fnc_log;
+
+	// reset the duty officer wheel menu on the client
+	[] remoteExecCall ["vn_mf_fnc_action_trait",_player];
 };

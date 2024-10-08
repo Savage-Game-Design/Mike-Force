@@ -26,9 +26,14 @@ private _airSupport = ["enable_air_support", 1] call BIS_fnc_getParamValue;
 private _artySupport = ["enable_arty_support", 1] call BIS_fnc_getParamValue;
 {
 	private _agent = _x;
+
+	// reset any existing client-side wheel menu options
+	// to only show currently available roles to a player
+	_agent setVariable ["para_wheel_menu_dyn_actions", []];
+
 	{
-        private _traitConfig = _x; 
-        private _trait = configName _traitConfig;
+	        private _traitConfig = _x;
+		private _trait = configName _traitConfig;
 		private _traitName = getText(_traitConfig >> "text");
 		private _image = getText(_traitConfig >> "image");
 		if !(_trait == "vn_artillery" && (_airSupport == 0 && _artySupport == 0)) then {

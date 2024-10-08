@@ -36,6 +36,8 @@ publicVariable _team;
 [[_team], {
 	[] call vn_mf_fnc_task_refresh_tasks_client;
 	[] call vn_mf_fnc_tr_overview_team_update;
+	// apply new team's traits to player
+	[] call vn_mf_fnc_apply_unit_traits;
+	// resets the duty officer wheel menus on the client
+	[] call vn_mf_fnc_action_trait;
 }] remoteExec ["spawn", _player];
-
-[] remoteExecCall ["vn_mf_fnc_apply_unit_traits", _player];
