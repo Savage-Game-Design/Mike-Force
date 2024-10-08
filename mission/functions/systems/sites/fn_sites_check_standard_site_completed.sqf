@@ -74,4 +74,4 @@ private _objectsInArea = _objectsToCheck inAreaArray [
 	false
 ];
 
-_objectsInArea findIf {alive _x && {!(_x getVariable ["log_inventory_loaded", false])}} == -1;
+_objectsInArea findIf {alive _x} == -1;

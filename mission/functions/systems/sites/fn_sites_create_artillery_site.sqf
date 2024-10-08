@@ -61,6 +61,10 @@ params ["_pos"];
 		private _objectives = [];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+			// site objects being placed in a vehicle's logistics inventory
+			// can result in strange side-effects / edge cases, including
+			// soft-locked sites and objects being deleted in front of players.
+			_x setVariable ["vn_log_enablePickup", false];
 		} forEach _mortars;
 		_objectives pushBack ([_spawnPos, 1, 2] call para_s_fnc_ai_obj_request_defend);
 

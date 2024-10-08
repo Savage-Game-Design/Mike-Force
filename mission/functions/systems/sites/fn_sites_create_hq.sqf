@@ -39,6 +39,11 @@ params ["_pos"];
 		private _hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {_x isKindOf "land_vn_pavn_ammo"};
 
+		// site objects being placed in a vehicle's logistics inventory
+		// can result in strange side-effects / edge cases, including
+		// soft-locked sites and objects being deleted in front of players.
+		_objectsToDestroy apply {_x setVariable ["vn_log_enablePickup", false]};
+
 		{
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 		} forEach _hqObjects;
