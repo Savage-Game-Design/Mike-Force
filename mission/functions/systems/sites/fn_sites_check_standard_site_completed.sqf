@@ -10,9 +10,10 @@
         'Standardised' here basically means typical Mike Force sites where players need
         to clear/destroy/spike certain objects to complete that site and progress.
 
-        The check also covers the case where a player has picked up a mortar/ZPU object
-        and walked away from the site with the advanced logistics module. Or some 'arma'
-        happened, yeeting the object away from the site.
+        The check also covers the cases where
+            * some 'arma' has happened, yeeting the object far away from the site
+            * a player has picked up a site object and walked away from the site
+            * a player has loaded a site object as vehicle cargo
 
     Parameter(s):
 
@@ -73,4 +74,4 @@ private _objectsInArea = _objectsToCheck inAreaArray [
 	false
 ];
 
-_objectsInArea findIf {alive _x} == -1;
+_objectsInArea findIf {alive _x && !(_x getVariable ["log_inventory_loaded", false])} == -1;
