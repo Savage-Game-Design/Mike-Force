@@ -4,7 +4,7 @@
 	Public: No
 
 	Description:
-		Check if the player can enter the vehicle.
+		Check if the player can enter the vehicle (or static weapon).
 
 	Parameter(s):
 	_player - Player that wants to enter [Object]
@@ -18,17 +18,32 @@
 */
 
 
-params ["_player", "_role", "_vehicle"];
+private _fnc_player_is_authorized = {
+	params ["_vehicle", "_player"];
 
-private _isCopilot = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isCopilot") > 0);
-private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
-
-if (_role == "driver" || _isCopilot) exitWith {
 	private _teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []];
+	private _playerGroup = _player getVariable ["vn_mf_db_player_group", "FAILED"];
+
 	if (_teamsVehicleIsLockedTo isEqualTo [] || _playerGroup in _teamsVehicleIsLockedTo) exitWith {
 		true
 	};
+
 	false
+};
+
+
+params ["_player", "_role", "_vehicle"];
+
+if (_vehicle isKindOf "StaticWeapon") exitWith {
+	[_vehicle, _player] call _fnc_player_is_authorized
+};
+
+private _isCopilot = (getNumber ([_vehicle, _vehicle unitTurret _player] call BIS_fnc_turretConfig >> "isCopilot") > 0);
+
+// allows passengers into vehicles
+
+if (_role == "driver" || _isCoPilot) exitWith {
+	[_vehicle, _player] call _fnc_player_is_authorized
 };
 
 true
