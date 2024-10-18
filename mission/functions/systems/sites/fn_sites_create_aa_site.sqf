@@ -67,6 +67,10 @@ params ["_pos"];
 		private _objectives = [];
 		{
 			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
+			// site objects being placed in a vehicle's logistics inventory
+			// can result in strange side-effects / edge cases, including
+			// soft-locked sites and objects being deleted in front of players.
+			_x setVariable ["vn_log_enablePickup", false];
 		} forEach _guns;
 		_objectives pushBack ([_spawnPos, 2, 3] call para_s_fnc_ai_obj_request_defend);
 
@@ -88,8 +92,11 @@ params ["_pos"];
 	//Teardown condition
 	{
 		params ["_siteStore"];
-		//Teardown when all guns destroyed
-		(_siteStore getVariable "aaGuns" findIf {alive _x} == -1)
+		[
+			_siteStore getVariable ["aaGuns", []],
+			_siteStore,
+			20
+		] call vn_mf_fnc_sites_check_standard_site_completed;
 	},
 	//Teardown code
 	{
