@@ -15,9 +15,10 @@ jobs:
 
     - name: build_release
       run: |
+          python3 -m pip install --user virtualenv
           virtualenv -p python3 ./venv
           ./venv/bin/python3 -m pip install GitPython
-          GITHUB_TOKEN=${{ github.token }} ./venv/bin/python3 ./release.py
+          ./venv/bin/python3 ./release.py
     
     - name: read_release_details
       run: |
