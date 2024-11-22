@@ -1,0 +1,40 @@
+on:
+  push:
+    branch:
+      - 'development'
+      # testing
+      - 'add-release-ci-builds'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v2 
+
+    - name: build_release
+      run: |
+          virtualenv -p python3 ./venv
+          ./venv/bin/python3 -m pip install GitPython
+          GITHUB_TOKEN=${{ github.token }} ./venv/bin/python3 ./release.py
+    
+    - name: read_release_details
+      run: |
+        echo "TAG_NAME=$(cat ./release/tag_name.txt)" >> $GITHUB_ENV
+        echo "RELEASE_TITLE=$(cat ./release/release_name.txt)" >> $GITHUB_ENV
+    
+    - name: release
+      uses: softprops/action-gh-release@v1
+      with:
+        token: ${{ github.token }}
+        tag_name: ${{ env.TAG_NAME }}
+        name: ${{ env.RELEASE_TITLE }}
+        files: |
+          ./release/*.zip
+          ./release/*.tar.gz
+        body_path: ./release/RELEASE.md
+        fail_on_unmatched_files: true
+        make_latest: true
+        # keep bundling Indev changes up in the same release
+        append_body: true
