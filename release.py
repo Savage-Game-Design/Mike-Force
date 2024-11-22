@@ -271,7 +271,7 @@ def main():
 
     # only handling last commit for now...
     # need to sort out historical tags in the repo to handle automatic changelogs
-    changelog = f"- {repo.commit().summary}"
+    changelog = f"- {git.Repo(".").commit().summary}"
 
     with open(RELEASE_DIR.joinpath("tag_name.txt"), "w") as f:
         f.write(f"v{mf_version}")
