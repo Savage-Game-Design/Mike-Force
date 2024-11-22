@@ -22,7 +22,6 @@ import zipfile
 import glob
 import subprocess
 import logging
-import requests
 
 from pathlib import Path
 
