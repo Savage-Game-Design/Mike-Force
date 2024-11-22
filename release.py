@@ -266,12 +266,11 @@ def main():
     for archive in build_archivedir.glob("*"):
         shutil.move(archive, RELEASE_DIR)
 
+    logger.info(f"Moved archived.")
+
     tag_name = mf_version
     release_name = f"Mike Force: {mf_version}"
-
-    # only handling last commit for now...
-    # need to sort out historical tags in the repo to handle automatic changelogs
-    changelog = f"- {git.Repo(".").commit().summary}"
+    commit_summary = git.Repo('.').commit().summary
 
     with open(RELEASE_DIR.joinpath("tag_name.txt"), "w") as f:
         f.write(f"v{mf_version}")
@@ -279,11 +278,13 @@ def main():
     with open(RELEASE_DIR.joinpath("release_name.txt"), "w") as f:
         f.write(f"Mike Force: {mf_version}")
 
+    # only handling last commit for now...
+    # need to sort out historical tags in the repo to handle automatic changelogs
     with open(RELEASE_DIR.joinpath("RELEASE.md"), "w") as f:
-        f.write(changelog)
+        f.write(f"- {commit_summary}")
 
     logger.info(f"Created release text files.")
-    logger.info(f"Release built.")
+    logger.info(f"Release prepared.")
 
 
 main()
