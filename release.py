@@ -253,25 +253,37 @@ def main() -> None:
             mkdir_p(map_target_dir.joinpath("paradigm"))
 
             for path in build_missiondir.glob("*"):
-                copy_dir_or_file(path, map_target_dir.joinpath(path.name))
+                copy_dir_or_file(
+                    path,
+                    map_target_dir.joinpath(path.name),
+                )
             l.info(f"Copied mission files.")
 
             for path in build_paradir.glob("*"):
-                copy_dir_or_file(path, map_target_dir.joinpath("paradigm").joinpath(path.name))
+                copy_dir_or_file(
+                    path,
+                    map_target_dir.joinpath("paradigm").joinpath(path.name),
+                )
             l.info(f"Copied paradigm files.")
 
             for path in map_dir.glob("*"):
-                copy_dir_or_file(path, map_target_dir.joinpath(path.name))
+                copy_dir_or_file(
+                    path,
+                    map_target_dir.joinpath(path.name),
+                )
             l.info(f"Copied map files.")
-            l.info(f"Compiled mission.")
 
     with LoggerManager("Building release archives.") as l:
 
         for archive_type in ["zip", "gztar"]:
 
             main_fname = f"{mission_stem}.all"
-            archive_name = shutil.make_archive(build_archivedir.joinpath(main_fname), archive_type, build_stagedir)
-            l.info(f"Built archive file: fname={main_fname} type={archive_type}")
+            archive_name = shutil.make_archive(
+                build_archivedir.joinpath(main_fname),
+                archive_type,
+                build_stagedir,
+            )
+            l.info(f"Built archive file: type={archive_type} fname={main_fname}")
 
             for mission in build_stagedir.glob("*"):
                 shutil.make_archive(
@@ -280,7 +292,7 @@ def main() -> None:
                     build_stagedir,
                     mission.name,
                 )
-                l.info(f"Built archive file: fname={mission.name} type={archive_type}")
+                l.info(f"Built archive file: type={archive_type} fname={mission.name}")
 
     with LoggerManager("Creating GitHub release data.") as l:
 
