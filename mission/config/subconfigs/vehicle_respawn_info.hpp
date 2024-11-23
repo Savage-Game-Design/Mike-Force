@@ -304,10 +304,6 @@ class vehicles {
 		tags[] = {"m151a1","transport", "car"};
 	};
 
-	class vn_b_wheeled_m151_mg_01 {
-		tags[] = {"m151a1","armed","firesupport","car"};
-	};
-
 	class vn_b_wheeled_m151_mg_02 {
 		tags[] = {"m151a1","armed","firesupport","car"};
 	};
