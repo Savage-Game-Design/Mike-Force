@@ -33,7 +33,7 @@ from pathlib import Path
 
 logging.basicConfig(
     level=os.environ.get("LOG_LEVEL", "INFO"),
-    format="%(asctime)s ::: %(levelname)s ::: %(message)s"
+    format="%(asctime)s ::: %(levelname)s ::: %(message)s",
 )
 
 logger = logging.getLogger()
@@ -42,12 +42,15 @@ logger = logging.getLogger()
 class LoggerManager:
     def __init__(self, message):
         self._message = message
+
     def info(self, message):
         logger.info(message)
+
     def __enter__(self):
-        logger.info("="*80)
+        logger.info("=" * 80)
         logger.info(f"Started: {self._message}")
         return self
+
     def __exit__(self, *args):
         logger.info(f"Done: {self._message}")
 
@@ -58,7 +61,9 @@ BUILD_DIR = Path(
 RELEASE_DIR = Path(
     os.environ.get("RELEASE_DIRPATH", "./release"),
 )
-PARADIGM_GITHUB_ZIP_URL = "https://github.com/Savage-Game-Design/Paradigm/archive/refs/heads/development.zip"
+PARADIGM_GITHUB_ZIP_URL = (
+    "https://github.com/Savage-Game-Design/Paradigm/archive/refs/heads/development.zip"
+)
 
 
 def get_paradigm_development_files(paradir: Path) -> None:
@@ -130,7 +135,7 @@ def copy_dir_or_file(src: Path, dest: Path) -> None:
                 "*git*",
                 "*__pycache__*",
                 "*.py",
-            )
+            ),
         )
     else:
         shutil.copy2(
@@ -230,8 +235,8 @@ def main() -> None:
 
         # copy mission files into build directory for ease of access
         shutil.copytree(
-            src_missiondir, 
-            build_missiondir, 
+            src_missiondir,
+            build_missiondir,
             dirs_exist_ok=True,
         )
         l.info(f"Copied common mision files.")
@@ -305,7 +310,7 @@ def main() -> None:
 
         tag_name = mf_version
         release_name = f"Mike Force: {mf_version}"
-        commit_summary = git.Repo('.').commit().summary
+        commit_summary = git.Repo(".").commit().summary
 
         write_txt_to_file(
             RELEASE_DIR.joinpath("tag_name.txt"),
@@ -325,7 +330,7 @@ def main() -> None:
         )
         l.info(f"Wrote commit summary file.")
 
-    logger.info("="*80)
+    logger.info("=" * 80)
     logger.info(f"Release build completed.")
 
 
