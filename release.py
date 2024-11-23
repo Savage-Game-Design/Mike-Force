@@ -1,91 +1,91 @@
 """
-This script is used to build the zip/tar archives included in GitHub releases.
+@author: Savage Game Design (@dijksterhuis)
+
+This script is used to build GitHub releases for Mike Force.
 
 It has been written to run on ubuntu GitHub CI runner machines.
 Running this script on windows will likely result in errors!
+
+To get more verbose logs, run like this:
+```bash
+LOG_LEVEL=DEBUG python3 ./release.py
+```
 """
 
-import platform
 import sys
+import platform
 
 if platform.system() != "Linux":
     print("This script should only run on a machine with a Linux OS.")
     sys.exit(7)
 
 import os
-import git
-import itertools
+import io
 import re
-import typing
-import shutil
-import zipfile
+import git
 import glob
-import subprocess
+import shutil
 import logging
+import zipfile
+import requests
 
 from pathlib import Path
 
-BUILD_DIR = Path("/tmp/build")
-RELEASE_DIR = Path("./release")
+logging.basicConfig(
+    level=os.environ.get("LOG_LEVEL", "INFO"),
+    format="%(asctime)s ::: %(levelname)s ::: %(message)s"
+)
+
+logger = logging.getLogger()
 
 
-def init_logging():
-
-    logging.basicConfig(level=os.environ.get("LOG_LEVEL", "INFO"))
-
-    l = logging.getLogger()
-    l.handlers = []
-    std_out = logging.StreamHandler(stream=sys.stdout)
-    std_err = logging.StreamHandler(stream=sys.stdout)
-    std_out.setLevel(logging.INFO)
-    std_out.addFilter(lambda record: record.levelno < logging.ERROR)
-    std_err.setLevel(logging.ERROR)
-    l.addHandler(std_out)
-    l.addHandler(std_err)
-
-    return l
+class LoggerManager:
+    def __init__(self, message):
+        self._message = message
+    def info(self, message):
+        logger.info(message)
+    def __enter__(self):
+        logger.info("="*80)
+        logger.info(f"Started: {self._message}")
+        return self
+    def __exit__(self, *args):
+        logger.info(f"Done: {self._message}")
 
 
-logger = init_logging()
+BUILD_DIR = Path(
+    os.environ.get("BUILD_DIRPATH", "/tmp/build"),
+)
+RELEASE_DIR = Path(
+    os.environ.get("RELEASE_DIRPATH", "./release"),
+)
+PARADIGM_GITHUB_ZIP_URL = "https://github.com/Savage-Game-Design/Paradigm/archive/refs/heads/development.zip"
 
 
-def check_git_bin_exists() -> bool:
-    logger.info("Checking for git binary executable ...")
-    try:
-        subprocess.run(
-            ["which", "git"],
-            capture_output=False,
-        )
+def get_paradigm_development_files(paradir: Path) -> None:
+    """
+    Downloads the latest version of the Paradigm 'development' branch
+    for this build.
 
-    except FileNotFoundError as err:
-        logger.exception(
-            "`git` binary not fund on system. Cannot clone paradigm without `git`.",
-            exc_info=err,
-        )
-        raise
-    except Exception as err:
-        logger.exception(
-            "An unknown error occured, please investigate this.",
-            exc_info=err,
-        )
-        raise err
+    @param: paradir: dirpath where Paradigm files will be downloaded to
+    @return: None
+    """
 
-    logger.info("Found git binary executable.")
-    return True
+    logger.debug("Getting paradigm development file data ...")
+    r = requests.get(PARADIGM_GITHUB_ZIP_URL, stream=True)
+    r.raise_for_status()
+    logger.debug("Downloaded paradigm development file data.")
 
+    # zipfile contains a directory called Paradigm-development
+    # which we dump into /tmp/build, then we move all of the
+    # contents to /tmp/build/para
 
-def clone_paradigm(path: Path) -> None:
-    logger.info(f"Cloning paradigm to {path} ...")
-    subprocess.run(
-        [
-            "git",
-            "clone",
-            "https://github.com/Savage-Game-Design/Paradigm",
-            path,
-        ],
-        capture_output=False,
-    )
-    logger.info(f"Cloned paradigm to {path}")
+    z = zipfile.ZipFile(io.BytesIO(r.content))
+    z.extractall(BUILD_DIR)
+
+    for obj in BUILD_DIR.joinpath("Paradigm-development").glob("*"):
+        shutil.move(obj, paradir)
+
+    logger.debug("Extracted paradigm development file data.")
 
 
 def mkdir_p(path: Path) -> None:
@@ -96,6 +96,7 @@ def mkdir_p(path: Path) -> None:
     @return: nothing
     """
     os.makedirs(path, exist_ok=True)
+    logger.debug(f"Created new OS directory: {path}")
 
 
 def create_build_subdir(dirname: Path) -> Path:
@@ -107,12 +108,17 @@ def create_build_subdir(dirname: Path) -> Path:
     """
     path = BUILD_DIR.joinpath(dirname)
     mkdir_p(path)
+    logger.debug(f"Created new build subdirectory with path: {path}")
     return path
 
 
 def copy_dir_or_file(src: Path, dest: Path) -> None:
     """
     Conditional file/directory copying.
+
+    @param: src: path to the file or directory needing to be copied
+    @param: dest: path to the directroy files will be copied to
+    @return: None
     """
     logger.debug(f"Copying: {src} -> {dest}")
     if src.is_dir():
@@ -137,6 +143,9 @@ def copy_dir_or_file(src: Path, dest: Path) -> None:
 def rm_dir_or_file(path: Path) -> None:
     """
     Conditional file/directory removal.
+
+    @param: path: path to the file or directory needing to be deleted
+    @return: None
     """
     logger.debug(f"Deleting: {path}")
     if path.is_dir():
@@ -149,16 +158,23 @@ def rm_dir_or_file(path: Path) -> None:
 def get_mf_version() -> str:
     """
     Parse the Mike Force version from mission/version.hpp
+
+    @return: string version which should match these examples:
+        1.00.03; 1.00.03.indev; 1.00.03.indata.myservername
     """
 
     logger.debug(f"Resolving Mike Force version ...")
-    with open("mission/version.hpp") as f:
-        ver_raw: list = f.readlines()
 
-    no_comments: str = [x for x in ver_raw if not x.startswith("//")]
+    with open("mission/version.hpp") as f:
+        ver_raw = f.readlines()
+
+    no_comments = [x for x in ver_raw if not x.startswith("//")]
     first_line = no_comments[0]
-    base: str = first_line.lstrip("#define VN_MF_VERSION v")
-    ver: str = re.sub(r" .*", "", base)
+
+    base = first_line.lstrip("#define VN_MF_VERSION v")
+    ver = re.sub(r" .*", "", base)
+
+    logger.debug(f"Base version string: {base}")
 
     # handle suffixes like 'v1.00.04 Indev' or 'v1.000.04 Indev MyServerName'
     possible_suffixes = base.replace(ver, "")
@@ -167,124 +183,138 @@ def get_mf_version() -> str:
             if len(x) > 0:
                 ver += "." + x.lower()
 
-    logger.info(f"Resolved Mike Force version: {ver}")
+    logger.debug(f"Resolved Mike Force version: {ver}")
 
     return ver
 
 
-def main():
+def write_txt_to_file(path: Path, data: str) -> None:
+    """
+    Simple boilerplate helper to write some string to a file.
 
-    if not check_git_bin_exists():
-        sys.exit(1)
+    @param: path: Path to of the file to write to
+    @param: data: string to write to the file
+    """
+    with open(path, "w") as f:
+        f.write(data)
+
+
+def main() -> None:
+
+    logger.info(f"Building new Mike Force GitHub release.")
 
     mf_version = get_mf_version()
+    mission_stem = f"vn_mikeforce_{mf_version.replace('.', '_')}"
 
-    mission_stem = "vn_mikeforce_" + mf_version.replace(".", "_")
+    with LoggerManager("Setting up build environment") as l:
 
-    # === setup temporary build directories ===
+        src_mapsdir = Path("maps")
+        src_missiondir = Path("mission")
 
-    src_mapsdir = Path("maps")
-    src_missiondir = Path("mission")
-    # we will clone this with git via a subprocess in a moment
-    src_paradir = BUILD_DIR.joinpath("para")
+        # location for paradigm data
+        build_paradir = BUILD_DIR.joinpath("para")
 
-    # mike force 'mission' scripts
-    build_missiondir = create_build_subdir("mission")
-    # actual build directory, where the individual missions get built
-    build_stagedir = create_build_subdir("stage")
-    # paradigm directory
-    build_paradir = create_build_subdir("para")
-    # final archives output directory
-    build_archivedir = create_build_subdir("archives")
+        # mike force 'mission' scripts
+        build_missiondir = create_build_subdir("mission")
 
-    logger.info(f"Configured path locations.")
+        # actual build directory, where the individual missions get built
+        build_stagedir = create_build_subdir("staging")
 
-    # === copy common sources ===
-    # put mission and paradigm scripts in build directory
-    # for easy access / safe usage
-    shutil.copytree(src_missiondir, build_missiondir, dirs_exist_ok=True)
-    clone_paradigm(src_paradir)
+        # paradigm directory
+        build_paradir = create_build_subdir("para")
 
-    logger.info(f"Copied common script files.")
+        # final archives output directory
+        build_archivedir = create_build_subdir("archives")
 
-    for map_dir in src_mapsdir.glob("*"):
+        l.info(f"Configured path locations.")
 
-        map_mission_stem = f"{mission_stem}.{map_dir.name}"
-        logger.debug(f"Compiling mission: {map_mission_stem}")
+        # copy mission files into build directory for ease of access
+        shutil.copytree(
+            src_missiondir, 
+            build_missiondir, 
+            dirs_exist_ok=True,
+        )
+        l.info(f"Copied common mision files.")
 
-        map_target_dir = build_stagedir.joinpath(map_mission_stem)
-        mkdir_p(map_target_dir.joinpath("paradigm"))
+        # download paradigm file data files into build directory
+        get_paradigm_development_files(
+            build_paradir,
+        )
+        l.info(f"Downloaded paradigm files.")
 
-        for path in build_missiondir.glob("*"):
-            copy_dir_or_file(path, map_target_dir.joinpath(path.name))
-        logger.debug(f"Compiled mission files: {map_mission_stem}")
+    with LoggerManager("Compiling mission files for each map.") as l:
 
-        for path in build_paradir.glob("*"):
-            copy_dir_or_file(path, map_target_dir.joinpath("paradigm").joinpath(path.name))
-        logger.debug(f"Compiled paradigm files: {map_mission_stem}")
+        for map_dir in src_mapsdir.glob("*"):
 
-        for path in map_dir.glob("*"):
-            copy_dir_or_file(path, map_target_dir.joinpath(path.name))
-        logger.debug(f"Compiled map files: {map_mission_stem}")
+            map_mission_stem = f"{mission_stem}.{map_dir.name}"
+            l.info(f"Compiling mission: {map_mission_stem}")
 
-        logger.info(f"Compiled mission: {map_mission_stem}")
+            map_target_dir = build_stagedir.joinpath(map_mission_stem)
+            mkdir_p(map_target_dir.joinpath("paradigm"))
 
-    logger.info(f"Compiled map specific missions.")
+            for path in build_missiondir.glob("*"):
+                copy_dir_or_file(path, map_target_dir.joinpath(path.name))
+            l.info(f"Copied mission files.")
 
-    hidden_dirs = [x for x in BUILD_DIR.rglob("*") if ".git" in x.parts or x.name.startswith(".")]
+            for path in build_paradir.glob("*"):
+                copy_dir_or_file(path, map_target_dir.joinpath("paradigm").joinpath(path.name))
+            l.info(f"Copied paradigm files.")
 
-    for hidden_dir in hidden_dirs:
-        rm_dir_or_file(hidden_dir)
-        logger.debug(f"Removed hidden directory/file: {hidden_dir}")
+            for path in map_dir.glob("*"):
+                copy_dir_or_file(path, map_target_dir.joinpath(path.name))
+            l.info(f"Copied map files.")
+            l.info(f"Compiled mission.")
 
-    logger.info(f"Removed hidden directories/files from build.")
+    with LoggerManager("Building release archives.") as l:
 
-    logger.info(f"Building release ...")
+        for archive_type in ["zip", "gztar"]:
 
-    for archive_type in ["zip", "gztar"]:
+            main_fname = f"{mission_stem}.all"
+            archive_name = shutil.make_archive(build_archivedir.joinpath(main_fname), archive_type, build_stagedir)
+            l.info(f"Built archive file: fname={main_fname} type={archive_type}")
 
-        main_fname = f"{mission_stem}.all"
-        archive_name = shutil.make_archive(build_archivedir.joinpath(main_fname), archive_type, build_stagedir)
-        logger.info(f"Built archive file: fname={main_fname} type={archive_type}")
+            for mission in build_stagedir.glob("*"):
+                shutil.make_archive(
+                    build_archivedir.joinpath(mission.name),
+                    archive_type,
+                    build_stagedir,
+                    mission.name,
+                )
+                l.info(f"Built archive file: fname={mission.name} type={archive_type}")
 
-        for mission in build_stagedir.glob("*"):
-            shutil.make_archive(
-                build_archivedir.joinpath(mission.name),
-                archive_type,
-                build_stagedir,
-                mission.name,
-            )
-            logger.info(f"Built archive file: fname={mission.name} type={archive_type}")
+    with LoggerManager("Creating GitHub release data.") as l:
 
-    logger.info(f"All archives built.")
+        mkdir_p(RELEASE_DIR)
+        l.info(f"Created release directory.")
 
-    # === create release directory ===
-    logger.info(f"Preparing release.")
+        for archive in build_archivedir.glob("*"):
+            shutil.move(archive, RELEASE_DIR)
+        l.info(f"Moved archives.")
 
-    mkdir_p(RELEASE_DIR)
+        tag_name = mf_version
+        release_name = f"Mike Force: {mf_version}"
+        commit_summary = git.Repo('.').commit().summary
 
-    for archive in build_archivedir.glob("*"):
-        shutil.move(archive, RELEASE_DIR)
+        write_txt_to_file(
+            RELEASE_DIR.joinpath("tag_name.txt"),
+            f"v{mf_version}",
+        )
+        l.info(f"Wrote new tag file.")
 
-    logger.info(f"Moved archived.")
+        write_txt_to_file(
+            RELEASE_DIR.joinpath("release_name.txt"),
+            f"Mike Force: {mf_version}",
+        )
+        l.info(f"Wrote release name file.")
 
-    tag_name = mf_version
-    release_name = f"Mike Force: {mf_version}"
-    commit_summary = git.Repo('.').commit().summary
+        write_txt_to_file(
+            RELEASE_DIR.joinpath("RELEASE.md"),
+            f"- {commit_summary}",
+        )
+        l.info(f"Wrote commit summary file.")
 
-    with open(RELEASE_DIR.joinpath("tag_name.txt"), "w") as f:
-        f.write(f"v{mf_version}")
-
-    with open(RELEASE_DIR.joinpath("release_name.txt"), "w") as f:
-        f.write(f"Mike Force: {mf_version}")
-
-    # only handling last commit for now...
-    # need to sort out historical tags in the repo to handle automatic changelogs
-    with open(RELEASE_DIR.joinpath("RELEASE.md"), "w") as f:
-        f.write(f"- {commit_summary}")
-
-    logger.info(f"Created release text files.")
-    logger.info(f"Release prepared.")
+    logger.info("="*80)
+    logger.info(f"Release build completed.")
 
 
 main()
