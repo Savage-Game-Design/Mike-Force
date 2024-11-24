@@ -20,8 +20,11 @@
       <Key ID="STR_vn_mf_goto">
         <Original>Goto %1</Original>
       </Key>
-      <Key ID="STR_vn_mf_training">
-        <Original>%1 Training</Original>
+      <Key ID="STR_vn_mf_training_add">
+        <Original>Add %1 Training</Original>
+      </Key>
+      <Key ID="STR_vn_mf_training_remove">
+        <Original>Remove %1 Training</Original>
       </Key>
       <Key ID="STR_vn_mf_needtobeengineer">
         <Original>You must be an %1 to build, please see a Duty Officer.</Original>
