@@ -284,6 +284,13 @@ class CfgFunctions
 			class action_trait {};
 			class settrait {};
 			class training {};
+			class traits_db_get {};
+			class traits_db_prune {};
+			class traits_db_pop {};
+			class traits_db_push {};
+			class traits_player_add_trait {};
+			class traits_player_remove_trait {};
+			class traits_trait_is_vanilla {};
 		};
 
 		class system_tutorial 

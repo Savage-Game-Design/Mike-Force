@@ -65,6 +65,12 @@
       <Key ID="STR_vn_mf_trainingcomplete">
         <Original>Training Complete</Original>
       </Key>
+      <Key ID="STR_vn_mf_trainingswapped">
+        <Original>Training Swapped</Original>
+      </Key>
+      <Key ID="STR_vn_mf_trainingremoved">
+        <Original>Training Removed</Original>
+      </Key>
       <Key ID="STR_vn_mf_invitereceived">
         <Original>Invite Received</Original>
       </Key>
