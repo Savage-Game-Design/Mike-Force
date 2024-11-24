@@ -37,5 +37,9 @@
 // Include map-specific config
 #include "..\map_config\init.hpp"
 
+// CfgRemoteExec -- https://community.bistudio.com/wiki/Arma_3:_CfgRemoteExec
+// Disabled by default
+#include "remoteexec.hpp"
+
 // load profile namespace variables for runtime use
 __EXEC(allProfileNamespaceVars = allVariables profileNamespace);
