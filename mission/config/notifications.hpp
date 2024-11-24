@@ -138,10 +138,19 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 	};
 
-	class TrainingFailedOneTraitPerTeam
+	class TrainingNotAllowed
 	{
 		title = $STR_vn_mf_notification_title_training;
-		description = $STR_vn_mf_onetraitperteam;
+		description = $STR_vn_mf_trainingnotallowed;
+		priority = 8;
+		color[] = {1,0.3,0.2,1};
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
+	};
+
+	class TrainingFailedTeamLimits
+	{
+		title = $STR_vn_mf_notification_title_training;
+		description = $STR_vn_mf_training_failed_teamlimits;
 		priority = 8;
 
 		color[] = {1,0.3,0.2,1};

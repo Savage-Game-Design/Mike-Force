@@ -33,7 +33,8 @@ if !(vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEq
 	private _group_ID = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 	// check if group is over limit for trait
 	private _limit = getNumber (missionConfigFile >> "gamemode" >> "teams" >> _group_ID >> "rolelimits" >> _trait);
-	private _allowed = (count (_selected_traits select {_x getVariable ["vn_mf_db_player_group", "FAILED"] isEqualTo _group_ID}) < _limit);
+	private _player_count = count (_players_with_selected_trait select {_x getVariable ["vn_mf_db_player_group", "FAILED"] isEqualTo _group_ID});
+	private _allowed = _player_count < _limit;
 
 	_current_trait = _player getVariable ["vn_mf_dyn_trait_set", ""];
 
@@ -67,7 +68,10 @@ if !(vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEq
 	}
 	else
 	{
-		{["TrainingFailedOneTraitPerTeam"] call para_c_fnc_show_notification} remoteExecCall ["call",_player];
+		private _notification = if (_limit isEqualTo 0) then {["TrainingNotAllowed"]} else {
+			["TrainingFailedOneTraitPerTeam", [format ["%1 / %2", _player_count, _limit]]]
+		};
+		_notification remoteExecCall ["para_c_fnc_show_notification", _player];
 	};
 
 	// broadcast any trait changes we've made across all clients
@@ -77,5 +81,5 @@ if !(vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEq
 	[_trait, _allowed] call BIS_fnc_log;
 
 	// reset the duty officer wheel menu on the client
-	[] remoteExecCall ["vn_mf_fnc_action_trait",_player];
+	[] remoteExecCall ["vn_mf_fnc_action_trait", _player];
 };
