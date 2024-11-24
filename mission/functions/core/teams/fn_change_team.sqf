@@ -21,8 +21,6 @@ params ["_player", "_team", ["_fullTeamBehaviour", "ABORT"]];
 
 private _currentTeam = _player getVariable ["vn_mf_db_player_group", "FAILED"];
 
-if (_currentTeam isEqualTo _team) exitWith { false };
-
 if (vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEqualTo []) exitWith {
 	["TaskFailed",["","STR_vn_mf_needdutyofficer"]] remoteExecCall ["para_c_fnc_show_notification",_player];
 	false
