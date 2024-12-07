@@ -116,14 +116,18 @@ class LoggerManager:
 
 
 def maybe_tear_down_builddir() -> None:
-    """ """
+    """
+    If the build directory exists, remove it from the file system. 
+    """
     if ARGS.build_dirpath.exists():
         shutil.rmtree(ARGS.build_dirpath)
         LOGGER.debug(f"Removed temporary build directory: path={ARGS.build_dirpath}")
 
 
 def maybe_tear_down_releasedir() -> None:
-    """ """
+    """
+    If the release directory exists, remove it from the file system. 
+    """
     if ARGS.release_dirpath.exists():
         shutil.rmtree(ARGS.release_dirpath)
         LOGGER.debug(f"Removed release directory: path={ARGS.release_dirpath}")
