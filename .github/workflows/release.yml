@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'Savage-Game-Design/Mike-Force'
     runs-on: ubuntu-latest
     steps:
 
