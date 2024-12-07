@@ -10,13 +10,6 @@ To get more verbose logs, run like this:
 ```bash
 LOG_LEVEL=DEBUG python3 ./release.py
 ```
-
-You can also change the location of the build and release 
-directories like this:
-```bash
-BUILD_DIRPATH=/path/to/build/dir python3 ./release.py
-RELEASE_DIRPATH=/path/to/release/dir python3 ./release.py
-```
 """
 
 import sys
