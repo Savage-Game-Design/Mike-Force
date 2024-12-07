@@ -34,7 +34,6 @@ jobs:
           ./release/*.tar.gz
         body_path: ./release/RELEASE.md
         fail_on_unmatched_files: true
-        make_latest: true
         # keep bundling Indev commits into the same release
         # instead of over multiple releases
         append_body: true
