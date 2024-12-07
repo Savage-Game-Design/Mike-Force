@@ -93,6 +93,13 @@ ARGS = get_args()
 
 
 class LoggerManager:
+    """
+    Context managed logging for logical blocks of code.
+    Emits a log for "doing this" then emit a log for "did this" when "this" was done.
+
+    Helps with code legibility as it forces different logical blocks of code
+    to be split up by context management statements.
+    """
     def __init__(self, message):
         self._message = message
 
@@ -287,13 +294,14 @@ def main() -> None:
         # mike force 'mission' scripts
         build_missiondir = create_build_subdir("mission")
 
-        # actual build directory, where the individual missions get built
+        # actual build directory, where the individual missions are built
+        # ready to be archived
         build_stagedir = create_build_subdir("staging")
 
         # paradigm directory
         build_paradir = create_build_subdir("para")
 
-        # final archives output directory
+        # archives output temporary directory
         build_archivedir = create_build_subdir("archives")
 
         l.info(f"Configured path locations.")
@@ -316,9 +324,11 @@ def main() -> None:
 
         for map_dir in src_mapsdir.glob("*"):
 
+            # example: vn_mikeforce_1_00_04_indev.altis
             map_mission_stem = f"{mission_stem}.{map_dir.name}"
             l.info(f"Compiling mission: {map_mission_stem}")
 
+            # create the necessary map-mission dirs
             map_target_dir = build_stagedir.joinpath(map_mission_stem)
             mkdir_p(map_target_dir.joinpath("paradigm"))
 
@@ -347,6 +357,7 @@ def main() -> None:
 
         for archive_type in ["zip", "gztar"]:
 
+            # 'all' archives contain a directory for each map in the build
             main_fname = f"{mission_stem}.all"
             archive_name = shutil.make_archive(
                 build_archivedir.joinpath(main_fname),
@@ -355,6 +366,9 @@ def main() -> None:
             )
             l.info(f"Built archive file: type={archive_type} fname={main_fname}")
 
+            # individual map archives contain a single directory for that map
+            # i.e. the archive only contains a `vn_mikeforce_1_00_04_indev.altis``
+            # directory
             for mission in build_stagedir.glob("*"):
                 shutil.make_archive(
                     build_archivedir.joinpath(mission.name),
