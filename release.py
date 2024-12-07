@@ -52,9 +52,8 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--build-dirpath",
         type=Path,
-        nargs=1,
         required=False,
-        default="/tmp/build/",
+        default=Path("/tmp/build/"),
         help=(
             "Location of temporary build directory for creating the release assets."
             " Will be created if it does not exist."
@@ -65,9 +64,8 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--release-dirpath",
         type=Path,
-        nargs=1,
         required=False,
-        default="./release/",
+        default=Path("./release/"),
         help=(
             "Location of output release directory containing all GitHub release assets."
             " Will be created if it does not exist."
