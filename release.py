@@ -35,15 +35,68 @@ import shutil
 import logging
 import zipfile
 import requests
+import argparse
 
 from pathlib import Path
 
+
+PARADIGM_GITHUB_ZIP_URL = (
+    "https://github.com/Savage-Game-Design/Paradigm/archive/refs/heads/development.zip"
+)
+
 logging.basicConfig(
-    level=os.environ.get("LOG_LEVEL", "INFO"),
     format="%(asctime)s ::: %(levelname)s ::: %(message)s",
 )
 
-logger = logging.getLogger()
+LOGGER = logging.getLogger(__name__)
+LOGGER.setLevel(os.environ.get("LOG_LEVEL", "INFO"))
+
+
+def get_args() -> argparse.Namespace:
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--build-dirpath",
+        type=Path,
+        nargs=1,
+        required=False,
+        default="/tmp/build/",
+        help=(
+            "Location of temporary build directory for creating the release assets."
+            " Will be created if it does not exist."
+            " Default: /tmp/build/"
+        ),
+    )
+
+    parser.add_argument(
+        "--release-dirpath",
+        type=Path,
+        nargs=1,
+        required=False,
+        default="./release/",
+        help=(
+            "Location of output release directory containing all GitHub release assets."
+            " Will be created if it does not exist."
+            " Default: ./release/"
+        ),
+    )
+
+    parser.add_argument(
+        "--teardown",
+        action="store_true",
+        help=(
+            "Provide this flag to remove existing build/release directories before executing the build."
+        ),
+    )
+
+    parsed = parser.parse_args()
+    LOGGER.debug(f"Executing with script arguments: {parsed}")
+
+    return parsed
+
+
+ARGS = get_args()
 
 
 class LoggerManager:
@@ -51,26 +104,29 @@ class LoggerManager:
         self._message = message
 
     def info(self, message):
-        logger.info(message)
+        LOGGER.info(message)
 
     def __enter__(self):
-        logger.info("=" * 80)
-        logger.info(f"Started: {self._message}")
+        LOGGER.info("=" * 80)
+        LOGGER.info(f"Started: {self._message}")
         return self
 
     def __exit__(self, *args):
-        logger.info(f"Done: {self._message}")
+        LOGGER.info(f"Done: {self._message}")
 
 
-BUILD_DIR = Path(
-    os.environ.get("BUILD_DIRPATH", "/tmp/build"),
-)
-RELEASE_DIR = Path(
-    os.environ.get("RELEASE_DIRPATH", "./release"),
-)
-PARADIGM_GITHUB_ZIP_URL = (
-    "https://github.com/Savage-Game-Design/Paradigm/archive/refs/heads/development.zip"
-)
+def maybe_tear_down_builddir() -> None:
+    """ """
+    if ARGS.build_dirpath.exists():
+        shutil.rmtree(ARGS.build_dirpath)
+        LOGGER.debug(f"Removed temporary build directory: path={ARGS.build_dirpath}")
+
+
+def maybe_tear_down_releasedir() -> None:
+    """ """
+    if ARGS.release_dirpath.exists():
+        shutil.rmtree(ARGS.release_dirpath)
+        LOGGER.debug(f"Removed release directory: path={ARGS.release_dirpath}")
 
 
 def get_paradigm_development_files(paradir: Path) -> None:
@@ -82,22 +138,22 @@ def get_paradigm_development_files(paradir: Path) -> None:
     @return: None
     """
 
-    logger.debug("Getting paradigm development file data ...")
+    LOGGER.debug("Getting paradigm development file data ...")
     r = requests.get(PARADIGM_GITHUB_ZIP_URL, stream=True)
     r.raise_for_status()
-    logger.debug("Downloaded paradigm development file data.")
+    LOGGER.debug("Downloaded paradigm development file data.")
 
     # zipfile contains a directory called Paradigm-development
     # which we dump into /tmp/build, then we move all of the
     # contents to /tmp/build/para
 
     z = zipfile.ZipFile(io.BytesIO(r.content))
-    z.extractall(BUILD_DIR)
+    z.extractall(ARGS.build_dirpath)
 
-    for obj in BUILD_DIR.joinpath("Paradigm-development").glob("*"):
+    for obj in ARGS.build_dirpath.joinpath("Paradigm-development").glob("*"):
         shutil.move(obj, paradir)
 
-    logger.debug("Extracted paradigm development file data.")
+    LOGGER.debug("Extracted paradigm development file data.")
 
 
 def mkdir_p(path: Path) -> None:
@@ -108,7 +164,7 @@ def mkdir_p(path: Path) -> None:
     @return: nothing
     """
     os.makedirs(path, exist_ok=True)
-    logger.debug(f"Created new OS directory: {path}")
+    LOGGER.debug(f"Created new OS directory: {path}")
 
 
 def create_build_subdir(dirname: Path) -> Path:
@@ -118,9 +174,9 @@ def create_build_subdir(dirname: Path) -> Path:
     @param: dirname: anme of the new build sub directory
     @return: pathlib.Path object referencing the location of the nw sub directory
     """
-    path = BUILD_DIR.joinpath(dirname)
+    path = ARGS.build_dirpath.joinpath(dirname)
     mkdir_p(path)
-    logger.debug(f"Created new build subdirectory with path: {path}")
+    LOGGER.debug(f"Created new build subdirectory with path: {path}")
     return path
 
 
@@ -132,7 +188,7 @@ def copy_dir_or_file(src: Path, dest: Path) -> None:
     @param: dest: path to the directroy files will be copied to
     @return: None
     """
-    logger.debug(f"Copying: {src} -> {dest}")
+    LOGGER.debug(f"Copying: {src} -> {dest}")
     if src.is_dir():
         shutil.copytree(
             src,
@@ -149,7 +205,7 @@ def copy_dir_or_file(src: Path, dest: Path) -> None:
             src,
             dest,
         )
-    logger.debug(f"Copied: {src} -> {dest}")
+    LOGGER.debug(f"Copied: {src} -> {dest}")
 
 
 def rm_dir_or_file(path: Path) -> None:
@@ -159,12 +215,12 @@ def rm_dir_or_file(path: Path) -> None:
     @param: path: path to the file or directory needing to be deleted
     @return: None
     """
-    logger.debug(f"Deleting: {path}")
+    LOGGER.debug(f"Deleting: {path}")
     if path.is_dir():
         shutil.rmtree(path)
     else:
         path.unlink(missing_ok=True)
-    logger.debug(f"Deleted: {path}")
+    LOGGER.debug(f"Deleted: {path}")
 
 
 def get_mf_version() -> str:
@@ -175,7 +231,7 @@ def get_mf_version() -> str:
         1.00.03; 1.00.03.indev; 1.00.03.indata.myservername
     """
 
-    logger.debug(f"Resolving Mike Force version ...")
+    LOGGER.debug(f"Resolving Mike Force version ...")
 
     with open("mission/version.hpp") as f:
         ver_raw = f.readlines()
@@ -186,7 +242,7 @@ def get_mf_version() -> str:
     base = first_line.lstrip("#define VN_MF_VERSION v")
     ver = re.sub(r" .*", "", base)
 
-    logger.debug(f"Base version string: {base}")
+    LOGGER.debug(f"Base version string: {base}")
 
     # handle suffixes like 'v1.00.04 Indev' or 'v1.000.04 Indev MyServerName'
     possible_suffixes = base.replace(ver, "")
@@ -195,7 +251,7 @@ def get_mf_version() -> str:
             if len(x) > 0:
                 ver += "." + x.lower()
 
-    logger.debug(f"Resolved Mike Force version: {ver}")
+    LOGGER.debug(f"Resolved Mike Force version: {ver}")
 
     return ver
 
@@ -213,18 +269,23 @@ def write_txt_to_file(path: Path, data: str) -> None:
 
 def main() -> None:
 
-    logger.info(f"Building new Mike Force GitHub release.")
+    LOGGER.info(f"Building new Mike Force GitHub release.")
 
     mf_version = get_mf_version()
     mission_stem = f"vn_mikeforce_{mf_version.replace('.', '_')}"
 
     with LoggerManager("Setting up build environment") as l:
 
+        if ARGS.teardown:
+            maybe_tear_down_builddir()
+            maybe_tear_down_releasedir()
+            l.info(f"Removed existing build/release directories.")
+
         src_mapsdir = Path("maps")
         src_missiondir = Path("mission")
 
         # location for paradigm data
-        build_paradir = BUILD_DIR.joinpath("para")
+        build_paradir = ARGS.build_dirpath.joinpath("para")
 
         # mike force 'mission' scripts
         build_missiondir = create_build_subdir("mission")
@@ -308,11 +369,11 @@ def main() -> None:
 
     with LoggerManager("Creating GitHub release data.") as l:
 
-        mkdir_p(RELEASE_DIR)
+        mkdir_p(ARGS.release_dirpath)
         l.info(f"Created release directory.")
 
         for archive in build_archivedir.glob("*"):
-            shutil.move(archive, RELEASE_DIR)
+            shutil.move(archive, ARGS.release_dirpath)
         l.info(f"Moved archives.")
 
         tag_name = mf_version
@@ -320,25 +381,25 @@ def main() -> None:
         commit_summary = git.Repo(".").commit().summary
 
         write_txt_to_file(
-            RELEASE_DIR.joinpath("tag_name.txt"),
+            ARGS.release_dirpath.joinpath("tag_name.txt"),
             f"v{mf_version}",
         )
         l.info(f"Wrote new tag file.")
 
         write_txt_to_file(
-            RELEASE_DIR.joinpath("release_name.txt"),
+            ARGS.release_dirpath.joinpath("release_name.txt"),
             f"Mike Force: {mf_version}",
         )
         l.info(f"Wrote release name file.")
 
         write_txt_to_file(
-            RELEASE_DIR.joinpath("RELEASE.md"),
+            ARGS.release_dirpath.joinpath("RELEASE.md"),
             f"- {commit_summary}",
         )
         l.info(f"Wrote commit summary file.")
 
-    logger.info("=" * 80)
-    logger.info(f"Release build completed.")
+    LOGGER.info("=" * 80)
+    LOGGER.info(f"Release build completed.")
 
 
 main()
