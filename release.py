@@ -100,6 +100,7 @@ class LoggerManager:
     Helps with code legibility as it forces different logical blocks of code
     to be split up by context management statements.
     """
+
     def __init__(self, message):
         self._message = message
 
@@ -117,7 +118,7 @@ class LoggerManager:
 
 def maybe_tear_down_builddir() -> None:
     """
-    If the build directory exists, remove it from the file system. 
+    If the build directory exists, remove it from the file system.
     """
     if ARGS.build_dirpath.exists():
         shutil.rmtree(ARGS.build_dirpath)
@@ -126,7 +127,7 @@ def maybe_tear_down_builddir() -> None:
 
 def maybe_tear_down_releasedir() -> None:
     """
-    If the release directory exists, remove it from the file system. 
+    If the release directory exists, remove it from the file system.
     """
     if ARGS.release_dirpath.exists():
         shutil.rmtree(ARGS.release_dirpath)
