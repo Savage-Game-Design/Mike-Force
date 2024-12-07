@@ -4,7 +4,7 @@ on:
       - 'development'
 
 jobs:
-  build:
+  release:
     if: github.repository == 'Savage-Game-Design/Mike-Force'
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +24,7 @@ jobs:
         echo "TAG_NAME=$(cat ./release/tag_name.txt)" >> $GITHUB_ENV
         echo "RELEASE_TITLE=$(cat ./release/release_name.txt)" >> $GITHUB_ENV
     
-    - name: release
+    - name: create_release
       uses: softprops/action-gh-release@v1
       with:
         token: ${{ github.token }}
