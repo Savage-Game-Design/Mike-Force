@@ -46,20 +46,3 @@ if !(_loadSuccessful) then
 };
 
 [] call vn_mf_fnc_sites_aa_reveal_targets;
-
-
-/*
-["sites_discovery_something_number", 100] call _fnc_load_from_params;
-["sites_discovery_something_bool", false, true] call _fnc_load_from_params;
-
-
-private _fnc_load_bool_from_params = {
-    params [
-        ["_param_key", "", ""],
-        ["_default_value", false, true]
-    ];
-
-    [false, true] select ([param_key, [0, 1] select _default_value] call BIS_fnc_getParamValue);
-
-};
-*/

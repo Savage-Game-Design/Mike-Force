@@ -3,7 +3,17 @@
 // @dijksterhuis: PR TODO: vn_artillery config options from here instead of config file?
 // @dijksterhuis: PR TODO: the bra mission.sqm needs the presence condition for advanced revive module added.
 // @dijksterhuis: PR TODO: sites -- configure the max random distance from site pos for markers?
+// @dijksterhuis: PR TODO: helper function to load booleans variable from 0/1 parameter values (see below)
+/*
+// ["sites_discovery_something_bool", false] call _fnc_load_from_params;
 
+params [
+    ["_param_key", "", ""],
+    ["_default_value", false, true]
+];
+
+[false, true] select ([param_key, [0, 1] select _default_value] call BIS_fnc_getParamValue);
+*/
 /* ================================ BOILERPLATE ================================*/
 
 #define TOGGLE_OPTION_DISABLED_DEFAULT(class_name, string_title) \
