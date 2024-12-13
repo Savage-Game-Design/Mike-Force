@@ -28,6 +28,13 @@ _potentialZonesToOpen = _potentialZonesToOpen arrayIntersect _potentialZonesToOp
 
 private _zonesToOpen = _potentialZonesToOpen - _capturedZones - _activeZones;
 
+private _concurrent_zones_limit = ["zones_concurrent_active_limit", -1] call BIS_fnc_getParamValue;
+
+if (_concurrent_zones_limit > 0) then {
+    _zonesToOpen resize _concurrent_zones_limit;
+    _zonesToOpen = _zonesToOpen select {_x isEqualType ""};
+};
+
 {
     [_x] call vn_mf_fnc_director_open_zone;
 } forEach _zonesToOpen;

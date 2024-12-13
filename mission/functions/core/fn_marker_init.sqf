@@ -22,6 +22,14 @@ vn_mf_markers_supply_officer_initial = [];
 vn_mf_markers_wreck_recovery = [];
 vn_mf_markers_no_harass = [];
 
+vn_mf_s_markers_zone_alpha_percent = (
+	(["zones_marker_alpha_percent", 50] call BIS_fnc_getParamValue) / 100
+);
+
+vn_mf_s_markers_zone_allow_harass = (
+	[false, true] select (["ai_harass_inside_zones", 0] call BIS_fnc_getParamValue)
+);
+
 {
 	if (_x find "mf_respawn_" isEqualTo 0) then {
 		vn_mf_markers_base_respawns pushBack _x;
@@ -51,11 +59,16 @@ vn_mf_markers_no_harass = [];
 		//Hide location marker used for mission mockup
 		_locationMarker setMarkerAlpha 0;
 
-		private _noHarassMarker = createMarker [format ["no_harass_%1", _x], getMarkerPos _x];
-		_noHarassMarker setMarkerShape "ELLIPSE";
-		_noHarassMarker setMarkerSize [200, 200];
-		_noHarassMarker setMarkerAlpha 0;
-		vn_mf_markers_no_harass pushBack _noHarassMarker;
+		_x setMarkerAlpha vn_mf_s_markers_zone_alpha_percent;
+
+		if (!vn_mf_s_markers_zone_allow_harass) then {
+			private _noHarassMarker = createMarker [format ["no_harass_%1", _x], getMarkerPos _x];
+			_noHarassMarker setMarkerShape "ELLIPSE";
+			_noHarassMarker setMarkerSize [200, 200];
+			_noHarassMarker setMarkerAlpha 0;
+			vn_mf_markers_no_harass pushBack _noHarassMarker;
+		};
+
 	};
 	if (_x find "wreck_recovery" isEqualTo 0) then {
 		vn_mf_markers_wreck_recovery pushBack _x;

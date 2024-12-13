@@ -16,6 +16,12 @@
         [] call vn_mf_fnc_sites_client_init
 */
 
+vn_mf_c_sites_partial_discovery_marker_alpha_percent = (["sites_partial_discovery_marker_alpha_percent", 30] call BIS_fnc_getParamValue) / 100;
+vn_mf_c_sites_discovery_marker_alpha_percent = (["sites_discovery_marker_alpha_percent", 50] call BIS_fnc_getParamValue) / 100;
+
+private _toggle_site_discovery = [false, true] select (["sites_passive_discovery_toggle", 1] call BIS_fnc_getParamValue);
+if (!_toggle_site_discovery) exitWith {true};
+
 /*
     The marker discovery system allows site markers to be discovered thru passive exploration of the map
     as well as thru active scouting. 
