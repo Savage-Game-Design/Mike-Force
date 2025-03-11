@@ -661,8 +661,9 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_mg42_50_mag",{2,-1,-1,4}},
 			{"vn_mg42_50_t_mag",{3,-1,-1,5}},
 			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
-			{"vnx_fm2429_mag",{0,-1,0,-1}},  // https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
-			{"vnx_fm2429_t_mag",{0,-1,0,-1}},  // https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
+			// FM 24/29 used by both ARVN and PAVN forces https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
+			{"vnx_fm2429_mag",{0,0,0,-1}},
+			{"vnx_fm2429_t_mag",{0,0,0,-1}},
 			{"vnx_m12_smg_32_mag",{-1,0,0,-1}},
 			{"vnx_m12_smg_32_t_mag",{-1,0,0,-1}},
 			{"vnx_m12_smg_20_mag",{-1,0,0,-1}},
@@ -1336,7 +1337,8 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_b_beret_01_10",{-1,3,-1,-1}},
 			{"vn_b_beret_01_11",{-1,4,-1,-1}},
 			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
-			{"vnx_o_aa_fm2429",{-1,0,0,-1}},  // https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
+			// FM 24/29 used by both ARVN and PAVN forces https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
+			{"vnx_o_aa_fm2429",{0,0,0,-1}},
 			{"vnx_b_helmet_hgu7_01_04",{-1,0,0,-1}},
 			{"vnx_b_helmet_hgu7_01_03",{-1,0,0,-1}},
 			{"vnx_b_helmet_hgu7_01_02",{-1,0,0,-1}},
