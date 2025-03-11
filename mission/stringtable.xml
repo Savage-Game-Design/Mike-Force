@@ -272,6 +272,9 @@
       <Key ID="STR_vn_mf_rvn_wound_medal">
         <Original>RVN Wound Medal</Original>
       </Key>
+      <Key ID="STR_vn_mf_rvn_civil_action_unit_citation">
+        <Original>RVN Civil Action Unit Citation</Original>
+      </Key>
       <Key ID="STR_vn_mf_distinguished_service_cross">
         <Original>Distinguished Service Cross</Original>
       </Key>
