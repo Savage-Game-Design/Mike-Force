@@ -1968,7 +1968,7 @@ class Mission
 			dataType="Marker";
 			position[]={3337.4041,140.24379,4378.3154};
 			name="mf_respawn_acav";
-			text="@STR_vn_mf_respawn_acav_khe_sanh";
+			text="@STR_vn_mf_respawn_acav_the_bra";
 			type="Empty";
 			id=203;
 			atlOffset=97.253784;
@@ -1978,7 +1978,7 @@ class Mission
 			dataType="Marker";
 			position[]={3322.2263,140.55472,4392.8491};
 			name="mf_respawn_spiketeam";
-			text="@STR_vn_mf_respawn_spike_team_khe_sanh";
+			text="@STR_vn_mf_respawn_spike_team_the_bra";
 			type="Empty";
 			angle=39.819992;
 			id=204;
@@ -1989,7 +1989,7 @@ class Mission
 			dataType="Marker";
 			position[]={3325.7202,118.37007,4379.2417};
 			name="mf_respawn_mikeforce";
-			text="@STR_vn_mf_respawn_mike_force_khe_sanh";
+			text="@STR_vn_mf_respawn_mike_force_the_bra";
 			type="Empty";
 			id=206;
 			atlOffset=75.31041;
@@ -1999,7 +1999,7 @@ class Mission
 			dataType="Marker";
 			position[]={3235.0828,129.67668,4274.5361};
 			name="mf_respawn_greenhornets";
-			text="@STR_vn_mf_respawn_green_hornets_khe_sanh";
+			text="@STR_vn_mf_respawn_green_hornets_the_bra";
 			type="Empty";
 			id=207;
 			atlOffset=90.001434;
