@@ -56,7 +56,8 @@ private _vehicleCategories = _spawnPoint get "settings" get "categories";
         private _vehicle = _x;
         createHashMapFromArray [
             ["text", getText (configFile >> "CfgVehicles" >> (_vehicle get "classname") >> "displayName")],
-            ["iconPath", _vehicle get "icon"],
+            // vehicles don't have icon data, so make do with the category icon instead
+            ["iconPath", _category get "icon"],
             ["functionArguments", [_spawnPoint get "id", _vehicle get "classname"]],
             ["function", "vn_mf_fnc_veh_asset_request_vehicle_change_client"]
         ]
