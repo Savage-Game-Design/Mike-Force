@@ -31,7 +31,7 @@ class wheel_menu_actions
 	//Put in earplugs
 	class earplugs_in : base_action
 	{
-		visible = "ALWAYS";
+		visible = "NO_TARGET";
 		condition = "!(localNamespace getVariable ['vn_mf_earplugs', false])";
 		text = "STR_VN_QOL_EARPLUGS_IN";
 		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_ear_in_ca.paa";
@@ -44,7 +44,7 @@ class wheel_menu_actions
 	//Remove earplugs
 	class earplugs_out : base_action
 	{
-		visible = "ALWAYS";
+		visible = "NO_TARGET";
 		condition = "(localNamespace getVariable ['vn_mf_earplugs', false])";
 		text = "STR_VN_QOL_EARPLUGS_OUT";
 		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_ear_out_ca.paa";
@@ -55,6 +55,10 @@ class wheel_menu_actions
 	};
 
 	//Add a sandbag to a building.
+	/*
+	note: @dijksterhuis: Needs to be set to 'ALWAYS' visible as requires a target
+	to be displayed to the player (will not show unless target is suitably in view)
+	*/
 	class add_sandbag : base_action
 	{
 		visible = "ALWAYS";
@@ -68,6 +72,10 @@ class wheel_menu_actions
 	};
 
 	//Resupply a building with a crate
+	/*
+	note: @dijksterhuis: Needs to be set to 'ALWAYS' visible as requires a target
+	to be displayed to the player (will not show unless target is suitably in view)
+	*/
 	class resupply : base_action
 	{
 		visible = "ALWAYS";
@@ -83,7 +91,7 @@ class wheel_menu_actions
 	//Manually scout for closest Enemy Site
 	class scout : base_action
 	{
-		visible = "ALWAYS";
+		visible = "NO_TARGET";
 		condition = "_target getUnitTrait 'scout'";
 		text = $STR_vn_mf_scout_action;
 		icon = "img\vn_ico_mf_binoculars_ca.paa";
