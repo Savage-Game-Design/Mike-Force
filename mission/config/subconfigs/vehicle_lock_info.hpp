@@ -36,6 +36,8 @@ class vn_c_car_01_01 : unlocked {};
 class vn_c_car_02_01 : unlocked {};
 class vn_c_car_03_01 : unlocked {};
 class vn_c_car_04_01 : unlocked {};
+class vnx_c_wheeled_tuktuk_01_01 : unlocked {};
+
 
 //APC
 class vn_b_armor_m113_01 : acav {};
