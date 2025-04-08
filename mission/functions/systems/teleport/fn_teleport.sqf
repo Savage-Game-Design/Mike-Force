@@ -38,3 +38,5 @@ if (_newLocation isEqualTo []) then {_newLocation = _destination};
 remoteExecCall ["vn_mf_fnc_display_location_time",_player];
 
 _player setPos _newLocation;
+// set player's direction to match respawn marker direction
+_player setDir markerDir getText (_destinationConfig >> "position_marker");
