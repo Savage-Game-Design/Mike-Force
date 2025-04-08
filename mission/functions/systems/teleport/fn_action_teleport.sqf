@@ -18,7 +18,7 @@
 		call vn_mf_fnc_action_teleport
 */
 
-private _baseConfig = missionConfigFile >> "gamemode" >> "teleporters";
+private _baseConfig = missionConfigFile >> "map_config" >> "teleporters";
 
 {
 	private _teleporterConfig = _x;
