@@ -9,4 +9,7 @@ class map_config {
 	class zones {
 		#include "zones.hpp"
 	};
+	class teleporters {
+		#include "teleporters.hpp"
+	};
 };
