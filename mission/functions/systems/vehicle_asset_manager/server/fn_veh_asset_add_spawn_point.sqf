@@ -39,7 +39,7 @@ if (_spawnPointSettings isEqualType "") then {
 // can occur if spawn point exclusively provides access to a mod's vehicles, but the mod isn't loaded.
 // NOTE: calling function `vn_mf_fnc_veh_asset_3DEN_spawn_point` doesn't use this function's result (yet).
 if (count (_spawnPointSettings getOrDefault ["categories", createHashMap]) isEqualTo 0) exitWith {
-	diag_log format ["WARN: %1: No categories for spawn point: objPos=%2", _fnc_scriptName, _spawnLocation];
+	diag_log format ["WARN: %1: Disabling spawn point as no categories data found: objPos=%2", _fnc_scriptName, _spawnLocation];
 	createHashMap;
 };
 
