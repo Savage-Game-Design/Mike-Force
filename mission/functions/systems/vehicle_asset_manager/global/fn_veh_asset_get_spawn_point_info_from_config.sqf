@@ -64,15 +64,15 @@ private _categoryConfigs = "true" configClasses (_config >> "categories");
         };
 
         _categoryVehicles = _categoryVehicles select {(_excludeTags - (_x get "tags")) isNotEqualTo []};
+
     } forEach (_category get "exclude");
 
-    private _categoryVehicleClasses = _categoryVehicles apply {_x get "classname"};
-
     _category set ["vehicles", _categoryVehicles];
-    _vehicles append (_categoryVehicleClasses);
+    _vehicles append (_categoryVehicles apply {_x get "classname"});
 } forEach _categoryConfigs;
 
-_spawnPointInfo set ["categories", _categories];
+// only add categories which actually have vehicle options (too many excludes/vehicle's mod not loaded)
+_spawnPointInfo set ["categories", _categories select {(_x getOrDefault ["vehicles", []]) isNotEqualTo []}];
 _spawnPointInfo set ["vehicles", keys (_vehicles createHashMapFromArray [])];
 
-_spawnPointInfo
+_spawnPointInfo;
