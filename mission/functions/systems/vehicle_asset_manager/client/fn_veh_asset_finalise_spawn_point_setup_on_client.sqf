@@ -26,6 +26,11 @@ params ["_spawnPoint"];
 // Validation 
 //============
 
+// not a player, shouldn't be executing this (will never see wheel menu)
+if (!hasInterface) exitWith {
+    nil;
+};
+
 if (isNil "_spawnPoint") exitWith {
     ["ERROR", "Attempted to finalise a non-existent spawn point"] call para_g_fnc_log;
 };
@@ -41,24 +46,86 @@ private _missingVariables = _requiredVariables select {!(_x in _spawnPoint)} app
 
 if (count _missingVariables > 0) exitWith {};
 
-//========
-// Logic
-//========
+/*
+===============================================================================
+Need to limit the number categories in the wheel menu, taking into account
+persistent wheel menu entries configured in `configs\wheel_menu_actions.hpp`.
+===============================================================================
+*/
 
-// ----------------------
-// Wheel menu actions
-// ----------------------
-private _vehicleCategories = _spawnPoint get "settings" get "categories";
+// may be resized, so deep copy
+private _categories = +(_spawnPoint get "settings" get "categories");
 
-{
+// ref: paradigm\client\functions\ui\wheel_menu\fn_wheel_menu_open_with_configured_actions.sqf
+// *should* be safe to mess around with _target here as this script is executed during player init
+// (they shouldn't be looking at any vehicle spawn point objects yet).
+
+// entries shown due to conditions when accessing *object* wheel menu
+private _target = _spawnPoint get 'object';
+private _objActions = para_c_wheel_menu_actions_always
+    select {(call (_x get "condition") isEqualType true)}
+    select {call (_x get "condition")}
+    ;
+
+// entries shown due to conditions when accessing *player* wheel menu
+private _target = player;
+private _playerActions = para_c_wheel_menu_actions_always
+    select {(call (_x get "condition") isEqualType true)}
+    select {call (_x get "condition")}
+    ;
+
+private _categoryLimit = 10 - (count _objActions) - (count _playerActions);
+
+if ((count _categories) > _categoryLimit) then {
+
+    diag_log format [
+        "WARN: %1: Too many categories configured (%2), only loading first %3 categories: spawnClass='%4' spawnPos=%5",
+        _fnc_scriptName,
+        count _categories,
+        _categoryLimit,
+        _spawnPoint get 'settings' get 'name',
+        _spawnPoint get 'spawnLocation' get 'pos'
+    ];
+
+    _categories resize _categoryLimit;
+};
+
+
+/*
+===============================================================================
+Create wheel menu.
+
+Also limit number of vehicles in sub menus to a maximum of 9 entries.
+(wheel menu max 10, plus need a 'back to categories' entry.
+===============================================================================
+*/
+
+_categories apply {
+
     private _category = _x;
-    private _submenuActions = _category get "vehicles" apply {
-        private _vehicle = _x;
+    // may be resized, so deep copy
+    private _vehs = +(_category get "vehicles");
+    // require one free wheel menu entry for the back button.
+    if (count _vehs > 9) then {
+
+        diag_log format [
+            "WARN: %1: Too many vehicles in category (%2), only loading first %3 vehicles: spawnClass='%4' spawnPos=%5",
+            _fnc_scriptName,
+            count _vehs,
+            9,
+            _spawnPoint get 'settings' get 'name',
+            _spawnPoint get 'spawnLocation' get 'pos'
+        ];
+
+        _vehs resize 9;
+    };
+
+    private _subMenuActions = _vehs apply {
         createHashMapFromArray [
-            ["text", getText (configFile >> "CfgVehicles" >> (_vehicle get "classname") >> "displayName")],
+            ["text", getText (configFile >> "CfgVehicles" >> (_x get "classname") >> "displayName")],
             // vehicles don't have icon data, so make do with the category icon instead
             ["iconPath", _category get "icon"],
-            ["functionArguments", [_spawnPoint get "id", _vehicle get "classname"]],
+            ["functionArguments", [_spawnPoint get "id", _x get "classname"]],
             ["function", "vn_mf_fnc_veh_asset_request_vehicle_change_client"]
         ]
     };
@@ -69,13 +136,13 @@ private _vehicleCategories = _spawnPoint get "settings" get "categories";
         ["submenuActions", _submenuActions]
     ];
 
-    [
-        _spawnPoint get "object",
-        _categoryAction
-    ] call para_c_fnc_wheel_menu_add_obj_action;
-} forEach _vehicleCategories;
+    [_spawnPoint get "object", _categoryAction] call para_c_fnc_wheel_menu_add_obj_action;
+};
 
 //TODO Setup "return vehicle to spawn" action as zeus
+// DJ note -- i've previously done something with this via an addAction.
+// Return to spawn only makes sense for wrecks as a way to skip wreck packaging.
+// (zeus can just delete abandoned respawn configured vehicles).
 
 // ----------------------
 // Interaction overlay
