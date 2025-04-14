@@ -37,6 +37,7 @@ class CfgFunctions
 				postinit = 1;
 			};
 			class adv_revive_params {};
+			class arsenals_init {};
 			class init_mission_handlers {};
 		};
 
