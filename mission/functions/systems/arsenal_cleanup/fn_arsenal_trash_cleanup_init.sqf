@@ -10,26 +10,29 @@
 		None
 
 	Returns:
-		None
+		true when executed successfully, nil on error.
 
 	Example(s):
 		call vn_mf_fnc_arsenal_trash_cleanup_init;
 */
 
+diag_log format ["INFO: %1: Loading trash cans ...", _fnc_scriptName];
 
 private _arsenals = missionNamespace getVariable ["vn_mf_arsenals", []];
 
-if (count _arsenals isEqualTo 0) exitWith {
-	diag_log format ["WARN: %1: No arsenals initialised, cannot setup trashcan cleanup addAction."];
+if (_arsenals isEqualTo []) exitWith {
+	diag_log format [
+		"WARN: %1: No mike force arsenals initialised, cannot init trash cans.",
+		_fnc_scriptName,
+	];
 	nil;
 };
 
 _arsenals
 	apply {
-		// consider a 'trash can' to be any non WLA module objects synchronized to the arsenal object
-		// (mission makers can then use other classes if they want to)
-		(synchronizedObjects _x)
-			select {typeOf _x isNotEqualTo "vn_module_whitelistedarsenal"}
+		// find nearby trash can objects (within 10m) and add the clean up action
+		(nearestObjects [_x, [], 10, true])
+			select {typeOf _x isEqualTo "Land_vn_object_trashcan_01"}
 			apply {
 				_x addAction [
 					"Clean Up",
@@ -50,5 +53,7 @@ _arsenals
 				];
 			};
 	};
+
+diag_log format ["INFO: %1: Trash cans loaded.", _fnc_scriptName];
 
 true;
