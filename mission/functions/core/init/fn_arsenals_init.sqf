@@ -39,5 +39,5 @@ private _arsenals = synchronizedObjects (
 } forEach _arsenals;
 
 missionNamespace setVariable ["vn_mf_arsenals", _arsenals];
-diag_log format ["Loaded %1 arsenals.", _arsenals];
+diag_log format ["Loaded %1 arsenals.", count _arsenals];
 true;
