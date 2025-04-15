@@ -19,9 +19,11 @@
 
 diag_log format ["INFO: %1: Loading arsenals ...", _fnc_scriptName];
 
-private _arsenals = synchronizedObjects (
-	allMissionObjects "Logic" select {typeOf _x isEqualTo "vn_module_whitelistedarsenal"}
-);
+// can be multiple WL arsenal modules in the mission
+// also possible to sync different module instances to the same arsenal object
+private _wlModules = allMissionObjects "Logic" select {typeOf _x isEqualTo "vn_module_whitelistedarsenal"};
+private _arsenals = flatten (_wlModules apply {synchronizedObjects _x});
+_arsenals = _arsenals arrayIntersect _arsenals;
 
 {
 	// create map markers for arsenal objects
