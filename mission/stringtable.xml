@@ -203,6 +203,18 @@
       <Key ID="STR_vn_mf_respawn_acav_khe_sanh">
         <Original>KHE SANH SF CAMP - ACAV</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_mike_force_the_bra">
+        <Original>CAMP STRIKER - MIKE FORCE</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_green_hornets_the_bra">
+        <Original>CAMP STRIKER - GREEN HORNETS</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_spike_team_the_bra">
+        <Original>CAMP STRIKER - SPIKE TEAM</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_acav_the_bra">
+        <Original>CAMP STRIKER - ACAV</Original>
+      </Key>
       <Key ID="STR_vn_mf_respawn_spike_team_altis">
         <Original>MOLOS VILLAGE - SPIKE TEAM</Original>
       </Key>
@@ -283,6 +295,9 @@
       </Key>
       <Key ID="STR_vn_mf_rvn_wound_medal">
         <Original>RVN Wound Medal</Original>
+      </Key>
+      <Key ID="STR_vn_mf_rvn_civil_action_unit_citation">
+        <Original>RVN Civil Action Unit Citation</Original>
       </Key>
       <Key ID="STR_vn_mf_distinguished_service_cross">
         <Original>Distinguished Service Cross</Original>

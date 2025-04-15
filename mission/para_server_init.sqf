@@ -44,8 +44,8 @@ vn_mf_duskLength = ["dusk_length", 1200] call BIS_fnc_getParamValue;
 vn_mf_nightLength = ["night_length", 1800] call BIS_fnc_getParamValue;
 
 //Set whether stamia is enabled
-vn_mf_param_enable_stamina = (["param_enable_stamina", 1] call BIS_fnc_getParamValue) > 0;
-vn_mf_param_set_stamina = (["param_set_stamina", 1] call BIS_fnc_getParamValue);
+vn_mf_param_enable_stamina = (["enable_stamina", 1] call BIS_fnc_getParamValue) > 0;
+vn_mf_param_set_stamina = (["set_stamina", 1] call BIS_fnc_getParamValue);
 publicVariable "vn_mf_param_enable_stamina";
 publicVariable "vn_mf_param_set_stamina";
 
