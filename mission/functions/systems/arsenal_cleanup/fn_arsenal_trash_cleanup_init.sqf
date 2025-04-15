@@ -25,7 +25,7 @@ if (_arsenals isEqualTo []) exitWith {
 		"WARN: %1: No mike force arsenals initialised, cannot init trash cans.",
 		_fnc_scriptName
 	];
-	nil;
+	nil
 };
 
 _arsenals
@@ -56,4 +56,4 @@ _arsenals
 
 diag_log format ["INFO: %1: Trash cans loaded.", _fnc_scriptName];
 
-true;
+true

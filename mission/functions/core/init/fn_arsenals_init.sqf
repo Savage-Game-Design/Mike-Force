@@ -36,4 +36,5 @@ _arsenals = _arsenals arrayIntersect _arsenals;
 
 missionNamespace setVariable ["vn_mf_arsenals", _arsenals];
 diag_log format ["INFO: %1: Loaded %2 arsenals.", _fnc_scriptName, count _arsenals];
-true;
+
+true
