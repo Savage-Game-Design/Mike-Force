@@ -30,4 +30,4 @@ _player setVariable ["vn_mf_dyn_trait_set", _trait];
 
 [_player, [_trait, true, !_is_vanilla_trait]] remoteExecCall ["setUnitTrait", _player];
 
-true;
+true

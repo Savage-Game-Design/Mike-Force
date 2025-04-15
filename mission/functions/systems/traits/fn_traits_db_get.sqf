@@ -20,4 +20,4 @@
 */
 
 params ["_trait"];
-(missionNamespace getVariable "vn_mf_traits_map") getOrDefault [_trait, []];
+(missionNamespace getVariable "vn_mf_traits_map") getOrDefault [_trait, []]

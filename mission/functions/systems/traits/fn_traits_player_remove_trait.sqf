@@ -26,4 +26,4 @@ private _is_vanilla_trait = [_trait] call vn_mf_fnc_traits_trait_is_vanilla;
 [_player, [_trait, false, !_is_vanilla_trait]] remoteExecCall ["setUnitTrait", _player];
 _player setVariable ["vn_mf_dyn_trait_set", ""];
 
-true;
+true

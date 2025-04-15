@@ -28,4 +28,4 @@ private _vanilla_traits = [
     "UAVHacker"
 ];
 
-_trait in _vanilla_traits;
+_trait in _vanilla_traits

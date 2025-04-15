@@ -55,4 +55,4 @@ private _curr = missionNamespace getVariable "vn_mf_traits_map";
 _curr set [_trait, _players_with_selected_trait];
 missionNamespace setVariable ["vn_mf_traits_map", _curr];
 
-_popped;
+_popped
