@@ -18,16 +18,9 @@
 
 diag_log "Loading arsenals ...";
 
-private _allLogics = allMissionObjects "Logic";
-
-private _wlArsenalLogicIdx = _allLogics findIf {
-	private _allVars = allVariables _x;
-	// all three of these are present as non-BI variables in the WL Arsenals module
-	// found with `(allMissionObjects "Logic") apply { allVariables _x }`
-	"scope" in _allVars && "rank" in _allVars && "side" in _allVars;
-};
-
-private _arsenals = synchronizedObjects (_allLogics select _wlArsenalLogicIdx);
+private _arsenals = synchronizedObjects (
+	allMissionObjects "Logic" select {typeOf _x isEqualTo "vn_module_whitelistedarsenal"}
+);
 
 {
 	// store an array of nearby trashcans for clients to
