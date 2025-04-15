@@ -31,7 +31,7 @@ private _arsenals = synchronizedObjects (
 	_x setVariable ["trashcans", _trash_cans];
 
 	// create map markers for arsenal objects
-	_marker = createMarkerLocal [format["vn_mf_arsenal_", _forEachIndex], _x];
+	_marker = createMarkerLocal [format["vn_mf_arsenal_%1", _forEachIndex], _x];
 	_marker setMarkerTextLocal "Arsenal";
 	_marker setMarkerTypeLocal "mil_dot";
 	_marker setMarkerColorLocal "ColorPink";
