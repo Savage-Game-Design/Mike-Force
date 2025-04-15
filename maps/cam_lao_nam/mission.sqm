@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=795;
+		nextID=814;
 	};
 	class Camera
 	{
-		pos[]={14820.604,141.51784,6819.9634};
-		dir[]={-0.46052995,-0.72541845,0.51155251};
-		up[]={-0.48535788,0.68830711,0.53913069};
-		aside[]={0.74320078,4.4834451e-08,0.66907275};
+		pos[]={0,25,-25};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -47,7 +47,6 @@ addons[]=
 	"A3_Characters_F",
 	"characters_f_vietnam_c",
 	"sounds_f_vietnam_c",
-	"cba_jam_vn",
 	"A3_Misc_F_Helpers",
 	"A3_Modules_F"
 };
@@ -55,7 +54,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=15;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -149,19 +148,12 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="cba_jam_vn";
-			name="Community Base Addons - Joint Ammo Magazines";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item14
-		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
@@ -221,14 +213,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -272,14 +264,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -289,19 +281,6 @@ class CustomAttributes
 	{
 		name="Scenario";
 		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="EnableDebugConsole";
 			expression="true";
@@ -314,7 +293,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=1;
 	};
 };
 class Mission

@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=551;
+		nextID=581;
 	};
 	class Camera
 	{
-		pos[]={14479.979,34.028595,6175.1948};
-		dir[]={-0.43369952,-0.69989479,0.56750834};
-		up[]={-0.42497972,0.71424693,0.5560981};
-		aside[]={0.79455078,-2.750312e-08,0.60720921};
+		pos[]={0,25,-25};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -262,24 +262,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		nAttributes=1;
-	};
-	class Category1
-	{
-		name="Scenario";
-		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
 				};
 			};
 		};
@@ -2231,11 +2213,11 @@ class Mission
 						};
 					};
 					id=329;
-					atlOffset=18.878847;
+					atlOffset=-0.00071334839;
 				};
 			};
 			id=323;
-			atlOffset=-35.738907;
+			atlOffset=-45.190495;
 		};
 		class Item10
 		{
@@ -5367,7 +5349,7 @@ class Mission
 							name="supply_officer_initial_2";
 							text="Initial Supply Officer 2";
 							type="Empty";
-							angle=46.721523;
+							angle=46.721519;
 							id=1082;
 						};
 						class Item9
@@ -5387,7 +5369,7 @@ class Mission
 						};
 					};
 					id=327;
-					atlOffset=-0.25759506;
+					atlOffset=-0.25821877;
 				};
 				class Item95
 				{
@@ -11262,7 +11244,7 @@ class Mission
 							text="Initial Supply Drop 1";
 							type="Empty";
 							colorName="ColorOrange";
-							angle=225.49701;
+							angle=225.49699;
 							id=1058;
 							atlOffset=0.50146294;
 						};
@@ -11289,7 +11271,7 @@ class Mission
 						};
 					};
 					id=836;
-					atlOffset=-0.53775978;
+					atlOffset=-0.67098618;
 				};
 				class Item52
 				{
@@ -16996,7 +16978,7 @@ class Mission
 				};
 			};
 			id=1129;
-			atlOffset=18.776302;
+			atlOffset=-0.17943954;
 		};
 		class Item80
 		{

@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=588;
+		nextID=625;
 	};
 	class Camera
 	{
-		pos[]={10813.433,111.94389,3010.2258};
-		dir[]={0.049677726,-0.49494424,0.86750495};
-		up[]={0.028296668,0.8689239,0.49413493};
-		aside[]={0.99836475,3.7616701e-09,-0.057171442};
+		pos[]={0,31.920967,-25};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -49,14 +49,13 @@ addons[]=
 	"A3_Structures_F_Items_Tools",
 	"characters_f_vietnam_c",
 	"sounds_f_vietnam_c",
-	"cba_jam_vn",
 	"A3_Misc_F_Helpers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=16;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -164,13 +163,6 @@ class AddonsMetaData
 		};
 		class Item15
 		{
-			className="cba_jam_vn";
-			name="Community Base Addons - Joint Ammo Magazines";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item16
-		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
@@ -231,24 +223,6 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
-				};
-			};
-		};
-		nAttributes=1;
-	};
-	class Category1
-	{
-		name="Scenario";
-		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
 				};
 			};
 		};
@@ -1547,7 +1521,7 @@ class Mission
 					};
 					id=76;
 					type="Land_SatelliteAntenna_01_F";
-					atlOffset=10.896271;
+					atlOffset=10.816376;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1568,7 +1542,7 @@ class Mission
 				};
 			};
 			id=124;
-			atlOffset=10.896271;
+			atlOffset=10.816376;
 		};
 		class Item15
 		{

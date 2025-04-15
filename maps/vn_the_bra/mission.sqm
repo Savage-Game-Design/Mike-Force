@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=713;
+		nextID=742;
 	};
 	class Camera
 	{
-		pos[]={3482.189,125.19694,4428.1924};
-		dir[]={0.77116805,-0.3905654,-0.50280321};
-		up[]={0.32717898,0.92057109,-0.21332233};
-		aside[]={-0.54618192,3.3559627e-07,-0.83770043};
+		pos[]={0,33.930714,-25};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -46,7 +46,6 @@ addons[]=
 	"A3_Structures_F_Items_Tools",
 	"characters_f_vietnam_c",
 	"sounds_f_vietnam_c",
-	"cba_jam_vn",
 	"A3_Misc_F_Helpers",
 	"A3_Modules_F"
 };
@@ -54,7 +53,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=15;
+		items=14;
 		class Item0
 		{
 			className="modules_f_vietnam";
@@ -141,19 +140,12 @@ class AddonsMetaData
 		};
 		class Item12
 		{
-			className="cba_jam_vn";
-			name="Community Base Addons - Joint Ammo Magazines";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item13
-		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item13
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
@@ -214,24 +206,6 @@ class CustomAttributes
 				class data
 				{
 					singleType="ARRAY";
-				};
-			};
-		};
-		nAttributes=1;
-	};
-	class Category1
-	{
-		name="Scenario";
-		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
 				};
 			};
 		};
