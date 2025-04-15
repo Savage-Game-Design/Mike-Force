@@ -17,7 +17,7 @@
 */
 
 
-diag_log "Loading arsenals ...";
+diag_log format ["INFO: %1: Loading arsenals ...", _fnc_scriptName];
 
 private _arsenals = synchronizedObjects (
 	allMissionObjects "Logic" select {typeOf _x isEqualTo "vn_module_whitelistedarsenal"}
@@ -33,5 +33,5 @@ private _arsenals = synchronizedObjects (
 } forEach _arsenals;
 
 missionNamespace setVariable ["vn_mf_arsenals", _arsenals];
-diag_log format ["Loaded %1 arsenals.", count _arsenals];
+diag_log format ["INFO: %1: Loaded %2 arsenals.", _fnc_scriptName, count _arsenals];
 true;
