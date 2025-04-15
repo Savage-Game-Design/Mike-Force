@@ -56,10 +56,6 @@ persistent wheel menu entries configured in `configs\wheel_menu_actions.hpp`.
 // may be resized, so deep copy
 private _categories = +(_spawnPoint get "settings" get "categories");
 
-// ref: paradigm\client\functions\ui\wheel_menu\fn_wheel_menu_open_with_configured_actions.sqf
-// *should* be safe to mess around with _target here as this script is executed during player init
-// (they shouldn't be looking at any vehicle spawn point objects yet).
-
 // entries shown due to conditions when accessing *object* wheel menu
 private _target = _spawnPoint get 'object';
 private _objActions = para_c_wheel_menu_actions_always
