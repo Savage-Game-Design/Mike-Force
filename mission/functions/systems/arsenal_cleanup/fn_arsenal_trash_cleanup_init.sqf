@@ -23,7 +23,7 @@ private _arsenals = missionNamespace getVariable ["vn_mf_arsenals", []];
 if (_arsenals isEqualTo []) exitWith {
 	diag_log format [
 		"WARN: %1: No mike force arsenals initialised, cannot init trash cans.",
-		_fnc_scriptName,
+		_fnc_scriptName
 	];
 	nil;
 };
