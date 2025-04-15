@@ -18,4 +18,4 @@ params ["_spawnPoint"];
 	["lastChanged", serverTime]
 ]] call vn_mf_fnc_veh_asset_set_global_variable;
 
-[_spawnPoint] call vn_mf_fnc_veh_asset_marker_delete;
+[_spawnPoint] call vn_mf_fnc_veh_asset_marker_delete
