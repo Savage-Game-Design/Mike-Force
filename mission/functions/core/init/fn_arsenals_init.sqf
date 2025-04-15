@@ -9,10 +9,11 @@
 
 	Parameter(s): none
 
-	Returns: nothing
+	Returns:
+		true when executed successfully
 
 	Example(s):
-		Not called directly
+		call vn_mf_fnc_arsenals_init;
 */
 
 
