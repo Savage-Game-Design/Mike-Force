@@ -78,4 +78,4 @@ _spawnPointInfo set [
 ];
 _spawnPointInfo set ["vehicles", keys (_vehicles createHashMapFromArray [])];
 
-_spawnPointInfo;
+_spawnPointInfo
