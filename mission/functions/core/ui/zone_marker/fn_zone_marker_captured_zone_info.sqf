@@ -17,4 +17,4 @@
 */
 params ["_marker"];
 //returns the string table entry
-[format ["%1 [Captured]", [_marker] call vn_mf_fnc_zone_marker_to_name]];
+[format ["%1 [Captured]", [_marker] call vn_mf_fnc_zone_marker_to_name]]
