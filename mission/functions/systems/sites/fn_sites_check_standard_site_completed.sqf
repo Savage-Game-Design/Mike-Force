@@ -74,4 +74,4 @@ private _objectsInArea = _objectsToCheck inAreaArray [
 	false
 ];
 
-_objectsInArea findIf {alive _x} == -1;
+_objectsInArea findIf {alive _x} == -1
