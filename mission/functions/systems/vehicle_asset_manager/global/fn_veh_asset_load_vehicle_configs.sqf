@@ -56,7 +56,7 @@ if (count _missingVehs > 0) then {
 private _validVehs = _vehicleConfigs - _missingVehs;
 diag_log format ["INFO: %1: %2 valid vehicle classes loaded.", _fnc_scriptName, count _validVehs];
 
-private _vehicles = (_vehicleConfigs - _missingVehs) apply {
+private _vehicles = _validVehs apply {
 	createHashMapFromArray [
 		["classname", configName _x],
 		["tags", getArray (_x >> 'tags')]
