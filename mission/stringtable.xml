@@ -1496,6 +1496,9 @@
       <Key ID="STR_vn_mf_zone_aggelochori">
         <Original>Aggelochori</Original>
       </Key>
+      <Key ID="STR_vn_mf_zone_galati">
+        <Original>Galati</Original>
+      </Key>
     </Container>
     <Container name="Zone_Name_Cam_Lao">
       <Key ID="STR_vn_mf_zone_ban_hoang">
