@@ -243,6 +243,82 @@ class units
 		nva_navy_rto_k50m = "vn_o_men_nva_navy_13";
 		nva_navy_sapper_sks = "vn_o_men_nva_navy_09";
 		nva_navy_sentry_sksBayo = "vn_o_men_nva_navy_12";
+
+		/*
+		==================================================================
+		pathet lao
+		==================================================================
+		*/
+		pathet_lao_at_pps = "vn_o_men_pl_14";
+		pathet_lao_at_tt33 = "vn_o_men_pl_26";
+		pathet_lao_grenadier_sks = "vn_o_men_pl_07";
+		pathet_lao_machinegunner_rpd = "vn_o_men_pl_11";
+		pathet_lao_machinegunner_mg42 = "vn_o_men_pl_24";
+		pathet_lao_machinegunner_dp27 = "vn_o_men_pl_25";
+		pathet_lao_marksman_svd = "vn_o_men_pl_31";
+		pathet_lao_marksman_m91 = "vn_o_men_pl_10";
+		pathet_lao_medic_mat49 = "vn_o_men_pl_28";
+		pathet_lao_medic_pps = "vn_o_men_pl_08";
+		pathet_lao_officer_type56 = "vn_o_men_pl_01";
+		pathet_lao_rifleman_m1 = "vn_o_men_pl_27";
+		pathet_lao_rifleman_ak = "vn_o_men_pl_06";
+		pathet_lao_rifleman_m36 = "vn_o_men_pl_30";
+		pathet_lao_rifleman_mat49 = "vn_o_men_pl_04";
+		pathet_lao_rifleman_ppsh = "vn_o_men_pl_05";
+		pathet_lao_rifleman_sks = "vn_o_men_pl_02";
+		pathet_lao_rifleman_sksBayo = "vn_o_men_pl_03";
+		pathet_lao_rto_ppsh = "vn_o_men_pl_13";
+		pathet_lao_sapper_ppsh = "vn_o_men_pl_29";
+		pathet_lao_sapper_type56 = "vn_o_men_pl_09";
+		pathet_lao_sentry_m91 = "vn_o_men_pl_12";
+		pathet_lao_squadleader_pps = "vn_o_men_pl_21";
+
+		/*
+		==================================================================
+		khmer rouge 1970
+		==================================================================
+		*/
+		khmer_rouge_70_at = "vn_o_men_kr_70_14";
+		khmer_rouge_70_grenadier = "vn_o_men_kr_70_07";
+		khmer_rouge_70_machinegunner = "vn_o_men_kr_70_11";
+		khmer_rouge_70_marksman = "vn_o_men_kr_70_10";
+		khmer_rouge_70_medic = "vn_o_men_kr_70_08";
+		khmer_rouge_70_officer = "vn_o_men_kr_70_01";
+		khmer_rouge_70_rifleman_m1891 = "vn_o_men_kr_70_06";
+		khmer_rouge_70_rifleman_m36Bayo = "vn_o_men_kr_70_13";
+		khmer_rouge_70_rifleman_m38 = "vn_o_men_kr_70_04";
+		khmer_rouge_70_rifleman_m91Bayo = "vn_o_men_kr_70_12";
+		khmer_rouge_70_rifleman_ppsh = "vn_o_men_kr_70_05";
+		khmer_rouge_70_rifleman_sksBayo = "vn_o_men_kr_70_03";
+		khmer_rouge_70_rifleman_sks = "vn_o_men_kr_70_02";
+		khmer_rouge_70_rto = "vn_o_men_kr_70_24";
+		khmer_rouge_70_sapper = "vn_o_men_kr_70_09";
+		khmer_rouge_70_scout = "vn_o_men_kr_70_23";
+		khmer_rouge_70_squadleader_ak = "vn_o_men_kr_70_22";
+		khmer_rouge_70_squadleader_sks = "vn_o_men_kr_70_21";
+
+		/*
+		==================================================================
+		khmer rouge 1975
+		==================================================================
+		*/
+		khmer_rouge_75_at = "vn_o_men_kr_75_14";
+		khmer_rouge_75_grenadier = "vn_o_men_kr_75_07";
+		khmer_rouge_75_machinegunner = "vn_o_men_kr_75_11";
+		khmer_rouge_75_marksman = "vn_o_men_kr_75_10";
+		khmer_rouge_75_medic = "vn_o_men_kr_75_08";
+		khmer_rouge_75_officer = "vn_o_men_kr_75_01";
+		khmer_rouge_75_rifleman_ak = "vn_o_men_kr_75_04";
+		khmer_rouge_75_rifleman_type56 = "vn_o_men_kr_75_05";
+		khmer_rouge_75_rifleman_sksBayo = "vn_o_men_kr_75_03";
+		khmer_rouge_75_rifleman_sksBayo2 = "vn_o_men_kr_75_12";
+		khmer_rouge_75_rifleman_sks = "vn_o_men_kr_75_02";
+		khmer_rouge_75_rto = "vn_o_men_kr_75_13";
+		khmer_rouge_75_sapper = "vn_o_men_kr_75_09";
+		khmer_rouge_75_scout = "vn_o_men_kr_75_23";
+		khmer_rouge_75_squadleader_ak = "vn_o_men_kr_75_22";
+		khmer_rouge_75_squadleader_sks = "vn_o_men_kr_75_21";
+
 	};
 
 	class guer
@@ -842,6 +918,354 @@ class squad_compositions
 			{"nva_65_rifleman_k50m", "nva_65_rifleman_sks", "nva_65_rifleman_sksBayo", "nva_65_rifleman_type56", "nva_65_rifleman_type56Bayo", "nva_65_marksman_sksSniper", "nva_65_machinegunner_rpd"}
 		};
 		
+		/*
+		==================================================================
+		pathet lao 1970 + 1975
+		==================================================================
+		*/
+
+		// 1x sentry; 1x rifleman/marksman; 1x RTO
+		pathet_lao_sentry[] = {
+			"pathet_lao_sentry",
+			{
+				"pathet_lao_rifleman_m1",
+				"pathet_lao_rifleman_ak",
+				"pathet_lao_rifleman_m36",
+				"pathet_lao_rifleman_mat49",
+				"pathet_lao_rifleman_sks",
+				"pathet_lao_rifleman_sksBayo",
+				"pathet_lao_marksman_svd",
+				"pathet_lao_marksman_m91"
+			},
+			"pathet_lao_rto_ppsh"
+		};
+
+		// 1x officer; 1x rto; 2x-6x riflemen; 1x medic;
+		// 1x AT; 0-1x sapper; 0-2x MG; 0-1x marksman
+		pathet_lao_standard[] = {
+			"pathet_lao_officer_type56",
+			"pathet_lao_rto_ppsh",
+			"pathet_lao_rifleman_ak",
+			{
+				"pathet_lao_rifleman_m1",
+				"pathet_lao_rifleman_ak",
+				"pathet_lao_rifleman_m36",
+				"pathet_lao_rifleman_mat49",
+				"pathet_lao_rifleman_sks",
+				"pathet_lao_rifleman_sksBayo",
+				"pathet_lao_grenadier_sks"
+			},
+			{
+				"pathet_lao_medic_mat49",
+				"pathet_lao_medic_pps"
+			},
+			{
+				"pathet_lao_at_pps",
+				"pathet_lao_at_tt33"
+			},
+			{
+				"pathet_lao_sapper_ppsh",
+				"pathet_lao_sapper_type56",
+				"pathet_lao_rifleman_mat49",
+			},
+			{
+				"pathet_lao_machinegunner_rpd",
+				"pathet_lao_machinegunner_mg42",
+				"pathet_lao_machinegunner_dp27",
+				"pathet_lao_rifleman_ak",
+			},
+			{
+				"pathet_lao_machinegunner_rpd",
+				"pathet_lao_machinegunner_mg42",
+				"pathet_lao_machinegunner_dp27",
+				"pathet_lao_rifleman_ak",
+			},
+			{
+				"pathet_lao_marksman_svd",
+				"pathet_lao_marksman_m91",
+				"pathet_lao_rifleman_m1",
+				"pathet_lao_rifleman_m36",
+				"pathet_lao_rifleman_sks"
+			}
+		};
+
+		// 2x AT; 2x riflemen; 1x medic
+		pathet_lao_at[] = {
+			{
+				"pathet_lao_at_pps",
+				"pathet_lao_at_tt33"
+			},
+			{
+				"pathet_lao_at_pps",
+				"pathet_lao_at_tt33"
+			},
+			{
+				"pathet_lao_rifleman_m1",
+				"pathet_lao_rifleman_m36",
+				"pathet_lao_rifleman_sks",
+				"pathet_lao_rifleman_sksBayo",
+			},
+			"pathet_lao_rifleman_ak",
+			{
+				"pathet_lao_medic_mat49",
+				"pathet_lao_medic_pps"
+			}
+		};
+
+		// 1-2x MGs; 1-2x marksmen; 2 riflemen/grenadiers; 1x medic
+		pathet_lao_cover_element[] = {
+			{
+				"pathet_lao_machinegunner_rpd",
+				"pathet_lao_machinegunner_mg42",
+				"pathet_lao_machinegunner_dp27"
+			},
+			{
+				"pathet_lao_marksman_svd",
+				"pathet_lao_marksman_m91"
+			},
+			{
+				"pathet_lao_machinegunner_rpd",
+				"pathet_lao_machinegunner_mg42",
+				"pathet_lao_marksman_svd",
+				"pathet_lao_marksman_m91"
+			},
+			{
+				"pathet_lao_rifleman_m1",
+				"pathet_lao_rifleman_ak",
+				"pathet_lao_rifleman_m36",
+				"pathet_lao_rifleman_mat49",
+				"pathet_lao_rifleman_sks",
+				"pathet_lao_rifleman_sksBayo",
+				"pathet_lao_grenadier_sks"
+			},
+			{
+				"pathet_lao_rifleman_m1",
+				"pathet_lao_rifleman_ak",
+				"pathet_lao_rifleman_m36",
+				"pathet_lao_rifleman_mat49",
+				"pathet_lao_rifleman_sks",
+				"pathet_lao_rifleman_sksBayo",
+				"pathet_lao_grenadier_sks"
+			},
+			{
+				"pathet_lao_medic_mat49",
+				"pathet_lao_medic_pps"
+			}
+		};
+
+		/*
+		==================================================================
+		khmer rouge 1970 + 1975
+		==================================================================
+		*/
+
+		// 1x sentry; 1x rifleman/marksman; 1x RTO
+		khmer_rouge_sentry[] = {
+			{
+				"khmer_rouge_70_scout",
+				"khmer_rouge_75_scout"
+			},
+			{
+				"khmer_rouge_70_rifleman_m1891",
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks",
+				"khmer_rouge_75_marksman"
+			},
+			{
+				"khmer_rouge_70_rto",
+				"khmer_rouge_75_rto"
+			}
+		};
+
+
+		// 1x officer; 1x rto; 2x-6x riflemen; 1x medic;
+		// 1x AT; 0-1x sapper; 0-2x MG; 0-1x marksman
+		khmer_rouge_standard[] = {
+			{
+				"khmer_rouge_70_officer",
+				"khmer_rouge_75_officer"
+			},
+			{
+				"khmer_rouge_70_rto",
+				"khmer_rouge_75_rto"
+			},
+			{
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_70_rifleman_m1891"
+			},
+			{
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_70_rifleman_m1891",
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_70_grenadier",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks",
+				"khmer_rouge_75_marksman",
+				"khmer_rouge_75_grenadier"
+			},
+			{
+				"khmer_rouge_70_medic",
+				"khmer_rouge_75_medic"
+			},
+			{
+				"khmer_rouge_70_at",
+				"khmer_rouge_75_at"
+			},
+			{
+				"khmer_rouge_70_sapper",
+				"khmer_rouge_75_sapper",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_70_rifleman_ppsh"
+			},
+			{
+				"khmer_rouge_70_machinegunner",
+				"khmer_rouge_75_machinegunner",
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56"
+			},
+			{
+				"khmer_rouge_70_machinegunner",
+				"khmer_rouge_75_machinegunner",
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56"
+			},
+			{
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks",
+				"khmer_rouge_75_marksman",
+			}
+		};
+
+
+		// 2x AT; 2x riflemen; 1x medic
+		khmer_rouge_at[] = {
+			{
+				"khmer_rouge_70_at",
+				"khmer_rouge_75_at"
+			},
+			{
+				"khmer_rouge_70_at",
+				"khmer_rouge_75_at"
+			},
+			{
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_70_rifleman_m1891",
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_70_grenadier",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks",
+				"khmer_rouge_75_marksman",
+				"khmer_rouge_75_grenadier"
+			},
+			{
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_70_rifleman_m1891",
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_70_grenadier",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks",
+				"khmer_rouge_75_marksman",
+				"khmer_rouge_75_grenadier"
+			},
+			{
+				"khmer_rouge_70_medic",
+				"khmer_rouge_75_medic"
+			}
+		};
+
+		// 1-2x MGs; 1-2x marksmen; 2 riflemen/grenadiers; 1x medic
+		khmer_rouge_cover_element[] = {
+			{
+				"khmer_rouge_70_machinegunner",
+				"khmer_rouge_75_machinegunner"
+			},
+			{
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_75_marksman"
+			},
+			{
+				"khmer_rouge_70_machinegunner",
+				"khmer_rouge_75_machinegunner",
+				"khmer_rouge_70_marksman",
+				"khmer_rouge_75_marksman"
+			},
+			{
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_70_rifleman_m1891",
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks"
+			},
+			{
+				"khmer_rouge_70_rifleman_ppsh",
+				"khmer_rouge_70_rifleman_m1891",
+				"khmer_rouge_70_rifleman_m36Bayo",
+				"khmer_rouge_70_rifleman_m38",
+				"khmer_rouge_70_rifleman_m91Bayo",
+				"khmer_rouge_70_rifleman_sksBayo",
+				"khmer_rouge_70_rifleman_sks",
+				"khmer_rouge_75_rifleman_ak",
+				"khmer_rouge_75_rifleman_type56",
+				"khmer_rouge_75_rifleman_sksBayo",
+				"khmer_rouge_75_rifleman_sksBayo2",
+				"khmer_rouge_75_rifleman_sks"
+			},
+			{
+				"khmer_rouge_70_medic",
+				"khmer_rouge_75_medic"
+			}
+		};
+
 	};	
 
 	class guer
