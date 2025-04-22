@@ -30,7 +30,7 @@ Follow one of the 'Setup' instruction sets in the [GitHub Wiki](https://github.c
 
 Follow the GitHub Desktop setup instructions in the [GitHub Wiki](https://github.com/Savage-Game-Design/Mike-Force/wiki/Custom-MF:-1a.-Setup-via-GitHub-Desktop)
 
-If you prefer to use `git` on the command line you'll likely be able to work it out from the wiki above, just repalce the GitHub Desktop steps with the relevant `git` commands.
+If you prefer to use `git` on the command line you'll likely be able to work it out from the wiki above, just replace the GitHub Desktop steps with the relevant `git` commands.
 
 ## generated doc file
 
