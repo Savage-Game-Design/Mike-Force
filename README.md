@@ -34,8 +34,6 @@ If you prefer to use `git` on the command line you'll likely be able to work it 
 
 ## generated doc file
 
-Started a simple documentation generator : <https://github.com/ryantownshend/sqf_tools>
+A simple documentation generator : <https://github.com/ryantownshend/sqf_tools>
 
 The file `mikeforce_api.html` is a super crude parse of the header comments from within the project.
-
-This can be fleshed out as we go, but it does provide a single place to view all the function file headers.
