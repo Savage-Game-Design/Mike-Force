@@ -16,22 +16,17 @@
         [markerPos "myHq"] call vn_mf_fnc_sites_create_hq
 */
 
-params ["_pos"];
+params ["_siteObj"];
 
 [
 	"hq",
-	_pos,
+	_siteObj,
 	//Setup Code
 	{
 		params ["_siteStore"];
 		private _siteId = _siteStore getVariable "site_id";
-		private _sitePos = getPos _siteStore;
-		private _spawnPos = _sitePos;
-
-		//Hide all nearby terrain objects.
-		{
-			_x hideObjectGlobal true;
-		} forEach (nearestTerrainObjects [_spawnPos, ["TREE", "BUSH", "SMALL TREE", "ROCK", "ROCKS"], 50, false, true]);
+		private _siteType = _siteStore getVariable "site_type";
+		private _spawnPos = (getPos _siteStore) vectorMultiply [1, 1, 0];
 
 		private _hqObjects = [_spawnPos] call vn_mf_fnc_create_hq_buildings;
 		private _objectsToDestroy = _hqObjects select {_x isKindOf "land_vn_pavn_ammo"};
@@ -40,20 +35,22 @@ params ["_pos"];
 			[_x, true] call para_s_fnc_enable_dynamic_sim;
 		} forEach _hqObjects;
 
+		private _baseMarkerText = localize (format ["STR_vn_mf_site_type_name_short_%1", _siteType]);
+
 		//Create a HQ marker.
 		private _markerPos = _spawnPos getPos [10 + random 20, random 360];
-		private _hqMarker = createMarker [format ["HQ_%1", _siteId], _markerPos];
+		private _hqMarker = createMarker [format ["%1_%2", _siteType, _siteId], _markerPos];
 		_hqMarker setMarkerType "o_hq";
-		_hqMarker setMarkerText "HQ";
+		_hqMarker setMarkerText _baseMarkerText;
 		// Hide at spawn 0.5
 		_hqMarker setMarkerAlpha 0;
 
 		// create partially discovered marker
 		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
-		private _partialMarker = createMarker [format ["hq_zone_%1_partial", _siteId], _partialPos];
+		private _partialMarker = createMarker [format ["%1_%2_partial", _siteType, _siteId], _partialPos];
 		_partialMarker setMarkerSize [400, 400];
 		_partialMarker setMarkerShape "ELLIPSE";
-		_partialMarker setMarkerText "Suspected HQ";
+		_partialMarker setMarkerText format ["Suspected %1", _baseMarkerText];
 		_partialMarker setMarkerColor "ColorRed";
 		_partialMarker setMarkerAlpha 0; // hiden at spawn 0.3
 

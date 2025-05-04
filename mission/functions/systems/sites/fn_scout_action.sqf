@@ -80,7 +80,11 @@ private _distanceTexts = [
 private _fnc_siteToDrawableIcon = {
     private _distance = getPos _this distance2D _playerRef;
     private _isDiscovered = _this getVariable ["discovered", false];
-    private _text = if (_isDiscovered) then { toUpper (_this getVariable ["site_type", ""]) } else { "???" };
+
+    // PR COMMENT: @dijksterhuis: lookup site type name from stringtable
+    // PR COMMENT: @dijksterhuis: allows custom site types to have different names rendered
+    private _stringtableKey = format ["STR_vn_mf_site_type_name_long_%1", _this getVariable ["site_type", "err"]];
+    private _text = if (_isDiscovered) then { toUpper (localize _stringtableKey) } else { "???" };
     // Full opacity up to X metres, then starts reducing linearly.
     private _opacity = 1 - ((_distance - 200 max 0) / vn_mf_scout_max_distance);
     private _distanceText = _distanceTexts select (_distanceTexts findIf {_x # 0 >= _distance}) select 1;
