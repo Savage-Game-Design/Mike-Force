@@ -1,13 +1,25 @@
 class Changelog {
 	class 1_00_03 {
 		version = "1.00.03";
-		date = "28th January 2023";
+		date = "13th June 2023";
 		changes[] = {
+			"[New] Adds S.O.G. Prairie Fire 1.3 weapons to the arsenal",
+			"[New] Adds S.O.G. Prairie Fire 1.3 vehicles to the spawn points",
+			"[New] Adds S.O.G. Prairie Fire 1.3 vehicles to FOB workshops",
+			"[Change] Vehicles can now be changed when they're at their spawn point. Press '6' to change vehicle.",
+			"[New] Added static weapon spawn points, with M45, M101, ZPU, etc.",
 			"[New] Adds a mission parameter to scale the number of AI (and therefore difficulty)",
 			"[Change] Added a notification when counterattacks are failed",
+			"[Change] Altis Green Hornets base is now more compact",
 			"[Fix] Zone progression rewritten to be more robust (fewer bugs)",
 			"[Fix] Headless clients should be much more effective at hosting AI",
-			"[Fix] Team swapping no longer causes an error"
+			"[Fix] Vehicles should explode far less often when created at the workshop",
+			"[Fix] Vehicles should explode far less often when recovered at a wreck recovery point",
+			"[Fix] Wreck recovery point status should update correctly",
+			"[Fix] Team swapping no longer causes an error",
+			"[Fix] Headless client slots added to Altis",
+			"[Fix] Respawn markers should be created when a building is loaded from a save",
+			"[Change] Minor changes to bases on Khe Sanh, Cam Lao Nam and The Bra"
 		};
 	};
 	

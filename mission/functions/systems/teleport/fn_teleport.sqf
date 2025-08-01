@@ -19,7 +19,7 @@
 
 params ["_objectName","_destinationName"];
 
-private _baseConfig = missionConfigFile >> "gamemode" >> "teleporters";
+private _baseConfig = missionConfigFile >> "map_config" >> "teleporters";
 private _objectConfig = _baseConfig >> "objects" >> _objectName;
 private _destinationConfig = _baseConfig >> "destinations" >> _destinationName;
 

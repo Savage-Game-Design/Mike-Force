@@ -190,6 +190,14 @@ class CfgFunctions
 			class earplugs {};
 		};
 
+		class system_garage {
+			file = "functions\systems\garage";
+			class garage_arsenal {};
+			class garage_create_ui_callback {};
+			class garage_open {};
+			class garage_register_display {};
+		};
+
 		class system_player_markers
 		{
 			file = "functions\systems\player_markers";
@@ -284,37 +292,65 @@ class CfgFunctions
 			class tutorial_subsystem_client_init {};
 		};
 
-		class system_vehicle_asset_manager
+		class system_vehicle_asset_manager_client
 		{
-			file = "functions\systems\vehicle_asset_manager";
-			class packageforslingloading {};
-			class veh_asset_add_package_wreck_action_local {};
+			file = "functions\systems\vehicle_asset_manager\client";
 			class veh_asset_add_package_underwater_wreck_action_local {};
+			class veh_asset_add_package_wreck_action_local {};
+			class veh_asset_describe_status {};
+			class veh_asset_finalise_spawn_point_setup_on_client {};
+			class veh_asset_remove_package_underwater_wreck_action_local {};
+			class veh_asset_remove_spawn_point_client {};
+			class veh_asset_request_vehicle_change_client {};
+			class veh_asset_setup_package_wreck_action_local {};
+			class veh_asset_update_spawn_point_data {};
+		};
+
+		class system_vehicle_asset_manager_global
+		{
+			file = "functions\systems\vehicle_asset_manager\global";
+			class veh_asset_can_change_vehicle {};
+			class veh_asset_get_spawn_point_info_from_config {};
+			class veh_asset_load_vehicle_configs {};
+		};
+
+		class system_vehicle_asset_manager_server_network
+		{
+			file = "functions\systems\vehicle_asset_manager\server\network";
+			class packageforslingloading {};
+			class veh_asset_handle_change_vehicle_request {};
+		};
+
+		class system_vehicle_asset_manager_server
+		{
+			file = "functions\systems\vehicle_asset_manager\server";
+			class veh_asset_3DEN_spawn_point {};
+			class veh_asset_add_spawn_point {};
 			class veh_asset_add_unlock_action {};
-			class veh_asset_add_vehicle {};
-			class veh_asset_get_by_id {};
-			class veh_asset_init_vehicle {};
-			class veh_asset_key {};
+			class veh_asset_assign_vehicle_to_spawn_point {};
+			class veh_asset_change_vehicle {};
+			class veh_asset_create_spawn_point_id {};
 			class veh_asset_job {};
 			class veh_asset_lock_vehicle {};
 			class veh_asset_marker_create {};
 			class veh_asset_marker_delete {};
 			class veh_asset_marker_update_position {};
 			class veh_asset_package_wreck {};
-			class veh_asset_remove_package_underwater_wreck_action_local {};
-			class veh_asset_remove_vehicle {};
+			class veh_asset_process_spawn_point {};
+			class veh_asset_remove_spawn_point {};
 			class veh_asset_respawn {};
+			class veh_asset_respawn_job {};
 			class veh_asset_set_active {};
 			class veh_asset_set_disabled {};
+			class veh_asset_set_global_variable {};
+			class veh_asset_set_global_variables {};
 			class veh_asset_set_idle {};
-			class veh_asset_setup_package_wreck_action {};
-			class veh_asset_setup_package_wreck_action_local {};
 			class veh_asset_set_repairing {};
 			class veh_asset_set_respawning {};
 			class veh_asset_set_wrecked {};
+			class veh_asset_setup_package_wreck_action {};
 			class veh_asset_subsystem_init {};
 			class veh_asset_unlock_vehicle {};
-			class veh_asset_respawn_job {};
 		};
 
 		class system_vehicle_creation_detection

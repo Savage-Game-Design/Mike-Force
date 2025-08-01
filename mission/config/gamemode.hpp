@@ -96,10 +96,6 @@ class gamemode
 	{
 		#include "subconfigs\vehicle_respawn_info.hpp"
 	};
-	class teleporters
-	{
-		#include "subconfigs\teleporters.hpp"
-	};
 	class interaction_overlay
 	{
 		#include "subconfigs\interaction_overlay.hpp"
