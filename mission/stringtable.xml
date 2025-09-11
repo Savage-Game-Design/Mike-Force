@@ -516,7 +516,7 @@
         <Original>Build Progress: %2%1</Original>
       </Key>
       <Key ID="STR_para_overlay_buildable_percentage_filled">
-        <Original>Percentage Filled: %2%1</Original>
+        <Original>Percentage Filled: %1</Original>
       </Key>
       <Key ID="STR_para_overlay_buildable_current_supplies">
         <Original>Current Supplies: %1</Original>
