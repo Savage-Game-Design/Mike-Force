@@ -27,12 +27,20 @@ if (_obj getVariable ["veh_asset_isSpawnPoint", false]) exitWith {
 	diag_log format ["VN MikeForce: [WARNING] Attempting to make object a vehicle spawn point twice: %1 at %2", typeOf _obj, getPos _obj];
 };
 
+if (_spawnLocation isEqualType objNull) then {
+	_spawnLocation = [getPosASL _spawnLocation, getDir _spawnLocation];
+};
+
 if (_spawnPointSettings isEqualType "") then {
 	_spawnPointSettings = [missionConfigFile >> "gamemode" >> "vehicle_respawn_info" >> "spawn_point_types" >> _spawnPointSettings] call vn_mf_fnc_veh_asset_get_spawn_point_info_from_config;
 };
 
-if (_spawnLocation isEqualType objNull) then {
-	_spawnLocation = [getPosASL _spawnLocation, getDir _spawnLocation];
+// players won't be able to do anything with this spawn point if no categories exist.
+// can occur if spawn point exclusively provides access to a mod's vehicles, but the mod isn't loaded.
+// NOTE: calling function `vn_mf_fnc_veh_asset_3DEN_spawn_point` doesn't use this function's result (yet).
+if (count (_spawnPointSettings getOrDefault ["categories", createHashMap]) isEqualTo 0) exitWith {
+	diag_log format ["WARN: %1: Disabling spawn point as no categories data found: objPos=%2", _fnc_scriptName, _spawnLocation];
+	createHashMap;
 };
 
 // This allows this function to be called even if the system isn't initialised yet.
