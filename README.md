@@ -22,40 +22,18 @@ Report issues using the "Issues" section above. Please be sure to follow the tem
 
 The gamemode is a self-contained mission file. Simply download the mission from Steam Workshop into your server's mpmissions folder, and select it from the in-game mission list. 
 
+## Creating Custom Mike Force Missions
 
-## installation for development
+Follow one of the 'Setup' instruction sets in the [GitHub Wiki](https://github.com/Savage-Game-Design/Mike-Force/wiki).
 
-Clone repo to local location of your choice and then symlink the `vn_mf.cam_lao_nam` folder into your Arma 3 missions folder.
+## Development
 
-Something like this:
+Follow the GitHub Desktop setup instructions in the [GitHub Wiki](https://github.com/Savage-Game-Design/Mike-Force/wiki/Custom-MF:-1a.-Setup-via-GitHub-Desktop)
 
-```shell
-C:\Users\USERNAME\Documents\Arma 3\missions
-```
-
-Windows symlinks are handled with the `mklink` command.
-
-```shell
-mklink /j "C:\Users\USERNAME\Documents\Arma 3\missions\vn_mf.cam_lao_nam" SGD_mikeforce\HAM\vn_mf.cam_lao_nam
-```
-
-**note** Use the standard windows commandline for this, bash on windows makes a mess of the paths.
-
-
-The SGD_Paradigm folder is also required to by symlinked in to be the `vn_mf.cam_lao_nam\paradigm` folder.
-
-
-```shell
-mklink /j "C:\Users\USERNAME\Documents\Arma 3\missions\vn_mf.cam_lao_nam\paradigm" SGD_paradigm
-```
+If you prefer to use `git` on the command line you'll likely be able to work it out from the wiki above, just replace the GitHub Desktop steps with the relevant `git` commands.
 
 ## generated doc file
 
-Started a simple documentation generator : <https://github.com/ryantownshend/sqf_tools>
+A simple documentation generator : <https://github.com/ryantownshend/sqf_tools>
 
 The file `mikeforce_api.html` is a super crude parse of the header comments from within the project.
-
-This can be fleshed out as we go, but it does provide a single place to view all the function file headers.
-
-
-
