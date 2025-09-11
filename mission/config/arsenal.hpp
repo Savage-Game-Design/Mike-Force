@@ -276,26 +276,36 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_m20a1b1_01",{-1,3,3,-1}},
 			{"vn_mg42",{2,-1,-1,4}},
 			{"vn_camera_01",{-1,1,1,-1}},
-			//---
-			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
-			{"vnx_fm2429",{0,-1,0,-1}},
-			{"vnx_l1a1_05",{-1,0,0,-1}},
-			{"vnx_l1a1_04",{-1,0,0,-1}},
-			{"vnx_l1a1_04",{-1,0,0,-1}},
-			{"vnx_l1a1_05",{-1,0,0,-1}},
-			{"vnx_m45_sf",{-1,0,0,-1}},
-			{"vnx_m12_smg",{-1,0,0,-1}},
-			{"vnx_m12_smg_fold",{-1,0,0,-1}},
-			{"vnx_m50_smg",{-1,0,0,-1}},
-			{"vnx_m50_smg_fold",{-1,0,0,-1}},
-			{"vnx_m77e",{-1,0,0,-1}},
-			{"vnx_m77e_shorty",{-1,0,0,-1}},
-			{"vnx_type56_xm148",{-1,0,0,-1}},
-			{"vnx_gjet",{-1,0,0,-1}},
-			{"vnx_hd_02",{-1,0,0,-1}},
-			{"vnx_m_ladle",{-1,0,0,-1}},
-			{"vnx_m_spoon_01",{-1,0,0,-1}},
-			{"vnx_m_spoon_02",{-1,0,0,-1}}
+
+			// NICKEL STEEL: 2024-12
+			{"vnx_gjet",{-1,2,2,-1}},
+			{"vnx_hd_02",{-1,3,3,-1}},
+			{"vnx_m45_sf",{-1,4,4,-1}},
+			{"vnx_m45_sf_sd",{-1,5,5,-1}},
+			{"vnx_type56_xm148",{-1,6,6,-1}},
+			{"vnx_fm2429",{1,1,1,1}},
+			{"vnx_fm2429_aa",{2,2,2,2}},
+			{"vnx_m_spoon_01",{0,0,0,0}},
+			{"vnx_m_spoon_02",{0,0,0,0}},
+			{"vnx_m_ladle",{0,0,0,0}},
+			{"vnx_m50_smg_fold",{0,0,0,0}},
+			{"vnx_m50_smg",{0,0,0,0}},
+			{"vnx_m12_smg_fold",{-1,2,2,-1}},
+			{"vnx_m12_smg",{-1,2,2,-1}},
+			{"vnx_m77e",{-1,2,2,-1}},
+			{"vnx_m77e_shorty",{-1,2,2,-1}},
+			{"vnx_l1a1_04",{-1,3,-1,-1}},
+			{"vnx_l1a1_04_camo",{-1,4,-1,-1}},
+			{"vnx_l1a1_05",{-1,4,-1,-1}},
+			{"vnx_l1a1_05_camo",{-1,5,-1,-1}},
+
+			// NICKEL STEEL: 2025-09
+			{"vnx_m201z",{-1,1,1,2}},
+			{"vnx_no4",{1,1,1,1}},
+			{"vnx_no4_bayo",{1,1,1,1}},
+			{"vnx_no4_sniper",{2,2,2,2}},
+			{"vnx_c96",{1,-1,-1,1}},
+			{"vnx_stg44",{1,-1,-1,2}},
 		};
 
 		magazines[] =
@@ -660,21 +670,36 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_rpg2_fuze_mag",{2,2,2,2}},
 			{"vn_mg42_50_mag",{2,-1,-1,4}},
 			{"vn_mg42_50_t_mag",{3,-1,-1,5}},
-			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
-			// FM 24/29 used by both ARVN and PAVN forces https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
-			{"vnx_fm2429_mag",{0,0,0,-1}},
-			{"vnx_fm2429_t_mag",{0,0,0,-1}},
-			{"vnx_m12_smg_32_mag",{-1,0,0,-1}},
-			{"vnx_m12_smg_32_t_mag",{-1,0,0,-1}},
-			{"vnx_m12_smg_20_mag",{-1,0,0,-1}},
-			{"vnx_m12_smg_20_t_mag",{-1,0,0,-1}},
-			{"vnx_m50_smg_mag",{-1,0,0,-1}},
-			{"vnx_m50_smg_t_mag",{-1,0,0,-1}},
-			{"vnx_m77e_so_mag",{-1,0,0,-1}},
-			{"vnx_m77e_fl_mag",{-1,0,0,-1}},
-			{"vnx_m77e_buck_mag",{-1,0,0,-1}},
-			{"vnx_gjet_mag",{-1,0,0,-1}},
-			{"vnx_hd_02_mag",{-1,0,0,-1}}
+
+			// NICKEL STEEL: 2024-12
+			{"vnx_gjet_mag",{-1,2,2,-1}},
+			{"vnx_hd_02_mag",{-1,3,3,-1}},
+			{"vnx_fm2429_mag",{1,1,1,1}},
+			{"vnx_fm2429_t_mag",{1,1,1,1}},
+			{"vnx_m50_smg_t_mag",{0,0,0,0}},
+			{"vnx_m50_smg_mag",{0,0,0,0}},
+			{"vnx_m12_smg_32_t_mag",{-1,2,2,-1}},
+			{"vnx_m12_smg_32_mag",{-1,2,2,-1}},
+			{"vnx_m12_smg_20_t_mag",{-1,2,2,-1}},
+			{"vnx_m12_smg_20_mag",{-1,2,2,-1}},
+			{"vnx_m77e_buck_mag",{-1,2,2,-1}},
+			{"vnx_m77e_fl_mag",{-1,2,2,-1}},
+			{"vnx_m77e_so_mag",{-1,2,2,-1}},
+
+			// NICKEL STEEL: 2025-09
+			{"vnx_37mm_cs_mag",{-1,1,1,2}},
+			{"vnx_37mm_cs_skat_mag",{-1,1,1,2}},
+			{"vnx_37mm_cs_fin_mag",{-1,1,1,2}},
+			{"vnx_37mm_cs_spray_mag",{-1,1,1,2}},
+			{"vnx_37mm_baton_mag",{-1,1,1,2}},
+			{"vnx_37mm_flare_mag",{-1,1,1,2}},
+			{"vnx_mk3a2_grenade_mag",{-1,0,-1,-1}},
+			{"vnx_c96_mag",{1,-1,-1,1}},
+			{"vnx_c96_t_mag",{1,-1,-1,1}},
+			{"vnx_stg44_mag",{1,-1,-1,2}},
+			{"vnx_stg44_t_mag",{1,-1,-1,2}},
+			{"vnx_no4_mag",{1,1,1,1}},
+			{"vnx_no4_t_mag",{1,1,1,1}},
 		};
 
 		items[] =
@@ -1336,18 +1361,47 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_b_beret_01_09",{-1,2,-1,-1}},
 			{"vn_b_beret_01_10",{-1,3,-1,-1}},
 			{"vn_b_beret_01_11",{-1,4,-1,-1}},
-			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
-			// FM 24/29 used by both ARVN and PAVN forces https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
-			{"vnx_o_aa_fm2429",{0,0,0,-1}},
-			{"vnx_b_helmet_hgu7_01_04",{-1,0,0,-1}},
-			{"vnx_b_helmet_hgu7_01_03",{-1,0,0,-1}},
-			{"vnx_b_helmet_hgu7_01_02",{-1,0,0,-1}},
-			{"vnx_b_helmet_hgu7_02_03",{-1,0,0,-1}},
-			{"vnx_b_helmet_hgu7_02_02",{-1,0,0,-1}},
-			{"vnx_b_helmet_hgu7_02_01",{-1,0,0,-1}},
-			{"vnx_b_helmet_hgu7_01_01",{-1,0,0,-1}},
+
+			// NICKEL STEEL: 2024-12
+			{"vnx_o_aa_fm2429",{2,2,2,2}},
+			{"vnx_b_helmet_hgu7_01_01",{-1,0,-1,-1}},
+			{"vnx_b_helmet_hgu7_01_02",{-1,0,-1,-1}},
+			{"vnx_b_helmet_hgu7_01_03",{-1,0,-1,-1}},
+			{"vnx_b_helmet_hgu7_01_04",{-1,0,-1,-1}},
+			{"vnx_b_helmet_hgu7_02_01",{-1,0,-1,-1}},
+			{"vnx_b_helmet_hgu7_02_02",{-1,0,-1,-1}},
+			{"vnx_b_helmet_hgu7_02_03",{-1,0,-1,-1}},
 			{"vnx_b_uniform_cwu_01",{-1,0,0,-1}},
-			{"vnx_b_uniform_cwu_02",{-1,0,0,-1}}
+			{"vnx_b_uniform_cwu_02",{-1,0,0,-1}},
+
+			// NICKEL STEEL: 2025-09
+			// Helmets
+			{"vnx_b_helmet_aph6_01_06",{-1,0,0,-1}},
+			{"vnx_b_helmet_aph6_02_06",{-1,0,0,-1}},
+			// Uniforms
+			{"vnx_b_uniform_cwu_03",{-1,0,0,-1}},
+			{"vnx_b_uniform_cwu_04",{-1,0,0,-1}},
+			{"vnx_b_uniform_sog_01_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_sog_02_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_macv_01_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_macv_02_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_macv_03_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_macv_04_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_macv_05_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_macv_06_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_heli_01_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_k2b_01_19",{-1,0,0,-1}},
+			{"vnx_b_uniform_k2b_02_19",{-1,0,0,-1}},
+			// Vests
+			{"vnx_b_vest_usaf_01",{-1,0,-1,-1}},
+			{"vnx_b_vest_usaf_02",{-1,0,-1,-1}},
+			{"vnx_b_vest_usaf_03",{-1,0,-1,-1}},
+			{"vnx_b_vest_usaf_04",{-1,0,-1,-1}},
+			{"vnx_b_vest_usaf_05",{-1,0,-1,-1}},
+			{"vnx_b_vest_usaf_06",{-1,0,-1,-1}},
+			{"vnx_b_vest_usaf_07",{-1,0,-1,-1}},
+			// misc
+			{"vnx_b_no4",{1,1,1,1}},
 		};
 
 		backpacks[] =
@@ -2229,7 +2283,40 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_b_army_static_m2_scoped_low",{-1,5,-1,-1}},
 			{"vn_b_sf_static_m2_scoped_high",{-1,6,-1,-1}},
 			{"vn_b_sf_static_m2_scoped_low",{-1,5,-1,-1}},
-		};
 
+			// NICKEL STEEL: 2024-12
+			{"vnx_o_wheeled_tuktuk_01_kr",{0,0,0,0}},
+			{"vnx_o_wheeled_tuktuk_mg_01_kr",{1,-1,-1,1}},
+			{"vnx_o_wheeled_tuktuk_mg_02_kr",{2,-1,-1,2}},
+			{"vnx_o_wheeled_tuktuk_01_vc",{0,-1,-1,0}},
+			{"vnx_o_wheeled_tuktuk_mg_01_vc",{1,-1,-1,1}},
+			{"vnx_o_wheeled_tuktuk_mg_02_vc",{2,-1,-1,2}},
+			{"vnx_c_wheeled_tuktuk_01_01",{0,0,0,0}},
+
+			// NICKEL STEEL: 2025-09
+			{"vnx_b_air_ov10a_covey",{-1,1,-1,-1}},
+			{"vnx_b_air_ov10a_cryer",{-1,1,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_cap",{-1,2,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_cas",{-1,2,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_hcas",{-1,3,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_ehcas",{-1,4,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_mr",{-1,5,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_bmb",{-1,2,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_lbmb",{-1,1,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_mbmb",{-1,3,-1,-1}},
+			{"vnx_b_air_ov10a_usmc_hbmb",{-1,4,-1,-1}},
+			{"vnx_b_air_ov10a_navy_cap",{-1,2,-1,-1}},
+			{"vnx_b_air_ov10a_navy_cas",{-1,2,-1,-1}},
+			{"vnx_b_air_ov10a_navy_hcas",{-1,3,-1,-1}},
+			{"vnx_b_air_ov10a_navy_ehcas",{-1,4,-1,-1}},
+			{"vnx_b_air_ov10a_navy_mr",{-1,5,-1,-1}},
+			{"vnx_b_air_ov10a_navy_bmb",{-1,2,-1,-1}},
+			{"vnx_b_air_ov10a_navy_lbmb",{-1,1,-1,-1}},
+			{"vnx_b_air_ov10a_navy_mbmb",{-1,3,-1,-1}},
+			{"vnx_b_air_ov10a_navy_hbmb",{-1,4,-1,-1}},
+			{"vnx_b_air_ov10a_aus_covey",{-1,1,-1,-1}},
+			{"vnx_b_armor_lvtp5_01_01",{-1,2,-1,-1}},
+			{"vnx_b_armor_m163_01",{-1,4,4,-1}},
+		};
 	};
 };

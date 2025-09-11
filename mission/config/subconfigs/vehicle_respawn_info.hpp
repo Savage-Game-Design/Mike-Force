@@ -468,6 +468,108 @@ class vehicles {
 	// S.O.G. Nickel Steel (VNX) Vehicles //
 	////////////////////////////////////////
 	
+	// APC
+
+	class vnx_b_armor_lvtp5_01 {
+		tags[] = {"lvtp5", "armed", "transport", "apc", "heavy"};
+	};
+
+	class vnx_b_armor_m163_01 {
+		tags[] = {"m163", "armed", "firesupport", "apc"};
+	};
+
+	// OV10A MISC
+
+	class vnx_b_air_ov10a_covey {
+		tags[] = {"ov10a", "misc", "cas", "covey", "plane"};
+	};
+
+	class vnx_b_air_ov10a_cryer {
+		tags[] = {"ov10a", "misc", "cas", "cryer", "plane"};
+	};
+
+	class vnx_b_air_ov10a_aus_covey {
+		tags[] = {"ov10a", "misc", "cas", "aus", "covey", "plane"};
+	};
+
+	// OV10A USMC
+
+	class vnx_b_air_ov10a_usmc_cap {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_cas {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_hcas {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_ehcas {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_bmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_hbmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_lbmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_mbmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_mr {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	// OV10A NAVY
+
+	class vnx_b_air_ov10a_navy_cap {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_cas {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_hcas {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_ehcas {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_bmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_hbmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_lbmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_mbmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_mr {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	// AC119
+
 	class vnx_b_air_ac119_01_01 {
 		tags[] = {"c119", "armed", "firesupport", "plane"};
 	};
@@ -627,9 +729,9 @@ class spawn_point_types {
 
 		class categories {
 			class m113 {
-				name = "M113";
+				name = "APC";
 				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "m113", "transport" } };
+				include[] = { { "apc", "transport" } };
 				exclude[] = { "firesupport" };
 			};
 
@@ -900,6 +1002,29 @@ class spawn_point_types {
 				name = "F4 Phantom";
 				icon = VEHICLE_ICON_PLANE;
 				include[] = { { "jet", "f4" } };
+			};
+		};
+	};
+
+	class ov10a {
+		name = "OV-10A (Bronco)";
+		WRECK_LONG;
+
+		class categories {
+			class transport {
+				name = "OV-10A CAS (Covey/Cryer)";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "ov10a", "misc" } };
+			};
+			class usmc {
+				name = "OV-10A CAS (USMC)";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "ov10a", "usmc" } };
+			};
+			class navy {
+				name = "OV-10A CAS (NAVY)";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "ov10a", "navy" } };
 			};
 		};
 	};
