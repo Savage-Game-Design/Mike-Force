@@ -491,7 +491,52 @@ class vehicles {
 	class vnx_b_air_ac119_04_01 {
 		tags[] = {"c119", "firesupport", "plane"};
 	};
+
+
+	/////////////////////////////////////////
+	//THEY FLOAT NOW? THEY FLOAT NOW(BOATS)//
+	/////////////////////////////////////////
+
+    // Large boats (all armed)
+    class vn_b_boat_05_01 {
+        tags[] = {"boat", "large", "mortar"};
+    };
+    class vn_b_boat_05_02 {
+        tags[] = {"boat", "large", "mortar"};
+    };
+    class vn_b_boat_06_01 {
+        tags[] = {"boat", "large", "40mm"};
+    };
+    class vn_b_boat_06_02 {
+        tags[] = {"boat", "large", "40mm"};
+    };
+
+    // Light boats (all armed and transport)
+    class vn_b_boat_10_01 {
+        tags[] = {"boat", "light", "armed", "m2"};
+    };
+    class vn_b_boat_09_01 {
+        tags[] = {"boat", "light", "armed", "m60"};
+    };
+    class vn_b_boat_11_01 {
+        tags[] = {"boat", "light", "armed", "mk18"};
+    };
+
+    // Small boats (all armed)
+    class vn_b_boat_12_01 {
+        tags[] = {"boat", "small", "m60"};
+    };
+    class vn_b_boat_13_01 {
+        tags[] = {"boat", "small", "mk18"};
+    };
 };
+
+
+
+
+
+
+
 
 class spawn_point_types {
 	class light_transport {
@@ -926,6 +971,65 @@ class spawn_point_types {
 				icon = VEHICLE_ICON_STATIC;
 				include[] = { { "static", "artillery" } };
 				exclude[] = { "mortar" };
+			};
+		};
+	};
+
+	class boat_light {
+		name = "Light Boats";
+		RESPAWN_MEDIUM;
+
+		class categories {
+			class light_transport_m2 {
+				name = "STAB M2";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "light", "boat", "m2" } };
+			};
+			class light_transport_m60 {
+				name = "STAB M60";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "light", "boat", "m60" } };
+			};
+			class light_transport_mk18 {
+				name = "STAB MK18";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "light", "boat", "mk18" } };
+			};
+		};
+	};
+
+	class boat_large {
+		name = "Large Boats";
+		WRECK_LONG;
+
+		class categories {
+			class large_boat_40mm {
+				name = "Nasty Boat-40mm";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "large", "boat", "40mm" } };
+			};
+			class large_boat_mortar {
+				name = "Nasty Boat-Mortar";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "large", "boat", "mortar" } };
+			};
+		};
+	};
+
+	class boat_small {
+		name = "Small Boats";
+		RESPAWN_SHORT;
+		
+		class categories {
+			class small_transport {
+				name = "PBR M60";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "small", "boat", "m60" } };
+			};
+			class small_transport_MK18 {
+				name = "PBR MK18";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "small", "boat", "mk18" } };
 			};
 		};
 	};
