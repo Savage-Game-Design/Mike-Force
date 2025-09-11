@@ -104,6 +104,8 @@ if !(rank _player isEqualTo _rank) then
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "MikeForce"];
 private _respawnMarker = format ["mf_respawn_%1", _playerGroup];
 _player setPos getMarkerPos _respawnMarker;
+// set player's direction to match the direction of the respawn marker
+_player setDir markerDir _respawnMarker;
 
 // add event handlers from the harass subsystem.
 [_player] call para_s_fnc_harass_add_player_event_handlers;
