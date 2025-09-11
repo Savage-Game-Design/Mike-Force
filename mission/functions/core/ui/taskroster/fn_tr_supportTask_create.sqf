@@ -17,7 +17,6 @@
 
 disableSerialization;
 
-systemchat str ["vn_tr_supportMissionInfo: ", vn_tr_supportMissionInfo];
 if((vn_tr_supportMissionInfo#2) isEqualTo [])exitWith{systemchat str ["((vn_tr_supportMissionInfo#2) isEqualTo []) = ", ((vn_tr_supportMissionInfo#2) isEqualTo [])]};
 //disable the Request Button, after clicking it
 VN_TR_SUPREQ_CTASK_IDC ctrlEnable false;

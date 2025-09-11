@@ -50,7 +50,6 @@ _classes = "true" configClasses (missionConfigFile >> "gamemode" >> "tasks");
 			_index = _ctrl_taskSelection lnbAddRow ["",_task_name];
 			_ctrl_taskSelection lnbSetPicture [[_index,0], _task_icon];
 			_ctrl_taskSelection lnbSetData [[_index,0], (configName _x)];
-			systemchat str [_index, _task_name, _task_type, _task_icon, (_ctrl_taskSelection lnbData [_index,0])];
 		};
 	};
 } forEach _classes;

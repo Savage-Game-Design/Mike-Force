@@ -33,7 +33,6 @@ VN_TR_USERNAME_CTRL ctrlSetText profileName;
 //Check which group the player is in
 private _groupID = player getVariable ["vn_mf_db_player_group", "FAILED"];
 
-systemchat str ["_groupID: ",_groupID];
 private _group_config = (missionConfigFile >> "gamemode" >> "teams" >> _groupID);
 private _group_name_full = getText(_group_config >> "name");
 private _group_icon = getText(_group_config >> "icon");
