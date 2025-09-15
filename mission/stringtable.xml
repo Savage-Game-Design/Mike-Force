@@ -215,6 +215,24 @@
       <Key ID="STR_vn_mf_respawn_acav_altis">
         <Original>FOB 1 - ACAV</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_mike_force_dong_giang">
+        <Original>FOB MILLER - MIKE FORCE</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_green_hornets_dong_giang">
+        <Original>FOB MILLER - GREEN HORNETS</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_acav_dong_giang">
+        <Original>FOB MILLER - ACAV</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_spike_team_dong_giang">
+        <Original>FOB MITCH - SPIKE TEAM</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_arty_section_dong_giang">
+        <Original>FOB MITCH - ARTILLERY SECTION</Original>
+      </Key>
+      <Key ID="STR_vn_mf_respawn_comms_tower_dong_giang">
+        <Original>FOB MITCH - COMMS TOWER</Original>
+      </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>
       </Key>
@@ -516,7 +534,7 @@
         <Original>Build Progress: %2%1</Original>
       </Key>
       <Key ID="STR_para_overlay_buildable_percentage_filled">
-        <Original>Percentage Filled: %2%1</Original>
+        <Original>Percentage Filled: %1</Original>
       </Key>
       <Key ID="STR_para_overlay_buildable_current_supplies">
         <Original>Current Supplies: %1</Original>
@@ -1496,6 +1514,9 @@
       <Key ID="STR_vn_mf_zone_aggelochori">
         <Original>Aggelochori</Original>
       </Key>
+      <Key ID="STR_vn_mf_zone_galati">
+        <Original>Galati</Original>
+      </Key>
     </Container>
     <Container name="Zone_Name_Cam_Lao">
       <Key ID="STR_vn_mf_zone_ban_hoang">
@@ -1570,6 +1591,27 @@
       <Key ID="STR_vn_mf_zone_ling_ho">
         <Original>Ling Ho</Original>
       </Key>
+      <Key ID="STR_vn_mf_zone_nodal_lho">
+        <Original>Nodal Lho</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_plain_of_jars">
+        <Original>Plain of Jars</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_bru_village">
+        <Original>Bru Village</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_son_tay">
+        <Original>Son Tay</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_gia_lam_airbase">
+        <Original>Gia Lam Airbase</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hanoi_city">
+        <Original>Hanoi City</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_fob_mai_loc">
+        <Original>FOB Mai Loc</Original>
+      </Key>
     </Container>
     <Container name="ZoneName_khe_sanh">
       <Key ID="STR_vn_mf_zone_khe_sanh">
@@ -1634,9 +1676,6 @@
       </Key>
       <Key ID="STR_vn_mf_zone_lang_vei">
         <Original>Lang Vei</Original>
-      </Key>
-      <Key ID="STR_vn_mf_zone_kok">
-        <Original>Kok</Original>
       </Key>
       <Key ID="STR_vn_mf_zone_a_bung">
         <Original>A Bung</Original>
@@ -1723,6 +1762,113 @@
       </Key>
       <Key ID="STR_vn_mf_zone_southeastern_supply_depot">
         <Original>Southeastern Supply Depot</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nva_pow_camp">
+        <Original>NVA POW Camp</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ban_onglouan">
+        <Original>Ban Onglouan</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ban_chom">
+        <Original>Ban Chom</Original>
+      </Key>
+    </Container>
+    <Container name="ZoneName_dong_giang">
+      <Key ID="STR_vn_mf_zone_da_nam_valley">
+        <Original>Ðà Nam Valley</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_da_nam">
+        <Original>Ðà Nam</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_south_eastern_village">
+        <Original>South Eastern Village</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_splintered_forest">
+        <Original>Splintered Forest</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ta_tieng">
+        <Original>Ta Tieng</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_south_western_village">
+        <Original>South Western Village</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_radio_relay_oscar">
+        <Original>Radio Relay Oscar</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_canyon">
+        <Original>Canyon</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pa_roh">
+        <Original>Pa Roh</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_thon_59b">
+        <Original>Thon 59B</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_plei_boh">
+        <Original>Plei Boh</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_kon_kap">
+        <Original>Kon Kăp</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_radio_relay_cudgel">
+        <Original>Radio Relay Cudgel</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_sung_la">
+        <Original>Sung La / Lung Cu</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_radio_relay_george">
+        <Original>Radio Relay George</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_dong_giang">
+        <Original>Dong Giang</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_junctions">
+        <Original>Road Junctions</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_dak_pa_r">
+        <Original>Dak Pa R</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_cr_toonh">
+        <Original>Cr'toonh</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_drawbridge">
+        <Original>Drawbridge</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ia_puh">
+        <Original>Ia Puh</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_battle_hill">
+        <Original>Battle Hill</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pa_toi">
+        <Original>Pà Tôi</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lz_one">
+        <Original>Landing Zone One</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lz_two">
+        <Original>Landing Zone Two</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_lz_three">
+        <Original>Landing Zone Three</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_northern_jungle">
+        <Original>Northern Jungle</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_dai_son">
+        <Original>Ðai Son</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_temple">
+        <Original>Temple</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pavn_base">
+        <Original>P.A.V.N. Base</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_abandoned_outpost">
+        <Original>Abandoned Outpost</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_pavn_camp">
+        <Original>P.A.V.N. Camp</Original>
       </Key>
     </Container>
   </Package>

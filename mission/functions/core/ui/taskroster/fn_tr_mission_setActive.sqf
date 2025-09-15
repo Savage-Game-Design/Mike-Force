@@ -18,12 +18,9 @@
 
 _list_index = lbCurSel VN_TR_MISSIONLIST_CTRL;
 
-systemchat str ["_list_index",_list_index];
-
 (vn_tr_taskList#_list_index) params["_sortOrder","_parent_category","_parent_classname","_parent"];
 
 {
-	systemchat str ["taskCompleted _x", taskCompleted _x];
 	if!(taskCompleted _x)then
 	{
 		_task = _x;

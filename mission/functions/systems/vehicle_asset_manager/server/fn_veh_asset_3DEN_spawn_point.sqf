@@ -37,6 +37,7 @@ if (_spawnObjectIndex > -1) then {
 
 private _spawnPointObjects = _synchronizedObjects select {!(_x isKindOf "Helper_Base_F")};
 
+// WARN: see note in `vn_mf_fnc_veh_asset_add_spawn_point` before using result of this function.
 [_spawnPointObjects select 0, _spawnPointSettings, _spawnLocationObject, _this param [1]] call vn_mf_fnc_veh_asset_add_spawn_point;
 
 deleteVehicle this;

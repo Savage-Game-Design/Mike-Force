@@ -468,6 +468,108 @@ class vehicles {
 	// S.O.G. Nickel Steel (VNX) Vehicles //
 	////////////////////////////////////////
 	
+	// APC
+
+	class vnx_b_armor_lvtp5_01 {
+		tags[] = {"lvtp5", "armed", "transport", "apc", "heavy"};
+	};
+
+	class vnx_b_armor_m163_01 {
+		tags[] = {"m163", "armed", "firesupport", "apc"};
+	};
+
+	// OV10A MISC
+
+	class vnx_b_air_ov10a_covey {
+		tags[] = {"ov10a", "misc", "cas", "covey", "plane"};
+	};
+
+	class vnx_b_air_ov10a_cryer {
+		tags[] = {"ov10a", "misc", "cas", "cryer", "plane"};
+	};
+
+	class vnx_b_air_ov10a_aus_covey {
+		tags[] = {"ov10a", "misc", "cas", "aus", "covey", "plane"};
+	};
+
+	// OV10A USMC
+
+	class vnx_b_air_ov10a_usmc_cap {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_cas {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_hcas {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_ehcas {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_bmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_hbmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_lbmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_mbmb {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_usmc_mr {
+		tags[] = {"ov10a", "usmc", "cas", "plane"};
+	};
+
+	// OV10A NAVY
+
+	class vnx_b_air_ov10a_navy_cap {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_cas {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_hcas {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_ehcas {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_bmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_hbmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_lbmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_mbmb {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	class vnx_b_air_ov10a_navy_mr {
+		tags[] = {"ov10a", "navy", "cas", "plane"};
+	};
+
+	// AC119
+
 	class vnx_b_air_ac119_01_01 {
 		tags[] = {"c119", "armed", "firesupport", "plane"};
 	};
@@ -491,7 +593,52 @@ class vehicles {
 	class vnx_b_air_ac119_04_01 {
 		tags[] = {"c119", "firesupport", "plane"};
 	};
+
+
+	/////////////////////////////////////////
+	//THEY FLOAT NOW? THEY FLOAT NOW(BOATS)//
+	/////////////////////////////////////////
+
+    // Large boats (all armed)
+    class vn_b_boat_05_01 {
+        tags[] = {"boat", "large", "mortar"};
+    };
+    class vn_b_boat_05_02 {
+        tags[] = {"boat", "large", "mortar"};
+    };
+    class vn_b_boat_06_01 {
+        tags[] = {"boat", "large", "40mm"};
+    };
+    class vn_b_boat_06_02 {
+        tags[] = {"boat", "large", "40mm"};
+    };
+
+    // Light boats (all armed and transport)
+    class vn_b_boat_10_01 {
+        tags[] = {"boat", "light", "armed", "m2"};
+    };
+    class vn_b_boat_09_01 {
+        tags[] = {"boat", "light", "armed", "m60"};
+    };
+    class vn_b_boat_11_01 {
+        tags[] = {"boat", "light", "armed", "mk18"};
+    };
+
+    // Small boats (all armed)
+    class vn_b_boat_12_01 {
+        tags[] = {"boat", "small", "m60"};
+    };
+    class vn_b_boat_13_01 {
+        tags[] = {"boat", "small", "mk18"};
+    };
 };
+
+
+
+
+
+
+
 
 class spawn_point_types {
 	class light_transport {
@@ -582,9 +729,9 @@ class spawn_point_types {
 
 		class categories {
 			class m113 {
-				name = "M113";
+				name = "APC";
 				icon = VEHICLE_ICON_ARMOUR;
-				include[] = { { "m113", "transport" } };
+				include[] = { { "apc", "transport" } };
 				exclude[] = { "firesupport" };
 			};
 
@@ -859,6 +1006,29 @@ class spawn_point_types {
 		};
 	};
 
+	class ov10a {
+		name = "OV-10A (Bronco)";
+		WRECK_LONG;
+
+		class categories {
+			class transport {
+				name = "OV-10A CAS (Covey/Cryer)";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "ov10a", "misc" } };
+			};
+			class usmc {
+				name = "OV-10A CAS (USMC)";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "ov10a", "usmc" } };
+			};
+			class navy {
+				name = "OV-10A CAS (NAVY)";
+				icon = VEHICLE_ICON_PLANE;
+				include[] = { { "ov10a", "navy" } };
+			};
+		};
+	};
+
 	class c119_unarmed {
 		name = "C-119 (Transport)";
 		RESPAWN_MEDIUM;
@@ -926,6 +1096,65 @@ class spawn_point_types {
 				icon = VEHICLE_ICON_STATIC;
 				include[] = { { "static", "artillery" } };
 				exclude[] = { "mortar" };
+			};
+		};
+	};
+
+	class boat_light {
+		name = "Light Boats";
+		RESPAWN_MEDIUM;
+
+		class categories {
+			class light_transport_m2 {
+				name = "STAB M2";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "light", "boat", "m2" } };
+			};
+			class light_transport_m60 {
+				name = "STAB M60";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "light", "boat", "m60" } };
+			};
+			class light_transport_mk18 {
+				name = "STAB MK18";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "light", "boat", "mk18" } };
+			};
+		};
+	};
+
+	class boat_large {
+		name = "Large Boats";
+		WRECK_LONG;
+
+		class categories {
+			class large_boat_40mm {
+				name = "Nasty Boat-40mm";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "large", "boat", "40mm" } };
+			};
+			class large_boat_mortar {
+				name = "Nasty Boat-Mortar";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "large", "boat", "mortar" } };
+			};
+		};
+	};
+
+	class boat_small {
+		name = "Small Boats";
+		RESPAWN_SHORT;
+		
+		class categories {
+			class small_transport {
+				name = "PBR M60";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "small", "boat", "m60" } };
+			};
+			class small_transport_MK18 {
+				name = "PBR MK18";
+				icon = VEHICLE_ICON_BOAT;
+				include[] = { { "small", "boat", "mk18" } };
 			};
 		};
 	};
