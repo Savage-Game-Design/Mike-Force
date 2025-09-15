@@ -22,12 +22,17 @@ vn_mf_s_max_fortifications_per_zone = getNumber (missionConfigFile >> "map_confi
 vn_mf_s_max_tunnels_per_zone = getNumber (missionConfigFile >> "map_config" >> "max_tunnels_per_zone");
 vn_mf_s_max_vehicle_depots_per_zone = getNumber (missionConfigFile >> "map_config" >> "max_vehicle_depots_per_zone");
 
-vn_mf_g_sites_partial_discovery_radius = 300;
+
+vn_mf_g_sites_partial_discovery_radius = ["sites_partial_discovery_radius_meters", 300] call BIS_fnc_getParamValue;
 publicVariable "vn_mf_g_sites_partial_discovery_radius";
-vn_mf_g_sites_discovery_radius = 50;
+
+vn_mf_g_sites_discovery_radius = ["sites_discovery_radius_meters", 50] call BIS_fnc_getParamValue;
 publicVariable "vn_mf_g_sites_discovery_radius";
-vn_mf_g_sites_scout_action_cooldown = 30;
+
+vn_mf_g_sites_scout_action_cooldown = ["sites_scout_action_cooldown_seconds", 30] call BIS_fnc_getParamValue;
 publicVariable "vn_mf_g_sites_scout_action_cooldown";
+
+vn_mf_s_sites_discovery_aa_marker_enabled = [false, true] select (["sites_discovery_aa_marker_toggle", 1] call BIS_fnc_getParamValue);
 
 missionNamespace setVariable ["sites", []];
 publicVariable "sites";

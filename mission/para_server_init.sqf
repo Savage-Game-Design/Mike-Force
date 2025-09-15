@@ -38,6 +38,16 @@ publicVariable "vn_mf_traits_map";
 //Set whether the building system needs vehicles (fuel/repair/rearm, etc) nearby to build certain structures.
 para_l_buildables_require_vehicles = [false, true] select (["buildables_require_vehicles", 1] call BIS_fnc_getParamValue);
 publicVariable "para_l_buildables_require_vehicles";
+
+// @dijksterhuis: PR TODO: para_l tag?
+// am following the convention above, but probably should be para_g tag.
+para_l_basebuilding_enabled = [false, true] select (["toggle_building_systems", 1] call BIS_fnc_getParamValue);
+publicVariable "para_l_basebuilding_enabled";
+
+para_s_harass_enabled = [false, true] select (["ai_harass_enabled", 1] call BIS_fnc_getParamValue);
+// @dijksterhuis: PR TODO: requires paradigm changes, will have no effect if merged before changes made
+para_s_harassMinDelay = ["ai_harass_minimum_delay", 240] call BIS_fnc_getParamValue;
+
 vn_mf_dawnLength = ["dawn_length", 1200] call BIS_fnc_getParamValue;
 vn_mf_dayLength = ["day_length", 9000] call BIS_fnc_getParamValue;
 vn_mf_duskLength = ["dusk_length", 1200] call BIS_fnc_getParamValue;
@@ -45,16 +55,19 @@ vn_mf_nightLength = ["night_length", 1800] call BIS_fnc_getParamValue;
 
 //Set whether stamia is enabled
 vn_mf_param_enable_stamina = (["enable_stamina", 1] call BIS_fnc_getParamValue) > 0;
-vn_mf_param_set_stamina = (["set_stamina", 1] call BIS_fnc_getParamValue);
 publicVariable "vn_mf_param_enable_stamina";
+
+vn_mf_param_set_stamina = (["set_stamina", 1] call BIS_fnc_getParamValue);
 publicVariable "vn_mf_param_set_stamina";
 
 //Set whether withstand is always available.
 vn_revive_withstand_allow = (["always_allow_withstand", 1] call BIS_fnc_getParamValue) > 0;
 publicVariable "vn_revive_withstand_allow";
+
 //Set number of bandages needed to withstand.
 vn_revive_withstand_amount = 4;
 publicVariable "vn_revive_withstand_amount";
+
 //Set number of max players per team
 vn_mf_max_players_acav = ["max_players_acav", 99] call BIS_fnc_getParamValue;
 vn_mf_max_players_greenhornets = ["max_players_greenhornets", 99] call BIS_fnc_getParamValue;;
@@ -179,6 +192,10 @@ diag_log format ["VN MikeForce: Total Game Time - %1", para_g_totalgametime];
 ["save_time_elapsed", {call vn_mf_fnc_save_time_elapsed}, [], 5] call para_g_fnc_scheduler_add_job;
 
 // spawn buildables and init vars
+
+// WARNING: We need to enable the building system even if the `para_l_basebuilding_enabled`
+// variable (from the "basebuilding_system_enabled" parameter option) is set to FALSE,
+// otherwise systems like AI Harassment cannot find the para_g_bases variable.
 diag_log "VN MikeForce: Initialising building system";
 call para_s_fnc_building_system_init;
 
@@ -187,6 +204,15 @@ diag_log "VN MikeForce: Creating supply officers";
 {
     [_x] call vn_mf_fnc_create_supply_officer;
 } forEach vn_mf_markers_supply_officer_initial;
+
+/*
+@dijksterhuis: PR TODO: disabling config flag until paradigm PR created
+if (para_l_basebuilding_enabled) then {
+    diag_log "VN MikeForce: Starting building state tracker";
+    // building state tracking
+    ["building_state_tracker", {call para_s_fnc_building_state_tracker}, [], 60] call para_g_fnc_scheduler_add_job;
+};
+*/
 
 diag_log "VN MikeForce: Starting building state tracker";
 // building state tracking
@@ -272,9 +298,11 @@ diag_log "VN MikeForce: Initialising AI Objectives";
     ["hardAiLimit", ["hard_ai_limit", 80] call BIS_fnc_getParamValue]
 ] call para_s_fnc_ai_obj_subsystem_init;
 
-diag_log "VN MikeForce: Initialising Harass";
 // Start harassment subsystem. Depends on the AI subsystem.
-[] call para_s_fnc_harass_subsystem_init;
+if (para_s_harass_enabled) then {
+    diag_log "VN MikeForce: Initialising Harass";
+    [] call para_s_fnc_harass_subsystem_init;
+};
 
 diag_log "VN MikeForce: Initialising Vehicle Manager";
 // start vehicle asset management subsystem

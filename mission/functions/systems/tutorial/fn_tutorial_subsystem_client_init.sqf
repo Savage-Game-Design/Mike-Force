@@ -38,9 +38,10 @@
 */
 
 private _tutorialEnabled = ["para_enableTutorial"] call para_c_fnc_optionsMenu_getValue;
+private _tutorialGlobalEnabled = ["toggle_global_tutorials", 0] call BIS_fnc_getParamValue > 0;
 
 // Early exit if the tutorial is disabled
-if (!_tutorialEnabled) exitWith {
+if (!_tutorialEnabled || !_tutorialGlobalEnabled) exitWith {
 	//systemChat "Tutorial Disabled";
 	false;
 };

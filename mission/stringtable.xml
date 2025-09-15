@@ -742,281 +742,216 @@
     </Container>
     <Container name="params">
       <Key ID="STR_vn_mf_param_wipe_save">
-        <Original>==== Delete Save ====</Original>
-        <English>==== Delete Save ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_wipe_save_desc">
-        <Original>[WARNING] Deletes your saved game. This will delete all progress (ranks and map)!</Original>
-        <English>[WARNING] Deletes your saved game. This will delete all progress (ranks and map)!</English>
+        <Original>TOGGLE DELETE SAVE: [WARNING] Deletes your saved game; This will delete all progress (ranks and map)!</Original>
+        <English>TOGGLE DELETE SAVE: [WARNING] Deletes your saved game; This will delete all progress (ranks and map)!</English>
       </Key>
       <Key ID="STR_vn_mf_param_enable_ranks">
-        <Original>==== Enable Rank System [Under Development] ====</Original>
-        <English>==== Enable Rank System [Under Development] ====</English>
+        <Original>TOGGLE RANK SYSTEM: Restrict arsenal item availability based on player rank</Original>
+        <English>TOGGLE RANK SYSTEM: Restrict arsenal item availability based on player rank</English>
       </Key>
       <Key ID="STR_vn_mf_param_hard_ai_limit">
-        <Original>==== Hard AI Limit ====</Original>
-        <English>==== Hard AI Limit ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_hard_ai_limit_desc">
-        <Original>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</Original>
-        <English>[High performance impact] The maximum number of AI the mission will ever have simultaneously.</English>
+        <Original>HARD AI LIMIT: Maximum number of AI the mission will ever spawn simultaneously [High performance impact]</Original>
+        <English>HARD AI LIMIT: Maximum number of AI the mission will ever spawn simultaneously [High performance impact]</English>
       </Key>
       <Key ID="STR_vn_mf_param_ai_scaling">
-        <Original>==== AI Quantity Scaling ====</Original>
-        <English>==== AI Quantity Scaling ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_ai_scaling_desc">
-        <Original>[High performance impact] Global AI scaling. Higher is more AI for everything, lower is less.</Original>
-        <English>[High performance impact] Global AI scaling. Higher is more AI for everything, lower is less.</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_enable_ranks_desc">
-        <Original>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</Original>
-        <English>Restrict vehicles/weapons based on rank. Recommended to reduce griefing.</English>
+        <Original>AI QUANTITY SCALING: Global AI scaling; Higher is more AI per objective, lower is less [High performance impact]</Original>
+        <English>AI QUANTITY SCALING: Global AI scaling; Higher is more AI per objective, lower is less [High performance impact]</English>
       </Key>
       <Key ID="STR_vn_mf_param_allow_map_markers">
-        <Original>==== Enable Map Markers ====</Original>
-        <English>==== Enable Map Markers ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_allow_map_markers_desc">
-        <Original>Toggle player map markers</Original>
-        <English>Toggle player map markers</English>
+        <Original>TOGGLE MAP MARKERS: Toggle mission's custom player/vehicle map markers</Original>
+        <English>TOGGLE MAP MARKERS: Toggle mission's custom player/vehicle map markers</English>
       </Key>
       <Key ID="STR_vn_mf_dawn_length">
-        <Original>==== Dawn Length ====</Original>
-        <English>==== Dawn Length ====</English>
+        <Original>DAWN LENGTH</Original>
+        <English>DAWN LENGTH</English>
       </Key>
       <Key ID="STR_vn_mf_day_length">
-        <Original>==== Day Length ====</Original>
-        <English>==== Day Length ====</English>
+        <Original>DAY LENGTH</Original>
+        <English>DAY LENGTH</English>
       </Key>
       <Key ID="STR_vn_mf_dusk_length">
-        <Original>==== Dusk Length ====</Original>
-        <English>==== Dusk Length ====</English>
+        <Original>DUSK LENGTH</Original>
+        <English>DUSK LENGTH</English>
       </Key>
       <Key ID="STR_vn_mf_night_length">
-        <Original>==== Night Length ==== </Original>
-        <English>==== Night Length ====</English>
+        <Original>NIGHT LENGTH</Original>
+        <English>NIGHT LENGTH</English>
       </Key>
       <Key ID="STR_vn_mf_buildables_require_vehicles">
-        <Original>==== Resupply buildings require vehicles ====</Original>
-        <English>==== Resupply buildings require vehicles ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_buildables_require_vehicles_desc">
-        <Original>Should vehicles be required to build resupply buildings [Not Advised].</Original>
-        <English>Should vehicles be required to build resupply buildings [Not Advised].</English>
+        <Original>TOGGLE BUILDING RESUPPLY REQUIRES VEHICLES: Should vehicles be required to build resupply buildings [Not Advised].</Original>
+        <English>TOGGLE BUILDING RESUPPLY REQUIRES VEHICLES: Should vehicles be required to build resupply buildings [Not Advised].</English>
       </Key>
       <Key ID="STR_vn_mf_ai_quantity">
         <Original>==== AI Quantity ====</Original>
         <English>==== AI Quantity ====</English>
       </Key>
       <Key ID="STR_vn_mf_always_allow_withstand">
-        <Original>==== Allow Withstanding ====</Original>
-        <English>==== Allow Withstanding ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_always_allow_withstand_desc">
-        <Original>Enable withstand with friendlies nearby</Original>
-        <English>Enable withstand with friendlies nearby</English>
+        <Original>TOGGLE WITHSTANDING: Players can withstand (revive themselves)</Original>
+        <English>TOGGLE WITHSTANDING: Players can withstand (revive themselves)</English>
       </Key>
       <Key ID="STR_vn_mf_building_sandbag_value">
-        <Original>==== Sandbag Supplies Quantity ====</Original>
-        <English>==== Sandbag Supplies Quantity ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_building_sandbag_value_desc">
-        <Original>The building supplies value of sandbags carried in the inventory.</Original>
-        <English>The building supplies value of sandbags carried in the inventory.</English>
+        <Original>SANDBAG RESUPPLY VALUE: Building resupply value when adding sandbags to a building.</Original>
+        <English>SANDBAG RESUPPLY VALUE: Building resupply value when adding sandbags to a building.</English>
       </Key>
       <Key ID="STR_vn_mf_advanced_revive">
-        <Original>==== Advanced Revive ====</Original>
-        <English>==== Advanced Revive ====</English>
+        <Original>TOGGLE ADVANCED REVIVE: Enables the S.O.G. Prairie Fire Advanced Medical module [RECOMMENDED]</Original>
+        <English>TOGGLE ADVANCED REVIVE: Enables the S.O.G. Prairie Fire Advanced Medical module [RECOMMENDED]</English>
       </Key>
-      <Key ID="STR_vn_mf_advanced_revive_desc">
-        <Original>Enable Advanced Revive (Recommended)</Original>
-        <English>Enable Advanced Revive (Recommended)</English>
-      </Key>
-
       <Key ID="STR_vn_mf_param_snake_header">
-        <Original>======== Snake Settings ========</Original>
-        <English>======== Snake Settings ========</English>
+        <Original>========================================== Snake ==========================================</Original>
+        <English>========================================== Snakes ==========================================</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_wounds_healing_header">
+        <Original>======== Wounds and Healing Settings ========</Original>
+        <English>======== Wounds and Healing Settings ========</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_hunger_thirst_header">
+        <Original>========================================== Consumables ==========================================</Original>
+        <English>========================================== Consumables ==========================================</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_stamina_header">
+        <Original>========================================== Stamina ==========================================</Original>
+        <English>========================================== Stamina ==========================================</English>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_chance">
-        <Original>==== Bite Chance ====</Original>
-        <English>==== Bite Chance ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_chance_desc">
-        <Original>Percentage chance of being bitten</Original>
-        <English>Percentage chance of being bitten</English>
+        <Original>BITE CHANCE: Percentage chance of being bitten</Original>
+        <English>BITE CHANCE: Percentage chance of being bitten</English>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_distance">
-        <Original>==== Bite Distance ====</Original>
-        <English>==== Bite Distance ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_distance_desc">
-        <Original>How close a snake must be to bite a player</Original>
-        <English>How close a snake must be to bite a player</English>
+        <Original>BITE DISTANCE: How close a snake must be to bite a player</Original>
+        <English>BITE DISTANCE: How close a snake must be to bite a player</English>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_frequency">
-        <Original>==== Bite Frequency ====</Original>
-        <English>==== Bite Frequency ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_frequency_desc">
-        <Original>Minimum Amount of time between bites</Original>
-        <English>Minimum Amount of time between bites</English>
+        <Original>BITE FREQUENCY: Minimum Amount of time between bites</Original>
+        <English>BITE FREQUENCY: Minimum Amount of time between bites</English>
       </Key>
       <Key ID="STR_vn_mf_param_snake_bite_extra_time">
-        <Original>==== Ramp up Time ====</Original>
-        <English>==== Ramp up Time ====</English>
+        <Original>RAMP UP TIME: Amount of time with reduced chance of being bitten; Starts counting after bite frequency time has elapsed</Original>
+        <English>RAMP UP TIME: Amount of time with reduced chance of being bitten; Starts counting after bite frequency time has elapsed</English>
       </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_extra_time_desc">
-        <Original>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</Original>
-        <English>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</English>
+      <Key ID="STR_vn_mf_param_misc_header">
+        <Original>========================================== Misc. ==========================================</Original>
+        <English>========================================== Misc. ==========================================</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_ai_header">
+        <Original>========================================== Enemy AI ==========================================</Original>
+        <English>========================================== Enemy AI ==========================================</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_building_header">
+        <Original>========================================== Building ==========================================</Original>
+        <English>========================================== Building ==========================================</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_daynight_length_header">
+        <Original>========================================== Time of Day Durations ==========================================</Original>
+        <English>========================================== Time of Day Durations ==========================================</English>
       </Key>
       <Key ID="STR_vn_mf_param_teams_header">
-        <Original>======== Team Settings ========</Original>
-        <English>======== Team Settings ========</English>
+        <Original>========================================== Players Per Team ==========================================</Original>
+        <English>========================================== Players Per Team ==========================================</English>
+      </Key>
+      <Key ID="STR_vn_mf_param_vnsupport_header">
+        <Original>========================================== Air/Arty Support Module ==========================================</Original>
+        <English>========================================== Air/Arty Support Module ==========================================</English>
       </Key>
       <Key ID="STR_vn_mf_max_players_acav">
-        <Original>==== Max players on ACAV ====</Original>
-        <English>==== Max players on ACAV ====</English>
+        <Original>MAX PLAYERS: ACAV</Original>
+        <English>MAX PLAYERS: ACAV</English>
       </Key>
       <Key ID="STR_vn_mf_max_players_greenhornets">
-        <Original>==== Max players on Green Hornets ====</Original>
-        <English>==== Max players on Green Hornets ====</English>
+        <Original>MAX PLAYERS: GREEN HORNETS</Original>
+        <English>MAX PLAYERS: GREEN HORNETS</English>
       </Key>
       <Key ID="STR_vn_mf_max_players_mikeforce">
-        <Original>==== Max players on Mike Force ====</Original>
-        <English>==== Max players on Mike Force ====</English>
+        <Original>MAX PLAYERS: MIKE FORCE</Original>
+        <English>MAX PLAYERS: MIKE FORCE</English>
       </Key>
       <Key ID="STR_vn_mf_max_players_spiketeam">
-        <Original>==== Max players on Spike Team ====</Original>
-        <English>==== Max players on Spike Team ====</English>
+        <Original>MAX PLAYERS: SPIKE TEAM</Original>
+        <English>MAX PLAYERS: SPIKE TEAM</English>
       </Key>
       <Key ID="STR_vn_mf_param_hunger_loss_rate">
-        <Original>==== Hunger Gain Rate ====</Original>
-        <English>==== Hunger Gain Rate ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_hunger_loss_rate_desc">
-        <Original>The percentage of the hunger bar lost every 10 seconds</Original>
-        <English>The percentage of the hunger bar lost every 10 seconds</English>
+        <Original>HUNGER RATE: The percentage of the hunger bar lost every 10 seconds</Original>
+        <English>HUNGER RATE: The percentage of the hunger bar lost every 10 seconds</English>
       </Key>
       <Key ID="STR_vn_mf_param_thirst_loss_rate">
-        <Original>==== Thirst Gain Rate ====</Original>
-        <English>==== Thirst Gain Rate ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_thirst_loss_rate_desc">
-        <Original>The percentage of the thirst bar lost every 10 seconds</Original>
-        <English>The percentage of the thirst bar lost every 10 seconds</English>
+        <Original>THIRST RATE: The percentage of the thirst bar lost every 10 seconds</Original>
+        <English>THIRST RATE: The percentage of the thirst bar lost every 10 seconds</English>
       </Key>
       <Key ID="STR_vn_mf_param_medical_header">
-        <Original>======== Medical Settings ========</Original>
-        <English>======== Medical Settings ========</English>
+        <Original>========================================== Advanced Revive ==========================================</Original>
+        <English>========================================== Advanced Revive ==========================================</English>
       </Key>
       <Key ID="STR_vn_mf_param_headshot_kill">
-        <Original>==== Headshots Kill ====</Original>
-        <English>==== Headshots Kill ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_headshot_kill_desc">
-        <Original>Toggle if headshots can cause instadeath</Original>
-        <English>Toggle if headshots can cause instadeath</English>
+        <Original>TOGGLE HEADSHOTS INSTAKILL: Toggle if headshots can cause instadeath for players</Original>
+        <English>TOGGLE HEADSHOTS INSTAKILL: Toggle if headshots can cause instadeath for players</English>
       </Key>
       <Key ID="STR_vn_mf_param_bleedout_time">
-        <Original>==== Bleedout Time ====</Original>
-        <English>==== Bleedout Time ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_bleedout_time_desc">
-        <Original>The time it takes in seconds for a wounded player to die</Original>
-        <English>The time it takes in seconds for a wounded player to die</English>
+        <Original>BLEEDOUT TIME: The time it takes in seconds for a wounded player to die once incapacitated</Original>
+        <English>BLEEDOUT TIME: The time it takes in seconds for a wounded player to die once incapacitated</English>
       </Key>
       <Key ID="STR_vn_mf_param_withstand_percentage">
-        <Original>==== Withstand Percentage ====</Original>
-        <English>==== Withstand Percentage ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_withstand_percentage_desc">
-        <Original>Percentage of bleedout time that must pass before withstanding is allowed</Original>
-        <English>Percentage of bleedout time that must pass before withstanding is allowed</English>
+        <Original>WITHSTAND PERCENTAGE: Percentage of bleedout time that must pass before withstanding is allowed</Original>
+        <English>WITHSTAND PERCENTAGE: Percentage of bleedout time that must pass before withstanding is allowed</English>
       </Key>
       <Key ID="STR_vn_mf_param_remove_bandage_item">
-        <Original>==== Remove Bandage Item ====</Original>
-        <English>==== Remove Bandage Item ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_remove_bandage_item_desc">
-        <Original>Remove the item used to stabilize a patient</Original>
-        <English>Remove the item used to stabilize a patient</English>
+        <Original>TOGGLE REMOVE BANDAGE ITEM: Remove the item used to stabilize a patient (does not remove Medikits)</Original>
+        <English>TOGGLE REMOVE BANDAGE ITEM: Remove the item used to stabilize a patient (does not remove Medikits)</English>
       </Key>
       <Key ID="STR_vn_mf_param_remove_revive_item">
-        <Original>==== Remove Revive Item ====</Original>
-        <English>==== Remove Revive Item ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_remove_revive_item_desc">
-        <Original>Remove the item used to revive a patient</Original>
-        <English>Remove the item used to revive a patient</English>
+        <Original>TOGGLE REMOVE REVIVE ITEM: Remove the item used to rescucitate a patient (does not remove Medikits)</Original>
+        <English>TOGGLE REMOVE REVIVE ITEM: Remove the item used to rescucitate a patient (does not remove Medikits)</English>
       </Key>
       <Key ID="STR_vn_mf_param_revive_requirement">
-        <Original>==== Require Medic to Revive ====</Original>
-        <English>==== Require Medic to Revive ====</English>
+        <Original>TOGGLE MEDIC ROLE REQUIRED: Players need the 'Medic' role to fully rescucitate patients</Original>
+        <English>TOGGLE MEDIC ROLE REQUIRED: Players need the 'Medic' role to fully rescucitate patients</English>
       </Key>
       <Key ID="STR_vn_mf_param_respawn_delay">
-        <Original>==== Respawn Delay ====</Original>
-        <English>==== Respawn Delay ====</English>
+        <Original>RESPAWN DELAY: How long a player has to wait before respawning</Original>
+        <English>RESPAWN DELAY: How long a player has to wait before respawning</English>
       </Key>
       <Key ID="STR_vn_mf_enable_air_support">
-        <Original>==== Enable RTO Air Support ====</Original>
-        <English>==== Enable RTO Air Support  ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_enable_air_support_desc">
-        <Original>Unique supports only will disable support from fast air and rotary wing units</Original>
-        <English>Unique supports only will disable support from fast air and rotary wing units</English>
+        <Original>TOGGLE RTO AIR SUPPORT: 'Unique Supports Only' disables support from fast air and rotary wing units</Original>
+        <English>TOGGLE RTO AIR SUPPORT: 'Unique Supports Only' disables support from fast air and rotary wing units</English>
       </Key>
       <Key ID="STR_vn_mf_enable_arty_support">
-        <Original>==== Enable RTO Artillery Support ====</Original>
-        <English>==== Enable RTO Artillery Support ====</English>
+        <Original>TOGGLE RTO ARTILLERY SUPPORT</Original>
+        <English>TOGGLE RTO ARTILLERY SUPPORT</English>
       </Key>
       <Key ID="STR_vn_mf_param_enable_stamina">
-        <Original>==== Enable Stamina ====</Original>
-        <English>==== Enable Stamina ====</English>
+        <Original>TOGGLE STAMINA</Original>
+        <English>TOGGLE STAMINA</English>
       </Key>
       <Key ID="STR_vn_mf_param_set_stamina">
-        <Original>==== Stamina Setting ====</Original>
-        <English>==== Stamina Setting ====</English>
+        <Original>STAMINA SCHEME: The Arma3 stamina scheme used by the mission</Original>
+        <English>STAMINA SCHEME: The Arma3 stamina scheme used by the mission</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_header">
-        <Original>======== Cleanup Settings ========</Original>
-        <English>======== Cleanup Settings ========</English>
+        <Original>========================================== Clean Up ==========================================</Original>
+        <English>========================================== Clean Up ==========================================</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_min_player_distance">
-        <Original>==== Cleanup Distance ====</Original>
-        <English>==== Cleanup Distance ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_cleanup_min_player_distance_desc">
-        <Original>Prevents deletion for certain objects, if a player is within X metres</Original>
-        <English>Prevents deletion for certain objects, if a player is within X metres</English>
+        <Original>CLEAN UP DISTANCE: Prevents deletion of certain objects if a player is within X metres</Original>
+        <English>CLEAN UP DISTANCE: Prevents deletion of certain objects if a player is within X metres</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_max_bodies">
-        <Original>==== Max Bodies ====</Original>
-        <English>==== Max Bodies ====</English>
+        <Original>MAX BODIES: Number of dead AI unit bodies to allow until performing a cleanup</Original>
+        <English>MAX BODIES: Number of dead AI unit bodies to allow until performing a cleanup</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_placed_gear">
-        <Original>==== Cleanup Placed Equipment ====</Original>
-        <English>==== Cleanup Placed Equipment ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_cleanup_placed_gear_desc">
-        <Original>Enables deleting equipment placed on the ground by players.</Original>
-        <English>Enables deleting equipment placed on the ground by players.</English>
+        <Original>TOGGLE CLEAN UP PLACED EQUIPMENT: Clean up job will delete equipment placed on the ground by players</Original>
+        <English>TOGGLE CLEAN UP PLACED EQUIPMENT: Clean up job will delete equipment placed on the ground by players</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_placed_gear_lifetime">
-        <Original>==== Placed equipment minimum lifetime ====</Original>
-        <English>==== Placed equipment minimum lifetime ====</English>
+        <Original>MINIMUM LIFETIME PLACED EQUIPMENT: Minimum amount of time before placed equipment is deleted</Original>
+        <English>MINIMUM LIFETIME PLACED EQUIPMENT: Minimum amount of time before placed equipment is deleted</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_dropped_gear">
-        <Original>==== Cleanup Dropped Equipment ====</Original>
-        <English>==== Cleanup Dropped Equipment ====</English>
-      </Key>
-      <Key ID="STR_vn_mf_param_cleanup_dropped_gear_desc">
-        <Original>Minimum amount of time before placed equipment is deleted.</Original>
-        <English>Minimum amount of time before placed equipment is deleted.</English>
+        <Original>TOGGLE CLEAN UP DROPPED EQUIPMENT: Clean up job will delete equipment dropped on the ground by players</Original>
+        <English>TOGGLE CLEAN UP DROPPED EQUIPMENT: Clean up job will delete equipment dropped on the ground by players</English>
       </Key>
       <Key ID="STR_vn_mf_param_cleanup_dropped_gear_lifetime">
-        <Original>==== Dropped equipment minimum lifetime ====</Original>
-        <English>==== Dropped equipment minimum lifetime ====</English>
+        <Original>MINIMUM LIFETIME DROPPED EQUIPMENT: Minimum amount of time before dropped equipment is deleted</Original>
+        <English>MINIMUM LIFETIME DROPPED EQUIPMENT: Minimum amount of time before dropped equipment is deleted</English>
       </Key>
     </Container>
     <Container name="voteMenu">

@@ -31,14 +31,14 @@ private _nearbyUndiscoveredSites =
   _siteRef setVariable ["partiallyDiscovered", true, true];
 
   if (_distance <= vn_mf_g_sites_discovery_radius) then {
-    _siteRef getVariable ["markers", []] apply {_x setMarkerAlpha 0.5};
+    _siteRef getVariable ["markers", []] apply {_x setMarkerAlpha vn_mf_c_sites_discovery_marker_alpha_percent};
     _siteRef getVariable ["partialMarkers", []] apply {_x setMarkerAlpha 0};
     _siteRef setVariable ["discovered", true, true];
     continue;
   };
 
   // Only set partial markers if we're not close enough to fully reveal
-  _siteRef getVariable ["partialMarkers", []] apply {_x setMarkerAlpha 0.3};
+  _siteRef getVariable ["partialMarkers", []] apply {_x setMarkerAlpha vn_mf_c_sites_partial_discovery_marker_alpha_percent};
 } forEach _nearbyUndiscoveredSites;
 
 true

@@ -33,6 +33,9 @@ params ["_pos"];
 
 		//Create an AA warning marker.
 		private _markerPos = _spawnPos getPos [5 + random 10, random 360];
+
+		private _mainMarkers = [];
+
 		private _aaZoneMarker = createMarker [format ["AA_zone_%1", _siteId], _markerPos];
 		_aaZoneMarker setMarkerSize [1000, 1000];
 		_aaZoneMarker setMarkerShape "ELLIPSE";
@@ -41,6 +44,8 @@ params ["_pos"];
 		// hiden at spawn 0.3
 		_aaZoneMarker setMarkerAlpha 0;
 
+		// special mission parameterisation case, toggles display of AA 'area of effect' markers
+		if (vn_mf_s_sites_discovery_aa_marker_enabled) then {_mainMarkers pushBack _aaZoneMarker};
 
 		// create partially discovered marker
 		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
@@ -56,6 +61,7 @@ params ["_pos"];
 		_aaMarker setMarkerText "AA";
 		// hiden at spawn 0.5
 		_aaMarker setMarkerAlpha 0;
+		_mainMarkers pushBack _aaMarker;
 
 		private _vehicles = _createdThings select 0;
 		private _groups = _createdThings select 1;
@@ -76,8 +82,7 @@ params ["_pos"];
 		_siteStore setVariable ["units", (_createdThings select 1)]; 
 		_siteStore setVariable ["groups", _groups];
 
-		
-		_siteStore setVariable ["markers", [_aaZoneMarker, _aaMarker], true];
+		_siteStore setVariable ["markers", _mainMarkers, true];
 		_siteStore setVariable ["partialMarkers", [_partialMarker], true];
 	},
 	//Teardown condition check code
