@@ -2,8 +2,7 @@
 
 ## IMPORTANT LICENSING INFORMATION
 
-We're still finalising the license under which this code can be modified and redistributed. 
-Until the new license is published, you can modify this work under the original license within this repository, further to the conditions stated here: https://community.sogpf.com/d/198-modifying-mike-force.
+<a rel="license" href="https://www.bohemia.net/community/licenses/arma-public-license-share-alike" target="_blank" ><img src="https://data.bistudio.com/images/license/APL-SA.png" ><br>This work is licensed under the Public License Share Alike</a>
 
 ## IMPORTANT BUILD INFORMATION
 
