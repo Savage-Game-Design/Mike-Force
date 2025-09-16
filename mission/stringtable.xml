@@ -547,6 +547,90 @@
         <English>In Progress</English>
       </Key>
     </Container>
+    <Container name="sites">
+      <Container name="site_type_names_long">
+        <Key ID="STR_vn_mf_site_type_name_long_aa">
+          <Original>Anti-Air</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_artillery">
+          <Original>Artillery</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_hq">
+          <Original>Headquarters</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_1">
+          <Original>Custom 1</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_2">
+          <Original>Custom 2</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_3">
+          <Original>Custom 3</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_4">
+          <Original>Custom 4</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_5">
+          <Original>Custom 5</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_6">
+          <Original>Custom 6</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_7">
+          <Original>Custom 7</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_8">
+          <Original>Custom 8</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_custom_9">
+          <Original>Custom 9</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_long_err">
+          <Original>Error</Original>
+        </Key>
+      </Container>
+      <Container name="site_type_names_short">
+        <Key ID="STR_vn_mf_site_type_name_short_aa">
+          <Original>AA</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_artillery">
+          <Original>Artillery</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_hq">
+          <Original>HQ</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_1">
+          <Original>C1</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_2">
+          <Original>C2</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_3">
+          <Original>C3</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_4">
+          <Original>C4</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_5">
+          <Original>C5</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_6">
+          <Original>C6</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_7">
+          <Original>C7</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_8">
+          <Original>C8</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_custom_9">
+          <Original>C9</Original>
+        </Key>
+        <Key ID="STR_vn_mf_site_type_name_short_err">
+          <Original>Error</Original>
+        </Key>
+      </Container>
+    </Container>
     <Container name="notifications">
       <Key ID="STR_vn_mf_notification_title_training">
         <Original>Training</Original>

@@ -230,10 +230,8 @@ class CfgFunctions
 			class sites_create_hq {};
 
 			// Composition and entity spawning
-			class create_aa_emplacement {};
 			class create_camp_buildings {};
 			class create_hq_buildings {};
-			class create_mortar {};
 
 			//Supporting functions
 			class sites_aa_reveal_targets {};

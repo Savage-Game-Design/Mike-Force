@@ -23,6 +23,9 @@ vn_mf_markers_wreck_recovery = [];
 vn_mf_markers_no_harass = [];
 
 {
+	if (_x find "site_index_" isEqualTo 0) then {
+		deleteMarker _x;
+	};
 	if (_x find "mf_respawn_" isEqualTo 0) then {
 		vn_mf_markers_base_respawns pushBack _x;
 	};

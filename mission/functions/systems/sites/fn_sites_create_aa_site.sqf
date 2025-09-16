@@ -16,24 +16,26 @@
 		["zone_saigon"] call vn_mf_fnc_zones_create_aa_site
 */
 
-params ["_pos"];
+params ["_siteObj"];
 
 [
 	"aa",
-	_pos,
+	_siteObj,
 	//Setup Code
 	{
 		params ["_siteStore"];
 		private _siteId = _siteStore getVariable "site_id";
-		private _sitePos = getPos _siteStore;
-		private _spawnPos = _sitePos;
+		private _siteType = _siteStore getVariable "site_type";
+		private _spawnPos = (getPos _siteStore) vectorMultiply [1, 1, 0];
 
-		private _result = [_spawnPos, "HEAVY"] call vn_mf_fnc_create_aa_emplacement;
-		private _createdThings = _result select 0;
+		private _cls = selectRandom ["vn_o_nva_static_zpu4"];
+		private _aaGun = createVehicle [_cls, _spawnPos, [], 0, "CAN_COLLIDE"];
+		[_aaGun, true] call para_s_fnc_enable_dynamic_sim;
 
+		private _baseMarkerText = localize (format ["STR_vn_mf_site_type_name_short_%1", _siteType]);
 		//Create an AA warning marker.
 		private _markerPos = _spawnPos getPos [5 + random 10, random 360];
-		private _aaZoneMarker = createMarker [format ["AA_zone_%1", _siteId], _markerPos];
+		private _aaZoneMarker = createMarker [format ["%1_%2", _siteType, _siteId], _markerPos];
 		_aaZoneMarker setMarkerSize [1000, 1000];
 		_aaZoneMarker setMarkerShape "ELLIPSE";
 		_aaZoneMarker setMarkerBrush "DiagGrid";
@@ -41,42 +43,27 @@ params ["_pos"];
 		// hiden at spawn 0.3
 		_aaZoneMarker setMarkerAlpha 0;
 
-
 		// create partially discovered marker
 		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
-		private _partialMarker = createMarker [format ["AA_zone_%1_partial", _siteId], _partialPos];
+		private _partialMarker = createMarker [format ["%1_%2_partial", _siteType, _siteId], _partialPos];
 		_partialMarker setMarkerSize [400, 400];
 		_partialMarker setMarkerShape "ELLIPSE";
-		_partialMarker setMarkerText "Suspected AA";
+		_partialMarker setMarkerText format ["Suspected %1", _baseMarkerText];
 		_partialMarker setMarkerColor "ColorRed";
 		_partialMarker setMarkerAlpha 0; // hiden at spawn 0.3
 
-		private _aaMarker = createMarker [format ["AA_%1", _siteId], _markerPos];
+		private _aaMarker = createMarker [format ["%1_%2", _siteType, _siteId], _markerPos];
 		_aaMarker setMarkerType "o_antiair";
-		_aaMarker setMarkerText "AA";
+		_aaMarker setMarkerText _baseMarkerText;
 		// hiden at spawn 0.5
 		_aaMarker setMarkerAlpha 0;
 
-		private _vehicles = _createdThings select 0;
-		private _groups = _createdThings select 1;
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-		} forEach (_vehicles + _groups);
-
-		private _guns = _result select 1;
 		private _objectives = [];
-		{
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _guns;
+		_objectives pushBack ([_aaGun] call para_s_fnc_ai_obj_request_crew);
 		_objectives pushBack ([_spawnPos, 2, 3] call para_s_fnc_ai_obj_request_defend);
 
 		_siteStore setVariable ["aiObjectives", _objectives];
-		_siteStore setVariable ["aaGuns", _guns];
-		_siteStore setVariable ["vehicles", _vehicles]; 
-		_siteStore setVariable ["units", (_createdThings select 1)]; 
-		_siteStore setVariable ["groups", _groups];
-
-		
+		_siteStore setVariable ["aaGuns", [_aaGun]];
 		_siteStore setVariable ["markers", [_aaZoneMarker, _aaMarker], true];
 		_siteStore setVariable ["partialMarkers", [_partialMarker], true];
 	},
@@ -102,7 +89,7 @@ params ["_pos"];
 
 		{
 			deleteVehicle _x;
-		} forEach ((_siteStore getVariable "vehicles") + (_siteStore getVariable "units"));
+		} forEach (_siteStore getVariable "aaGuns");
 
 		{
 			[_x] call para_s_fnc_ai_obj_finish_objective;

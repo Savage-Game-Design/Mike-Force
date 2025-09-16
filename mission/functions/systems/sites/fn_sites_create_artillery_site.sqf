@@ -16,60 +16,46 @@
 		["zone_saigon"] call vn_mf_fnc_zones_create_artillery_site
 */
 
-params ["_pos"];
+params ["_siteObj"];
 
 [
 	"artillery",
-	_pos,
+	_siteObj,
 	//Setup Code
 	{
 		params ["_siteStore"];
 		private _siteId = _siteStore getVariable "site_id";
-		private _sitePos = getPos _siteStore;
-		private _spawnPos = _sitePos;
+		private _siteType = _siteStore getVariable "site_type";
+		private _spawnPos = (getPos _siteStore) vectorMultiply [1, 1, 0];
 
-		private _result = [_spawnPos] call vn_mf_fnc_create_mortar;
-		private _createdThings = _result select 0;
+		private _cls = selectRandom vehicles_vc_mortars;
+		private _mortar = createVehicle [_cls, _spawnPos, [], 0, "CAN_COLLIDE"];
+		[_mortar, true] call para_s_fnc_enable_dynamic_sim;
+		_mortar enableWeaponDisassembly false;
 
+		private _objectives = [];
+		_objectives pushBack ([_mortar] call para_s_fnc_ai_obj_request_crew);
+		_objectives pushBack ([_spawnPos, 1, 2] call para_s_fnc_ai_obj_request_defend);
+
+		private _baseMarkerText = localize (format ["STR_vn_mf_site_type_name_short_%1", _siteType]);
 		private _markerPos = _spawnPos getPos [random 5, random 360];
-		private _artilleryMarker = createMarker [format ["Artillery_%1", _siteId], _markerPos];
+		private _artilleryMarker = createMarker [format ["%1_%2", _siteType, _siteId], _markerPos];
 		_artilleryMarker setMarkerType "o_art";
-		_artilleryMarker setMarkerText "Artillery";
+		_artilleryMarker setMarkerText _baseMarkerText;
 		// Hiden at spawn 0.5
 		_artilleryMarker setMarkerAlpha 0;
 
 		// create partially discovered marker
 		private _partialPos = _spawnPos getPos [10 + random 40, random 360];
-		private _partialMarker = createMarker [format ["artillery_zone_%1_partial", _siteId], _partialPos];
+		private _partialMarker = createMarker [format ["%1_%2_partial", _siteType, _siteId], _partialPos];
 		_partialMarker setMarkerSize [400, 400];
 		_partialMarker setMarkerShape "ELLIPSE";
-		_partialMarker setMarkerText "Suspected Artillery";
+		_partialMarker setMarkerText format ["Suspected %1", _baseMarkerText];
 		_partialMarker setMarkerColor "ColorRed";
 		_partialMarker setMarkerAlpha 0; // hiden at spawn 0.3
 
-		private _vehicles = _createdThings select 0;
-		{
-			//Disable weapon dissassembly - statics don't get deleted properly when disassembled, so it breaks the site/mission.
-			_x enableWeaponDisassembly false;
-		} forEach _vehicles;
-		private _groups = _createdThings select 1;
-		{
-			[_x, true] call para_s_fnc_enable_dynamic_sim;
-		} forEach (_vehicles + _groups);
-
-		private _mortars = _result select 1;
-		private _objectives = [];
-		{
-			_objectives pushBack ([_x] call para_s_fnc_ai_obj_request_crew);
-		} forEach _mortars;
-		_objectives pushBack ([_spawnPos, 1, 2] call para_s_fnc_ai_obj_request_defend);
-
 		_siteStore setVariable ["aiObjectives", _objectives];
-		_siteStore setVariable ["mortars", _mortars];
-		_siteStore setVariable ["vehicles", _vehicles]; 
-		_siteStore setVariable ["units", (_createdThings select 1)]; 
-		_siteStore setVariable ["groups", _groups];
-
+		_siteStore setVariable ["mortars", [_mortar]];
 		_siteStore setVariable ["markers", [_artilleryMarker], true];
 		_siteStore setVariable ["partialMarkers", [_partialMarker], true];
 	},
@@ -94,7 +80,7 @@ params ["_pos"];
 
 		{
 			deleteVehicle _x;
-		} forEach ((_siteStore getVariable "vehicles") + (_siteStore getVariable "units"));
+		} forEach ((_siteStore getVariable "mortars"));
 
 		{
 			[_x] call para_s_fnc_ai_obj_finish_objective;
