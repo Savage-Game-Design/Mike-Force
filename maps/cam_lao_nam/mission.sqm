@@ -6,9 +6,13 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=521;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
-		nextID=1606;
+		nextID=1614;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=776;
+		nextID=814;
 	};
 	class Camera
 	{
-		pos[]={15757.656,72.217995,7047.3052};
-		dir[]={0.17276351,-0.29721525,-0.93909144};
-		up[]={0.053788774,0.9547863,-0.29238018};
-		aside[]={-0.98352438,1.359731e-007,-0.18093935};
+		pos[]={0,25,-25};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
-sourceName="vn_mikeforce_indev";
+sourceName="vn_sgd_mikeforce_indev";
 addons[]=
 {
 	"A3_Ui_F",
@@ -43,7 +47,6 @@ addons[]=
 	"A3_Characters_F",
 	"characters_f_vietnam_c",
 	"sounds_f_vietnam_c",
-	"cba_jam_vn",
 	"A3_Misc_F_Helpers",
 	"A3_Modules_F"
 };
@@ -51,7 +54,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=15;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -145,19 +148,12 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="cba_jam_vn";
-			name="Community Base Addons - Joint Ammo Magazines";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item14
-		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
@@ -202,13 +198,13 @@ class ScenarioData
 		minPlayers=1;
 		maxPlayers=64;
 	};
-	wreckManagerMode=2;
-	wreckLimit=2;
-	wreckRemovalMaxTime=1500;
 	corpseManagerMode=2;
 	corpseLimit=2;
 	corpseRemovalMinTime=10.200001;
 	corpseRemovalMaxTime=1500;
+	wreckManagerMode=2;
+	wreckLimit=2;
+	wreckRemovalMaxTime=1500;
 };
 class CustomAttributes
 {
@@ -286,19 +282,6 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -310,7 +293,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=1;
 	};
 };
 class Mission
@@ -338,7 +321,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=238;
+		items=246;
 		class Item0
 		{
 			dataType="Marker";
@@ -1560,7 +1543,7 @@ class Mission
 			type="Empty";
 			colorName="ColorOrange";
 			id=316;
-			atlOffset=-1.9073486e-005;
+			atlOffset=-1.9073486e-05;
 		};
 		class Item72
 		{
@@ -1982,7 +1965,7 @@ class Mission
 			type="b_hq";
 			colorName="ColorWEST";
 			id=565;
-			atlOffset=-1.9073486e-005;
+			atlOffset=-1.9073486e-05;
 		};
 		class Item103
 		{
@@ -2121,7 +2104,7 @@ class Mission
 			type="Empty";
 			angle=180.04774;
 			id=666;
-			atlOffset=-1.9073486e-005;
+			atlOffset=-1.9073486e-05;
 		};
 		class Item115
 		{
@@ -2691,7 +2674,7 @@ class Mission
 			};
 			id=727;
 			type="Land_vn_fuel_tank_stairs";
-			atlOffset=-9.5367432e-007;
+			atlOffset=-9.5367432e-07;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4429,7 +4412,7 @@ class Mission
 			type="mil_arrow";
 			angle=358.57498;
 			id=1057;
-			atlOffset=-16.291449;
+			atlOffset=-23.553333;
 		};
 		class Item163
 		{
@@ -4754,7 +4737,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorPink";
 			id=1121;
-			atlOffset=-1.9073486e-005;
+			atlOffset=-1.9073486e-05;
 		};
 		class Item187
 		{
@@ -11386,7 +11369,7 @@ class Mission
 			};
 			id=1294;
 			type="Land_vn_object_trashcan_01";
-			atlOffset=1.1444092e-005;
+			atlOffset=1.1444092e-05;
 		};
 		class Item230
 		{
@@ -11418,7 +11401,7 @@ class Mission
 							};
 							id=1322;
 							type="vn_signad_sponsors_f";
-							atlOffset=2.2888184e-005;
+							atlOffset=2.2888184e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11481,7 +11464,7 @@ class Mission
 							};
 							id=1343;
 							type="vn_signad_sponsors_f";
-							atlOffset=2.2888184e-005;
+							atlOffset=2.2888184e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11679,7 +11662,7 @@ class Mission
 							};
 							id=1355;
 							type="vn_signad_sponsors_f";
-							atlOffset=1.5258789e-005;
+							atlOffset=1.5258789e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11725,7 +11708,7 @@ class Mission
 							init="['patrol', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1357;
 							type="Logic";
-							atlOffset=1.5258789e-005;
+							atlOffset=1.5258789e-05;
 						};
 						class Item3
 						{
@@ -11743,7 +11726,7 @@ class Mission
 							};
 							id=1362;
 							type="vn_signad_sponsors_f";
-							atlOffset=1.5258789e-005;
+							atlOffset=1.5258789e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11789,7 +11772,7 @@ class Mission
 							init="['patrol', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1364;
 							type="Logic";
-							atlOffset=1.5258789e-005;
+							atlOffset=1.5258789e-05;
 						};
 						class Item6
 						{
@@ -11807,7 +11790,7 @@ class Mission
 							};
 							id=1365;
 							type="vn_signad_sponsors_f";
-							atlOffset=1.5258789e-005;
+							atlOffset=1.5258789e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -11853,7 +11836,7 @@ class Mission
 							init="['patrol', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1367;
 							type="Logic";
-							atlOffset=1.5258789e-005;
+							atlOffset=1.5258789e-05;
 						};
 					};
 					id=1368;
@@ -13685,7 +13668,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={15770.414,16.121468,7028.2046};
-								angles[]={0,4.8158174,-0};
+								angles[]={0,4.8158174,0};
 							};
 							side="Empty";
 							flags=5;
@@ -13719,7 +13702,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={15756.339,14.98,7036.8936};
-								angles[]={-0,5.7423425,0};
+								angles[]={0,5.7423425,0};
 							};
 							init="['c119_unarmed', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1600;
@@ -13747,7 +13730,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={15943.627,16.121468,6891.2007};
-								angles[]={0,3.1385608,-0};
+								angles[]={0,3.1385608,0};
 							};
 							side="Empty";
 							flags=5;
@@ -13781,7 +13764,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={15959.27,14.98,6879.9424};
-								angles[]={-0,5.7423425,0};
+								angles[]={0,5.7423425,0};
 							};
 							init="['c119_armed', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1603;
@@ -13805,7 +13788,7 @@ class Mission
 						};
 					};
 					id=1397;
-					atlOffset=0.57143211;
+					atlOffset=0.5714283;
 				};
 				class Item9
 				{
@@ -14022,7 +14005,7 @@ class Mission
 							init="['heavy_fire_support', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1485;
 							type="Logic";
-							atlOffset=1.335144e-005;
+							atlOffset=1.335144e-05;
 						};
 						class Item1
 						{
@@ -14040,7 +14023,7 @@ class Mission
 							};
 							id=1486;
 							type="vn_signad_sponsors_f";
-							atlOffset=1.1444092e-005;
+							atlOffset=1.1444092e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -14086,7 +14069,7 @@ class Mission
 							init="['heavy_fire_support', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1488;
 							type="Logic";
-							atlOffset=7.6293945e-006;
+							atlOffset=7.6293945e-06;
 						};
 						class Item4
 						{
@@ -14104,7 +14087,7 @@ class Mission
 							};
 							id=1489;
 							type="vn_signad_sponsors_f";
-							atlOffset=3.8146973e-006;
+							atlOffset=3.8146973e-06;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -14285,7 +14268,7 @@ class Mission
 							init="['transport_heavy', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1473;
 							type="Logic";
-							atlOffset=-1.9073486e-006;
+							atlOffset=-1.9073486e-06;
 						};
 						class Item7
 						{
@@ -14410,7 +14393,7 @@ class Mission
 							init="['transport_heavy', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1482;
 							type="Logic";
-							atlOffset=3.8146973e-006;
+							atlOffset=3.8146973e-06;
 						};
 						class Item13
 						{
@@ -14428,7 +14411,7 @@ class Mission
 							};
 							id=1483;
 							type="vn_signad_sponsors_f";
-							atlOffset=1.9073486e-006;
+							atlOffset=1.9073486e-06;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -14485,7 +14468,7 @@ class Mission
 							init="['light_fire_support', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1491;
 							type="Logic";
-							atlOffset=1.335144e-005;
+							atlOffset=1.335144e-05;
 						};
 						class Item1
 						{
@@ -14503,7 +14486,7 @@ class Mission
 							};
 							id=1492;
 							type="vn_signad_sponsors_f";
-							atlOffset=9.5367432e-006;
+							atlOffset=9.5367432e-06;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -14611,7 +14594,7 @@ class Mission
 							init="['light_fire_support', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1498;
 							type="Logic";
-							atlOffset=-1.9073486e-006;
+							atlOffset=-1.9073486e-06;
 						};
 						class Item7
 						{
@@ -14629,7 +14612,7 @@ class Mission
 							};
 							id=1499;
 							type="vn_signad_sponsors_f";
-							atlOffset=-1.9073486e-006;
+							atlOffset=-1.9073486e-06;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -14675,7 +14658,7 @@ class Mission
 							init="['light_fire_support', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1501;
 							type="Logic";
-							atlOffset=1.335144e-005;
+							atlOffset=1.335144e-05;
 						};
 						class Item10
 						{
@@ -14693,7 +14676,7 @@ class Mission
 							};
 							id=1502;
 							type="vn_signad_sponsors_f";
-							atlOffset=1.1444092e-005;
+							atlOffset=1.1444092e-05;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -14734,7 +14717,7 @@ class Mission
 				};
 			};
 			id=1325;
-			atlOffset=-0.58335304;
+			atlOffset=-0.59669876;
 		};
 		class Item231
 		{
@@ -14895,6 +14878,248 @@ class Mission
 						{
 							singleType="BOOL";
 							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item238
+		{
+			dataType="Marker";
+			position[]={-65.085999,-85.112999,-248.22301};
+			name="ai_area_flag_khmer_rouge";
+			text="KHMER ROUGE";
+			type="vn_flag_cam02";
+			id=1606;
+			atlOffset=8.3809967;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item239
+		{
+			dataType="Marker";
+			position[]={4000,-28.356001,5000};
+			name="ai_unit_spawn_type_khmer_rouge";
+			text="AI AREA -- KHMER ROUGE";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			fillName="Border";
+			a=5000;
+			b=6000;
+			drawBorder=1;
+			id=1607;
+			atlOffset=-0.26585388;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item240
+		{
+			dataType="Marker";
+			position[]={384.29501,248.653,16004.683};
+			name="ai_unit_spawn_type_pathet_lao";
+			text="AI AREA -- PATHET LAO";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			fillName="Border";
+			a=3867.6011;
+			b=6119.0479;
+			angle=149.99997;
+			drawBorder=1;
+			id=1608;
+			atlOffset=58.172577;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item241
+		{
+			dataType="Marker";
+			position[]={-907.96899,204.127,11696.033};
+			name="ai_area_flag_pathet_lao";
+			text="PATHET LAO";
+			type="vn_flag_lao";
+			id=1609;
+			atlOffset=3.2319336;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item242
+		{
+			dataType="Marker";
+			position[]={8870.0801,295.27399,21000};
+			name="ai_unit_spawn_type_dac_cong";
+			text="AI AREA -- DAC CONG";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			fillName="Border";
+			a=6000;
+			b=5000;
+			angle=149.99997;
+			drawBorder=1;
+			id=1610;
+			atlOffset=110.92981;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item243
+		{
+			dataType="Marker";
+			position[]={15177.06,160.03,19916.492};
+			name="ai_area_flag_dac_cong";
+			text="PAVN (DAC CONG)";
+			type="vn_flag_pavn";
+			id=1611;
+			atlOffset=-6.1035156e-05;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item244
+		{
+			dataType="Marker";
+			position[]={15000,107.162,4000};
+			name="ai_unit_spawn_type_vc";
+			text="AI AREA -- VIET CONG";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			fillName="Border";
+			a=6000;
+			b=5000;
+			drawBorder=1;
+			id=1612;
+			atlOffset=55.932003;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item245
+		{
+			dataType="Marker";
+			position[]={20093.881,-82.568001,-529.26501};
+			name="ai_area_flag_vc";
+			text="VIETCONG";
+			type="vn_flag_vc";
+			id=1613;
+			atlOffset=7.5653534;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_markerHideOnStart";
+					expression="                if (!isServer || is3DEN || !_value) exitWith {};                missionNamespace setVariable [format ['ENH_attributesMarker_%1_initAlpha', _this], markerAlpha _this];                _this setMarkerAlpha 0";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
 						};
 					};
 				};

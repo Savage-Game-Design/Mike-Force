@@ -34,15 +34,11 @@ if (_pos isEqualTo []) then
 } 
 else 
 {
-	if (_pos distance2D [14296, 5932, 0] < 7000) exitWith {
-		_faction = "vc";
-	};
-
-	if (_pos # 0 < 6303) exitWith {
-		_faction = "dac_cong";
-	};
-
-	_faction = "nva";
+	// "enemy_spawn_faction__X" marker box in a mission
+	private _factions = ["dac_cong", "khmer_rouge", "pathet_lao", "vc", "nva"];
+	private _factionSearch = _factions select {_pos inArea format ["enemy_spawn_faction_%1", _x]};
+	// not found -- set to nva, otherwise take the first one found
+	if (count _factionSearch isEqualTo 0) then {_faction = "nva"} else {_faction = _factionSearch select 0};
 };
 
 if (_type == "PATROL") then 
@@ -55,6 +51,14 @@ if (_type == "PATROL") then
 		case "dac_cong":
 		{
 			selectRandom ["nva_dac_cong_sentry"]
+		};
+		case "pathet_lao":
+		{
+			"pathet_lao_sentry"
+		};
+		case "khmer_rouge":
+		{
+			"khmer_rouge_sentry"
 		};
 		default
 		{
@@ -73,6 +77,24 @@ if (_type == "STANDARD") then
 		case "dac_cong":
 		{
 			selectRandom ["nva_dac_cong_standard", "nva_dac_cong_standard", "nva_dac_cong_at", "nva_dac_cong_cover_element"]
+		};
+		case "pathet_lao":
+		{
+			selectRandom [
+				"pathet_lao_standard",
+				"pathet_lao_standard",
+				"pathet_lao_at",
+				"pathet_lao_cover_element"
+			]
+		};
+		case "khmer_rouge":
+		{
+			selectRandom [
+				"khmer_rouge_standard",
+				"khmer_rouge_standard",
+				"khmer_rouge_at",
+				"khmer_rouge_cover_element"
+			]
 		};
 		default 
 		{
