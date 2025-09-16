@@ -19,7 +19,6 @@ disableSerialization;
 //get markerPos of desired Mission location
 private _markerName = format["%1_missionMarker",getPlayerUID player];
 private _pos = mapGridPosition (getMarkerPos _markerName);
-systemchat str [(getMarkerPos _markerName),mapGridPosition (getMarkerPos _markerName)];
 
 //update text of map selection
 VN_TR_SUPREQ_SELPOS_CTRL ctrlSetText format["Selected Position: [%1]", _pos];
