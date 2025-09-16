@@ -20,8 +20,11 @@
       <Key ID="STR_vn_mf_goto">
         <Original>Goto %1</Original>
       </Key>
-      <Key ID="STR_vn_mf_training">
-        <Original>%1 Training</Original>
+      <Key ID="STR_vn_mf_training_add">
+        <Original>Add %1 Training</Original>
+      </Key>
+      <Key ID="STR_vn_mf_training_remove">
+        <Original>Remove %1 Training</Original>
       </Key>
       <Key ID="STR_vn_mf_needtobeengineer">
         <Original>You must be an %1 to build, please see a Duty Officer.</Original>
@@ -62,14 +65,23 @@
       <Key ID="STR_vn_mf_trainingcomplete">
         <Original>Training Complete</Original>
       </Key>
+      <Key ID="STR_vn_mf_trainingswapped">
+        <Original>Training Swapped</Original>
+      </Key>
+      <Key ID="STR_vn_mf_trainingremoved">
+        <Original>Training Removed</Original>
+      </Key>
+      <Key ID="STR_vn_mf_trainingnotallowed">
+        <Original>Your team is not allowed this Training</Original>
+      </Key>
       <Key ID="STR_vn_mf_invitereceived">
         <Original>Invite Received</Original>
       </Key>
       <Key ID="STR_vn_mf_onetraitperplayer">
         <Original>You can only have one speciality at a time.</Original>
       </Key>
-      <Key ID="STR_vn_mf_onetraitperteam">
-        <Original>Your team already has a player with that speciality.</Original>
+      <Key ID="STR_vn_mf_training_failed_teamlimits">
+        <Original>Your team has the maximum player(s) with that speciality: (%1).</Original>
       </Key>
       <Key ID="STR_vn_mf_supplydroponstandby">
         <Original>Supply drops on standby, make sure no other supplies are near drop zone.</Original>

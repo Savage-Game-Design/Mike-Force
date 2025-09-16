@@ -92,9 +92,6 @@ progressLoadingScreen 1.0;
 //Setup teleporters
 call vn_mf_fnc_action_teleport;
 
-call vn_mf_fnc_apply_unit_traits;
-
-call vn_mf_fnc_action_trait;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
 
 // apply health effects
