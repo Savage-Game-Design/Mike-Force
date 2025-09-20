@@ -1496,6 +1496,9 @@
       <Key ID="STR_vn_mf_zone_aggelochori">
         <Original>Aggelochori</Original>
       </Key>
+      <Key ID="STR_vn_mf_zone_galati">
+        <Original>Galati</Original>
+      </Key>
     </Container>
     <Container name="Zone_Name_Cam_Lao">
       <Key ID="STR_vn_mf_zone_ban_hoang">
@@ -1569,6 +1572,27 @@
       </Key>
       <Key ID="STR_vn_mf_zone_ling_ho">
         <Original>Ling Ho</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nodal_lho">
+        <Original>Nodal Lho</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_plain_of_jars">
+        <Original>Plain of Jars</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_bru_village">
+        <Original>Bru Village</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_son_tay">
+        <Original>Son Tay</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_gia_lam_airbase">
+        <Original>Gia Lam Airbase</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_hanoi_city">
+        <Original>Hanoi City</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_fob_mai_loc">
+        <Original>FOB Mai Loc</Original>
       </Key>
     </Container>
     <Container name="ZoneName_khe_sanh">
@@ -1723,6 +1747,15 @@
       </Key>
       <Key ID="STR_vn_mf_zone_southeastern_supply_depot">
         <Original>Southeastern Supply Depot</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_nva_pow_camp">
+        <Original>NVA POW Camp</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ban_onglouan">
+        <Original>Ban Onglouan</Original>
+      </Key>
+      <Key ID="STR_vn_mf_zone_ban_chom">
+        <Original>Ban Chom</Original>
       </Key>
     </Container>
   </Package>
