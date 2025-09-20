@@ -491,6 +491,13 @@ class vehicles {
 	class vnx_b_air_ac119_04_01 {
 		tags[] = {"c119", "firesupport", "plane"};
 	};
+
+	// only used at spike team base civilian spawn
+	class vnx_c_wheeled_tuktuk_01_01 {
+		tags[] = {"tuktuk","transport","car"};
+	};
+
+
 };
 
 class spawn_point_types {
@@ -510,6 +517,12 @@ class spawn_point_types {
 				name = "Civilian";
 				icon = VEHICLE_ICON_CAR;
 				include[] = { "civilian" };
+			};
+
+			class tuktuk {
+				name = "Tuk Tuk";
+				icon = VEHICLE_ICON_CAR;
+				include[] = { "tuktuk" };
 			};
 
 			class m151 {
