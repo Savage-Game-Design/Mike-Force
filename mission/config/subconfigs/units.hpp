@@ -564,7 +564,7 @@ class squad_compositions
 	
 		nva_marines_at[] = {
 			"nva_marines_at_sks_rpg2",
-			"nva_marines_at_sks_rgp2",
+			"nva_marines_at_sks_rpg2",
 			{"nva_marines_rifleman_sks_0", "nva_marines_rifleman_sksBayo", "nva_marines_rifleman_sks_1", "nva_marines_grenadier_sksGl"},
 		    "nva_marines_rifleman_type56",
 			{"nva_marines_rifleman_k50m", "nva_marines_medic_k50m"}
@@ -605,7 +605,7 @@ class squad_compositions
 		
 		nva_navy_at[] = {
 			"nva_navy_at_sks_rpg2",
-			"nva_navy_at_sks_rgp2",
+			"nva_navy_at_sks_rpg2",
 			{"nva_navy_rifleman_sks_0", "nva_navy_rifleman_sksBayo", "nva_navy_rifleman_sks_1", "nva_navy_grenadier_sksGl"},
 			{"nva_navy_rifleman_type56", "nva_navy_rifleman_type56Bayo"},
 			"nva_marines_medic_k50m"
@@ -705,7 +705,7 @@ class squad_compositions
 		
         nva_d_at[] = { 
 			"nva_d_at_sks_rpg7",
-			"nva_d_at_sks_rgp7",
+			"nva_d_at_sks_rpg7",
 			{"nva_d_rifleman_sks", "nva_d_rifleman_sksBayo", "nva_d_grenadier_sksGl"},
 		    {"nva_d_rifleman_type56", "nva_d_rifleman_type56Bayo"},
 			{"nva_d_rifleman_k50m", "nva_d_medic_k50m"}
@@ -764,7 +764,7 @@ class squad_compositions
 		
         nva_65_d_at[] = { 
 			"nva_65_d_at_sks_rpg7",
-			"nva_65_d_at_sks_rgp7",
+			"nva_65_d_at_sks_rpg7",
 			{"nva_65_d_rifleman_sks", "nva_65_d_rifleman_sksBayo", "nva_65_d_grenadier_sksGl"},
 		    {"nva_65_d_rifleman_type56", "nva_65_d_rifleman_type56Bayo"},
 			{"nva_65_d_rifleman_k50m", "nva_65_d_medic_k50m"}
@@ -814,7 +814,7 @@ class squad_compositions
 		
         nva_65_at[] = { 
 			"nva_65_at_sks_rpg7",
-			"nva_65_at_sks_rgp7",
+			"nva_65_at_sks_rpg7",
 			{"nva_65_rifleman_sks", "nva_65_rifleman_sksBayo", "nva_65_grenadier_sksGl"},
 		    {"nva_65_rifleman_type56", "nva_65_rifleman_type56Bayo"},
 			{"nva_65_rifleman_k50m", "nva_65_medic_k50m"}
