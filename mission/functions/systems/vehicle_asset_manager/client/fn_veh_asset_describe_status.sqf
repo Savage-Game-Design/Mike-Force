@@ -27,6 +27,7 @@ if (isNil "_spawnPoint") exitWith { "" };
 private _vehicle = _spawnPoint getOrDefault ["currentVehicle", objNull];
 private _vehicleType = typeOf _vehicle;
 private _vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleType >> "displayName");
+if (_vehicleName isEqualTo "") then {_vehicleName = "vehicle"};
 
 private _status = _spawnPoint getOrDefault ["status", createHashMap];
 private _state = _status getOrDefault ["state", "UNKNOWN"];
@@ -43,29 +44,13 @@ private _fnc_getTimeRemaining = {
 	format ["%1 seconds", _seconds];
 };
 
-if (_state isEqualTo "IDLE") exitWith {
-	format ["%1 is currently deployed and not in use.", _vehicleName]
+switch (_state) do {
+	case "IDLE": { format ["%1 is currently deployed and not in use.", _vehicleName] };
+	case "QUEUED": { format ["The %1 is in the respawn queue and should be created within %2", _vehicleName, call _fnc_getTimeRemaining] };
+	case "REPAIRING": { format ["The %1 is currently being repaired, and will be sent to the respawn queue in %2.", _vehicleName, call _fnc_getTimeRemaining] };
+	case "RESPAWNING": { format ["The %1 is currently respawning, and will be sent to the respawn queue in %2.", _vehicleName, call _fnc_getTimeRemaining] };
+	case "WRECKED": { format ["The %1 is currently wrecked. The wreck needs bringing to a wreck recovery point at the main base or a FOB.", _vehicleName] };
+	case "DISABLED": { format ["The %1 is currently deployed. However, it's disabled and needs repairs from an engineer.", _vehicleName] };
+	case "ACTIVE": { format ["The %1 is currently deployed and in use.", _vehicleName] };
+	default { "The current state of this spawn point is unknown." };
 };
-
-if (_state isEqualTo "REPAIRING") exitWith {
-	format ["The vehicle is currently being repaired, and will be finished in %1.", call _fnc_getTimeRemaining];
-};
-
-if (_state isEqualTo "RESPAWNING") exitWith {
-	format ["The vehicle is currently respawning, and will be finished in %1.", call _fnc_getTimeRemaining];
-};
-
-if (_state isEqualTo "WRECKED") exitWith {
-	format ["The %1 is currently wrecked. The wreck needs bringing to a wreck recovery point at the main base or a FOB.", _vehicleName];
-};
-
-if (_state isEqualTo "DISABLED") exitWith {
-	format ["The %1 is currently deployed. However, it's disabled and needs repairs from an engineer.", _vehicleName];
-};
-
-if (_state isEqualTo "ACTIVE") exitWith {
-	format ["The %1 is currently deployed and in use.", _vehicleName];
-};
-
-
-"The current state of this spawn point is unknown."

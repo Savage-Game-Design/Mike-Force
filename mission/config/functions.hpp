@@ -341,6 +341,7 @@ class CfgFunctions
 			class veh_asset_respawn {};
 			class veh_asset_respawn_job {};
 			class veh_asset_set_active {};
+			class veh_asset_set_queued {};
 			class veh_asset_set_disabled {};
 			class veh_asset_set_global_variable {};
 			class veh_asset_set_global_variables {};
