@@ -139,6 +139,9 @@ enableenvironment [[false,true] select _ambientlife,[false,true] select _ambient
 //Set up respawn points.
 [] call vn_mf_fnc_respawn_points_init;
 
+// setup arsenals
+[] call vn_mf_fnc_arsenals_init;
+
 // start scheduler
 diag_log "VN MikeForce: Starting scheduler";
 [] call para_g_fnc_scheduler_subsystem_init;
