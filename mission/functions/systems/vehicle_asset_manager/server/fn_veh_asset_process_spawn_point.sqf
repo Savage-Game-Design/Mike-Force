@@ -54,6 +54,25 @@ if (!alive _vehicle && !((_spawnPoint get "status" get "state") in ["RESPAWNING"
 	};
 };
 
+// advanced logistics system check
+// when vehicle container is destroyed, this forces statics to destroyed too
+if (
+        _vehicle getVariable ["log_inventory_loaded", false]
+        && !alive (_vehicle getVariable ["log_inventory_loaded_vehicle", objNull])
+        && !((_spawnPoint get "status" get "state") in ["RESPAWNING", "REPAIRING"])
+) then {
+        if (_respawnType == "WRECK") exitWith {
+		// TODO: unload the static weapons nearby?
+                deleteVehicle _vehicle;
+                [_spawnPoint] call vn_mf_fnc_veh_asset_set_wrecked;
+        };
+
+        if (_respawnType == "RESPAWN") exitWith {
+                [_spawnPoint, _settings get "time"] call vn_mf_fnc_veh_asset_set_respawning;
+        };
+};
+
+
 if (!canMove _vehicle) then {
 	if ((_spawnPoint get "status" get "state") in ["ACTIVE", "IDLE"]) then {
 		[_spawnPoint] call vn_mf_fnc_veh_asset_set_disabled;
