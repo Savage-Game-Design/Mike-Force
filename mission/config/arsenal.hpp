@@ -275,8 +275,27 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_l4",{-1,2,-1,-1}},
 			{"vn_m20a1b1_01",{-1,3,3,-1}},
 			{"vn_mg42",{2,-1,-1,4}},
-			{"vn_camera_01",{-1,1,1,-1}}
+			{"vn_camera_01",{-1,1,1,-1}},
 			//---
+			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
+			{"vnx_fm2429",{0,-1,0,-1}},
+			{"vnx_l1a1_05",{-1,0,0,-1}},
+			{"vnx_l1a1_04",{-1,0,0,-1}},
+			{"vnx_l1a1_04",{-1,0,0,-1}},
+			{"vnx_l1a1_05",{-1,0,0,-1}},
+			{"vnx_m45_sf",{-1,0,0,-1}},
+			{"vnx_m12_smg",{-1,0,0,-1}},
+			{"vnx_m12_smg_fold",{-1,0,0,-1}},
+			{"vnx_m50_smg",{-1,0,0,-1}},
+			{"vnx_m50_smg_fold",{-1,0,0,-1}},
+			{"vnx_m77e",{-1,0,0,-1}},
+			{"vnx_m77e_shorty",{-1,0,0,-1}},
+			{"vnx_type56_xm148",{-1,0,0,-1}},
+			{"vnx_gjet",{-1,0,0,-1}},
+			{"vnx_hd_02",{-1,0,0,-1}},
+			{"vnx_m_ladle",{-1,0,0,-1}},
+			{"vnx_m_spoon_01",{-1,0,0,-1}},
+			{"vnx_m_spoon_02",{-1,0,0,-1}}
 		};
 
 		magazines[] =
@@ -640,7 +659,22 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_m20a1b1_wp_mag",{-1,4,4,-1}},
 			{"vn_rpg2_fuze_mag",{2,2,2,2}},
 			{"vn_mg42_50_mag",{2,-1,-1,4}},
-			{"vn_mg42_50_t_mag",{3,-1,-1,5}}
+			{"vn_mg42_50_t_mag",{3,-1,-1,5}},
+			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
+			// FM 24/29 used by both ARVN and PAVN forces https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
+			{"vnx_fm2429_mag",{0,0,0,-1}},
+			{"vnx_fm2429_t_mag",{0,0,0,-1}},
+			{"vnx_m12_smg_32_mag",{-1,0,0,-1}},
+			{"vnx_m12_smg_32_t_mag",{-1,0,0,-1}},
+			{"vnx_m12_smg_20_mag",{-1,0,0,-1}},
+			{"vnx_m12_smg_20_t_mag",{-1,0,0,-1}},
+			{"vnx_m50_smg_mag",{-1,0,0,-1}},
+			{"vnx_m50_smg_t_mag",{-1,0,0,-1}},
+			{"vnx_m77e_so_mag",{-1,0,0,-1}},
+			{"vnx_m77e_fl_mag",{-1,0,0,-1}},
+			{"vnx_m77e_buck_mag",{-1,0,0,-1}},
+			{"vnx_gjet_mag",{-1,0,0,-1}},
+			{"vnx_hd_02_mag",{-1,0,0,-1}}
 		};
 
 		items[] =
@@ -1301,7 +1335,19 @@ class vn_whitelisted_arsenal_loadouts
 			{"vn_b_boonie_05_09",{-1,5,-1,-1}},
 			{"vn_b_beret_01_09",{-1,2,-1,-1}},
 			{"vn_b_beret_01_10",{-1,3,-1,-1}},
-			{"vn_b_beret_01_11",{-1,4,-1,-1}}
+			{"vn_b_beret_01_11",{-1,4,-1,-1}},
+			// NICKEL STEEL UPDATE: 19 Dec, 2024 @ 11:35pm
+			// FM 24/29 used by both ARVN and PAVN forces https://en.wikipedia.org/wiki/FM_24/29_light_machine_gun#Operational_use
+			{"vnx_o_aa_fm2429",{0,0,0,-1}},
+			{"vnx_b_helmet_hgu7_01_04",{-1,0,0,-1}},
+			{"vnx_b_helmet_hgu7_01_03",{-1,0,0,-1}},
+			{"vnx_b_helmet_hgu7_01_02",{-1,0,0,-1}},
+			{"vnx_b_helmet_hgu7_02_03",{-1,0,0,-1}},
+			{"vnx_b_helmet_hgu7_02_02",{-1,0,0,-1}},
+			{"vnx_b_helmet_hgu7_02_01",{-1,0,0,-1}},
+			{"vnx_b_helmet_hgu7_01_01",{-1,0,0,-1}},
+			{"vnx_b_uniform_cwu_01",{-1,0,0,-1}},
+			{"vnx_b_uniform_cwu_02",{-1,0,0,-1}}
 		};
 
 		backpacks[] =
