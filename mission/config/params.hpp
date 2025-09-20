@@ -334,6 +334,22 @@ class enable_air_support_desc
     default = 1;
 };
 
+class danger_close_distance
+{
+    title = $STR_vn_mf_param_danger_close;
+    values[] = {0, 25, 50, 75, 100, 150, 200};
+    texts[] = {"0 meters", "25 meters", "50 meters", "75 meters", "100 meters", "150 meters", "200 meters"};
+    default = 150;
+};
+
+class danger_close_distance_desc
+{
+    title = $STR_vn_mf_param_danger_close_disc;
+    values[] = {""};
+    texts[] = {""};
+    default = "";
+};
+
 class Spacer15 : Spacer1 {};
 
 class medical_header
