@@ -8,3 +8,4 @@ mission/paradigm
 build_output
 user_paths.py
 *.code-workspace
+release/

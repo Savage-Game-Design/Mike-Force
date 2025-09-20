@@ -1,0 +1,40 @@
+on:
+  push:
+    branch:
+      - 'development'
+
+jobs:
+  release:
+    if: github.repository == 'Savage-Game-Design/Mike-Force'
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v2 
+
+    - name: build_release
+      run: |
+          python3 -m pip install --user virtualenv
+          virtualenv -p python3 ./venv
+          ./venv/bin/python3 -m pip install -r ./requirements.release.txt
+          ./venv/bin/python3 ./release.py
+    
+    - name: read_release_details
+      run: |
+        echo "TAG_NAME=$(cat ./release/tag_name.txt)" >> $GITHUB_ENV
+        echo "RELEASE_TITLE=$(cat ./release/release_name.txt)" >> $GITHUB_ENV
+    
+    - name: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        token: ${{ github.token }}
+        tag_name: ${{ env.TAG_NAME }}
+        name: ${{ env.RELEASE_TITLE }}
+        files: |
+          ./release/*.zip
+          ./release/*.tar.gz
+        body_path: ./release/RELEASE.md
+        fail_on_unmatched_files: true
+        # keep bundling Indev commits into the same release
+        # instead of over multiple releases
+        append_body: true
